@@ -1,7 +1,7 @@
 import { Frame, Navigation, TopBar } from "@shopify/polaris";
 
 import React from "react";
-import Routes from "./app_components/Routes";
+import Routes from "./Routes";
 import { useLocation } from "react-router-dom";
 
 function AppFrame() {
@@ -33,7 +33,7 @@ function AppFrame() {
                     <Navigation.Section
                         items={[
                             {
-                                url: "/",
+                                url: "/dashboard",
                                 label: "Dashboard",
                             },
                             {
@@ -46,6 +46,7 @@ function AppFrame() {
                             },
                         ]}
                     />
+                    {location.pathname}
                 </Navigation>
             }
         >

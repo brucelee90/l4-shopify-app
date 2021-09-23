@@ -1,9 +1,9 @@
 import { Route, Switch } from "react-router-dom";
 
-import Home from "./Home";
-import Products from "./Products";
+import Home from "./app_components/Home";
+import Products from "./app_components/Products";
 import React from "react";
-import Settings from "./Settings";
+import Settings from "./app_components/Settings";
 
 function Routes() {
     return (
@@ -14,7 +14,7 @@ function Routes() {
             <Route path="/settings">
                 <Settings />
             </Route>
-            <Route path="/">
+            <Route path="/dashboard">
                 <Home />
             </Route>
         </Switch>

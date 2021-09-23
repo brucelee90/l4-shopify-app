@@ -14,20 +14,4 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->middleware(['verify.shopify'])->name('home');
-
-/*
-Route::get('/{path?}', function () {
-    return view('welcome');
-})->where('path', '.*')->middleware(['verify.shopify'])->name('home');
-*/
-
-// Route::get('/{?}', [HomeController::class, 'index'])->middleware(['verify.shopify'])->name('home');
-
-Route::get('/{any}', function ($any) {
-
-    // any other url, subfolders also
-    return view('welcome');
-})->where('any', '.*');
+Route::get('/{path?}', [HomeController::class, 'index'])->middleware(['verify.shopify'])->name('home');

@@ -1,26 +1,40 @@
+import { AppProvider, Navigation } from "@shopify/polaris";
+import { HomeMajor, OrdersMajor, ProductsMajor } from "@shopify/polaris-icons";
+
 import React from "react";
 import ReactDOM from "react-dom";
 
 function Example() {
     return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component</div>
-
-                        <div className="card-body">
-                            I'm an example component!
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <AppProvider>
+            <Navigation location="/">
+                <Navigation.Section
+                    items={[
+                        {
+                            url: "/path/to/place",
+                            label: "Home",
+                            icon: HomeMajor,
+                        },
+                        {
+                            url: "/path/to/place",
+                            label: "Orders",
+                            icon: OrdersMajor,
+                            badge: "15",
+                        },
+                        {
+                            url: "/path/to/place",
+                            label: "Products",
+                            icon: ProductsMajor,
+                        },
+                    ]}
+                />
+            </Navigation>
+        </AppProvider>
     );
 }
 
 export default Example;
 
-if (document.getElementById("example")) {
-    ReactDOM.render(<Example />, document.getElementById("example"));
+if (document.getElementById("root")) {
+    ReactDOM.render(<Example />, document.getElementById("root"));
 }

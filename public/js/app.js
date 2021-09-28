@@ -2100,979 +2100,6 @@ function _objectWithoutProperties(source, excluded) {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/AccountConnection/AccountConnection.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/AccountConnection/AccountConnection.js ***!
-  \**************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AccountConnection": () => (/* binding */ AccountConnection)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Avatar_Avatar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Avatar/Avatar.js */ "./node_modules/@shopify/polaris/dist/esm/components/Avatar/Avatar.js");
-/* harmony import */ var _TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../TextStyle/TextStyle.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.js");
-/* harmony import */ var _Button_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Button/utils.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js");
-/* harmony import */ var _Stack_Stack_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Stack/Stack.js */ "./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.js");
-/* harmony import */ var _Card_Card_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Card/Card.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.js");
-/* harmony import */ var _SettingAction_SettingAction_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../SettingAction/SettingAction.js */ "./node_modules/@shopify/polaris/dist/esm/components/SettingAction/SettingAction.js");
-/* harmony import */ var _AccountConnection_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AccountConnection.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/AccountConnection/AccountConnection.scss.js");
-
-
-
-
-
-
-
-
-
-function AccountConnection({
-  connected = false,
-  action,
-  avatarUrl,
-  accountName = '',
-  title,
-  details,
-  termsOfService
-}) {
-  const initials = accountName ? accountName.split(/\s+/).map(name => name[0]).join('') : undefined;
-  const avatarMarkup = connected ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Avatar_Avatar_js__WEBPACK_IMPORTED_MODULE_1__.Avatar, {
-    accessibilityLabel: "",
-    name: accountName,
-    initials: initials,
-    source: avatarUrl
-  }) : null;
-  let titleMarkup = null;
-
-  if (title) {
-    titleMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, title);
-  } else if (accountName) {
-    titleMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, accountName);
-  }
-
-  const detailsMarkup = details ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_2__.TextStyle, {
-    variation: "subdued"
-  }, details)) : null;
-  const termsOfServiceMarkup = termsOfService ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AccountConnection_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].TermsOfService
-  }, termsOfService) : null;
-  const actionElement = action ? (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_4__.buttonFrom)(action, {
-    primary: !connected
-  }) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card_Card_js__WEBPACK_IMPORTED_MODULE_5__.Card, {
-    sectioned: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SettingAction_SettingAction_js__WEBPACK_IMPORTED_MODULE_6__.SettingAction, {
-    action: actionElement
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_7__.Stack, null, avatarMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_7__.Stack.Item, {
-    fill: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _AccountConnection_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Content
-  }, titleMarkup, detailsMarkup)))), termsOfServiceMarkup);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/AccountConnection/AccountConnection.scss.js":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/AccountConnection/AccountConnection.scss.js ***!
-  \*******************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "TermsOfService": "Polaris-AccountConnection__TermsOfService",
-  "Content": "Polaris-AccountConnection__Content"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.js ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ActionList": () => (/* binding */ ActionList)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ActionList.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.scss.js");
-/* harmony import */ var _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Section/Section.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/components/Section/Section.js");
-
-
-
-
-
-function ActionList({
-  items,
-  sections = [],
-  actionRole,
-  onActionAnyItem
-}) {
-  let finalSections = [];
-
-  if (items) {
-    finalSections = [{
-      items
-    }, ...sections];
-  } else if (sections) {
-    finalSections = sections;
-  }
-
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_ActionList_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].ActionList);
-  const hasMultipleSections = finalSections.length > 1;
-  const Element = hasMultipleSections ? 'ul' : 'div';
-  const sectionMarkup = finalSections.map((section, index) => {
-    return section.items.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Section_Section_js__WEBPACK_IMPORTED_MODULE_3__.Section, {
-      key: section.title || index,
-      section: section,
-      hasMultipleSections: hasMultipleSections,
-      actionRole: actionRole,
-      onActionAnyItem: onActionAnyItem
-    }) : null;
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Element, {
-    className: className
-  }, sectionMarkup);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.scss.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.scss.js ***!
-  \*****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "ActionList": "Polaris-ActionList",
-  "Section-withoutTitle": "Polaris-ActionList__Section--withoutTitle",
-  "Actions": "Polaris-ActionList__Actions",
-  "Title": "Polaris-ActionList__Title",
-  "Section": "Polaris-ActionList__Section",
-  "Item": "Polaris-ActionList__Item",
-  "active": "Polaris-ActionList--active",
-  "destructive": "Polaris-ActionList--destructive",
-  "disabled": "Polaris-ActionList--disabled",
-  "Prefix": "Polaris-ActionList__Prefix",
-  "Suffix": "Polaris-ActionList__Suffix",
-  "Content": "Polaris-ActionList__Content",
-  "ContentBlock": "Polaris-ActionList__ContentBlock",
-  "ContentBlockInner": "Polaris-ActionList__ContentBlockInner",
-  "Text": "Polaris-ActionList__Text"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/components/Item/Item.js":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionList/components/Item/Item.js ***!
-  \**********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Item": () => (/* binding */ Item)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_focus_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../utilities/focus.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Scrollable/Scrollable.js */ "./node_modules/@shopify/polaris/dist/esm/components/Scrollable/Scrollable.js");
-/* harmony import */ var _UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../UnstyledLink/UnstyledLink.js */ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledLink/UnstyledLink.js");
-/* harmony import */ var _Badge_Badge_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Badge/Badge.js */ "./node_modules/@shopify/polaris/dist/esm/components/Badge/Badge.js");
-/* harmony import */ var _TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../TextStyle/TextStyle.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.js");
-/* harmony import */ var _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../ActionList.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.scss.js");
-
-
-
-
-
-
-
-
-
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_1__.Scrollable.ScrollTo, null);
-
-function Item({
-  id,
-  badge,
-  content,
-  accessibilityLabel,
-  helpText,
-  url,
-  onAction,
-  icon,
-  image,
-  prefix,
-  suffix,
-  disabled,
-  external,
-  destructive,
-  ellipsis,
-  active,
-  role
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Item, disabled && _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].disabled, destructive && _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].destructive, active && _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].active);
-  let prefixMarkup = null;
-
-  if (prefix) {
-    prefixMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Prefix
-    }, prefix);
-  } else if (icon) {
-    prefixMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Prefix
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_4__.Icon, {
-      source: icon
-    }));
-  } else if (image) {
-    prefixMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      role: "presentation",
-      className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Prefix,
-      style: {
-        backgroundImage: `url(${image}`
-      }
-    });
-  }
-
-  const contentText = ellipsis && content ? `${content}…` : content;
-  const contentMarkup = helpText ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].ContentBlock
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].ContentBlockInner
-  }, contentText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_5__.TextStyle, {
-    variation: "subdued"
-  }, helpText)) : contentText;
-  const badgeMarkup = badge && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Suffix
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Badge_Badge_js__WEBPACK_IMPORTED_MODULE_6__.Badge, {
-    status: badge.status
-  }, badge.content));
-  const suffixMarkup = suffix && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Suffix
-  }, suffix);
-  const textMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Text
-  }, contentMarkup);
-  const contentElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Content
-  }, prefixMarkup, textMarkup, badgeMarkup, suffixMarkup);
-  const scrollMarkup = active ? _ref : null;
-  const control = url ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_7__.UnstyledLink, {
-    id: id,
-    url: disabled ? null : url,
-    className: className,
-    external: external,
-    "aria-label": accessibilityLabel,
-    onClick: disabled ? null : onAction
-  }, contentElement) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    id: id,
-    type: "button",
-    className: className,
-    disabled: disabled,
-    "aria-label": accessibilityLabel,
-    onClick: onAction,
-    onMouseUp: _utilities_focus_js__WEBPACK_IMPORTED_MODULE_8__.handleMouseUpByBlurring
-  }, contentElement);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    role: role
-  }, scrollMarkup, control);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/components/Section/Section.js":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionList/components/Section/Section.js ***!
-  \****************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Section": () => (/* binding */ Section)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../ActionList.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.scss.js");
-/* harmony import */ var _Item_Item_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/components/Item/Item.js");
-
-
-
-
-
-function Section({
-  section,
-  hasMultipleSections,
-  actionRole,
-  onActionAnyItem
-}) {
-  const handleAction = itemOnAction => {
-    return () => {
-      if (itemOnAction) {
-        itemOnAction();
-      }
-
-      if (onActionAnyItem) {
-        onActionAnyItem();
-      }
-    };
-  };
-
-  const actionMarkup = section.items.map((_ref, index) => {
-    let {
-      content,
-      helpText,
-      onAction
-    } = _ref,
-        item = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectWithoutProperties)(_ref, ["content", "helpText", "onAction"]);
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Item_Item_js__WEBPACK_IMPORTED_MODULE_2__.Item, Object.assign({
-      key: `${content}-${index}`,
-      content: content,
-      helpText: helpText,
-      role: actionRole,
-      onAction: handleAction(onAction)
-    }, item));
-  });
-  const className = section.title ? undefined : _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Section-withoutTitle"];
-  const titleMarkup = section.title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Title
-  }, section.title) : null;
-  const sectionRole = actionRole === 'option' ? 'presentation' : undefined;
-  const sectionMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, titleMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Actions,
-    role: sectionRole
-  }, actionMarkup));
-  return hasMultipleSections ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    className: _ActionList_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Section
-  }, sectionMarkup) : sectionMarkup;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/ActionMenu.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/ActionMenu.js ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ActionMenu": () => (/* binding */ ActionMenu),
-/* harmony export */   "hasGroupsWithActions": () => (/* binding */ hasGroupsWithActions)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _components_Actions_Actions_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Actions/Actions.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/Actions/Actions.js");
-/* harmony import */ var _components_RollupActions_RollupActions_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/RollupActions/RollupActions.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/RollupActions/RollupActions.js");
-/* harmony import */ var _ActionMenu_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ActionMenu.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/ActionMenu.scss.js");
-
-
-
-
-
-
-function ActionMenu({
-  actions = [],
-  groups = [],
-  rollup
-}) {
-  if (actions.length === 0 && groups.length === 0) {
-    return null;
-  }
-
-  const actionMenuClassNames = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_ActionMenu_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].ActionMenu, rollup && _ActionMenu_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].rollup);
-  const rollupSections = groups.map(group => convertGroupToSection(group));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: actionMenuClassNames
-  }, rollup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_RollupActions_RollupActions_js__WEBPACK_IMPORTED_MODULE_3__.RollupActions, {
-    items: actions,
-    sections: rollupSections
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Actions_Actions_js__WEBPACK_IMPORTED_MODULE_4__.Actions, {
-    actions: actions,
-    groups: groups
-  }));
-}
-function hasGroupsWithActions(groups = []) {
-  return groups.length === 0 ? false : groups.some(group => group.actions.length > 0);
-}
-
-function convertGroupToSection({
-  title,
-  actions
-}) {
-  return {
-    title,
-    items: actions
-  };
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/ActionMenu.scss.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/ActionMenu.scss.js ***!
-  \*****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "ActionMenu": "Polaris-ActionMenu",
-  "rollup": "Polaris-ActionMenu--rollup"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/Actions/Actions.js":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/Actions/Actions.js ***!
-  \****************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Actions": () => (/* binding */ Actions)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
-/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../EventListener/EventListener.js */ "./node_modules/@shopify/polaris/dist/esm/components/EventListener/EventListener.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../ButtonGroup/ButtonGroup.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.js");
-/* harmony import */ var _SecondaryAction_SecondaryAction_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SecondaryAction/SecondaryAction.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/SecondaryAction/SecondaryAction.js");
-/* harmony import */ var _MenuGroup_MenuGroup_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../MenuGroup/MenuGroup.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/MenuGroup/MenuGroup.js");
-/* harmony import */ var _Actions_scss_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Actions.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/Actions/Actions.scss.js");
-
-
-
-
-
-
-
-
-
-
-const ACTION_SPACING = 8;
-function Actions({
-  actions = [],
-  groups = []
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_2__.useI18n)();
-  const actionsLayoutRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const menuGroupWidthRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
-  const availableWidthRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
-  const actionsAndGroupsLengthRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
-  const timesMeasured = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
-  const actionWidthsRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]);
-  const [activeMenuGroup, setActiveMenuGroup] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(undefined);
-  const [measuredActions, setMeasuredActions] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    showable: [],
-    rolledUp: []
-  });
-  const defaultRollupGroup = {
-    title: i18n.translate('Polaris.Actions.moreActions'),
-    actions: []
-  };
-  const lastMenuGroup = [...groups].pop();
-  const lastMenuGroupWidth = [...actionWidthsRef.current].pop() || 0;
-  const handleActionsOffsetWidth = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(width => {
-    actionWidthsRef.current = [...actionWidthsRef.current, width];
-  }, []);
-  const handleMenuGroupToggle = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(group => setActiveMenuGroup(activeMenuGroup ? undefined : group), [activeMenuGroup]);
-  const handleMenuGroupClose = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => setActiveMenuGroup(undefined), []);
-  const updateActions = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    let actionsAndGroups = [...actions, ...groups];
-
-    if (groups.length > 0) {
-      // We don't want to include actions from the last group
-      // since it is always rendered with its own actions
-      actionsAndGroups = [...actionsAndGroups].slice(0, actionsAndGroups.length - 1);
-    }
-
-    const showable = actionsAndGroups.slice(0, measuredActions.showable.length);
-    const rolledUp = actionsAndGroups.slice(measuredActions.showable.length, actionsAndGroups.length);
-    setMeasuredActions({
-      showable,
-      rolledUp
-    });
-  }, [actions, groups, measuredActions.showable.length]);
-  const measureActions = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    if (actionWidthsRef.current.length === 0 || availableWidthRef.current === 0) {
-      return;
-    }
-
-    const actionsAndGroups = [...actions, ...groups];
-
-    if (actionsAndGroups.length === 1) {
-      setMeasuredActions({
-        showable: actionsAndGroups,
-        rolledUp: []
-      });
-      return;
-    }
-
-    let currentAvailableWidth = availableWidthRef.current;
-    let newShowableActions = [];
-    let newRolledUpActions = [];
-    actionsAndGroups.forEach((action, index) => {
-      const canFitAction = actionWidthsRef.current[index] + menuGroupWidthRef.current + ACTION_SPACING + lastMenuGroupWidth <= currentAvailableWidth;
-
-      if (canFitAction) {
-        currentAvailableWidth -= actionWidthsRef.current[index] + ACTION_SPACING * 2;
-        newShowableActions = [...newShowableActions, action];
-      } else {
-        currentAvailableWidth = 0; // Find last group if it exists and always render it as a rolled up action below
-
-        if (action === lastMenuGroup) return;
-        newRolledUpActions = [...newRolledUpActions, action];
-      }
-    });
-    setMeasuredActions({
-      showable: newShowableActions,
-      rolledUp: newRolledUpActions
-    });
-    timesMeasured.current += 1;
-    actionsAndGroupsLengthRef.current = actionsAndGroups.length;
-  }, [actions, groups, lastMenuGroup, lastMenuGroupWidth]);
-  const handleResize = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default()(() => {
-    if (!actionsLayoutRef.current) return;
-    availableWidthRef.current = actionsLayoutRef.current.offsetWidth; // Set timesMeasured to 0 to allow re-measuring
-
-    timesMeasured.current = 0;
-    measureActions();
-  }, 50, {
-    leading: false,
-    trailing: true
-  }), [measureActions]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (!actionsLayoutRef.current) {
-      return;
-    }
-
-    availableWidthRef.current = actionsLayoutRef.current.offsetWidth;
-
-    if ( // Allow measuring twice
-    // This accounts for the initial paint and re-flow
-    timesMeasured.current >= 2 && [...actions, ...groups].length === actionsAndGroupsLengthRef.current) {
-      updateActions();
-      return;
-    }
-
-    measureActions();
-  }, [actions, groups, measureActions, updateActions]);
-  const actionsMarkup = actions.map(action => {
-    if (measuredActions.showable.length > 0 || measuredActions.rolledUp.includes(action)) return null;
-
-    const {
-      content,
-      onAction
-    } = action,
-          rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__.objectWithoutProperties)(action, ["content", "onAction"]);
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SecondaryAction_SecondaryAction_js__WEBPACK_IMPORTED_MODULE_4__.SecondaryAction, Object.assign({
-      key: content,
-      onClick: onAction
-    }, rest, {
-      getOffsetWidth: handleActionsOffsetWidth
-    }), content);
-  });
-  const rollUppableActionsMarkup = measuredActions.showable.length > 0 ? measuredActions.showable.map(action => action.content && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SecondaryAction_SecondaryAction_js__WEBPACK_IMPORTED_MODULE_4__.SecondaryAction, Object.assign({
-    key: action.content
-  }, action, {
-    getOffsetWidth: handleActionsOffsetWidth
-  }), action.content)) : null;
-  const filteredGroups = [...groups, defaultRollupGroup].filter(group => {
-    return groups.length === 0 ? group : group === lastMenuGroup || !measuredActions.rolledUp.some(rolledUpGroup => isMenuGroup(rolledUpGroup) && rolledUpGroup.title === group.title);
-  });
-  const groupsMarkup = filteredGroups.map(group => {
-    const {
-      title,
-      actions: groupActions
-    } = group,
-          rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__.objectWithoutProperties)(group, ["title", "actions"]);
-
-    const isDefaultGroup = group === defaultRollupGroup;
-    const isLastMenuGroup = group === lastMenuGroup;
-    const finalRolledUpActions = measuredActions.rolledUp.reduce((memo, action) => {
-      memo.push(...(isMenuGroup(action) ? action.actions : [action]));
-      return memo;
-    }, []);
-
-    if (!isDefaultGroup && !isLastMenuGroup) {
-      // Render a normal MenuGroup with just its actions
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_MenuGroup_MenuGroup_js__WEBPACK_IMPORTED_MODULE_5__.MenuGroup, Object.assign({
-        key: title,
-        title: title,
-        active: title === activeMenuGroup,
-        actions: groupActions
-      }, rest, {
-        onOpen: handleMenuGroupToggle,
-        onClose: handleMenuGroupClose,
-        getOffsetWidth: handleActionsOffsetWidth
-      }));
-    } else if (!isDefaultGroup && isLastMenuGroup) {
-      // render the last, rollup group with its actions and finalRolledupActions
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_MenuGroup_MenuGroup_js__WEBPACK_IMPORTED_MODULE_5__.MenuGroup, Object.assign({
-        key: title,
-        title: title,
-        active: title === activeMenuGroup,
-        actions: [...finalRolledUpActions, ...groupActions]
-      }, rest, {
-        onOpen: handleMenuGroupToggle,
-        onClose: handleMenuGroupClose,
-        getOffsetWidth: handleActionsOffsetWidth
-      }));
-    } else if (isDefaultGroup && groups.length === 0 && finalRolledUpActions.length) {
-      // Render the default group to rollup into if one does not exist
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_MenuGroup_MenuGroup_js__WEBPACK_IMPORTED_MODULE_5__.MenuGroup, Object.assign({
-        key: title,
-        title: title,
-        active: title === activeMenuGroup,
-        actions: finalRolledUpActions
-      }, rest, {
-        onOpen: handleMenuGroupToggle,
-        onClose: handleMenuGroupClose,
-        getOffsetWidth: handleActionsOffsetWidth
-      }));
-    }
-  });
-  const groupedActionsMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_6__.ButtonGroup, {
-    spacing: "extraTight"
-  }, rollUppableActionsMarkup, actionsMarkup, groupsMarkup);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Actions_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].ActionsLayout,
-    ref: actionsLayoutRef
-  }, groupedActionsMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_8__.EventListener, {
-    event: "resize",
-    handler: handleResize
-  }));
-}
-
-function isMenuGroup(actionOrMenuGroup) {
-  return 'title' in actionOrMenuGroup;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/Actions/Actions.scss.js":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/Actions/Actions.scss.js ***!
-  \*********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "ActionsLayout": "Polaris-ActionMenu-Actions__ActionsLayout"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/MenuGroup/MenuGroup.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/MenuGroup/MenuGroup.js ***!
-  \********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MenuGroup": () => (/* binding */ MenuGroup)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Popover_Popover_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Popover/Popover.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.js");
-/* harmony import */ var _ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../ActionList/ActionList.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.js");
-/* harmony import */ var _SecondaryAction_SecondaryAction_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../SecondaryAction/SecondaryAction.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/SecondaryAction/SecondaryAction.js");
-/* harmony import */ var _MenuGroup_scss_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MenuGroup.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/MenuGroup/MenuGroup.scss.js");
-
-
-
-
-
-
-function MenuGroup({
-  accessibilityLabel,
-  active,
-  actions,
-  details,
-  title,
-  icon,
-  onClose,
-  onOpen,
-  getOffsetWidth
-}) {
-  const handleClose = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    onClose(title);
-  }, [onClose, title]);
-  const handleOpen = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    onOpen(title);
-  }, [onOpen, title]);
-  const handleOffsetWidth = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(width => {
-    if (!getOffsetWidth) return;
-    getOffsetWidth(width);
-  }, [getOffsetWidth]);
-  const popoverActivator = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SecondaryAction_SecondaryAction_js__WEBPACK_IMPORTED_MODULE_1__.SecondaryAction, {
-    disclosure: true,
-    icon: icon,
-    accessibilityLabel: accessibilityLabel,
-    onClick: handleOpen,
-    getOffsetWidth: handleOffsetWidth
-  }, title);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Popover_Popover_js__WEBPACK_IMPORTED_MODULE_2__.Popover, {
-    active: Boolean(active),
-    activator: popoverActivator,
-    preferredAlignment: "left",
-    onClose: handleClose,
-    hideOnPrint: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_3__.ActionList, {
-    items: actions,
-    onActionAnyItem: handleClose
-  }), details && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _MenuGroup_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Details
-  }, details));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/MenuGroup/MenuGroup.scss.js":
-/*!*************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/MenuGroup/MenuGroup.scss.js ***!
-  \*************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Details": "Polaris-ActionMenu-MenuGroup__Details"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/RollupActions/RollupActions.js":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/RollupActions/RollupActions.js ***!
-  \****************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RollupActions": () => (/* binding */ RollupActions)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/HorizontalDotsMinor.svg.mjs");
-/* harmony import */ var _Popover_Popover_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Popover/Popover.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.js");
-/* harmony import */ var _ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../ActionList/ActionList.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.js");
-/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Button/Button.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js");
-/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
-/* harmony import */ var _RollupActions_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RollupActions.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/RollupActions/RollupActions.scss.js");
-
-
-
-
-
-
-
-
-
-function RollupActions({
-  items = [],
-  sections = []
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useI18n)();
-  const {
-    value: rollupOpen,
-    toggle: toggleRollupOpen
-  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__.useToggle)(false);
-
-  if (items.length === 0 && sections.length === 0) {
-    return null;
-  }
-
-  const activatorMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _RollupActions_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].RollupActivator
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_4__.Button, {
-    outline: true,
-    icon: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_5__.S,
-    accessibilityLabel: i18n.translate('Polaris.ActionMenu.RollupActions.rollupButton'),
-    onClick: toggleRollupOpen
-  }));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Popover_Popover_js__WEBPACK_IMPORTED_MODULE_6__.Popover, {
-    active: rollupOpen,
-    activator: activatorMarkup,
-    preferredAlignment: "right",
-    onClose: toggleRollupOpen,
-    hideOnPrint: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_7__.ActionList, {
-    items: items,
-    sections: sections,
-    onActionAnyItem: toggleRollupOpen
-  }));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/RollupActions/RollupActions.scss.js":
-/*!*********************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/RollupActions/RollupActions.scss.js ***!
-  \*********************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "RollupActivator": "Polaris-ActionMenu-RollupActions__RollupActivator"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/SecondaryAction/SecondaryAction.js":
-/*!********************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/SecondaryAction/SecondaryAction.js ***!
-  \********************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SecondaryAction": () => (/* binding */ SecondaryAction)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Button/Button.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js");
-/* harmony import */ var _SecondaryAction_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SecondaryAction.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/SecondaryAction/SecondaryAction.scss.js");
-
-
-
-
-
-function SecondaryAction(_ref) {
-  let {
-    children,
-    onAction,
-    getOffsetWidth
-  } = _ref,
-      rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectWithoutProperties)(_ref, ["children", "onAction", "getOffsetWidth"]);
-
-  const secondaryActionsRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    var _secondaryActionsRef$;
-
-    if (!getOffsetWidth || !secondaryActionsRef.current) return;
-    getOffsetWidth((_secondaryActionsRef$ = secondaryActionsRef.current) == null ? void 0 : _secondaryActionsRef$.offsetWidth);
-  }, [getOffsetWidth]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _SecondaryAction_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].SecondaryAction,
-    ref: secondaryActionsRef
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_3__.Button, Object.assign({
-    onClick: onAction
-  }, rest), children));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/SecondaryAction/SecondaryAction.scss.js":
-/*!*************************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/components/SecondaryAction/SecondaryAction.scss.js ***!
-  \*************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "SecondaryAction": "Polaris-ActionMenu-SecondaryAction"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
 /***/ "./node_modules/@shopify/polaris/dist/esm/components/AppProvider/AppProvider.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@shopify/polaris/dist/esm/components/AppProvider/AppProvider.js ***!
@@ -3194,164 +2221,6 @@ class AppProvider extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
 }
 
 
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Avatar/Avatar.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Avatar/Avatar.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Avatar": () => (/* binding */ Avatar),
-/* harmony export */   "STYLE_CLASSES": () => (/* binding */ STYLE_CLASSES)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_use_is_after_initial_mount_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/use-is-after-initial-mount.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-is-after-initial-mount.js");
-/* harmony import */ var _Image_Image_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Image/Image.js */ "./node_modules/@shopify/polaris/dist/esm/components/Image/Image.js");
-/* harmony import */ var _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Avatar.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Avatar/Avatar.scss.js");
-
-
-
-
-
-
-
-var Status;
-
-(function (Status) {
-  Status["Pending"] = "PENDING";
-  Status["Loaded"] = "LOADED";
-  Status["Errored"] = "ERRORED";
-})(Status || (Status = {}));
-
-const STYLE_CLASSES = ['one', 'two', 'three', 'four', 'five'];
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-  fill: "currentColor",
-  d: "M8.28 27.5A14.95 14.95 0 0120 21.8c4.76 0 8.97 2.24 11.72 5.7a14.02 14.02 0 01-8.25 5.91 14.82 14.82 0 01-6.94 0 14.02 14.02 0 01-8.25-5.9zM13.99 12.78a6.02 6.02 0 1112.03 0 6.02 6.02 0 01-12.03 0z"
-});
-
-function Avatar({
-  name,
-  source,
-  onError,
-  initials,
-  customer,
-  size = 'medium',
-  accessibilityLabel
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useI18n)();
-  const isAfterInitialMount = (0,_utilities_use_is_after_initial_mount_js__WEBPACK_IMPORTED_MODULE_2__.useIsAfterInitialMount)();
-
-  function styleClass(name) {
-    return name ? STYLE_CLASSES[name.charCodeAt(0) % STYLE_CLASSES.length] : STYLE_CLASSES[0];
-  }
-
-  const [status, setStatus] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(Status.Pending); // If the source changes, set the status back to pending
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    setStatus(Status.Pending);
-  }, [source]);
-  const handleError = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    setStatus(Status.Errored);
-
-    if (onError) {
-      onError();
-    }
-  }, [onError]);
-  const handleLoad = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    setStatus(Status.Loaded);
-  }, []);
-  const hasImage = source && status !== Status.Errored;
-  const nameString = name || initials;
-  let label;
-
-  if (accessibilityLabel) {
-    label = accessibilityLabel;
-  } else if (name) {
-    label = name;
-  } else if (initials) {
-    const splitInitials = initials.split('').join(' ');
-    label = i18n.translate('Polaris.Avatar.labelWithInitials', {
-      initials: splitInitials
-    });
-  } else {
-    label = i18n.translate('Polaris.Avatar.label');
-  }
-
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_3__.classNames)(_Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Avatar, size && _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_3__.variationName)('size', size)], !customer && _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_3__.variationName)('style', styleClass(nameString))], (hasImage || initials && initials.length === 0) && status !== Status.Loaded && _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, hasImage && _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].hasImage);
-  const imageMarkUp = source && isAfterInitialMount && status !== Status.Errored ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Image_Image_js__WEBPACK_IMPORTED_MODULE_5__.Image, {
-    className: _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Image,
-    source: source,
-    alt: "",
-    role: "presentation",
-    onLoad: handleLoad,
-    onError: handleError
-  }) : null; // Use `dominant-baseline: central` instead of `dy` when Edge supports it.
-
-  const verticalOffset = '0.35em';
-  const avatarBody = customer || !initials ? _ref : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("text", {
-    x: "50%",
-    y: "50%",
-    dy: verticalOffset,
-    fill: "currentColor",
-    fontSize: "20",
-    textAnchor: "middle"
-  }, initials);
-  const svgMarkup = !hasImage ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Initials
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
-    className: _Avatar_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Svg,
-    viewBox: "0 0 40 40"
-  }, avatarBody)) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    "aria-label": label,
-    role: "img",
-    className: className
-  }, svgMarkup, imageMarkUp);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Avatar/Avatar.scss.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Avatar/Avatar.scss.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Avatar": "Polaris-Avatar",
-  "hidden": "Polaris-Avatar--hidden",
-  "sizeSmall": "Polaris-Avatar--sizeSmall",
-  "sizeMedium": "Polaris-Avatar--sizeMedium",
-  "sizeLarge": "Polaris-Avatar--sizeLarge",
-  "styleOne": "Polaris-Avatar--styleOne",
-  "styleTwo": "Polaris-Avatar--styleTwo",
-  "styleThree": "Polaris-Avatar--styleThree",
-  "styleFour": "Polaris-Avatar--styleFour",
-  "styleFive": "Polaris-Avatar--styleFive",
-  "hasImage": "Polaris-Avatar--hasImage",
-  "Image": "Polaris-Avatar__Image",
-  "Initials": "Polaris-Avatar__Initials",
-  "Svg": "Polaris-Avatar__Svg"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
 
 
 /***/ }),
@@ -3503,1174 +2372,92 @@ var styles = {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Breadcrumbs/Breadcrumbs.js":
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Collapsible/Collapsible.js":
 /*!**************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Breadcrumbs/Breadcrumbs.js ***!
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Collapsible/Collapsible.js ***!
   \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Breadcrumbs": () => (/* binding */ Breadcrumbs)
+/* harmony export */   "Collapsible": () => (/* binding */ Collapsible)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/ArrowLeftMinor.svg.mjs");
-/* harmony import */ var _utilities_focus_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utilities/focus.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _VisuallyHidden_VisuallyHidden_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../VisuallyHidden/VisuallyHidden.js */ "./node_modules/@shopify/polaris/dist/esm/components/VisuallyHidden/VisuallyHidden.js");
-/* harmony import */ var _UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../UnstyledLink/UnstyledLink.js */ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledLink/UnstyledLink.js");
-/* harmony import */ var _Breadcrumbs_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Breadcrumbs.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Breadcrumbs/Breadcrumbs.scss.js");
-
-
-
-
-
-
-
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-  source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S
-});
-
-function Breadcrumbs({
-  breadcrumbs
-}) {
-  const breadcrumb = breadcrumbs[breadcrumbs.length - 1];
-
-  if (breadcrumb == null) {
-    return null;
-  }
-
-  const {
-    content
-  } = breadcrumb;
-  const contentMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Breadcrumbs_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].ContentWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Breadcrumbs_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Icon
-  }, _ref), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_VisuallyHidden_VisuallyHidden_js__WEBPACK_IMPORTED_MODULE_4__.VisuallyHidden, null, content));
-  const breadcrumbMarkup = 'url' in breadcrumb ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_5__.UnstyledLink, {
-    key: content,
-    url: breadcrumb.url,
-    className: _Breadcrumbs_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Breadcrumb,
-    onMouseUp: _utilities_focus_js__WEBPACK_IMPORTED_MODULE_6__.handleMouseUpByBlurring,
-    "aria-label": breadcrumb.accessibilityLabel
-  }, contentMarkup) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    key: content,
-    className: _Breadcrumbs_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Breadcrumb,
-    onClick: breadcrumb.onAction,
-    onMouseUp: _utilities_focus_js__WEBPACK_IMPORTED_MODULE_6__.handleMouseUpByBlurring,
-    type: "button",
-    "aria-label": breadcrumb.accessibilityLabel
-  }, contentMarkup);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
-    role: "navigation"
-  }, breadcrumbMarkup);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Breadcrumbs/Breadcrumbs.scss.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Breadcrumbs/Breadcrumbs.scss.js ***!
-  \*******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Breadcrumb": "Polaris-Breadcrumbs__Breadcrumb",
-  "ContentWrapper": "Polaris-Breadcrumbs__ContentWrapper",
-  "Icon": "Polaris-Breadcrumbs__Icon",
-  "Content": "Polaris-Breadcrumbs__Content"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Button": () => (/* binding */ Button)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/CaretDownMinor.svg.mjs");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/SelectMinor.svg.mjs");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/CaretUpMinor.svg.mjs");
-/* harmony import */ var _utilities_focus_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utilities/focus.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _Spinner_Spinner_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Spinner/Spinner.js */ "./node_modules/@shopify/polaris/dist/esm/components/Spinner/Spinner.js");
-/* harmony import */ var _Popover_Popover_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Popover/Popover.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.js");
-/* harmony import */ var _ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ActionList/ActionList.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.js");
-/* harmony import */ var _UnstyledButton_UnstyledButton_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../UnstyledButton/UnstyledButton.js */ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledButton/UnstyledButton.js");
-/* harmony import */ var _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Button.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.scss.js");
-
-
-
-
-
-
-
-
-
-
-
-
-const DEFAULT_SIZE = 'medium';
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-  source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S
-});
-
-function Button({
-  id,
-  children,
-  url,
-  disabled,
-  external,
-  download,
-  submit,
-  loading,
-  pressed,
-  accessibilityLabel,
-  role,
-  ariaControls,
-  ariaExpanded,
-  ariaDescribedBy,
-  onClick,
-  onFocus,
-  onBlur,
-  onKeyDown,
-  onKeyPress,
-  onKeyUp,
-  onMouseEnter,
-  onTouchStart,
-  icon,
-  primary,
-  outline,
-  destructive,
-  disclosure,
-  plain,
-  monochrome,
-  removeUnderline,
-  size = DEFAULT_SIZE,
-  textAlign,
-  fullWidth,
-  connectedDisclosure
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_3__.useI18n)();
-  const isDisabled = disabled || loading;
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Button, primary && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].primary, outline && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].outline, destructive && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].destructive, isDisabled && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].disabled, loading && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].loading, plain && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].plain, pressed && !disabled && !url && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].pressed, monochrome && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].monochrome, size && size !== DEFAULT_SIZE && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.variationName)('size', size)], textAlign && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.variationName)('textAlign', textAlign)], fullWidth && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].fullWidth, icon && children == null && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].iconOnly, connectedDisclosure && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].connectedDisclosure, removeUnderline && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].removeUnderline);
-  const disclosureMarkup = disclosure ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Icon
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].DisclosureIcon, loading && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].hidden)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-    source: loading ? 'placeholder' : getDisclosureIconSource(disclosure)
-  }))) : null;
-  const iconSource = isIconSource(icon) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-    source: loading ? 'placeholder' : icon
-  }) : icon;
-  const iconMarkup = iconSource ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Icon, loading && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].hidden)
-  }, iconSource) : null;
-  const childMarkup = children ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Text, removeUnderline && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].removeUnderline) // Fixes Safari bug that doesn't re-render button text to correct color
-    ,
-    key: disabled ? 'text-disabled' : 'text'
-  }, children) : null;
-  const spinnerSVGMarkup = loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Spinner
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Spinner_Spinner_js__WEBPACK_IMPORTED_MODULE_6__.Spinner, {
-    size: "small",
-    accessibilityLabel: i18n.translate('Polaris.Button.spinnerAccessibilityLabel')
-  })) : null;
-  const [disclosureActive, setDisclosureActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const toggleDisclosureActive = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    setDisclosureActive(disclosureActive => !disclosureActive);
-  }, []);
-  let connectedDisclosureMarkup;
-
-  if (connectedDisclosure) {
-    const connectedDisclosureClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Button, primary && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].primary, outline && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].outline, size && size !== DEFAULT_SIZE && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.variationName)('size', size)], textAlign && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.variationName)('textAlign', textAlign)], destructive && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].destructive, connectedDisclosure.disabled && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].disabled, _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].iconOnly, _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].ConnectedDisclosure, monochrome && _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].monochrome);
-    const defaultLabel = i18n.translate('Polaris.Button.connectedDisclosureAccessibilityLabel');
-    const {
-      disabled: _disabled,
-      accessibilityLabel: disclosureLabel = defaultLabel
-    } = connectedDisclosure;
-    const connectedDisclosureActivator = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-      type: "button",
-      className: connectedDisclosureClassName,
-      disabled: _disabled,
-      "aria-label": disclosureLabel,
-      "aria-describedby": ariaDescribedBy,
-      onClick: toggleDisclosureActive,
-      onMouseUp: _utilities_focus_js__WEBPACK_IMPORTED_MODULE_7__.handleMouseUpByBlurring
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Icon
-    }, _ref));
-    connectedDisclosureMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Popover_Popover_js__WEBPACK_IMPORTED_MODULE_8__.Popover, {
-      active: disclosureActive,
-      onClose: toggleDisclosureActive,
-      activator: connectedDisclosureActivator,
-      preferredAlignment: "right"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_9__.ActionList, {
-      items: connectedDisclosure.actions,
-      onActionAnyItem: toggleDisclosureActive
-    }));
-  }
-
-  const commonProps = {
-    id,
-    className,
-    accessibilityLabel,
-    ariaDescribedBy,
-    role,
-    onClick,
-    onFocus,
-    onBlur,
-    onMouseUp: _utilities_focus_js__WEBPACK_IMPORTED_MODULE_7__.handleMouseUpByBlurring,
-    onMouseEnter,
-    onTouchStart
-  };
-  const linkProps = {
-    url,
-    external,
-    download
-  };
-  const actionProps = {
-    submit,
-    disabled: isDisabled,
-    loading,
-    ariaControls,
-    ariaExpanded,
-    pressed,
-    onKeyDown,
-    onKeyUp,
-    onKeyPress
-  };
-  const buttonMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledButton_UnstyledButton_js__WEBPACK_IMPORTED_MODULE_10__.UnstyledButton, Object.assign({}, commonProps, linkProps, actionProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Content
-  }, spinnerSVGMarkup, iconMarkup, childMarkup, disclosureMarkup));
-  return connectedDisclosureMarkup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Button_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].ConnectedDisclosureWrapper
-  }, buttonMarkup, connectedDisclosureMarkup) : buttonMarkup;
-}
-
-function isIconSource(x) {
-  return typeof x === 'string' || typeof x === 'object' && x.body || typeof x === 'function';
-}
-
-function getDisclosureIconSource(disclosure) {
-  if (disclosure === 'select') {
-    return _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_11__.S;
-  }
-
-  return disclosure === 'up' ? _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_12__.S : _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.scss.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Button/Button.scss.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Button": "Polaris-Button",
-  "pressed": "Polaris-Button--pressed",
-  "disabled": "Polaris-Button--disabled",
-  "connectedDisclosure": "Polaris-Button--connectedDisclosure",
-  "Content": "Polaris-Button__Content",
-  "plain": "Polaris-Button--plain",
-  "textAlignLeft": "Polaris-Button--textAlignLeft",
-  "textAlignCenter": "Polaris-Button--textAlignCenter",
-  "textAlignRight": "Polaris-Button--textAlignRight",
-  "Icon": "Polaris-Button__Icon",
-  "fullWidth": "Polaris-Button--fullWidth",
-  "hidden": "Polaris-Button--hidden",
-  "Spinner": "Polaris-Button__Spinner",
-  "primary": "Polaris-Button--primary",
-  "destructive": "Polaris-Button--destructive",
-  "outline": "Polaris-Button--outline",
-  "loading": "Polaris-Button--loading",
-  "removeUnderline": "Polaris-Button--removeUnderline",
-  "iconOnly": "Polaris-Button--iconOnly",
-  "sizeSlim": "Polaris-Button--sizeSlim",
-  "sizeLarge": "Polaris-Button--sizeLarge",
-  "monochrome": "Polaris-Button--monochrome",
-  "Text": "Polaris-Button__Text",
-  "ConnectedDisclosureWrapper": "Polaris-Button__ConnectedDisclosureWrapper",
-  "ConnectedDisclosure": "Polaris-Button__ConnectedDisclosure"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "buttonFrom": () => (/* binding */ buttonFrom),
-/* harmony export */   "buttonsFrom": () => (/* binding */ buttonsFrom)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Button.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js");
-
-
-
-
-function buttonsFrom(actions, overrides = {}) {
-  if (Array.isArray(actions)) {
-    return actions.map((action, index) => buttonFrom(action, overrides, index));
-  } else {
-    const action = actions;
-    return buttonFrom(action, overrides);
-  }
-}
-function buttonFrom(_ref, overrides, key) {
-  let {
-    content,
-    onAction
-  } = _ref,
-      action = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectWithoutProperties)(_ref, ["content", "onAction"]);
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_js__WEBPACK_IMPORTED_MODULE_2__.Button, Object.assign({
-    key: key,
-    onClick: onAction
-  }, action, overrides), content);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.js ***!
-  \**************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ButtonGroup": () => (/* binding */ ButtonGroup)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
 /* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_components_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/components.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js");
-/* harmony import */ var _ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ButtonGroup.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.scss.js");
-/* harmony import */ var _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/components/Item/Item.js");
+/* harmony import */ var _Collapsible_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Collapsible.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Collapsible/Collapsible.scss.js");
 
 
 
 
 
-
-function ButtonGroup({
-  children,
-  spacing,
-  segmented,
-  fullWidth,
-  connectedTop
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].ButtonGroup, spacing && _ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"][spacing], segmented && _ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].segmented, fullWidth && _ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].fullWidth);
-  const contents = (0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_3__.elementChildren)(children).map((child, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Item_Item_js__WEBPACK_IMPORTED_MODULE_4__.Item, {
-    button: child,
-    key: index
-  }));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className,
-    "data-buttongroup-segmented": segmented,
-    "data-buttongroup-connected-top": connectedTop,
-    "data-buttongroup-full-width": fullWidth
-  }, contents);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.scss.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.scss.js ***!
-  \*******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "ButtonGroup": "Polaris-ButtonGroup",
-  "Item": "Polaris-ButtonGroup__Item",
-  "Item-plain": "Polaris-ButtonGroup__Item--plain",
-  "segmented": "Polaris-ButtonGroup--segmented",
-  "Item-focused": "Polaris-ButtonGroup__Item--focused",
-  "fullWidth": "Polaris-ButtonGroup--fullWidth",
-  "extraTight": "Polaris-ButtonGroup--extraTight",
-  "tight": "Polaris-ButtonGroup--tight",
-  "loose": "Polaris-ButtonGroup--loose"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/components/Item/Item.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/components/Item/Item.js ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Item": () => (/* binding */ Item)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
-/* harmony import */ var _ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../ButtonGroup.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.scss.js");
-
-
-
-
-
-function Item({
-  button
-}) {
-  const {
-    value: focused,
-    setTrue: forceTrueFocused,
-    setFalse: forceFalseFocused
-  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_1__.useToggle)(false);
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Item, focused && _ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Item-focused"], button.props.plain && _ButtonGroup_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Item-plain"]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className,
-    onFocus: forceTrueFocused,
-    onBlur: forceFalseFocused
-  }, button);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Card/Card.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Card": () => (/* binding */ Card)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _Popover_Popover_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Popover/Popover.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.js");
-/* harmony import */ var _ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../ActionList/ActionList.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionList/ActionList.js");
-/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Button/Button.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js");
-/* harmony import */ var _Button_utils_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Button/utils.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js");
-/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
-/* harmony import */ var _utilities_within_content_context_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utilities/within-content-context.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/within-content-context.js");
-/* harmony import */ var _ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../ButtonGroup/ButtonGroup.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.js");
-/* harmony import */ var _Card_scss_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Card.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.scss.js");
-/* harmony import */ var _components_Header_Header_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Header/Header.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/components/Header/Header.js");
-/* harmony import */ var _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Section/Section.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/components/Section/Section.js");
-/* harmony import */ var _components_Subsection_Subsection_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/Subsection/Subsection.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/components/Subsection/Subsection.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// TypeScript can't generate types that correctly infer the typing of
-// subcomponents so explicitly state the subcomponents in the type definition.
-// Letting this be implicit works in this project but fails in projects that use
-// generated *.d.ts files.
-const Card = function Card({
-  children,
-  hideOnPrint,
-  title,
-  subdued,
-  sectioned,
-  actions,
-  primaryFooterAction,
-  secondaryFooterActions,
-  secondaryFooterActionsDisclosureText,
-  footerActionAlignment = 'right'
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useI18n)();
-  const {
-    value: secondaryActionsPopoverOpen,
-    toggle: toggleSecondaryActionsPopoverOpen
-  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__.useToggle)(false);
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_3__.classNames)(_Card_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Card, subdued && _Card_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].subdued, hideOnPrint && _Card_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].hideOnPrint);
-  const headerMarkup = title || actions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header_Header_js__WEBPACK_IMPORTED_MODULE_5__.Header, {
-    actions: actions,
-    title: title
-  }) : null;
-  const content = sectioned ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Section_Section_js__WEBPACK_IMPORTED_MODULE_6__.Section, null, children) : children;
-  const primaryFooterActionMarkup = primaryFooterAction ? (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_7__.buttonFrom)(primaryFooterAction, {
-    primary: true
-  }) : null;
-  let secondaryFooterActionsMarkup = null;
-
-  if (secondaryFooterActions && secondaryFooterActions.length) {
-    if (secondaryFooterActions.length === 1) {
-      secondaryFooterActionsMarkup = (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_7__.buttonFrom)(secondaryFooterActions[0]);
-    } else {
-      secondaryFooterActionsMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Popover_Popover_js__WEBPACK_IMPORTED_MODULE_8__.Popover, {
-        active: secondaryActionsPopoverOpen,
-        activator: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_9__.Button, {
-          disclosure: true,
-          onClick: toggleSecondaryActionsPopoverOpen
-        }, secondaryFooterActionsDisclosureText || i18n.translate('Polaris.Common.more')),
-        onClose: toggleSecondaryActionsPopoverOpen
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ActionList_ActionList_js__WEBPACK_IMPORTED_MODULE_10__.ActionList, {
-        items: secondaryFooterActions
-      })));
-    }
-  }
-
-  const footerMarkup = primaryFooterActionMarkup || secondaryFooterActionsMarkup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_3__.classNames)(_Card_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Footer, footerActionAlignment === 'left' && _Card_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].LeftJustified)
-  }, footerActionAlignment === 'right' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_11__.ButtonGroup, null, secondaryFooterActionsMarkup, primaryFooterActionMarkup) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_11__.ButtonGroup, null, primaryFooterActionMarkup, secondaryFooterActionsMarkup)) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_within_content_context_js__WEBPACK_IMPORTED_MODULE_12__.WithinContentContext.Provider, {
-    value: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, headerMarkup, content, footerMarkup));
-};
-Card.Header = _components_Header_Header_js__WEBPACK_IMPORTED_MODULE_5__.Header;
-Card.Section = _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_6__.Section;
-Card.Subsection = _components_Subsection_Subsection_js__WEBPACK_IMPORTED_MODULE_13__.Subsection;
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.scss.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Card/Card.scss.js ***!
-  \*****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Card": "Polaris-Card",
-  "subdued": "Polaris-Card--subdued",
-  "Section-hideOnPrint": "Polaris-Card__Section--hideOnPrint",
-  "hideOnPrint": "Polaris-Card--hideOnPrint",
-  "Header": "Polaris-Card__Header",
-  "Section": "Polaris-Card__Section",
-  "Section-fullWidth": "Polaris-Card__Section--fullWidth",
-  "Section-flush": "Polaris-Card__Section--flush",
-  "Section-subdued": "Polaris-Card__Section--subdued",
-  "SectionHeader": "Polaris-Card__SectionHeader",
-  "Subsection": "Polaris-Card__Subsection",
-  "Footer": "Polaris-Card__Footer",
-  "LeftJustified": "Polaris-Card__LeftJustified"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Card/components/Header/Header.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Card/components/Header/Header.js ***!
-  \********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Header": () => (/* binding */ Header)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Button_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Button/utils.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js");
-/* harmony import */ var _ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../ButtonGroup/ButtonGroup.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.js");
-/* harmony import */ var _Stack_Stack_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Stack/Stack.js */ "./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.js");
-/* harmony import */ var _Heading_Heading_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Heading/Heading.js */ "./node_modules/@shopify/polaris/dist/esm/components/Heading/Heading.js");
-/* harmony import */ var _Card_scss_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Card.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.scss.js");
-
-
-
-
-
-
-
-function Header({
-  children,
-  title,
-  actions
-}) {
-  const actionMarkup = actions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_1__.ButtonGroup, null, (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_2__.buttonsFrom)(actions, {
-    plain: true
-  })) : null;
-  const titleMarkup = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(title) ? title : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Heading_Heading_js__WEBPACK_IMPORTED_MODULE_3__.Heading, null, title);
-  const headingMarkup = actionMarkup || children ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_4__.Stack, {
-    alignment: "baseline"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_4__.Stack.Item, {
-    fill: true
-  }, titleMarkup), actionMarkup, children) : titleMarkup;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Card_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Header
-  }, headingMarkup);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Card/components/Section/Section.js":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Card/components/Section/Section.js ***!
-  \**********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Section": () => (/* binding */ Section)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _Button_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Button/utils.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js");
-/* harmony import */ var _ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../ButtonGroup/ButtonGroup.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.js");
-/* harmony import */ var _Stack_Stack_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Stack/Stack.js */ "./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.js");
-/* harmony import */ var _Card_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Card.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.scss.js");
-/* harmony import */ var _Subheading_Subheading_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Subheading/Subheading.js */ "./node_modules/@shopify/polaris/dist/esm/components/Subheading/Subheading.js");
-
-
-
-
-
-
-
-
-function Section({
-  children,
-  title,
-  subdued,
-  flush,
-  fullWidth,
-  actions,
-  hideOnPrint
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Card_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Section, flush && _Card_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-flush"], subdued && _Card_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-subdued"], fullWidth && _Card_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-fullWidth"], hideOnPrint && _Card_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-hideOnPrint"]);
-  const actionMarkup = actions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_3__.ButtonGroup, null, (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_4__.buttonsFrom)(actions, {
-    plain: true
-  })) : null;
-  const titleMarkup = typeof title === 'string' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Subheading_Subheading_js__WEBPACK_IMPORTED_MODULE_5__.Subheading, null, title) : title;
-  const titleAreaMarkup = titleMarkup || actionMarkup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Card_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].SectionHeader
-  }, actionMarkup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_6__.Stack, {
-    alignment: "baseline"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Stack_Stack_js__WEBPACK_IMPORTED_MODULE_6__.Stack.Item, {
-    fill: true
-  }, titleMarkup), actionMarkup) : titleMarkup) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, titleAreaMarkup, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Card/components/Subsection/Subsection.js":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Card/components/Subsection/Subsection.js ***!
-  \****************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Subsection": () => (/* binding */ Subsection)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Card_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Card.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.scss.js");
-
-
-
-function Subsection({
+function Collapsible({
+  id,
+  expandOnPrint,
+  open,
+  transition,
   children
 }) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Card_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Subsection
-  }, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Checkbox/Checkbox.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Checkbox/Checkbox.js ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Checkbox": () => (/* binding */ Checkbox)
-/* harmony export */ });
-/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../types.js */ "./node_modules/@shopify/polaris/dist/esm/types.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/MinusMinor.svg.mjs");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/TickSmallMinor.svg.mjs");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
-/* harmony import */ var _InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../InlineError/InlineError.js */ "./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.js");
-/* harmony import */ var _Choice_Choice_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Choice/Choice.js */ "./node_modules/@shopify/polaris/dist/esm/components/Choice/Choice.js");
-/* harmony import */ var _Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Checkbox.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Checkbox/Checkbox.scss.js");
-
-
-
-
-
-
-
-
-
-
-
-const Checkbox = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(function Checkbox({
-  ariaDescribedBy: ariaDescribedByProp,
-  label,
-  labelHidden,
-  checked = false,
-  helpText,
-  disabled,
-  id: idProp,
-  name,
-  value,
-  error,
-  onChange,
-  onFocus,
-  onBlur
-}, ref) {
-  const inputNode = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const id = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useUniqueId)('Checkbox', idProp);
-  const {
-    value: mouseOver,
-    setTrue: handleMouseOver,
-    setFalse: handleMouseOut
-  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__.useToggle)(false);
-  const [keyFocused, setKeyFocused] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref, () => ({
-    focus: () => {
-      if (inputNode.current) {
-        inputNode.current.focus();
-      }
-    }
-  }));
-
-  const handleBlur = () => {
-    onBlur && onBlur();
-    setKeyFocused(false);
-  };
-
-  const handleInput = () => {
-    if (onChange == null || inputNode.current == null || disabled) {
-      return;
-    }
-
-    onChange(!inputNode.current.checked, id);
-    inputNode.current.focus();
-  };
-
-  const handleKeyUp = event => {
-    const {
-      keyCode
-    } = event;
-    !keyFocused && setKeyFocused(true);
-
-    if (keyCode === _types_js__WEBPACK_IMPORTED_MODULE_3__.Key.Space) {
-      handleInput();
-    }
-  };
-
-  const describedBy = [];
-
-  if (error && typeof error !== 'boolean') {
-    describedBy.push((0,_InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_4__.errorTextID)(id));
-  }
-
-  if (helpText) {
-    describedBy.push((0,_Choice_Choice_js__WEBPACK_IMPORTED_MODULE_5__.helpTextID)(id));
-  }
-
-  if (ariaDescribedByProp) {
-    describedBy.push(ariaDescribedByProp);
-  }
-
-  const ariaDescribedBy = describedBy.length ? describedBy.join(' ') : undefined;
-  const wrapperClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Checkbox, error && _Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].error);
-  const backdropClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Backdrop, mouseOver && _Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].hover);
-  const isIndeterminate = checked === 'indeterminate';
-  const isChecked = !isIndeterminate && Boolean(checked);
-  const indeterminateAttributes = isIndeterminate ? {
-    indeterminate: 'true',
-    'aria-checked': 'mixed'
-  } : {
-    'aria-checked': isChecked
-  };
-  const iconSource = isIndeterminate ? _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_8__.S : _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_9__.S;
-  const inputClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Input, isIndeterminate && _Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Input-indeterminate"], keyFocused && _Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].keyFocused);
-  return (
-    /*#__PURE__*/
-
-    /* eslint-disable jsx-a11y/no-redundant-roles */
-    react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Choice_Choice_js__WEBPACK_IMPORTED_MODULE_5__.Choice, {
-      id: id,
-      label: label,
-      labelHidden: labelHidden,
-      helpText: helpText,
-      error: error,
-      disabled: disabled,
-      onClick: handleInput,
-      onMouseOver: handleMouseOver,
-      onMouseOut: handleMouseOut
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: wrapperClassName
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", Object.assign({
-      onKeyUp: handleKeyUp,
-      ref: inputNode,
-      id: id,
-      name: name,
-      value: value,
-      type: "checkbox",
-      checked: isChecked,
-      disabled: disabled,
-      className: inputClassName,
-      onFocus: onFocus,
-      onBlur: handleBlur,
-      onClick: stopPropagation,
-      onChange: noop,
-      "aria-invalid": error != null,
-      "aria-describedby": ariaDescribedBy,
-      role: "checkbox"
-    }, indeterminateAttributes)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: backdropClassName
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: _Checkbox_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Icon
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_10__.Icon, {
-      source: iconSource
-    }))))
-    /* eslint-enable jsx-a11y/no-redundant-roles */
-
-  );
-});
-
-function noop() {}
-
-function stopPropagation(event) {
-  event.stopPropagation();
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Checkbox/Checkbox.scss.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Checkbox/Checkbox.scss.js ***!
-  \*************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Checkbox": "Polaris-Checkbox",
-  "Input": "Polaris-Checkbox__Input",
-  "keyFocused": "Polaris-Checkbox--keyFocused",
-  "Backdrop": "Polaris-Checkbox__Backdrop",
-  "Input-indeterminate": "Polaris-Checkbox__Input--indeterminate",
-  "Icon": "Polaris-Checkbox__Icon",
-  "hover": "Polaris-Checkbox--hover",
-  "error": "Polaris-Checkbox--error"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Choice/Choice.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Choice/Choice.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Choice": () => (/* binding */ Choice),
-/* harmony export */   "helpTextID": () => (/* binding */ helpTextID)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../InlineError/InlineError.js */ "./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.js");
-/* harmony import */ var _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Choice.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Choice/Choice.scss.js");
-
-
-
-
-
-function Choice({
-  id,
-  label,
-  disabled,
-  error,
-  children,
-  labelHidden,
-  helpText,
-  onClick,
-  onMouseOut,
-  onMouseOver
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Choice, labelHidden && _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].labelHidden, disabled && _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].disabled);
-  const labelMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-    className: className,
-    htmlFor: id,
-    onClick: onClick,
-    onMouseOver: onMouseOver,
-    onMouseOut: onMouseOut
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Control
-  }, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Label
-  }, label));
-  const helpTextMarkup = helpText ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].HelpText,
-    id: helpTextID(id)
-  }, helpText) : null;
-  const errorMarkup = error && typeof error !== 'boolean' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Error
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_3__.InlineError, {
-    message: error,
-    fieldID: id
-  }));
-  const descriptionMarkup = helpTextMarkup || errorMarkup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Choice_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Descriptions
-  }, errorMarkup, helpTextMarkup) : null;
-  return descriptionMarkup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, labelMarkup, descriptionMarkup) : labelMarkup;
-}
-function helpTextID(id) {
-  return `${id}HelpText`;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Choice/Choice.scss.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Choice/Choice.scss.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Choice": "Polaris-Choice",
-  "labelHidden": "Polaris-Choice--labelHidden",
-  "Label": "Polaris-Choice__Label",
-  "Control": "Polaris-Choice__Control",
-  "disabled": "Polaris-Choice--disabled",
-  "Descriptions": "Polaris-Choice__Descriptions",
-  "HelpText": "Polaris-Choice__HelpText"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ChoiceList/ChoiceList.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ChoiceList/ChoiceList.js ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ChoiceList": () => (/* binding */ ChoiceList)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../InlineError/InlineError.js */ "./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.js");
-/* harmony import */ var _Checkbox_Checkbox_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Checkbox/Checkbox.js */ "./node_modules/@shopify/polaris/dist/esm/components/Checkbox/Checkbox.js");
-/* harmony import */ var _RadioButton_RadioButton_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../RadioButton/RadioButton.js */ "./node_modules/@shopify/polaris/dist/esm/components/RadioButton/RadioButton.js");
-/* harmony import */ var _ChoiceList_scss_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ChoiceList.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/ChoiceList/ChoiceList.scss.js");
-
-
-
-
-
-
-
-
-function ChoiceList({
-  title,
-  titleHidden,
-  allowMultiple,
-  choices,
-  selected,
-  onChange = noop,
-  error,
-  disabled = false,
-  name: nameProp
-}) {
-  // Type asserting to any is required for TS3.2 but can be removed when we update to 3.3
-  // see https://github.com/Microsoft/TypeScript/issues/28768
-  const ControlComponent = allowMultiple ? _Checkbox_Checkbox_js__WEBPACK_IMPORTED_MODULE_1__.Checkbox : _RadioButton_RadioButton_js__WEBPACK_IMPORTED_MODULE_2__.RadioButton;
-  const name = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__.useUniqueId)('ChoiceList', nameProp);
-  const finalName = allowMultiple ? `${name}[]` : name;
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_ChoiceList_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].ChoiceList, titleHidden && _ChoiceList_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].titleHidden);
-  const titleMarkup = title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("legend", {
-    className: _ChoiceList_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Title
-  }, title) : null;
-  const choicesMarkup = choices.map(choice => {
-    const {
-      value,
-      label,
-      helpText,
-      disabled: choiceDisabled,
-      describedByError
-    } = choice;
-
-    function handleChange(checked) {
-      onChange(updateSelectedChoices(choice, checked, selected, allowMultiple), name);
-    }
-
-    const isSelected = choiceIsSelected(choice, selected);
-    const renderedChildren = choice.renderChildren ? choice.renderChildren(isSelected) : null;
-    const children = renderedChildren ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _ChoiceList_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].ChoiceChildren
-    }, renderedChildren) : null;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-      key: value
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ControlComponent, {
-      name: finalName,
-      value: value,
-      label: label,
-      disabled: choiceDisabled || disabled,
-      checked: choiceIsSelected(choice, selected),
-      helpText: helpText,
-      onChange: handleChange,
-      ariaDescribedBy: error && describedByError ? (0,_InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_6__.errorTextID)(finalName) : null
-    }), children);
+  const [height, setHeight] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
+  const [isOpen, setIsOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(open);
+  const [animationState, setAnimationState] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('idle');
+  const collapsibleContainer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const isFullyOpen = animationState === 'idle' && open && isOpen;
+  const isFullyClosed = animationState === 'idle' && !open && !isOpen;
+  const content = expandOnPrint || !isFullyClosed ? children : null;
+  const wrapperClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Collapsible_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Collapsible, isFullyClosed && _Collapsible_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].isFullyClosed, expandOnPrint && _Collapsible_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].expandOnPrint);
+
+  const collapsibleStyles = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__.objectSpread2)((0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_3__.objectSpread2)({}, transition && {
+    transitionDuration: `${transition.duration}`,
+    transitionTimingFunction: `${transition.timingFunction}`
+  }), {
+    maxHeight: isFullyOpen ? 'none' : `${height}px`,
+    overflow: isFullyOpen ? 'visible' : 'hidden'
   });
-  const errorMarkup = error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _ChoiceList_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].ChoiceError
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_6__.InlineError, {
-    message: error,
-    fieldID: finalName
-  }));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("fieldset", {
-    className: className,
-    id: finalName,
-    "aria-invalid": error != null
-  }, titleMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: _ChoiceList_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Choices
-  }, choicesMarkup), errorMarkup);
-}
 
-function noop() {}
+  const handleCompleteAnimation = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(({
+    target
+  }) => {
+    if (target === collapsibleContainer.current) {
+      setAnimationState('idle');
+      setIsOpen(open);
+    }
+  }, [open]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (open !== isOpen) {
+      setAnimationState('measuring');
+    }
+  }, [open, isOpen]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!open || !collapsibleContainer.current) return; // If collapsible defaults to open, set an initial height
 
-function choiceIsSelected({
-  value
-}, selected) {
-  return selected.includes(value);
-}
+    setHeight(collapsibleContainer.current.scrollHeight); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!collapsibleContainer.current) return;
 
-function updateSelectedChoices({
-  value
-}, checked, selected, allowMultiple = false) {
-  if (checked) {
-    return allowMultiple ? [...selected, value] : [value];
-  }
+    switch (animationState) {
+      case 'idle':
+        break;
 
-  return selected.filter(selectedChoice => selectedChoice !== value);
+      case 'measuring':
+        setHeight(collapsibleContainer.current.scrollHeight);
+        setAnimationState('animating');
+        break;
+
+      case 'animating':
+        setHeight(open ? collapsibleContainer.current.scrollHeight : 0);
+    }
+  }, [animationState, open, isOpen]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: id,
+    style: collapsibleStyles,
+    ref: collapsibleContainer,
+    className: wrapperClassName,
+    onTransitionEnd: handleCompleteAnimation,
+    "aria-expanded": open
+  }, content);
 }
 
 
@@ -4678,10 +2465,10 @@ function updateSelectedChoices({
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/ChoiceList/ChoiceList.scss.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/ChoiceList/ChoiceList.scss.js ***!
-  \*****************************************************************************************/
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Collapsible/Collapsible.scss.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Collapsible/Collapsible.scss.js ***!
+  \*******************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4690,121 +2477,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var styles = {
-  "ChoiceList": "Polaris-ChoiceList",
-  "titleHidden": "Polaris-ChoiceList--titleHidden",
-  "Title": "Polaris-ChoiceList__Title",
-  "Choices": "Polaris-ChoiceList__Choices",
-  "ChoiceChildren": "Polaris-ChoiceList__ChoiceChildren",
-  "ChoiceError": "Polaris-ChoiceList__ChoiceError"
+  "Collapsible": "Polaris-Collapsible",
+  "isFullyClosed": "Polaris-Collapsible--isFullyClosed",
+  "expandOnPrint": "Polaris-Collapsible--expandOnPrint"
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Connected/Connected.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Connected/Connected.js ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Connected": () => (/* binding */ Connected)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Connected_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Connected.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Connected/Connected.scss.js");
-/* harmony import */ var _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/Connected/components/Item/Item.js");
-
-
-
-
-function Connected({
-  children,
-  left,
-  right
-}) {
-  const leftConnectionMarkup = left ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Item_Item_js__WEBPACK_IMPORTED_MODULE_1__.Item, {
-    position: "left"
-  }, left) : null;
-  const rightConnectionMarkup = right ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Item_Item_js__WEBPACK_IMPORTED_MODULE_1__.Item, {
-    position: "right"
-  }, right) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Connected_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Connected
-  }, leftConnectionMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Item_Item_js__WEBPACK_IMPORTED_MODULE_1__.Item, {
-    position: "primary"
-  }, children), rightConnectionMarkup);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Connected/Connected.scss.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Connected/Connected.scss.js ***!
-  \***************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Connected": "Polaris-Connected",
-  "Item": "Polaris-Connected__Item",
-  "Item-primary": "Polaris-Connected__Item--primary",
-  "Item-focused": "Polaris-Connected__Item--focused"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Connected/components/Item/Item.js":
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Connected/components/Item/Item.js ***!
-  \*********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Item": () => (/* binding */ Item)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
-/* harmony import */ var _Connected_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Connected.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Connected/Connected.scss.js");
-
-
-
-
-
-function Item({
-  children,
-  position
-}) {
-  const {
-    value: focused,
-    setTrue: forceTrueFocused,
-    setFalse: forceFalseFocused
-  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_1__.useToggle)(false);
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_Connected_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Item, focused && _Connected_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Item-focused"], position === 'primary' ? _Connected_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Item-primary"] : _Connected_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Item-connection"]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    onBlur: forceFalseFocused,
-    onFocus: forceTrueFocused,
-    className: className
-  }, children);
-}
-
-
 
 
 /***/ }),
@@ -4925,294 +2603,6 @@ function FocusManager({
 }
 
 
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/FooterHelp/FooterHelp.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/FooterHelp/FooterHelp.js ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FooterHelp": () => (/* binding */ FooterHelp)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/InfoMinor.svg.mjs");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _FooterHelp_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FooterHelp.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/FooterHelp/FooterHelp.scss.js");
-
-
-
-
-
-
-function FooterHelp({
-  children
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_FooterHelp_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].FooterHelp);
-  const iconProps = {
-    source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_3__.S,
-    color: 'highlight'
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _FooterHelp_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Content
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _FooterHelp_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Icon
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_4__.Icon, iconProps)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _FooterHelp_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Text
-  }, children)));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/FooterHelp/FooterHelp.scss.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/FooterHelp/FooterHelp.scss.js ***!
-  \*****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "FooterHelp": "Polaris-FooterHelp",
-  "Content": "Polaris-FooterHelp__Content",
-  "Icon": "Polaris-FooterHelp__Icon",
-  "Text": "Polaris-FooterHelp__Text"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.js ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormLayout": () => (/* binding */ FormLayout)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_components_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/components.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js");
-/* harmony import */ var _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormLayout.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.scss.js");
-/* harmony import */ var _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/components/Item/Item.js");
-/* harmony import */ var _components_Group_Group_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Group/Group.js */ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/components/Group/Group.js");
-
-
-
-
-
-
-const FormLayout = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(function FormLayout({
-  children
-}) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].FormLayout
-  }, react__WEBPACK_IMPORTED_MODULE_0__.Children.map(children, wrapChildren));
-});
-FormLayout.Group = _components_Group_Group_js__WEBPACK_IMPORTED_MODULE_2__.Group;
-
-function wrapChildren(child, index) {
-  if ((0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_3__.isElementOfType)(child, _components_Group_Group_js__WEBPACK_IMPORTED_MODULE_2__.Group)) {
-    return child;
-  }
-
-  const props = {
-    key: index
-  };
-  return (0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_3__.wrapWithComponent)(child, _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_4__.Item, props);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.scss.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.scss.js ***!
-  \*****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "FormLayout": "Polaris-FormLayout",
-  "Title": "Polaris-FormLayout__Title",
-  "Items": "Polaris-FormLayout__Items",
-  "HelpText": "Polaris-FormLayout__HelpText",
-  "Item": "Polaris-FormLayout__Item",
-  "grouped": "Polaris-FormLayout--grouped",
-  "condensed": "Polaris-FormLayout--condensed"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/components/Group/Group.js":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/FormLayout/components/Group/Group.js ***!
-  \************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Group": () => (/* binding */ Group)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_components_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../utilities/components.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js");
-/* harmony import */ var _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../FormLayout.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.scss.js");
-/* harmony import */ var _Item_Item_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/components/Item/Item.js");
-
-
-
-
-
-
-
-function Group({
-  children,
-  condensed,
-  title,
-  helpText
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(condensed ? _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].condensed : _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].grouped);
-  const id = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__.useUniqueId)('FormLayoutGroup');
-  let helpTextElement = null;
-  let helpTextID;
-  let titleElement = null;
-  let titleID;
-
-  if (helpText) {
-    helpTextID = `${id}HelpText`;
-    helpTextElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      id: helpTextID,
-      className: _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].HelpText
-    }, helpText);
-  }
-
-  if (title) {
-    titleID = `${id}Title`;
-    titleElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      id: titleID,
-      className: _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Title
-    }, title);
-  }
-
-  const itemsMarkup = react__WEBPACK_IMPORTED_MODULE_0__.Children.map(children, child => (0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_4__.wrapWithComponent)(child, _Item_Item_js__WEBPACK_IMPORTED_MODULE_5__.Item, {}));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    role: "group",
-    className: className,
-    "aria-labelledby": titleID,
-    "aria-describedby": helpTextID
-  }, titleElement, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Items
-  }, itemsMarkup), helpTextElement);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/components/Item/Item.js":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/FormLayout/components/Item/Item.js ***!
-  \**********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Item": () => (/* binding */ Item)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../FormLayout.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.scss.js");
-
-
-
-function Item(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _FormLayout_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Item
-  }, props.children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Heading/Heading.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Heading/Heading.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Heading": () => (/* binding */ Heading)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Heading_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Heading.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Heading/Heading.scss.js");
-
-
-
-function Heading({
-  element: Element = 'h2',
-  children
-}) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Element, {
-    className: _Heading_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Heading
-  }, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Heading/Heading.scss.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Heading/Heading.scss.js ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Heading": "Polaris-Heading"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
 
 
 /***/ }),
@@ -5374,518 +2764,30 @@ function Image(_ref) {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.js ***!
-  \**************************************************************************************/
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Indicator/Indicator.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Indicator/Indicator.js ***!
+  \**********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "InlineError": () => (/* binding */ InlineError),
-/* harmony export */   "errorTextID": () => (/* binding */ errorTextID)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/AlertMinor.svg.mjs");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _InlineError_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./InlineError.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.scss.js");
-
-
-
-
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-  source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S
-});
-
-function InlineError({
-  message,
-  fieldID
-}) {
-  if (!message) {
-    return null;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    id: errorTextID(fieldID),
-    className: _InlineError_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].InlineError
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _InlineError_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Icon
-  }, _ref), message);
-}
-function errorTextID(id) {
-  return `${id}Error`;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.scss.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.scss.js ***!
-  \*******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "InlineError": "Polaris-InlineError",
-  "Icon": "Polaris-InlineError__Icon"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/KeypressListener/KeypressListener.js":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/KeypressListener/KeypressListener.js ***!
-  \************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "KeypressListener": () => (/* binding */ KeypressListener)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_use_isomorphic_layout_effect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/use-isomorphic-layout-effect.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-isomorphic-layout-effect.js");
-
-
-
-function KeypressListener({
-  keyCode,
-  handler,
-  keyEvent = 'keyup'
-}) {
-  const tracked = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({
-    handler,
-    keyCode
-  });
-  (0,_utilities_use_isomorphic_layout_effect_js__WEBPACK_IMPORTED_MODULE_1__.useIsomorphicLayoutEffect)(() => {
-    tracked.current = {
-      handler,
-      keyCode
-    };
-  }, [handler, keyCode]);
-  const handleKeyEvent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(event => {
-    const {
-      handler,
-      keyCode
-    } = tracked.current;
-
-    if (event.keyCode === keyCode) {
-      handler(event);
-    }
-  }, []);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    document.addEventListener(keyEvent, handleKeyEvent);
-    return () => {
-      document.removeEventListener(keyEvent, handleKeyEvent);
-    };
-  }, [keyEvent, handleKeyEvent]);
-  return null;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Label/Label.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Label/Label.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Label": () => (/* binding */ Label),
-/* harmony export */   "labelID": () => (/* binding */ labelID)
+/* harmony export */   "Indicator": () => (/* binding */ Indicator)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _Label_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Label.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Label/Label.scss.js");
+/* harmony import */ var _Indicator_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Indicator.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Indicator/Indicator.scss.js");
 
 
 
 
-function labelID(id) {
-  return `${id}Label`;
-}
-function Label({
-  children,
-  id,
-  hidden,
-  requiredIndicator
+function Indicator({
+  pulse = true
 }) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Label_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Label, hidden && _Label_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].hidden);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Indicator_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Indicator, pulse && _Indicator_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].pulseIndicator);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: className
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-    id: labelID(id),
-    htmlFor: id,
-    className: (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Label_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Text, requiredIndicator && _Label_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].RequiredIndicator)
-  }, children));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Label/Label.scss.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Label/Label.scss.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Label": "Polaris-Label",
-  "hidden": "Polaris-Label--hidden",
-  "Text": "Polaris-Label__Text",
-  "RequiredIndicator": "Polaris-Label__RequiredIndicator"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Labelled/Labelled.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Labelled/Labelled.js ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "labelID": () => (/* reexport safe */ _Label_Label_js__WEBPACK_IMPORTED_MODULE_1__.labelID),
-/* harmony export */   "Labelled": () => (/* binding */ Labelled),
-/* harmony export */   "helpTextID": () => (/* binding */ helpTextID)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _Button_utils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Button/utils.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js");
-/* harmony import */ var _Label_Label_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Label/Label.js */ "./node_modules/@shopify/polaris/dist/esm/components/Label/Label.js");
-/* harmony import */ var _InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../InlineError/InlineError.js */ "./node_modules/@shopify/polaris/dist/esm/components/InlineError/InlineError.js");
-/* harmony import */ var _Labelled_scss_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Labelled.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Labelled/Labelled.scss.js");
-
-
-
-
-
-
-
-
-
-function Labelled(_ref) {
-  let {
-    id,
-    label,
-    error,
-    action,
-    helpText,
-    children,
-    labelHidden,
-    requiredIndicator
-  } = _ref,
-      rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_2__.objectWithoutProperties)(_ref, ["id", "label", "error", "action", "helpText", "children", "labelHidden", "requiredIndicator"]);
-
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_3__.classNames)(labelHidden && _Labelled_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].hidden);
-  const actionMarkup = action ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Labelled_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Action
-  }, (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_5__.buttonFrom)(action, {
-    plain: true
-  })) : null;
-  const helpTextMarkup = helpText ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Labelled_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].HelpText,
-    id: helpTextID(id)
-  }, helpText) : null;
-  const errorMarkup = error && typeof error !== 'boolean' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Labelled_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Error
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_InlineError_InlineError_js__WEBPACK_IMPORTED_MODULE_6__.InlineError, {
-    message: error,
-    fieldID: id
-  }));
-  const labelMarkup = label ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Labelled_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].LabelWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Label_Label_js__WEBPACK_IMPORTED_MODULE_1__.Label, Object.assign({
-    id: id,
-    requiredIndicator: requiredIndicator
-  }, rest, {
-    hidden: false
-  }), label), actionMarkup) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, labelMarkup, children, errorMarkup, helpTextMarkup);
-}
-function helpTextID(id) {
-  return `${id}HelpText`;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Labelled/Labelled.scss.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Labelled/Labelled.scss.js ***!
-  \*************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "hidden": "Polaris-Labelled--hidden",
-  "LabelWrapper": "Polaris-Labelled__LabelWrapper",
-  "HelpText": "Polaris-Labelled__HelpText",
-  "Error": "Polaris-Labelled__Error",
-  "Action": "Polaris-Labelled__Action"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Layout": () => (/* binding */ Layout)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Layout.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.scss.js");
-/* harmony import */ var _components_AnnotatedSection_AnnotatedSection_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/AnnotatedSection/AnnotatedSection.js */ "./node_modules/@shopify/polaris/dist/esm/components/Layout/components/AnnotatedSection/AnnotatedSection.js");
-/* harmony import */ var _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Section/Section.js */ "./node_modules/@shopify/polaris/dist/esm/components/Layout/components/Section/Section.js");
-
-
-
-
-
-const Layout = function Layout({
-  sectioned,
-  children
-}) {
-  const content = sectioned ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Section_Section_js__WEBPACK_IMPORTED_MODULE_1__.Section, null, children) : children;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Layout
-  }, content);
-};
-Layout.AnnotatedSection = _components_AnnotatedSection_AnnotatedSection_js__WEBPACK_IMPORTED_MODULE_3__.AnnotatedSection;
-Layout.Section = _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_1__.Section;
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.scss.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.scss.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Layout": "Polaris-Layout",
-  "Section": "Polaris-Layout__Section",
-  "Section-secondary": "Polaris-Layout__Section--secondary",
-  "Section-fullWidth": "Polaris-Layout__Section--fullWidth",
-  "Section-oneHalf": "Polaris-Layout__Section--oneHalf",
-  "Section-oneThird": "Polaris-Layout__Section--oneThird",
-  "AnnotatedSection": "Polaris-Layout__AnnotatedSection",
-  "AnnotationWrapper": "Polaris-Layout__AnnotationWrapper",
-  "AnnotationContent": "Polaris-Layout__AnnotationContent",
-  "Annotation": "Polaris-Layout__Annotation",
-  "AnnotationDescription": "Polaris-Layout__AnnotationDescription"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Layout/components/AnnotatedSection/AnnotatedSection.js":
-/*!******************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Layout/components/AnnotatedSection/AnnotatedSection.js ***!
-  \******************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AnnotatedSection": () => (/* binding */ AnnotatedSection)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Heading_Heading_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Heading/Heading.js */ "./node_modules/@shopify/polaris/dist/esm/components/Heading/Heading.js");
-/* harmony import */ var _TextContainer_TextContainer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../TextContainer/TextContainer.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextContainer/TextContainer.js");
-/* harmony import */ var _Layout_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Layout.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.scss.js");
-
-
-
-
-
-function AnnotatedSection(props) {
-  const {
-    children,
-    title,
-    description
-  } = props;
-  const descriptionMarkup = typeof description === 'string' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, description) : description;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Layout_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].AnnotatedSection
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Layout_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].AnnotationWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Layout_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Annotation
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TextContainer_TextContainer_js__WEBPACK_IMPORTED_MODULE_2__.TextContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Heading_Heading_js__WEBPACK_IMPORTED_MODULE_3__.Heading, null, title), descriptionMarkup && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Layout_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].AnnotationDescription
-  }, descriptionMarkup))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Layout_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].AnnotationContent
-  }, children)));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Layout/components/Section/Section.js":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Layout/components/Section/Section.js ***!
-  \************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Section": () => (/* binding */ Section)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Layout.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.scss.js");
-
-
-
-
-function Section({
-  children,
-  secondary,
-  fullWidth,
-  oneHalf,
-  oneThird
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Section, secondary && _Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-secondary"], fullWidth && _Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-fullWidth"], oneHalf && _Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-oneHalf"], oneThird && _Layout_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Section-oneThird"]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Link/Link.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Link/Link.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Link": () => (/* binding */ Link)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/ExternalSmallMinor.svg.mjs");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../UnstyledLink/UnstyledLink.js */ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledLink/UnstyledLink.js");
-/* harmony import */ var _utilities_banner_context_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utilities/banner-context.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/banner-context.js");
-/* harmony import */ var _Link_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Link.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Link/Link.scss.js");
-
-
-
-
-
-
-
-
-
-function Link({
-  url,
-  children,
-  onClick,
-  external,
-  id,
-  monochrome,
-  removeUnderline,
-  accessibilityLabel
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useI18n)();
-  let childrenMarkup = children;
-
-  if (external && typeof children === 'string') {
-    const iconLabel = i18n.translate('Polaris.Common.newWindowAccessibilityHint');
-    childrenMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: _Link_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].IconLockup
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-      className: _Link_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].IconLayout
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_3__.Icon, {
-      accessibilityLabel: iconLabel,
-      source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_4__.S
-    }))));
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_banner_context_js__WEBPACK_IMPORTED_MODULE_5__.BannerContext.Consumer, null, BannerContext => {
-    const shouldBeMonochrome = monochrome || BannerContext;
-    const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_Link_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Link, shouldBeMonochrome && _Link_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].monochrome, removeUnderline && _Link_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].removeUnderline);
-    return url ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_7__.UnstyledLink, {
-      onClick: onClick,
-      className: className,
-      url: url,
-      external: external,
-      id: id,
-      "aria-label": accessibilityLabel
-    }, childrenMarkup) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-      type: "button",
-      onClick: onClick,
-      className: className,
-      id: id,
-      "aria-label": accessibilityLabel
-    }, childrenMarkup);
   });
 }
 
@@ -5894,10 +2796,10 @@ function Link({
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Link/Link.scss.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Link/Link.scss.js ***!
-  \*****************************************************************************/
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Indicator/Indicator.scss.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Indicator/Indicator.scss.js ***!
+  \***************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5906,11 +2808,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var styles = {
-  "Link": "Polaris-Link",
-  "IconLockup": "Polaris-Link__IconLockup",
-  "IconLayout": "Polaris-Link__IconLayout",
-  "monochrome": "Polaris-Link--monochrome",
-  "removeUnderline": "Polaris-Link--removeUnderline"
+  "Indicator": "Polaris-Indicator",
+  "pulseIndicator": "Polaris-Indicator--pulseIndicator",
+  "bounce": "Polaris-Indicator--bounce",
+  "pulse": "Polaris-Indicator--pulse"
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
@@ -5973,45 +2874,485 @@ const MediaQueryProvider = function MediaQueryProvider({
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Page/Page.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Page/Page.js ***!
-  \************************************************************************/
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.js ***!
+  \************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Page": () => (/* binding */ Page)
+/* harmony export */   "Navigation": () => (/* binding */ Navigation)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _components_Header_Header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Header/Header.js */ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/Header.js");
-/* harmony import */ var _Page_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Page.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Page/Page.scss.js");
+/* harmony import */ var _utilities_theme_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/theme/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/theme/hooks.js");
+/* harmony import */ var _Image_Image_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Image/Image.js */ "./node_modules/@shopify/polaris/dist/esm/components/Image/Image.js");
+/* harmony import */ var _Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Scrollable/Scrollable.js */ "./node_modules/@shopify/polaris/dist/esm/components/Scrollable/Scrollable.js");
+/* harmony import */ var _UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../UnstyledLink/UnstyledLink.js */ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledLink/UnstyledLink.js");
+/* harmony import */ var _utilities_within_content_context_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utilities/within-content-context.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/within-content-context.js");
+/* harmony import */ var _utilities_get_width_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/get-width.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/get-width.js");
+/* harmony import */ var _context_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./context.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/context.js");
+/* harmony import */ var _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navigation.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.scss.js");
+/* harmony import */ var _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Item/Item.js");
+/* harmony import */ var _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Section/Section.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Section/Section.js");
 
 
 
 
 
 
-function Page(_ref) {
-  let {
-    children,
-    fullWidth,
-    narrowWidth,
-    divider
-  } = _ref,
-      rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectWithoutProperties)(_ref, ["children", "fullWidth", "narrowWidth", "divider"]);
 
-  const pageClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_Page_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Page, fullWidth && _Page_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].fullWidth, narrowWidth && _Page_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].narrowWidth);
-  const hasHeaderContent = rest.title != null && rest.title !== '' || rest.primaryAction != null || rest.secondaryActions != null && rest.secondaryActions.length > 0 || rest.actionGroups != null && rest.actionGroups.length > 0 || rest.breadcrumbs != null && rest.breadcrumbs.length > 0;
-  const contentClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_Page_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Content, divider && hasHeaderContent && _Page_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].divider);
-  const headerMarkup = hasHeaderContent ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header_Header_js__WEBPACK_IMPORTED_MODULE_4__.Header, rest) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: pageClassName
-  }, headerMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: contentClassName
+
+
+
+
+
+const Navigation = function Navigation({
+  children,
+  contextControl,
+  location,
+  onDismiss
+}) {
+  const {
+    logo
+  } = (0,_utilities_theme_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useTheme)();
+  const width = (0,_utilities_get_width_js__WEBPACK_IMPORTED_MODULE_2__.getWidth)(logo, 104);
+  const logoMarkup = logo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].LogoContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_4__.UnstyledLink, {
+    url: logo.url || '',
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].LogoLink,
+    style: {
+      width
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Image_Image_js__WEBPACK_IMPORTED_MODULE_5__.Image, {
+    source: logo.topBarSource || '',
+    alt: logo.accessibilityLabel || '',
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Logo,
+    style: {
+      width
+    }
+  }))) : null;
+  const mediaMarkup = contextControl ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].ContextControl
+  }, contextControl) : logoMarkup;
+  const context = {
+    location,
+    onNavigationDismiss: onDismiss
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_context_js__WEBPACK_IMPORTED_MODULE_6__.NavigationContext.Provider, {
+    value: context
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_within_content_context_js__WEBPACK_IMPORTED_MODULE_7__.WithinContentContext.Provider, {
+    value: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Navigation
+  }, mediaMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_8__.Scrollable, {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].PrimaryNavigation
+  }, children))));
+};
+Navigation.Item = _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_9__.Item;
+Navigation.Section = _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_10__.Section;
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.scss.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.scss.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var styles = {
+  "Navigation": "Polaris-Navigation",
+  "UserMenu": "Polaris-Navigation__UserMenu",
+  "ContextControl": "Polaris-Navigation__ContextControl",
+  "PrimaryNavigation": "Polaris-Navigation__PrimaryNavigation",
+  "LogoContainer": "Polaris-Navigation__LogoContainer",
+  "Logo": "Polaris-Navigation__Logo",
+  "LogoLink": "Polaris-Navigation__LogoLink",
+  "Item": "Polaris-Navigation__Item",
+  "keyFocused": "Polaris-Navigation--keyFocused",
+  "Item-selected": "Polaris-Navigation__Item--selected",
+  "Item-disabled": "Polaris-Navigation__Item--disabled",
+  "Icon": "Polaris-Navigation__Icon",
+  "Badge": "Polaris-Navigation__Badge",
+  "subNavigationActive": "Polaris-Navigation--subNavigationActive",
+  "ListItem": "Polaris-Navigation__ListItem",
+  "RollupSection": "Polaris-Navigation__RollupSection",
+  "SecondaryNavigation": "Polaris-Navigation__SecondaryNavigation",
+  "ListItem-hasAction": "Polaris-Navigation__ListItem--hasAction",
+  "ItemWrapper": "Polaris-Navigation__ItemWrapper",
+  "Text": "Polaris-Navigation__Text",
+  "SecondaryAction": "Polaris-Navigation__SecondaryAction",
+  "isExpanded": "Polaris-Navigation--isExpanded",
+  "List": "Polaris-Navigation__List",
+  "SecondaryNavigation-noIcon": "Polaris-Navigation__SecondaryNavigation--noIcon",
+  "Section": "Polaris-Navigation__Section",
+  "Section-fill": "Polaris-Navigation__Section--fill",
+  "Section-withSeparator": "Polaris-Navigation__Section--withSeparator",
+  "SectionHeading": "Polaris-Navigation__SectionHeading",
+  "Action": "Polaris-Navigation__Action",
+  "RollupToggle": "Polaris-Navigation__RollupToggle",
+  "Indicator": "Polaris-Navigation__Indicator",
+  "fade-in": "Polaris-Navigation__fade--in"
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
+
+
+/***/ }),
+
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Item/Item.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Item/Item.js ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Item": () => (/* binding */ Item),
+/* harmony export */   "isNavigationItemActive": () => (/* binding */ isNavigationItemActive)
+/* harmony export */ });
+/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../types.js */ "./node_modules/@shopify/polaris/dist/esm/types.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
+/* harmony import */ var _utilities_media_query_hooks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../utilities/media-query/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/media-query/hooks.js");
+/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
+/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
+/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
+/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
+/* harmony import */ var _UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../UnstyledLink/UnstyledLink.js */ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledLink/UnstyledLink.js");
+/* harmony import */ var _Badge_Badge_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../Badge/Badge.js */ "./node_modules/@shopify/polaris/dist/esm/components/Badge/Badge.js");
+/* harmony import */ var _Indicator_Indicator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Indicator/Indicator.js */ "./node_modules/@shopify/polaris/dist/esm/components/Indicator/Indicator.js");
+/* harmony import */ var _context_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../context.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/context.js");
+/* harmony import */ var _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Navigation.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.scss.js");
+/* harmony import */ var _components_Secondary_Secondary_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Secondary/Secondary.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Item/components/Secondary/Secondary.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var MatchState;
+
+(function (MatchState) {
+  MatchState[MatchState["MatchForced"] = 0] = "MatchForced";
+  MatchState[MatchState["MatchUrl"] = 1] = "MatchUrl";
+  MatchState[MatchState["MatchPaths"] = 2] = "MatchPaths";
+  MatchState[MatchState["Excluded"] = 3] = "Excluded";
+  MatchState[MatchState["NoMatch"] = 4] = "NoMatch";
+})(MatchState || (MatchState = {}));
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Indicator_Indicator_js__WEBPACK_IMPORTED_MODULE_1__.Indicator, {
+  pulse: true
+});
+
+function Item({
+  url,
+  icon,
+  label,
+  subNavigationItems = [],
+  secondaryAction,
+  disabled,
+  onClick,
+  accessibilityLabel,
+  selected: selectedOverride,
+  badge,
+  new: isNew,
+  matches,
+  exactMatch,
+  matchPaths,
+  excludePaths
+}) {
+  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_2__.useI18n)();
+  const {
+    isNavigationCollapsed
+  } = (0,_utilities_media_query_hooks_js__WEBPACK_IMPORTED_MODULE_3__.useMediaQuery)();
+  const secondaryNavigationId = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_4__.useUniqueId)('SecondaryNavigation');
+  const {
+    location,
+    onNavigationDismiss
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context_js__WEBPACK_IMPORTED_MODULE_5__.NavigationContext);
+  const [expanded, setExpanded] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [keyFocused, setKeyFocused] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!isNavigationCollapsed && expanded) {
+      setExpanded(false);
+    }
+  }, [expanded, isNavigationCollapsed]);
+  const handleKeyUp = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(event => {
+    if (event.keyCode === _types_js__WEBPACK_IMPORTED_MODULE_6__.Key.Tab) {
+      !keyFocused && setKeyFocused(true);
+    }
+  }, [keyFocused]);
+  const handleBlur = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
+    keyFocused && setKeyFocused(false);
+  }, [keyFocused]);
+  const tabIndex = disabled ? -1 : 0;
+  const hasNewChild = subNavigationItems.filter(subNavigationItem => subNavigationItem.new).length > 0;
+  const indicatorMarkup = hasNewChild ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Indicator
+  }, _ref) : null;
+  const iconMarkup = icon ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Icon
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_8__.Icon, {
+    source: icon
+  })) : null;
+  let badgeMarkup = null;
+
+  if (isNew) {
+    badgeMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Badge_Badge_js__WEBPACK_IMPORTED_MODULE_9__.Badge, {
+      status: "new",
+      size: "small"
+    }, i18n.translate('Polaris.Badge.STATUS_LABELS.new'));
+  } else if (typeof badge === 'string') {
+    badgeMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Badge_Badge_js__WEBPACK_IMPORTED_MODULE_9__.Badge, {
+      status: "new",
+      size: "small"
+    }, badge);
+  } else {
+    badgeMarkup = badge;
+  }
+
+  const wrappedBadgeMarkup = badgeMarkup == null ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Badge
+  }, badgeMarkup);
+  const itemContentMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, iconMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Text
+  }, label, indicatorMarkup), wrappedBadgeMarkup);
+
+  if (url == null) {
+    const _className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_10__.classNames)(_Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Item, disabled && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Item-disabled"], keyFocused && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].keyFocused);
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].ListItem
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      type: "button",
+      className: _className,
+      disabled: disabled,
+      "aria-disabled": disabled,
+      "aria-label": accessibilityLabel,
+      onClick: getClickHandler(onClick),
+      onKeyUp: handleKeyUp,
+      onBlur: handleBlur
+    }, itemContentMarkup));
+  }
+
+  const secondaryActionMarkup = secondaryAction && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_11__.UnstyledLink, {
+    external: true,
+    url: secondaryAction.url,
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].SecondaryAction,
+    tabIndex: tabIndex,
+    "aria-disabled": disabled,
+    "aria-label": secondaryAction.accessibilityLabel
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_8__.Icon, {
+    source: secondaryAction.icon
+  }));
+  const matchState = matchStateForItem({
+    url,
+    matches,
+    exactMatch,
+    matchPaths,
+    excludePaths
+  }, location);
+  const matchingSubNavigationItems = subNavigationItems.filter(item => {
+    const subMatchState = matchStateForItem(item, location);
+    return subMatchState === MatchState.MatchForced || subMatchState === MatchState.MatchUrl || subMatchState === MatchState.MatchPaths;
+  });
+  const childIsActive = matchingSubNavigationItems.length > 0;
+  const selected = selectedOverride == null ? matchState === MatchState.MatchForced || matchState === MatchState.MatchUrl || matchState === MatchState.MatchPaths : selectedOverride;
+  const showExpanded = selected || expanded || childIsActive;
+  const itemClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_10__.classNames)(_Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Item, disabled && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Item-disabled"], selected && subNavigationItems.length === 0 && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Item-selected"], showExpanded && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].subNavigationActive, keyFocused && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].keyFocused);
+  let secondaryNavigationMarkup = null;
+
+  if (subNavigationItems.length > 0) {
+    const longestMatch = matchingSubNavigationItems.sort(({
+      url: firstUrl
+    }, {
+      url: secondUrl
+    }) => secondUrl.length - firstUrl.length)[0];
+    const SecondaryNavigationClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_10__.classNames)(_Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].SecondaryNavigation, showExpanded && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].isExpanded, !icon && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["SecondaryNavigation-noIcon"]);
+    secondaryNavigationMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: SecondaryNavigationClassName
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Secondary_Secondary_js__WEBPACK_IMPORTED_MODULE_12__.Secondary, {
+      expanded: showExpanded,
+      id: secondaryNavigationId
+    }, subNavigationItems.map(item => {
+      const {
+        label
+      } = item,
+            rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_13__.objectWithoutProperties)(item, ["label"]);
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Item, Object.assign({}, rest, {
+        key: label,
+        label: label,
+        matches: item === longestMatch,
+        onClick: onNavigationDismiss
+      }));
+    })));
+  }
+
+  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_10__.classNames)(_Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].ListItem, secondaryAction && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["ListItem-hasAction"]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: className
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].ItemWrapper
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_11__.UnstyledLink, Object.assign({
+    url: url,
+    className: itemClassName,
+    tabIndex: tabIndex,
+    "aria-disabled": disabled,
+    "aria-label": accessibilityLabel,
+    onClick: getClickHandler(onClick),
+    onKeyUp: handleKeyUp,
+    onBlur: handleBlur
+  }, normalizeAriaAttributes(secondaryNavigationId, subNavigationItems.length > 0, showExpanded)), itemContentMarkup), secondaryActionMarkup), secondaryNavigationMarkup);
+
+  function getClickHandler(onClick) {
+    return event => {
+      const {
+        currentTarget
+      } = event;
+
+      if (currentTarget.getAttribute('href') === location) {
+        event.preventDefault();
+      }
+
+      if (subNavigationItems && subNavigationItems.length > 0 && isNavigationCollapsed) {
+        event.preventDefault();
+        setExpanded(!expanded);
+      } else if (onNavigationDismiss) {
+        onNavigationDismiss();
+
+        if (onClick && onClick !== onNavigationDismiss) {
+          onClick();
+        }
+
+        return;
+      }
+
+      if (onClick) {
+        onClick();
+      }
+    };
+  }
+}
+function isNavigationItemActive(navigationItem, currentPath) {
+  const matchState = matchStateForItem(navigationItem, currentPath);
+  const matchingSubNavigationItems = navigationItem.subNavigationItems && navigationItem.subNavigationItems.filter(item => {
+    const subMatchState = matchStateForItem(item, currentPath);
+    return subMatchState === MatchState.MatchForced || subMatchState === MatchState.MatchUrl || subMatchState === MatchState.MatchPaths;
+  });
+  const childIsActive = matchingSubNavigationItems && matchingSubNavigationItems.length > 0;
+  const selected = matchState === MatchState.MatchForced || matchState === MatchState.MatchUrl || matchState === MatchState.MatchPaths;
+  return selected || childIsActive;
+}
+
+function normalizePathname(pathname) {
+  const barePathname = pathname.split('?')[0].split('#')[0];
+  return barePathname.endsWith('/') ? barePathname : `${barePathname}/`;
+}
+
+function safeEqual(location, path) {
+  return normalizePathname(location) === normalizePathname(path);
+}
+
+function safeStartsWith(location, path) {
+  return normalizePathname(location).startsWith(normalizePathname(path));
+}
+
+function matchStateForItem({
+  url,
+  matches,
+  exactMatch,
+  matchPaths,
+  excludePaths
+}, location) {
+  if (url == null) {
+    return MatchState.NoMatch;
+  }
+
+  if (matches) {
+    return MatchState.MatchForced;
+  }
+
+  if (matches === false || excludePaths && excludePaths.some(path => safeStartsWith(location, path))) {
+    return MatchState.Excluded;
+  }
+
+  if (matchPaths && matchPaths.some(path => safeStartsWith(location, path))) {
+    return MatchState.MatchPaths;
+  }
+
+  const matchesUrl = exactMatch ? safeEqual(location, url) : safeStartsWith(location, url);
+  return matchesUrl ? MatchState.MatchUrl : MatchState.NoMatch;
+}
+
+function normalizeAriaAttributes(controlId, hasSubMenu, expanded) {
+  return hasSubMenu ? {
+    'aria-expanded': expanded,
+    'aria-controls': controlId
+  } : undefined;
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Item/components/Secondary/Secondary.js":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Item/components/Secondary/Secondary.js ***!
+  \************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Secondary": () => (/* binding */ Secondary)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
+/* harmony import */ var _Collapsible_Collapsible_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../Collapsible/Collapsible.js */ "./node_modules/@shopify/polaris/dist/esm/components/Collapsible/Collapsible.js");
+/* harmony import */ var _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../Navigation.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.scss.js");
+
+
+
+
+
+function Secondary({
+  id,
+  children,
+  expanded
+}) {
+  const uid = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useUniqueId)('SecondaryNavigation');
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Collapsible_Collapsible_js__WEBPACK_IMPORTED_MODULE_2__.Collapsible, {
+    id: id || uid,
+    open: expanded,
+    transition: {
+      duration: '0ms',
+      timingFunction: 'linear'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].List
   }, children));
 }
 
@@ -6020,1087 +3361,10 @@ function Page(_ref) {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Page/Page.scss.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Page/Page.scss.js ***!
-  \*****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Page": "Polaris-Page",
-  "fullWidth": "Polaris-Page--fullWidth",
-  "narrowWidth": "Polaris-Page--narrowWidth",
-  "Content": "Polaris-Page__Content",
-  "divider": "Polaris-Page--divider"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/Header.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/Header.js ***!
-  \********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Header": () => (/* binding */ Header),
-/* harmony export */   "isPrimaryAction": () => (/* binding */ isPrimaryAction)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _utilities_media_query_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/media-query/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/media-query/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_components_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../utilities/components.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js");
-/* harmony import */ var _TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../TextStyle/TextStyle.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.js");
-/* harmony import */ var _Button_utils_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../Button/utils.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js");
-/* harmony import */ var _ActionMenu_ActionMenu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../ActionMenu/ActionMenu.js */ "./node_modules/@shopify/polaris/dist/esm/components/ActionMenu/ActionMenu.js");
-/* harmony import */ var _Breadcrumbs_Breadcrumbs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Breadcrumbs/Breadcrumbs.js */ "./node_modules/@shopify/polaris/dist/esm/components/Breadcrumbs/Breadcrumbs.js");
-/* harmony import */ var _Pagination_Pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Pagination/Pagination.js */ "./node_modules/@shopify/polaris/dist/esm/components/Pagination/Pagination.js");
-/* harmony import */ var _components_Title_Title_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Title/Title.js */ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/components/Title/Title.js");
-/* harmony import */ var _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/Header.scss.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-function isPrimaryAction(x) {
-  return ! /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(x) && x !== undefined;
-}
-const SHORT_TITLE = 20;
-const REALLY_SHORT_TITLE = 8;
-const LONG_TITLE = 34;
-function Header({
-  title,
-  subtitle,
-  titleMetadata,
-  additionalMetadata,
-  thumbnail,
-  titleHidden = false,
-  primaryAction,
-  pagination,
-  additionalNavigation,
-  breadcrumbs = [],
-  secondaryActions = [],
-  actionGroups = []
-}) {
-  const {
-    isNavigationCollapsed
-  } = (0,_utilities_media_query_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useMediaQuery)();
-  const isSingleRow = !primaryAction && !pagination && !secondaryActions.length && !actionGroups.length;
-  const breadcrumbMarkup = breadcrumbs.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].BreadcrumbWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Breadcrumbs_Breadcrumbs_js__WEBPACK_IMPORTED_MODULE_3__.Breadcrumbs, {
-    breadcrumbs: breadcrumbs
-  })) : null;
-  const paginationMarkup = pagination && !isNavigationCollapsed ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].PaginationWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Pagination_Pagination_js__WEBPACK_IMPORTED_MODULE_4__.Pagination, pagination)) : null;
-  const additionalNavigationMarkup = additionalNavigation ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].AdditionalNavigationWrapper
-  }, additionalNavigation) : null;
-  const navigationMarkup = breadcrumbMarkup || paginationMarkup || additionalNavigationMarkup ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Navigation
-  }, breadcrumbMarkup, additionalNavigationMarkup, paginationMarkup) : null;
-  const pageTitleMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].TitleWrapper
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Title_Title_js__WEBPACK_IMPORTED_MODULE_5__.Title, {
-    title: title,
-    subtitle: subtitle,
-    titleMetadata: titleMetadata,
-    thumbnail: thumbnail
-  }));
-  const primaryActionMarkup = primaryAction ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(PrimaryActionMarkup, {
-    primaryAction: primaryAction
-  }) : null;
-  const actionMenuMarkup = secondaryActions.length > 0 || (0,_ActionMenu_ActionMenu_js__WEBPACK_IMPORTED_MODULE_6__.hasGroupsWithActions)(actionGroups) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ActionMenu_ActionMenu_js__WEBPACK_IMPORTED_MODULE_6__.ActionMenu, {
-    actions: secondaryActions,
-    groups: actionGroups,
-    rollup: isNavigationCollapsed
-  }) : null;
-  const additionalMetadataMarkup = additionalMetadata ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].AdditionalMetaData
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_7__.TextStyle, {
-    variation: "subdued"
-  }, additionalMetadata)) : null;
-  const headerClassNames = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_8__.classNames)(_Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Header, isSingleRow && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].isSingleRow, titleHidden && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].titleHidden, navigationMarkup && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].hasNavigation, actionMenuMarkup && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].hasActionMenu, isNavigationCollapsed && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].mobileView, !breadcrumbs.length && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].noBreadcrumbs, title && title.length < LONG_TITLE && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].mediumTitle, title && title.length > LONG_TITLE && _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].longTitle);
-  const {
-    slot1,
-    slot2,
-    slot3,
-    slot4,
-    slot5,
-    slot6
-  } = determineLayout({
-    actionMenuMarkup,
-    additionalMetadataMarkup,
-    additionalNavigationMarkup,
-    breadcrumbMarkup,
-    isNavigationCollapsed,
-    pageTitleMarkup,
-    paginationMarkup,
-    primaryActionMarkup,
-    title
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: headerClassNames
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_components_js__WEBPACK_IMPORTED_MODULE_9__.ConditionalRender, {
-    condition: [slot1, slot2, slot3, slot4].some(notNull)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Row
-  }, slot1, slot2, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_components_js__WEBPACK_IMPORTED_MODULE_9__.ConditionalRender, {
-    condition: [slot3, slot4].some(notNull)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].RightAlign
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_components_js__WEBPACK_IMPORTED_MODULE_9__.ConditionalWrapper, {
-    condition: [slot3, slot4].every(notNull),
-    wrapper: children => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Actions
-    }, children)
-  }, slot3, slot4))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_components_js__WEBPACK_IMPORTED_MODULE_9__.ConditionalRender, {
-    condition: [slot5, slot6].some(notNull)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Row
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].LeftAlign
-  }, slot5), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utilities_components_js__WEBPACK_IMPORTED_MODULE_9__.ConditionalRender, {
-    condition: slot6 != null
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].RightAlign
-  }, slot6)))));
-}
-
-function PrimaryActionMarkup({
-  primaryAction
-}) {
-  const {
-    isNavigationCollapsed
-  } = (0,_utilities_media_query_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useMediaQuery)();
-  let content = primaryAction;
-
-  if (isPrimaryAction(primaryAction)) {
-    const primary = primaryAction.primary === undefined ? true : primaryAction.primary;
-    content = (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_10__.buttonsFrom)(shouldShowIconOnly(isNavigationCollapsed, primaryAction), {
-      primary
-    });
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Header_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].PrimaryActionWrapper
-  }, content);
-}
-
-function shouldShowIconOnly(isMobile, action) {
-  let {
-    content,
-    accessibilityLabel,
-    icon
-  } = action;
-  if (icon == null) return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_11__.objectSpread2)((0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_11__.objectSpread2)({}, action), {}, {
-    icon: undefined
-  });
-
-  if (isMobile) {
-    accessibilityLabel = accessibilityLabel || content;
-    content = undefined;
-  } else {
-    icon = undefined;
-  }
-
-  return (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_11__.objectSpread2)((0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_11__.objectSpread2)({}, action), {}, {
-    content,
-    accessibilityLabel,
-    icon
-  });
-}
-
-function notNull(value) {
-  return value != null;
-}
-
-function determineLayout({
-  actionMenuMarkup,
-  additionalMetadataMarkup,
-  additionalNavigationMarkup,
-  breadcrumbMarkup,
-  isNavigationCollapsed,
-  pageTitleMarkup,
-  paginationMarkup,
-  primaryActionMarkup,
-  title
-}) {
-  //    Header Layout
-  // |----------------------------------------------------|
-  // | slot1 | slot2 |                    | slot3 | slot4 |
-  // |----------------------------------------------------|
-  // | slot5 |                                    | slot6 |
-  // |----------------------------------------------------|
-  //
-  const layouts = {
-    mobileCompact: {
-      slots: {
-        slot1: null,
-        slot2: pageTitleMarkup,
-        slot3: actionMenuMarkup,
-        slot4: primaryActionMarkup,
-        slot5: additionalMetadataMarkup,
-        slot6: additionalNavigationMarkup
-      },
-      condition: isNavigationCollapsed && breadcrumbMarkup == null && title != null && title.length <= REALLY_SHORT_TITLE
-    },
-    mobileDefault: {
-      slots: {
-        slot1: breadcrumbMarkup,
-        slot2: pageTitleMarkup,
-        slot3: actionMenuMarkup,
-        slot4: primaryActionMarkup,
-        slot5: additionalMetadataMarkup,
-        slot6: additionalNavigationMarkup
-      },
-      condition: isNavigationCollapsed
-    },
-    desktopCompact: {
-      slots: {
-        slot1: breadcrumbMarkup,
-        slot2: pageTitleMarkup,
-        slot3: actionMenuMarkup,
-        slot4: primaryActionMarkup,
-        slot5: additionalMetadataMarkup,
-        slot6: additionalNavigationMarkup
-      },
-      condition: !isNavigationCollapsed && paginationMarkup == null && actionMenuMarkup == null && title != null && title.length <= SHORT_TITLE
-    },
-    desktopDefault: {
-      slots: {
-        slot1: breadcrumbMarkup,
-        slot2: pageTitleMarkup,
-        slot3: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, actionMenuMarkup, primaryActionMarkup),
-        slot4: paginationMarkup,
-        slot5: additionalMetadataMarkup,
-        slot6: additionalNavigationMarkup
-      },
-      condition: !isNavigationCollapsed
-    }
-  };
-  const layout = Object.values(layouts).find(layout => layout.condition) || layouts.desktopDefault;
-  return layout.slots;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/Header.scss.js":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/Header.scss.js ***!
-  \*************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Header": "Polaris-Page-Header",
-  "titleHidden": "Polaris-Page-Header--titleHidden",
-  "TitleWrapper": "Polaris-Page-Header__TitleWrapper",
-  "Navigation": "Polaris-Page-Header__Navigation",
-  "hasActionMenu": "Polaris-Page-Header--hasActionMenu",
-  "mobileView": "Polaris-Page-Header--mobileView",
-  "BreadcrumbWrapper": "Polaris-Page-Header__BreadcrumbWrapper",
-  "PaginationWrapper": "Polaris-Page-Header__PaginationWrapper",
-  "AdditionalNavigationWrapper": "Polaris-Page-Header__AdditionalNavigationWrapper",
-  "MainContent": "Polaris-Page-Header__MainContent",
-  "TitleActionMenuWrapper": "Polaris-Page-Header__TitleActionMenuWrapper",
-  "hasNavigation": "Polaris-Page-Header--hasNavigation",
-  "PrimaryActionWrapper": "Polaris-Page-Header__PrimaryActionWrapper",
-  "ActionMenuWrapper": "Polaris-Page-Header__ActionMenuWrapper",
-  "Row": "Polaris-Page-Header__Row",
-  "RightAlign": "Polaris-Page-Header__RightAlign",
-  "LeftAlign": "Polaris-Page-Header__LeftAlign",
-  "noBreadcrumbs": "Polaris-Page-Header--noBreadcrumbs",
-  "AdditionalMetaData": "Polaris-Page-Header__AdditionalMetaData",
-  "Actions": "Polaris-Page-Header__Actions",
-  "longTitle": "Polaris-Page-Header--longTitle",
-  "mediumTitle": "Polaris-Page-Header--mediumTitle",
-  "isSingleRow": "Polaris-Page-Header--isSingleRow"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/components/Title/Title.js":
-/*!************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/components/Title/Title.js ***!
-  \************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Title": () => (/* binding */ Title)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Title_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Title.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/components/Title/Title.scss.js");
-
-
-
-function Title({
-  title,
-  subtitle,
-  titleMetadata,
-  thumbnail
-}) {
-  const titleMarkup = title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
-    className: _Title_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Title
-  }, title) : null;
-  const titleMetadataMarkup = titleMetadata ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Title_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].TitleMetadata
-  }, titleMetadata) : null;
-  const wrappedTitleMarkup = titleMetadata ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Title_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].TitleWithMetadataWrapper
-  }, titleMarkup, titleMetadataMarkup) : titleMarkup;
-  const subtitleMarkup = subtitle ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Title_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].SubTitle
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, subtitle)) : null;
-  const thumbnailMarkup = thumbnail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, thumbnail) : null;
-  const pageTitleClassName = thumbnail ? _Title_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].hasThumbnail : undefined;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: pageTitleClassName
-  }, thumbnailMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Title_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].TitleAndSubtitleWrapper
-  }, wrappedTitleMarkup, subtitleMarkup));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/components/Title/Title.scss.js":
-/*!*****************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Page/components/Header/components/Title/Title.scss.js ***!
-  \*****************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Title": "Polaris-Header-Title",
-  "SubTitle": "Polaris-Header-Title__SubTitle",
-  "hasThumbnail": "Polaris-Header-Title--hasThumbnail",
-  "TitleAndSubtitleWrapper": "Polaris-Header-Title__TitleAndSubtitleWrapper",
-  "TitleWithMetadataWrapper": "Polaris-Header-Title__TitleWithMetadataWrapper",
-  "TitleMetadata": "Polaris-Header-Title__TitleMetadata"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Pagination/Pagination.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Pagination/Pagination.js ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Pagination": () => (/* binding */ Pagination)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/ChevronLeftMinor.svg.mjs");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/ChevronRightMinor.svg.mjs");
-/* harmony import */ var _KeypressListener_KeypressListener_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../KeypressListener/KeypressListener.js */ "./node_modules/@shopify/polaris/dist/esm/components/KeypressListener/KeypressListener.js");
-/* harmony import */ var _TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../TextStyle/TextStyle.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.js");
-/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Button/Button.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js");
-/* harmony import */ var _ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ButtonGroup/ButtonGroup.js */ "./node_modules/@shopify/polaris/dist/esm/components/ButtonGroup/ButtonGroup.js");
-/* harmony import */ var _utilities_is_input_focused_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utilities/is-input-focused.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/is-input-focused.js");
-/* harmony import */ var _Tooltip_Tooltip_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Tooltip/Tooltip.js */ "./node_modules/@shopify/polaris/dist/esm/components/Tooltip/Tooltip.js");
-
-
-
-
-
-
-
-
-
-
-function Pagination({
-  hasNext,
-  hasPrevious,
-  nextURL,
-  previousURL,
-  onNext,
-  onPrevious,
-  nextTooltip,
-  previousTooltip,
-  nextKeys,
-  previousKeys,
-  accessibilityLabel,
-  accessibilityLabels,
-  label
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useI18n)();
-  const node = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)();
-  const navLabel = accessibilityLabel || i18n.translate('Polaris.Pagination.pagination');
-  const previousLabel = (accessibilityLabels == null ? void 0 : accessibilityLabels.previous) || i18n.translate('Polaris.Pagination.previous');
-  const nextLabel = (accessibilityLabels == null ? void 0 : accessibilityLabels.next) || i18n.translate('Polaris.Pagination.next');
-  const prev = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    outline: true,
-    icon: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_3__.S,
-    accessibilityLabel: previousLabel,
-    url: previousURL,
-    onClick: onPrevious,
-    disabled: !hasPrevious,
-    id: "previousURL"
-  });
-  const constructedPrevious = previousTooltip && hasPrevious ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Tooltip_Tooltip_js__WEBPACK_IMPORTED_MODULE_4__.Tooltip, {
-    activatorWrapper: "span",
-    content: previousTooltip
-  }, prev) : prev;
-  const next = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    outline: true,
-    icon: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_5__.S,
-    accessibilityLabel: nextLabel,
-    url: nextURL,
-    onClick: onNext,
-    disabled: !hasNext,
-    id: "nextURL"
-  });
-  const constructedNext = nextTooltip && hasNext ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Tooltip_Tooltip_js__WEBPACK_IMPORTED_MODULE_4__.Tooltip, {
-    activatorWrapper: "span",
-    content: nextTooltip
-  }, next) : next;
-  const previousHandler = onPrevious || noop;
-  const previousButtonEvents = previousKeys && (previousURL || onPrevious) && hasPrevious && previousKeys.map(key => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_KeypressListener_KeypressListener_js__WEBPACK_IMPORTED_MODULE_6__.KeypressListener, {
-    key: key,
-    keyCode: key,
-    handler: previousURL ? handleCallback(clickPaginationLink('previousURL', node)) : handleCallback(previousHandler)
-  }));
-  const nextHandler = onNext || noop;
-  const nextButtonEvents = nextKeys && (nextURL || onNext) && hasNext && nextKeys.map(key => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_KeypressListener_KeypressListener_js__WEBPACK_IMPORTED_MODULE_6__.KeypressListener, {
-    key: key,
-    keyCode: key,
-    handler: nextURL ? handleCallback(clickPaginationLink('nextURL', node)) : handleCallback(nextHandler)
-  }));
-  const labelTextMarkup = hasNext && hasPrevious ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_7__.TextStyle, null, label) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TextStyle_TextStyle_js__WEBPACK_IMPORTED_MODULE_7__.TextStyle, {
-    variation: "subdued"
-  }, label);
-  const labelMarkup = label ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    "aria-live": "polite"
-  }, labelTextMarkup) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
-    "aria-label": navLabel,
-    ref: node
-  }, previousButtonEvents, nextButtonEvents, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ButtonGroup_ButtonGroup_js__WEBPACK_IMPORTED_MODULE_8__.ButtonGroup, {
-    segmented: !label
-  }, constructedPrevious, labelMarkup, constructedNext));
-}
-
-function clickPaginationLink(id, node) {
-  return () => {
-    if (node.current == null) {
-      return;
-    }
-
-    const link = node.current.querySelector(`#${id}`);
-
-    if (link) {
-      link.click();
-    }
-  };
-}
-
-function handleCallback(fn) {
-  return () => {
-    if ((0,_utilities_is_input_focused_js__WEBPACK_IMPORTED_MODULE_9__.isInputFocused)()) {
-      return;
-    }
-
-    fn();
-  };
-}
-
-function noop() {}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PopoverCloseSource": () => (/* reexport safe */ _components_PopoverOverlay_PopoverOverlay_js__WEBPACK_IMPORTED_MODULE_1__.PopoverCloseSource),
-/* harmony export */   "Popover": () => (/* binding */ Popover)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _shared_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shared.js */ "./node_modules/@shopify/polaris/dist/esm/components/shared.js");
-/* harmony import */ var _utilities_focus_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/focus.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js");
-/* harmony import */ var _Portal_Portal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Portal/Portal.js */ "./node_modules/@shopify/polaris/dist/esm/components/Portal/Portal.js");
-/* harmony import */ var _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Section/Section.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Section/Section.js");
-/* harmony import */ var _components_Pane_Pane_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Pane/Pane.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Pane/Pane.js");
-/* harmony import */ var _components_PopoverOverlay_PopoverOverlay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/PopoverOverlay/PopoverOverlay.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/PopoverOverlay/PopoverOverlay.js");
-/* harmony import */ var _set_activator_attributes_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./set-activator-attributes.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/set-activator-attributes.js");
-
-
-
-
-
-
-
-
-
-
-
-
-// TypeScript can't generate types that correctly infer the typing of
-// subcomponents so explicitly state the subcomponents in the type definition.
-// Letting this be implicit works in this project but fails in projects that use
-// generated *.d.ts files.
-const Popover = function Popover(_ref) {
-  let {
-    activatorWrapper = 'div',
-    children,
-    onClose,
-    activator,
-    preventFocusOnClose,
-    active,
-    fixed,
-    ariaHaspopup,
-    preferInputActivator = true,
-    colorScheme,
-    zIndexOverride
-  } = _ref,
-      rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_2__.objectWithoutProperties)(_ref, ["activatorWrapper", "children", "onClose", "activator", "preventFocusOnClose", "active", "fixed", "ariaHaspopup", "preferInputActivator", "colorScheme", "zIndexOverride"]);
-
-  const [activatorNode, setActivatorNode] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)();
-  const activatorContainer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const WrapperComponent = activatorWrapper;
-  const id = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__.useUniqueId)('popover');
-  const setAccessibilityAttributes = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    if (activatorContainer.current == null) {
-      return;
-    }
-
-    const firstFocusable = (0,_utilities_focus_js__WEBPACK_IMPORTED_MODULE_4__.findFirstFocusableNodeIncludingDisabled)(activatorContainer.current);
-    const focusableActivator = firstFocusable || activatorContainer.current;
-    const activatorDisabled = 'disabled' in focusableActivator && Boolean(focusableActivator.disabled);
-    (0,_set_activator_attributes_js__WEBPACK_IMPORTED_MODULE_5__.setActivatorAttributes)(focusableActivator, {
-      id,
-      active,
-      ariaHaspopup,
-      activatorDisabled
-    });
-  }, [id, active, ariaHaspopup]);
-
-  const handleClose = source => {
-    onClose(source);
-
-    if (activatorContainer.current == null || preventFocusOnClose) {
-      return;
-    }
-
-    if ((source === _components_PopoverOverlay_PopoverOverlay_js__WEBPACK_IMPORTED_MODULE_1__.PopoverCloseSource.FocusOut || source === _components_PopoverOverlay_PopoverOverlay_js__WEBPACK_IMPORTED_MODULE_1__.PopoverCloseSource.EscapeKeypress) && activatorNode) {
-      const focusableActivator = (0,_utilities_focus_js__WEBPACK_IMPORTED_MODULE_4__.findFirstFocusableNodeIncludingDisabled)(activatorNode) || (0,_utilities_focus_js__WEBPACK_IMPORTED_MODULE_4__.findFirstFocusableNodeIncludingDisabled)(activatorContainer.current) || activatorContainer.current;
-
-      if (!(0,_utilities_focus_js__WEBPACK_IMPORTED_MODULE_4__.focusNextFocusableNode)(focusableActivator, isInPortal)) {
-        focusableActivator.focus();
-      }
-    }
-  };
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (!activatorNode && activatorContainer.current) {
-      setActivatorNode(activatorContainer.current.firstElementChild);
-    } else if (activatorNode && activatorContainer.current && !activatorContainer.current.contains(activatorNode)) {
-      setActivatorNode(activatorContainer.current.firstElementChild);
-    }
-
-    setAccessibilityAttributes();
-  }, [activatorNode, setAccessibilityAttributes]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (activatorNode && activatorContainer.current) {
-      setActivatorNode(activatorContainer.current.firstElementChild);
-    }
-
-    setAccessibilityAttributes();
-  }, [activatorNode, setAccessibilityAttributes]);
-  const portal = activatorNode ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Portal_Portal_js__WEBPACK_IMPORTED_MODULE_6__.Portal, {
-    idPrefix: "popover"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PopoverOverlay_PopoverOverlay_js__WEBPACK_IMPORTED_MODULE_1__.PopoverOverlay, Object.assign({
-    id: id,
-    activator: activatorNode,
-    preferInputActivator: preferInputActivator,
-    onClose: handleClose,
-    active: active,
-    fixed: fixed,
-    colorScheme: colorScheme,
-    zIndexOverride: zIndexOverride
-  }, rest), children)) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(WrapperComponent, {
-    ref: activatorContainer
-  }, react__WEBPACK_IMPORTED_MODULE_0__.Children.only(activator), portal);
-};
-
-function isInPortal(element) {
-  let parentElement = element.parentElement;
-
-  while (parentElement) {
-    if (parentElement.matches(_shared_js__WEBPACK_IMPORTED_MODULE_7__.portal.selector)) return false;
-    parentElement = parentElement.parentElement;
-  }
-
-  return true;
-}
-
-Popover.Pane = _components_Pane_Pane_js__WEBPACK_IMPORTED_MODULE_8__.Pane;
-Popover.Section = _components_Section_Section_js__WEBPACK_IMPORTED_MODULE_9__.Section;
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.scss.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.scss.js ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Popover": "Polaris-Popover",
-  "PopoverOverlay": "Polaris-Popover__PopoverOverlay",
-  "PopoverOverlay-entering": "Polaris-Popover__PopoverOverlay--entering",
-  "PopoverOverlay-open": "Polaris-Popover__PopoverOverlay--open",
-  "PopoverOverlay-exiting": "Polaris-Popover__PopoverOverlay--exiting",
-  "measuring": "Polaris-Popover--measuring",
-  "fullWidth": "Polaris-Popover--fullWidth",
-  "Content": "Polaris-Popover__Content",
-  "positionedAbove": "Polaris-Popover--positionedAbove",
-  "Wrapper": "Polaris-Popover__Wrapper",
-  "Content-fullHeight": "Polaris-Popover__Content--fullHeight",
-  "Content-fluidContent": "Polaris-Popover__Content--fluidContent",
-  "Pane": "Polaris-Popover__Pane",
-  "Pane-fixed": "Polaris-Popover__Pane--fixed",
-  "Section": "Polaris-Popover__Section",
-  "FocusTracker": "Polaris-Popover__FocusTracker",
-  "PopoverOverlay-hideOnPrint": "Polaris-Popover__PopoverOverlay--hideOnPrint"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Pane/Pane.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Pane/Pane.js ***!
-  \*******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Pane": () => (/* binding */ Pane)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_components_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../utilities/components.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js");
-/* harmony import */ var _Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Scrollable/Scrollable.js */ "./node_modules/@shopify/polaris/dist/esm/components/Scrollable/Scrollable.js");
-/* harmony import */ var _Popover_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Popover.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.scss.js");
-/* harmony import */ var _Section_Section_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Section/Section.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Section/Section.js");
-
-
-
-
-
-
-
-function Pane({
-  fixed,
-  sectioned,
-  children,
-  onScrolledToBottom
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Popover_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Pane, fixed && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Pane-fixed"]);
-  const content = sectioned ? (0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_3__.wrapWithComponent)(children, _Section_Section_js__WEBPACK_IMPORTED_MODULE_4__.Section, {}) : children;
-  return fixed ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, content) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_5__.Scrollable, {
-    hint: true,
-    shadow: true,
-    className: className,
-    onScrolledToBottom: onScrolledToBottom
-  }, content);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/PopoverOverlay/PopoverOverlay.js":
-/*!***************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Popover/components/PopoverOverlay/PopoverOverlay.js ***!
-  \***************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PopoverCloseSource": () => (/* binding */ PopoverCloseSource),
-/* harmony export */   "PopoverOverlay": () => (/* binding */ PopoverOverlay),
-/* harmony export */   "nodeContainsDescendant": () => (/* binding */ nodeContainsDescendant)
-/* harmony export */ });
-/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../types.js */ "./node_modules/@shopify/polaris/dist/esm/types.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ThemeProvider_ThemeProvider_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../ThemeProvider/ThemeProvider.js */ "./node_modules/@shopify/polaris/dist/esm/components/ThemeProvider/ThemeProvider.js");
-/* harmony import */ var _EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../EventListener/EventListener.js */ "./node_modules/@shopify/polaris/dist/esm/components/EventListener/EventListener.js");
-/* harmony import */ var _shopify_polaris_tokens__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @shopify/polaris-tokens */ "./node_modules/@shopify/polaris-tokens/dist/index.esm.js");
-/* harmony import */ var _shared_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared.js */ "./node_modules/@shopify/polaris/dist/esm/components/shared.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_focus_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../utilities/focus.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js");
-/* harmony import */ var _utilities_components_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../utilities/components.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js");
-/* harmony import */ var _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Popover.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.scss.js");
-/* harmony import */ var _Pane_Pane_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Pane/Pane.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Pane/Pane.js");
-/* harmony import */ var _KeypressListener_KeypressListener_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../KeypressListener/KeypressListener.js */ "./node_modules/@shopify/polaris/dist/esm/components/KeypressListener/KeypressListener.js");
-/* harmony import */ var _PositionedOverlay_PositionedOverlay_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../PositionedOverlay/PositionedOverlay.js */ "./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/PositionedOverlay.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let PopoverCloseSource;
-
-(function (PopoverCloseSource) {
-  PopoverCloseSource[PopoverCloseSource["Click"] = 0] = "Click";
-  PopoverCloseSource[PopoverCloseSource["EscapeKeypress"] = 1] = "EscapeKeypress";
-  PopoverCloseSource[PopoverCloseSource["FocusOut"] = 2] = "FocusOut";
-  PopoverCloseSource[PopoverCloseSource["ScrollOut"] = 3] = "ScrollOut";
-})(PopoverCloseSource || (PopoverCloseSource = {}));
-
-var TransitionStatus;
-
-(function (TransitionStatus) {
-  TransitionStatus["Entering"] = "entering";
-  TransitionStatus["Entered"] = "entered";
-  TransitionStatus["Exiting"] = "exiting";
-  TransitionStatus["Exited"] = "exited";
-})(TransitionStatus || (TransitionStatus = {}));
-
-class PopoverOverlay extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
-  constructor(...args) {
-    super(...args);
-    this.state = {
-      transitionStatus: this.props.active ? TransitionStatus.Entering : TransitionStatus.Exited
-    };
-    this.contentNode = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)();
-    this.enteringTimer = void 0;
-    this.exitingTimer = void 0;
-
-    this.renderPopover = overlayDetails => {
-      const {
-        measuring,
-        desiredHeight,
-        positioning
-      } = overlayDetails;
-      const {
-        id,
-        children,
-        sectioned,
-        fullWidth,
-        fullHeight,
-        fluidContent,
-        hideOnPrint,
-        colorScheme,
-        autofocusTarget
-      } = this.props;
-      const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Popover, positioning === 'above' && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].positionedAbove, fullWidth && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].fullWidth, measuring && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].measuring, hideOnPrint && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["PopoverOverlay-hideOnPrint"]);
-      const contentStyles = measuring ? undefined : {
-        height: desiredHeight
-      };
-      const contentClassNames = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Content, fullHeight && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Content-fullHeight"], fluidContent && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["Content-fluidContent"]);
-      const content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: id,
-        tabIndex: autofocusTarget === 'none' ? undefined : -1,
-        className: contentClassNames,
-        style: contentStyles,
-        ref: this.contentNode
-      }, renderPopoverContent(children, {
-        sectioned
-      }));
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", Object.assign({
-        className: className
-      }, _shared_js__WEBPACK_IMPORTED_MODULE_4__.overlay.props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_5__.EventListener, {
-        event: "click",
-        handler: this.handleClick
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_5__.EventListener, {
-        event: "touchstart",
-        handler: this.handleClick
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_KeypressListener_KeypressListener_js__WEBPACK_IMPORTED_MODULE_6__.KeypressListener, {
-        keyCode: _types_js__WEBPACK_IMPORTED_MODULE_7__.Key.Escape,
-        handler: this.handleEscape
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].FocusTracker // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-        ,
-        tabIndex: 0,
-        onFocus: this.handleFocusFirstItem
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ThemeProvider_ThemeProvider_js__WEBPACK_IMPORTED_MODULE_8__.ThemeProvider, {
-        alwaysRenderCustomProperties: true,
-        theme: {
-          colorScheme
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Wrapper
-      }, content)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].FocusTracker // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-        ,
-        tabIndex: 0,
-        onFocus: this.handleFocusLastItem
-      }));
-    };
-
-    this.handleClick = event => {
-      const target = event.target;
-      const {
-        contentNode,
-        props: {
-          activator,
-          onClose
-        }
-      } = this;
-      const isDescendant = contentNode.current != null && nodeContainsDescendant(contentNode.current, target);
-      const isActivatorDescendant = nodeContainsDescendant(activator, target);
-
-      if (isDescendant || isActivatorDescendant || this.state.transitionStatus !== TransitionStatus.Entered) {
-        return;
-      }
-
-      onClose(PopoverCloseSource.Click);
-    };
-
-    this.handleScrollOut = () => {
-      this.props.onClose(PopoverCloseSource.ScrollOut);
-    };
-
-    this.handleEscape = () => {
-      this.props.onClose(PopoverCloseSource.EscapeKeypress);
-    };
-
-    this.handleFocusFirstItem = () => {
-      this.props.onClose(PopoverCloseSource.FocusOut);
-    };
-
-    this.handleFocusLastItem = () => {
-      this.props.onClose(PopoverCloseSource.FocusOut);
-    };
-  }
-
-  changeTransitionStatus(transitionStatus, cb) {
-    this.setState({
-      transitionStatus
-    }, cb); // Forcing a reflow to enable the animation
-
-    this.contentNode.current && this.contentNode.current.getBoundingClientRect();
-  }
-
-  componentDidMount() {
-    if (this.props.active) {
-      this.focusContent();
-      this.changeTransitionStatus(TransitionStatus.Entered);
-    }
-  }
-
-  componentDidUpdate(oldProps) {
-    if (this.props.active && !oldProps.active) {
-      this.focusContent();
-      this.changeTransitionStatus(TransitionStatus.Entering, () => {
-        this.clearTransitionTimeout();
-        this.enteringTimer = window.setTimeout(() => {
-          this.setState({
-            transitionStatus: TransitionStatus.Entered
-          });
-        }, _shopify_polaris_tokens__WEBPACK_IMPORTED_MODULE_1__.durationBase);
-      });
-    }
-
-    if (!this.props.active && oldProps.active) {
-      this.changeTransitionStatus(TransitionStatus.Exiting, () => {
-        this.clearTransitionTimeout();
-        this.exitingTimer = window.setTimeout(() => {
-          this.setState({
-            transitionStatus: TransitionStatus.Exited
-          });
-        }, _shopify_polaris_tokens__WEBPACK_IMPORTED_MODULE_1__.durationBase);
-      });
-    }
-  }
-
-  componentWillUnmount() {
-    this.clearTransitionTimeout();
-  }
-
-  render() {
-    const {
-      active,
-      activator,
-      fullWidth,
-      preferredPosition = 'below',
-      preferredAlignment = 'center',
-      preferInputActivator = true,
-      fixed,
-      zIndexOverride
-    } = this.props;
-    const {
-      transitionStatus
-    } = this.state;
-    if (transitionStatus === TransitionStatus.Exited && !active) return null;
-    const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].PopoverOverlay, transitionStatus === TransitionStatus.Entering && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["PopoverOverlay-entering"], transitionStatus === TransitionStatus.Entered && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["PopoverOverlay-open"], transitionStatus === TransitionStatus.Exiting && _Popover_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"]["PopoverOverlay-exiting"]);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_PositionedOverlay_PositionedOverlay_js__WEBPACK_IMPORTED_MODULE_9__.PositionedOverlay, {
-      fullWidth: fullWidth,
-      active: active,
-      activator: activator,
-      preferInputActivator: preferInputActivator,
-      preferredPosition: preferredPosition,
-      preferredAlignment: preferredAlignment,
-      render: this.renderPopover.bind(this),
-      fixed: fixed,
-      onScrollOut: this.handleScrollOut,
-      classNames: className,
-      zIndexOverride: zIndexOverride
-    });
-  }
-
-  clearTransitionTimeout() {
-    if (this.enteringTimer) {
-      window.clearTimeout(this.enteringTimer);
-    }
-
-    if (this.exitingTimer) {
-      window.clearTimeout(this.exitingTimer);
-    }
-  }
-
-  focusContent() {
-    const {
-      autofocusTarget = 'container'
-    } = this.props;
-
-    if (autofocusTarget === 'none' || this.contentNode == null) {
-      return;
-    }
-
-    requestAnimationFrame(() => {
-      if (this.contentNode.current == null) {
-        return;
-      }
-
-      const focusableChild = (0,_utilities_focus_js__WEBPACK_IMPORTED_MODULE_10__.findFirstFocusableNode)(this.contentNode.current);
-
-      if (focusableChild && autofocusTarget === 'first-node') {
-        focusableChild.focus({
-          preventScroll: "development" === 'development'
-        });
-      } else {
-        this.contentNode.current.focus({
-          preventScroll: "development" === 'development'
-        });
-      }
-    });
-  } // eslint-disable-next-line @shopify/react-no-multiple-render-methods
-
-
-}
-
-function renderPopoverContent(children, props) {
-  const childrenArray = react__WEBPACK_IMPORTED_MODULE_0__.Children.toArray(children);
-
-  if ((0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_11__.isElementOfType)(childrenArray[0], _Pane_Pane_js__WEBPACK_IMPORTED_MODULE_12__.Pane)) {
-    return childrenArray;
-  }
-
-  return (0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_11__.wrapWithComponent)(childrenArray, _Pane_Pane_js__WEBPACK_IMPORTED_MODULE_12__.Pane, props);
-}
-
-function nodeContainsDescendant(rootNode, descendant) {
-  if (rootNode === descendant) {
-    return true;
-  }
-
-  let parent = descendant.parentNode;
-
-  while (parent != null) {
-    if (parent === rootNode) {
-      return true;
-    }
-
-    parent = parent.parentNode;
-  }
-
-  return false;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Section/Section.js":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Popover/components/Section/Section.js ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Section/Section.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Section/Section.js ***!
+  \****************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -7109,97 +3373,163 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Section": () => (/* binding */ Section)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Popover_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Popover.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Popover/Popover.scss.js");
+/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
+/* harmony import */ var _utilities_breakpoints_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../utilities/breakpoints.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/breakpoints.js");
+/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
+/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
+/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/HorizontalDotsMinor.svg.mjs");
+/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
+/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
+/* harmony import */ var _Collapsible_Collapsible_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../Collapsible/Collapsible.js */ "./node_modules/@shopify/polaris/dist/esm/components/Collapsible/Collapsible.js");
+/* harmony import */ var _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Navigation.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.scss.js");
+/* harmony import */ var _Item_Item_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/components/Item/Item.js");
 
 
+
+
+
+
+
+
+
+
+
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
+  source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S
+});
 
 function Section({
-  children
-}) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _Popover_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Section
-  }, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Popover/set-activator-attributes.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Popover/set-activator-attributes.js ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setActivatorAttributes": () => (/* binding */ setActivatorAttributes)
-/* harmony export */ });
-function setActivatorAttributes(activator, {
-  id,
-  active = false,
-  ariaHaspopup,
-  activatorDisabled = false
-}) {
-  if (!activatorDisabled) {
-    activator.tabIndex = activator.tabIndex || 0;
-  }
-
-  activator.setAttribute('aria-controls', id);
-  activator.setAttribute('aria-owns', id);
-  activator.setAttribute('aria-expanded', String(active));
-
-  if (ariaHaspopup != null) {
-    activator.setAttribute('aria-haspopup', String(ariaHaspopup));
-  }
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Portal/Portal.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Portal/Portal.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Portal": () => (/* binding */ Portal)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _utilities_portals_hooks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/portals/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/portals/hooks.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-
-
-
-
-
-function Portal({
-  children,
-  idPrefix = '',
-  onPortalCreated = noop
+  title,
+  fill,
+  action,
+  items,
+  rollup,
+  separator
 }) {
   const {
-    container
-  } = (0,_utilities_portals_hooks_js__WEBPACK_IMPORTED_MODULE_2__.usePortalsManager)();
-  const uniqueId = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_3__.useUniqueId)('portal');
-  const portalId = idPrefix !== '' ? `${idPrefix}-${uniqueId}` : uniqueId;
+    value: expanded,
+    toggle: toggleExpanded,
+    setFalse: setExpandedFalse
+  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_3__.useToggle)(false);
+  const animationFrame = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+
+  const handleClick = (onClick, hasSubNavItems) => {
+    return () => {
+      if (onClick) {
+        onClick();
+      }
+
+      if (animationFrame.current) {
+        cancelAnimationFrame(animationFrame.current);
+      }
+
+      if (!hasSubNavItems || !(0,_utilities_breakpoints_js__WEBPACK_IMPORTED_MODULE_4__.navigationBarCollapsed)().matches) {
+        animationFrame.current = requestAnimationFrame(setExpandedFalse);
+      }
+    };
+  };
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    onPortalCreated();
-  }, [onPortalCreated]);
-  return container ? /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    "data-portal-id": portalId
-  }, children), container) : null;
+    return () => {
+      animationFrame.current && cancelAnimationFrame(animationFrame.current);
+    };
+  });
+  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_5__.classNames)(_Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].Section, separator && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"]["Section-withSeparator"], fill && _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"]["Section-fill"]);
+  const actionMarkup = action && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button",
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].Action,
+    "aria-label": action.accessibilityLabel,
+    onClick: action.onClick
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
+    source: action.icon
+  }));
+  const sectionHeadingMarkup = title && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].SectionHeading
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].Text
+  }, title), actionMarkup);
+  const itemsMarkup = items.map(item => {
+    const {
+      onClick,
+      label,
+      subNavigationItems
+    } = item,
+          rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_7__.objectWithoutProperties)(item, ["onClick", "label", "subNavigationItems"]);
+
+    const hasSubNavItems = subNavigationItems != null && subNavigationItems.length > 0;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Item_Item_js__WEBPACK_IMPORTED_MODULE_8__.Item, Object.assign({}, rest, {
+      key: label,
+      label: label,
+      subNavigationItems: subNavigationItems,
+      onClick: handleClick(onClick, hasSubNavItems)
+    }));
+  });
+  const toggleClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_5__.classNames)(_Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].Item, _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].RollupToggle);
+  const ariaLabel = rollup && (expanded ? rollup.hide : rollup.view);
+  const toggleRollup = rollup && items.length > rollup.after && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].ListItem,
+    key: "List Item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "button",
+    className: toggleClassName,
+    onClick: toggleExpanded,
+    "aria-label": ariaLabel
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].Icon
+  }, _ref)));
+  const activeItemIndex = items.findIndex(item => {
+    if (!rollup) {
+      return false;
+    }
+
+    return rollup.activePath === item.url || item.url && rollup.activePath.startsWith(item.url) || (item.subNavigationItems ? item.subNavigationItems.some(({
+      url: itemUrl
+    }) => rollup.activePath.startsWith(itemUrl)) : false);
+  });
+  const sectionItems = rollup ? itemsMarkup.slice(0, rollup.after) : itemsMarkup;
+  const additionalItems = rollup ? itemsMarkup.slice(rollup.after) : [];
+
+  if (rollup && activeItemIndex !== -1 && activeItemIndex > rollup.after - 1) {
+    sectionItems.push(...additionalItems.splice(activeItemIndex - rollup.after, 1));
+  }
+
+  const additionalItemsId = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_9__.useUniqueId)('AdditionalItems');
+  const activeItemsMarkup = rollup && additionalItems.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].RollupSection
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Collapsible_Collapsible_js__WEBPACK_IMPORTED_MODULE_10__.Collapsible, {
+    id: additionalItemsId,
+    open: expanded
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: _Navigation_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].List
+  }, additionalItems)), toggleRollup);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: className
+  }, sectionHeadingMarkup, sectionItems, activeItemsMarkup);
 }
 
-function noop() {}
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/context.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/components/Navigation/context.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NavigationContext": () => (/* binding */ NavigationContext)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const NavigationContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)({
+  location: ''
+});
 
 
 
@@ -7269,508 +3599,6 @@ function PortalsContainerComponent(_props, ref) {
 const PortalsContainer = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(PortalsContainerComponent);
 
 
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/PositionedOverlay.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/PositionedOverlay.js ***!
-  \**************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PositionedOverlay": () => (/* binding */ PositionedOverlay)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../EventListener/EventListener.js */ "./node_modules/@shopify/polaris/dist/esm/components/EventListener/EventListener.js");
-/* harmony import */ var _shared_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../shared.js */ "./node_modules/@shopify/polaris/dist/esm/components/shared.js");
-/* harmony import */ var _utilities_geometry_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/geometry.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/geometry.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Scrollable/Scrollable.js */ "./node_modules/@shopify/polaris/dist/esm/components/Scrollable/Scrollable.js");
-/* harmony import */ var _utilities_math_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utilities/math.js */ "./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/utilities/math.js");
-/* harmony import */ var _PositionedOverlay_scss_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PositionedOverlay.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/PositionedOverlay.scss.js");
-
-
-
-
-
-
-
-
-
-
-const OBSERVER_CONFIG = {
-  childList: true,
-  subtree: true
-};
-class PositionedOverlay extends react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      measuring: true,
-      activatorRect: (0,_utilities_geometry_js__WEBPACK_IMPORTED_MODULE_1__.getRectForNode)(this.props.activator),
-      right: undefined,
-      left: undefined,
-      top: 0,
-      height: 0,
-      width: null,
-      positioning: 'below',
-      zIndex: null,
-      outsideScrollableContainer: false,
-      lockPosition: false
-    };
-    this.overlay = null;
-    this.scrollableContainer = null;
-    this.observer = void 0;
-
-    this.overlayDetails = () => {
-      const {
-        measuring,
-        left,
-        right,
-        positioning,
-        height,
-        activatorRect
-      } = this.state;
-      return {
-        measuring,
-        left,
-        right,
-        desiredHeight: height,
-        positioning,
-        activatorRect
-      };
-    };
-
-    this.setOverlay = node => {
-      this.overlay = node;
-    };
-
-    this.handleMeasurement = () => {
-      const {
-        lockPosition,
-        top
-      } = this.state;
-      this.observer.disconnect();
-      this.setState(({
-        left,
-        top,
-        right
-      }) => ({
-        left,
-        right,
-        top,
-        height: 0,
-        positioning: 'below',
-        measuring: true
-      }), () => {
-        if (this.overlay == null || this.scrollableContainer == null) {
-          return;
-        }
-
-        const {
-          activator,
-          preferredPosition = 'below',
-          preferredAlignment = 'center',
-          onScrollOut,
-          fullWidth,
-          fixed,
-          preferInputActivator = true
-        } = this.props;
-        const preferredActivator = preferInputActivator ? activator.querySelector('input') || activator : activator;
-        const activatorRect = (0,_utilities_geometry_js__WEBPACK_IMPORTED_MODULE_1__.getRectForNode)(preferredActivator);
-        const currentOverlayRect = (0,_utilities_geometry_js__WEBPACK_IMPORTED_MODULE_1__.getRectForNode)(this.overlay);
-        const scrollableElement = isDocument(this.scrollableContainer) ? document.body : this.scrollableContainer;
-        const scrollableContainerRect = (0,_utilities_geometry_js__WEBPACK_IMPORTED_MODULE_1__.getRectForNode)(scrollableElement);
-        const overlayRect = fullWidth ? new _utilities_geometry_js__WEBPACK_IMPORTED_MODULE_1__.Rect((0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_2__.objectSpread2)((0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_2__.objectSpread2)({}, currentOverlayRect), {}, {
-          width: activatorRect.width
-        })) : currentOverlayRect; // If `body` is 100% height, it still acts as though it were not constrained to that size. This adjusts for that.
-
-        if (scrollableElement === document.body) {
-          scrollableContainerRect.height = document.body.scrollHeight;
-        }
-
-        const overlayMargins = this.overlay.firstElementChild && this.overlay.firstChild instanceof HTMLElement ? getMarginsForNode(this.overlay.firstElementChild) : {
-          activator: 0,
-          container: 0,
-          horizontal: 0
-        };
-        const containerRect = (0,_utilities_math_js__WEBPACK_IMPORTED_MODULE_3__.windowRect)();
-        const zIndexForLayer = getZIndexForLayerFromNode(activator);
-        const zIndex = zIndexForLayer == null ? zIndexForLayer : zIndexForLayer + 1;
-        const verticalPosition = (0,_utilities_math_js__WEBPACK_IMPORTED_MODULE_3__.calculateVerticalPosition)(activatorRect, overlayRect, overlayMargins, scrollableContainerRect, containerRect, preferredPosition, fixed);
-        const horizontalPosition = (0,_utilities_math_js__WEBPACK_IMPORTED_MODULE_3__.calculateHorizontalPosition)(activatorRect, overlayRect, containerRect, overlayMargins, preferredAlignment);
-        this.setState({
-          measuring: false,
-          activatorRect: (0,_utilities_geometry_js__WEBPACK_IMPORTED_MODULE_1__.getRectForNode)(activator),
-          left: preferredAlignment !== 'right' ? horizontalPosition : undefined,
-          right: preferredAlignment === 'right' ? horizontalPosition : undefined,
-          top: lockPosition ? top : verticalPosition.top,
-          lockPosition: Boolean(fixed),
-          height: verticalPosition.height || 0,
-          width: fullWidth ? overlayRect.width : null,
-          positioning: verticalPosition.positioning,
-          outsideScrollableContainer: onScrollOut != null && (0,_utilities_math_js__WEBPACK_IMPORTED_MODULE_3__.rectIsOutsideOfRect)(activatorRect, (0,_utilities_math_js__WEBPACK_IMPORTED_MODULE_3__.intersectionWithViewport)(scrollableContainerRect)),
-          zIndex
-        }, () => {
-          if (!this.overlay) return;
-          this.observer.observe(this.overlay, OBSERVER_CONFIG);
-        });
-      });
-    };
-
-    this.observer = new MutationObserver(this.handleMeasurement);
-  }
-
-  componentDidMount() {
-    this.scrollableContainer = _Scrollable_Scrollable_js__WEBPACK_IMPORTED_MODULE_4__.Scrollable.forNode(this.props.activator);
-
-    if (this.scrollableContainer && !this.props.fixed) {
-      this.scrollableContainer.addEventListener('scroll', this.handleMeasurement);
-    }
-
-    this.handleMeasurement();
-  }
-
-  componentWillUnmount() {
-    if (this.scrollableContainer && !this.props.fixed) {
-      this.scrollableContainer.removeEventListener('scroll', this.handleMeasurement);
-    }
-  }
-
-  componentDidUpdate() {
-    const {
-      outsideScrollableContainer,
-      top
-    } = this.state;
-    const {
-      onScrollOut,
-      active
-    } = this.props;
-
-    if (active && onScrollOut != null && top !== 0 && outsideScrollableContainer) {
-      onScrollOut();
-    }
-  }
-
-  render() {
-    const {
-      left,
-      right,
-      top,
-      zIndex,
-      width
-    } = this.state;
-    const {
-      render,
-      fixed,
-      preventInteraction,
-      classNames: propClassNames,
-      zIndexOverride
-    } = this.props;
-    const style = {
-      top: top == null || isNaN(top) ? undefined : top,
-      left: left == null || isNaN(left) ? undefined : left,
-      right: right == null || isNaN(right) ? undefined : right,
-      width: width == null || isNaN(width) ? undefined : width,
-      zIndex: zIndexOverride || zIndex || undefined
-    };
-    const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_5__.classNames)(_PositionedOverlay_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].PositionedOverlay, fixed && _PositionedOverlay_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].fixed, preventInteraction && _PositionedOverlay_scss_js__WEBPACK_IMPORTED_MODULE_6__["default"].preventInteraction, propClassNames);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: className,
-      style: style,
-      ref: this.setOverlay
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_7__.EventListener, {
-      event: "resize",
-      handler: this.handleMeasurement
-    }), render(this.overlayDetails()));
-  }
-
-}
-
-function getMarginsForNode(node) {
-  const nodeStyles = window.getComputedStyle(node);
-  return {
-    activator: parseFloat(nodeStyles.marginTop || '0'),
-    container: parseFloat(nodeStyles.marginBottom || '0'),
-    horizontal: parseFloat(nodeStyles.marginLeft || '0')
-  };
-}
-
-function getZIndexForLayerFromNode(node) {
-  const layerNode = node.closest(_shared_js__WEBPACK_IMPORTED_MODULE_8__.layer.selector) || document.body;
-  const zIndex = layerNode === document.body ? 'auto' : parseInt(window.getComputedStyle(layerNode).zIndex || '0', 10);
-  return zIndex === 'auto' || isNaN(zIndex) ? null : zIndex;
-}
-
-function isDocument(node) {
-  return node === document;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/PositionedOverlay.scss.js":
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/PositionedOverlay.scss.js ***!
-  \*******************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "PositionedOverlay": "Polaris-PositionedOverlay",
-  "fixed": "Polaris-PositionedOverlay--fixed",
-  "calculating": "Polaris-PositionedOverlay--calculating",
-  "preventInteraction": "Polaris-PositionedOverlay--preventInteraction"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/utilities/math.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/utilities/math.js ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "calculateHorizontalPosition": () => (/* binding */ calculateHorizontalPosition),
-/* harmony export */   "calculateVerticalPosition": () => (/* binding */ calculateVerticalPosition),
-/* harmony export */   "intersectionWithViewport": () => (/* binding */ intersectionWithViewport),
-/* harmony export */   "rectIsOutsideOfRect": () => (/* binding */ rectIsOutsideOfRect),
-/* harmony export */   "windowRect": () => (/* binding */ windowRect)
-/* harmony export */ });
-/* harmony import */ var _utilities_geometry_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../utilities/geometry.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/geometry.js");
-
-
-function calculateVerticalPosition(activatorRect, overlayRect, overlayMargins, scrollableContainerRect, containerRect, preferredPosition, fixed) {
-  const activatorTop = activatorRect.top;
-  const activatorBottom = activatorTop + activatorRect.height;
-  const spaceAbove = activatorRect.top;
-  const spaceBelow = containerRect.height - activatorRect.top - activatorRect.height;
-  const desiredHeight = overlayRect.height;
-  const verticalMargins = overlayMargins.activator + overlayMargins.container;
-  const minimumSpaceToScroll = overlayMargins.container;
-  const distanceToTopScroll = activatorRect.top - Math.max(scrollableContainerRect.top, 0);
-  const distanceToBottomScroll = containerRect.top + Math.min(containerRect.height, scrollableContainerRect.top + scrollableContainerRect.height) - (activatorRect.top + activatorRect.height);
-  const enoughSpaceFromTopScroll = distanceToTopScroll >= minimumSpaceToScroll;
-  const enoughSpaceFromBottomScroll = distanceToBottomScroll >= minimumSpaceToScroll;
-  const heightIfBelow = Math.min(spaceBelow, desiredHeight);
-  const heightIfAbove = Math.min(spaceAbove, desiredHeight);
-  const containerRectTop = fixed ? 0 : containerRect.top;
-  const positionIfAbove = {
-    height: heightIfAbove - verticalMargins,
-    top: activatorTop + containerRectTop - heightIfAbove,
-    positioning: 'above'
-  };
-  const positionIfBelow = {
-    height: heightIfBelow - verticalMargins,
-    top: activatorBottom + containerRectTop,
-    positioning: 'below'
-  };
-
-  if (preferredPosition === 'above') {
-    return (enoughSpaceFromTopScroll || distanceToTopScroll >= distanceToBottomScroll && !enoughSpaceFromBottomScroll) && (spaceAbove > desiredHeight || spaceAbove > spaceBelow) ? positionIfAbove : positionIfBelow;
-  }
-
-  if (preferredPosition === 'below') {
-    return (enoughSpaceFromBottomScroll || distanceToBottomScroll >= distanceToTopScroll && !enoughSpaceFromTopScroll) && (spaceBelow > desiredHeight || spaceBelow > spaceAbove) ? positionIfBelow : positionIfAbove;
-  }
-
-  if (enoughSpaceFromTopScroll && enoughSpaceFromBottomScroll) {
-    return spaceAbove > spaceBelow ? positionIfAbove : positionIfBelow;
-  }
-
-  return distanceToTopScroll > minimumSpaceToScroll ? positionIfAbove : positionIfBelow;
-}
-function calculateHorizontalPosition(activatorRect, overlayRect, containerRect, overlayMargins, preferredAlignment) {
-  const maximum = containerRect.width - overlayRect.width;
-
-  if (preferredAlignment === 'left') {
-    return Math.min(maximum, Math.max(0, activatorRect.left - overlayMargins.horizontal));
-  } else if (preferredAlignment === 'right') {
-    const activatorRight = containerRect.width - (activatorRect.left + activatorRect.width);
-    return Math.min(maximum, Math.max(0, activatorRight - overlayMargins.horizontal));
-  }
-
-  return Math.min(maximum, Math.max(0, activatorRect.center.x - overlayRect.width / 2));
-}
-function rectIsOutsideOfRect(inner, outer) {
-  const {
-    center
-  } = inner;
-  return center.y < outer.top || center.y > outer.top + outer.height;
-}
-function intersectionWithViewport(rect, viewport = windowRect()) {
-  const top = Math.max(rect.top, 0);
-  const left = Math.max(rect.left, 0);
-  const bottom = Math.min(rect.top + rect.height, viewport.height);
-  const right = Math.min(rect.left + rect.width, viewport.width);
-  return new _utilities_geometry_js__WEBPACK_IMPORTED_MODULE_0__.Rect({
-    top,
-    left,
-    height: bottom - top,
-    width: right - left
-  });
-}
-function windowRect() {
-  return new _utilities_geometry_js__WEBPACK_IMPORTED_MODULE_0__.Rect({
-    top: window.scrollY,
-    left: window.scrollX,
-    height: window.innerHeight,
-    width: document.body.clientWidth
-  });
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/RadioButton/RadioButton.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/RadioButton/RadioButton.js ***!
-  \**************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RadioButton": () => (/* binding */ RadioButton)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
-/* harmony import */ var _Choice_Choice_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Choice/Choice.js */ "./node_modules/@shopify/polaris/dist/esm/components/Choice/Choice.js");
-/* harmony import */ var _RadioButton_scss_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./RadioButton.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/RadioButton/RadioButton.scss.js");
-
-
-
-
-
-
-
-function RadioButton({
-  ariaDescribedBy: ariaDescribedByProp,
-  label,
-  labelHidden,
-  helpText,
-  checked,
-  disabled,
-  onChange,
-  onFocus,
-  onBlur,
-  id: idProp,
-  name: nameProp,
-  value
-}) {
-  const id = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useUniqueId)('RadioButton', idProp);
-  const name = nameProp || id;
-  const inputNode = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const [keyFocused, setKeyFocused] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const {
-    value: mouseOver,
-    setTrue: handleMouseOver,
-    setFalse: handleMouseOut
-  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_2__.useToggle)(false);
-
-  const handleKeyUp = () => {
-    !keyFocused && setKeyFocused(true);
-  };
-
-  const handleBlur = () => {
-    onBlur && onBlur();
-    setKeyFocused(false);
-  };
-
-  function handleChange({
-    currentTarget
-  }) {
-    onChange && onChange(currentTarget.checked, id);
-  }
-
-  const describedBy = [];
-
-  if (helpText) {
-    describedBy.push((0,_Choice_Choice_js__WEBPACK_IMPORTED_MODULE_3__.helpTextID)(id));
-  }
-
-  if (ariaDescribedByProp) {
-    describedBy.push(ariaDescribedByProp);
-  }
-
-  const ariaDescribedBy = describedBy.length ? describedBy.join(' ') : undefined;
-  const inputClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_RadioButton_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Input, keyFocused && _RadioButton_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].keyFocused);
-  const backdropClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_4__.classNames)(_RadioButton_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].Backdrop, mouseOver && _RadioButton_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].hover);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Choice_Choice_js__WEBPACK_IMPORTED_MODULE_3__.Choice, {
-    label: label,
-    labelHidden: labelHidden,
-    disabled: disabled,
-    id: id,
-    helpText: helpText,
-    onMouseOver: handleMouseOver,
-    onMouseOut: handleMouseOut
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: _RadioButton_scss_js__WEBPACK_IMPORTED_MODULE_5__["default"].RadioButton
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-    id: id,
-    name: name,
-    value: value,
-    type: "radio",
-    checked: checked,
-    disabled: disabled,
-    className: inputClassName,
-    onChange: handleChange,
-    onFocus: onFocus,
-    onKeyUp: handleKeyUp,
-    onBlur: handleBlur,
-    "aria-describedby": ariaDescribedBy,
-    ref: inputNode
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: backdropClassName
-  })));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/RadioButton/RadioButton.scss.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/RadioButton/RadioButton.scss.js ***!
-  \*******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "RadioButton": "Polaris-RadioButton",
-  "Input": "Polaris-RadioButton__Input",
-  "keyFocused": "Polaris-RadioButton--keyFocused",
-  "Backdrop": "Polaris-RadioButton__Backdrop",
-  "hover": "Polaris-RadioButton--hover"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
 
 
 /***/ }),
@@ -8127,1091 +3955,6 @@ const ScrollableContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.cre
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/SettingAction/SettingAction.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/SettingAction/SettingAction.js ***!
-  \******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SettingAction": () => (/* binding */ SettingAction)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _SettingAction_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SettingAction.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/SettingAction/SettingAction.scss.js");
-
-
-
-function SettingAction({
-  action,
-  children
-}) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _SettingAction_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].SettingAction
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _SettingAction_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Setting
-  }, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _SettingAction_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Action
-  }, action));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/SettingAction/SettingAction.scss.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/SettingAction/SettingAction.scss.js ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "SettingAction": "Polaris-SettingAction",
-  "Setting": "Polaris-SettingAction__Setting",
-  "Action": "Polaris-SettingAction__Action"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/SettingToggle/SettingToggle.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/SettingToggle/SettingToggle.js ***!
-  \******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SettingToggle": () => (/* binding */ SettingToggle)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Button_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Button/utils.js */ "./node_modules/@shopify/polaris/dist/esm/components/Button/utils.js");
-/* harmony import */ var _Card_Card_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Card/Card.js */ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.js");
-/* harmony import */ var _SettingAction_SettingAction_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../SettingAction/SettingAction.js */ "./node_modules/@shopify/polaris/dist/esm/components/SettingAction/SettingAction.js");
-
-
-
-
-
-function SettingToggle({
-  enabled,
-  action,
-  children
-}) {
-  const actionMarkup = action ? (0,_Button_utils_js__WEBPACK_IMPORTED_MODULE_1__.buttonFrom)(action, {
-    primary: !enabled
-  }) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card_Card_js__WEBPACK_IMPORTED_MODULE_2__.Card, {
-    sectioned: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SettingAction_SettingAction_js__WEBPACK_IMPORTED_MODULE_3__.SettingAction, {
-    action: actionMarkup
-  }, children));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Spinner/Spinner.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Spinner/Spinner.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Spinner": () => (/* binding */ Spinner)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_use_is_after_initial_mount_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/use-is-after-initial-mount.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-is-after-initial-mount.js");
-/* harmony import */ var _VisuallyHidden_VisuallyHidden_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../VisuallyHidden/VisuallyHidden.js */ "./node_modules/@shopify/polaris/dist/esm/components/VisuallyHidden/VisuallyHidden.js");
-/* harmony import */ var _Spinner_scss_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Spinner.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Spinner/Spinner.scss.js");
-
-
-
-
-
-
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
-  viewBox: "0 0 44 44",
-  xmlns: "http://www.w3.org/2000/svg"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-  d: "M15.542 1.487A21.507 21.507 0 00.5 22c0 11.874 9.626 21.5 21.5 21.5 9.847 0 18.364-6.675 20.809-16.072a1.5 1.5 0 00-2.904-.756C37.803 34.755 30.473 40.5 22 40.5 11.783 40.5 3.5 32.217 3.5 22c0-8.137 5.3-15.247 12.942-17.65a1.5 1.5 0 10-.9-2.863z"
-}));
-
-var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
-  viewBox: "0 0 20 20",
-  xmlns: "http://www.w3.org/2000/svg"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-  d: "M7.229 1.173a9.25 9.25 0 1011.655 11.412 1.25 1.25 0 10-2.4-.698 6.75 6.75 0 11-8.506-8.329 1.25 1.25 0 10-.75-2.385z"
-}));
-
-function Spinner({
-  size = 'large',
-  accessibilityLabel,
-  hasFocusableParent
-}) {
-  const isAfterInitialMount = (0,_utilities_use_is_after_initial_mount_js__WEBPACK_IMPORTED_MODULE_1__.useIsAfterInitialMount)();
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.classNames)(_Spinner_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"].Spinner, size && _Spinner_scss_js__WEBPACK_IMPORTED_MODULE_3__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_2__.variationName)('size', size)]);
-  const spinnerSVGMarkup = size === 'large' ? _ref : _ref2;
-
-  const spanAttributes = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_4__.objectSpread2)({}, !hasFocusableParent && {
-    role: 'status'
-  });
-
-  const accessibilityLabelMarkup = (isAfterInitialMount || !hasFocusableParent) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_VisuallyHidden_VisuallyHidden_js__WEBPACK_IMPORTED_MODULE_5__.VisuallyHidden, null, accessibilityLabel);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: className
-  }, spinnerSVGMarkup), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", spanAttributes, accessibilityLabelMarkup));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Spinner/Spinner.scss.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Spinner/Spinner.scss.js ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Spinner": "Polaris-Spinner",
-  "loading": "Polaris-Spinner--loading",
-  "sizeSmall": "Polaris-Spinner--sizeSmall",
-  "sizeLarge": "Polaris-Spinner--sizeLarge"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Stack": () => (/* binding */ Stack)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_components_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/components.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js");
-/* harmony import */ var _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Stack.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.scss.js");
-/* harmony import */ var _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Item/Item.js */ "./node_modules/@shopify/polaris/dist/esm/components/Stack/components/Item/Item.js");
-
-
-
-
-
-
-const Stack = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(function Stack({
-  children,
-  vertical,
-  spacing,
-  distribution,
-  alignment,
-  wrap
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Stack, vertical && _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].vertical, spacing && _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.variationName)('spacing', spacing)], distribution && _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.variationName)('distribution', distribution)], alignment && _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.variationName)('alignment', alignment)], wrap === false && _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].noWrap);
-  const itemMarkup = (0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_3__.elementChildren)(children).map((child, index) => {
-    const props = {
-      key: index
-    };
-    return (0,_utilities_components_js__WEBPACK_IMPORTED_MODULE_3__.wrapWithComponent)(child, _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_4__.Item, props);
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, itemMarkup);
-});
-Stack.Item = _components_Item_Item_js__WEBPACK_IMPORTED_MODULE_4__.Item;
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.scss.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.scss.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Stack": "Polaris-Stack",
-  "Item": "Polaris-Stack__Item",
-  "noWrap": "Polaris-Stack--noWrap",
-  "spacingNone": "Polaris-Stack--spacingNone",
-  "spacingExtraTight": "Polaris-Stack--spacingExtraTight",
-  "spacingTight": "Polaris-Stack--spacingTight",
-  "spacingBaseTight": "Polaris-Stack--spacingBaseTight",
-  "spacingLoose": "Polaris-Stack--spacingLoose",
-  "spacingExtraLoose": "Polaris-Stack--spacingExtraLoose",
-  "distributionLeading": "Polaris-Stack--distributionLeading",
-  "distributionTrailing": "Polaris-Stack--distributionTrailing",
-  "distributionCenter": "Polaris-Stack--distributionCenter",
-  "distributionEqualSpacing": "Polaris-Stack--distributionEqualSpacing",
-  "distributionFill": "Polaris-Stack--distributionFill",
-  "distributionFillEvenly": "Polaris-Stack--distributionFillEvenly",
-  "alignmentLeading": "Polaris-Stack--alignmentLeading",
-  "alignmentTrailing": "Polaris-Stack--alignmentTrailing",
-  "alignmentCenter": "Polaris-Stack--alignmentCenter",
-  "alignmentFill": "Polaris-Stack--alignmentFill",
-  "alignmentBaseline": "Polaris-Stack--alignmentBaseline",
-  "vertical": "Polaris-Stack--vertical",
-  "Item-fill": "Polaris-Stack__Item--fill"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Stack/components/Item/Item.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Stack/components/Item/Item.js ***!
-  \*****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Item": () => (/* binding */ Item)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Stack.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Stack/Stack.scss.js");
-
-
-
-
-function Item({
-  children,
-  fill
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].Item, fill && _Stack_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"]["Item-fill"]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Subheading/Subheading.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Subheading/Subheading.js ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Subheading": () => (/* binding */ Subheading)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Subheading_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Subheading.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Subheading/Subheading.scss.js");
-
-
-
-function Subheading({
-  element: Element = 'h3',
-  children
-}) {
-  const ariaLabel = typeof children === 'string' ? children : undefined;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Element, {
-    "aria-label": ariaLabel,
-    className: _Subheading_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Subheading
-  }, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Subheading/Subheading.scss.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Subheading/Subheading.scss.js ***!
-  \*****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "Subheading": "Polaris-Subheading"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextContainer/TextContainer.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextContainer/TextContainer.js ***!
-  \******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TextContainer": () => (/* binding */ TextContainer)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _TextContainer_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TextContainer.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextContainer/TextContainer.scss.js");
-
-
-
-
-function TextContainer({
-  spacing,
-  children
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(_TextContainer_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].TextContainer, spacing && _TextContainer_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.variationName)('spacing', spacing)]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className
-  }, children);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextContainer/TextContainer.scss.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextContainer/TextContainer.scss.js ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "TextContainer": "Polaris-TextContainer",
-  "spacingTight": "Polaris-TextContainer--spacingTight",
-  "spacingLoose": "Polaris-TextContainer--spacingLoose"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.js ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TextField": () => (/* binding */ TextField)
-/* harmony export */ });
-/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../types.js */ "./node_modules/@shopify/polaris/dist/esm/types.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _utilities_use_is_after_initial_mount_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/use-is-after-initial-mount.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-is-after-initial-mount.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/CircleCancelMinor.svg.mjs");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _VisuallyHidden_VisuallyHidden_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../VisuallyHidden/VisuallyHidden.js */ "./node_modules/@shopify/polaris/dist/esm/components/VisuallyHidden/VisuallyHidden.js");
-/* harmony import */ var _Label_Label_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Label/Label.js */ "./node_modules/@shopify/polaris/dist/esm/components/Label/Label.js");
-/* harmony import */ var _Labelled_Labelled_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Labelled/Labelled.js */ "./node_modules/@shopify/polaris/dist/esm/components/Labelled/Labelled.js");
-/* harmony import */ var _Connected_Connected_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../Connected/Connected.js */ "./node_modules/@shopify/polaris/dist/esm/components/Connected/Connected.js");
-/* harmony import */ var _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./TextField.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.scss.js");
-/* harmony import */ var _components_Resizer_Resizer_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Resizer/Resizer.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextField/components/Resizer/Resizer.js");
-/* harmony import */ var _components_Spinner_Spinner_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Spinner/Spinner.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextField/components/Spinner/Spinner.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-  source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S,
-  color: "base"
-});
-
-function TextField({
-  prefix,
-  suffix,
-  placeholder,
-  value,
-  helpText,
-  label,
-  labelAction,
-  labelHidden,
-  disabled,
-  clearButton,
-  readOnly,
-  autoFocus,
-  focused,
-  multiline,
-  error,
-  connectedRight,
-  connectedLeft,
-  type,
-  name,
-  id: idProp,
-  role,
-  step,
-  autoComplete,
-  max,
-  maxLength,
-  min,
-  minLength,
-  pattern,
-  inputMode,
-  spellCheck,
-  ariaOwns,
-  ariaControls,
-  ariaExpanded,
-  ariaActiveDescendant,
-  ariaAutocomplete,
-  showCharacterCount,
-  align,
-  onClearButtonClick,
-  onChange,
-  onFocus,
-  onBlur,
-  requiredIndicator,
-  monospaced
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_3__.useI18n)();
-  const [height, setHeight] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  const [focus, setFocus] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(Boolean(focused));
-  const isAfterInitial = (0,_utilities_use_is_after_initial_mount_js__WEBPACK_IMPORTED_MODULE_4__.useIsAfterInitialMount)();
-  const id = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_5__.useUniqueId)('TextField', idProp);
-  const inputRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const prefixRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const suffixRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const buttonPressTimer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const input = inputRef.current;
-    if (!input || focused === undefined) return;
-    focused ? input.focus() : input.blur();
-  }, [focused]); // Use a typeof check here as Typescript mostly protects us from non-stringy
-  // values but overzealous usage of `any` in consuming apps means people have
-  // been known to pass a number in, so make it clear that doesn't work.
-
-  const normalizedValue = typeof value === 'string' ? value : '';
-  const normalizedStep = step != null ? step : 1;
-  const normalizedMax = max != null ? max : Infinity;
-  const normalizedMin = min != null ? min : -Infinity;
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].TextField, Boolean(normalizedValue) && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].hasValue, disabled && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].disabled, readOnly && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].readOnly, error && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].error, multiline && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].multiline, focus && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].focus);
-  const inputType = type === 'currency' ? 'text' : type;
-  const prefixMarkup = prefix ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Prefix,
-    id: `${id}Prefix`,
-    ref: prefixRef
-  }, prefix) : null;
-  const suffixMarkup = suffix ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Suffix,
-    id: `${id}Suffix`,
-    ref: suffixRef
-  }, suffix) : null;
-  let characterCountMarkup = null;
-
-  if (showCharacterCount) {
-    const characterCount = normalizedValue.length;
-    const characterCountLabel = maxLength ? i18n.translate('Polaris.TextField.characterCountWithMaxLength', {
-      count: characterCount,
-      limit: maxLength
-    }) : i18n.translate('Polaris.TextField.characterCount', {
-      count: characterCount
-    });
-    const characterCountClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].CharacterCount, multiline && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].AlignFieldBottom);
-    const characterCountText = !maxLength ? characterCount : `${characterCount}/${maxLength}`;
-    characterCountMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      id: `${id}CharacterCounter`,
-      className: characterCountClassName,
-      "aria-label": characterCountLabel,
-      "aria-live": focus ? 'polite' : 'off',
-      "aria-atomic": "true"
-    }, characterCountText);
-  }
-
-  const clearButtonVisible = normalizedValue !== '';
-  const clearButtonClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].ClearButton, !clearButtonVisible && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["ClearButton-hidden"]);
-  const clearButtonMarkup = clearButton ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    type: "button",
-    className: clearButtonClassName,
-    onClick: handleClearButtonPress,
-    disabled: disabled,
-    tabIndex: clearButtonVisible ? 0 : -1
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_VisuallyHidden_VisuallyHidden_js__WEBPACK_IMPORTED_MODULE_8__.VisuallyHidden, null, i18n.translate('Polaris.Common.clear')), _ref) : null;
-  const handleNumberChange = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(steps => {
-    if (onChange == null) {
-      return;
-    } // Returns the length of decimal places in a number
-
-
-    const dpl = num => (num.toString().split('.')[1] || []).length;
-
-    const numericValue = value ? parseFloat(value) : 0;
-
-    if (isNaN(numericValue)) {
-      return;
-    } // Making sure the new value has the same length of decimal places as the
-    // step / value has.
-
-
-    const decimalPlaces = Math.max(dpl(numericValue), dpl(normalizedStep));
-    const newValue = Math.min(Number(normalizedMax), Math.max(numericValue + steps * normalizedStep, Number(normalizedMin)));
-    onChange(String(newValue.toFixed(decimalPlaces)), id);
-  }, [id, normalizedMax, normalizedMin, onChange, normalizedStep, value]);
-  const handleButtonRelease = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    clearTimeout(buttonPressTimer.current);
-  }, []);
-  const handleButtonPress = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(onChange => {
-    const minInterval = 50;
-    const decrementBy = 10;
-    let interval = 200;
-
-    const onChangeInterval = () => {
-      if (interval > minInterval) interval -= decrementBy;
-      onChange(0);
-      buttonPressTimer.current = window.setTimeout(onChangeInterval, interval);
-    };
-
-    buttonPressTimer.current = window.setTimeout(onChangeInterval, interval);
-    document.addEventListener('mouseup', handleButtonRelease, {
-      once: true
-    });
-  }, [handleButtonRelease]);
-  const spinnerMarkup = type === 'number' && step !== 0 && !disabled && !readOnly ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Spinner_Spinner_js__WEBPACK_IMPORTED_MODULE_9__.Spinner, {
-    onChange: handleNumberChange,
-    onMouseDown: handleButtonPress,
-    onMouseUp: handleButtonRelease
-  }) : null;
-  const style = multiline && height ? {
-    height
-  } : null;
-  const handleExpandingResize = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(height => {
-    setHeight(height);
-  }, []);
-  const resizer = multiline && isAfterInitial ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Resizer_Resizer_js__WEBPACK_IMPORTED_MODULE_10__.Resizer, {
-    contents: normalizedValue || placeholder,
-    currentHeight: height,
-    minimumLines: typeof multiline === 'number' ? multiline : 1,
-    onHeightChange: handleExpandingResize
-  }) : null;
-  const describedBy = [];
-
-  if (error) {
-    describedBy.push(`${id}Error`);
-  }
-
-  if (helpText) {
-    describedBy.push((0,_Labelled_Labelled_js__WEBPACK_IMPORTED_MODULE_11__.helpTextID)(id));
-  }
-
-  if (showCharacterCount) {
-    describedBy.push(`${id}CharacterCounter`);
-  }
-
-  const labelledBy = [];
-
-  if (prefix) {
-    labelledBy.push(`${id}Prefix`);
-  }
-
-  if (suffix) {
-    labelledBy.push(`${id}Suffix`);
-  }
-
-  labelledBy.unshift((0,_Label_Label_js__WEBPACK_IMPORTED_MODULE_12__.labelID)(id));
-  const inputClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Input, align && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.variationName)('Input-align', align)], suffix && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Input-suffixed"], clearButton && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Input-hasClearButton"], monospaced && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].monospaced);
-  const input = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(multiline ? 'textarea' : 'input', (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_13__.objectSpread2)({
-    name,
-    id,
-    disabled,
-    readOnly,
-    role,
-    autoFocus,
-    value: normalizedValue,
-    placeholder,
-    onFocus,
-    onBlur,
-    onKeyPress: handleKeyPress,
-    style,
-    autoComplete: normalizeAutoComplete(autoComplete),
-    className: inputClassName,
-    onChange: handleChange,
-    ref: inputRef,
-    min,
-    max,
-    step,
-    minLength,
-    maxLength,
-    spellCheck,
-    pattern,
-    inputMode,
-    type: inputType,
-    'aria-describedby': describedBy.length ? describedBy.join(' ') : undefined,
-    'aria-labelledby': labelledBy.join(' '),
-    'aria-invalid': Boolean(error),
-    'aria-owns': ariaOwns,
-    'aria-activedescendant': ariaActiveDescendant,
-    'aria-autocomplete': ariaAutocomplete,
-    'aria-controls': ariaControls,
-    'aria-expanded': ariaExpanded,
-    'aria-required': requiredIndicator
-  }, normalizeAriaMultiline(multiline)));
-  const backdropClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_6__.classNames)(_TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"].Backdrop, connectedLeft && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Backdrop-connectedLeft"], connectedRight && _TextField_scss_js__WEBPACK_IMPORTED_MODULE_7__["default"]["Backdrop-connectedRight"]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Labelled_Labelled_js__WEBPACK_IMPORTED_MODULE_11__.Labelled, {
-    label: label,
-    id: id,
-    error: error,
-    action: labelAction,
-    labelHidden: labelHidden,
-    helpText: helpText,
-    requiredIndicator: requiredIndicator
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Connected_Connected_js__WEBPACK_IMPORTED_MODULE_14__.Connected, {
-    left: connectedLeft,
-    right: connectedRight
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: className,
-    onFocus: handleFocus,
-    onBlur: handleBlur,
-    onClick: handleClick
-  }, prefixMarkup, input, suffixMarkup, characterCountMarkup, clearButtonMarkup, spinnerMarkup, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: backdropClassName
-  }), resizer)));
-
-  function handleClearButtonPress() {
-    onClearButtonClick && onClearButtonClick(id);
-  }
-
-  function handleKeyPress(event) {
-    const {
-      key,
-      which
-    } = event;
-    const numbersSpec = /[\d.eE+-]$/;
-
-    if (type !== 'number' || which === _types_js__WEBPACK_IMPORTED_MODULE_15__.Key.Enter || numbersSpec.test(key)) {
-      return;
-    }
-
-    event.preventDefault();
-  }
-
-  function containsAffix(target) {
-    return target instanceof HTMLElement && (prefixRef.current && prefixRef.current.contains(target) || suffixRef.current && suffixRef.current.contains(target));
-  }
-
-  function handleChange(event) {
-    onChange && onChange(event.currentTarget.value, id);
-  }
-
-  function handleFocus({
-    target
-  }) {
-    if (containsAffix(target)) {
-      return;
-    }
-
-    setFocus(true);
-  }
-
-  function handleBlur() {
-    setFocus(false);
-  }
-
-  function handleClick({
-    target
-  }) {
-    if (containsAffix(target)) {
-      return;
-    }
-
-    inputRef.current && inputRef.current.focus();
-  }
-}
-
-function normalizeAutoComplete(autoComplete) {
-  if (autoComplete === true) {
-    return 'on';
-  } else if (autoComplete === false) {
-    return 'off';
-  } else {
-    return autoComplete;
-  }
-}
-
-function normalizeAriaMultiline(multiline) {
-  if (!multiline) return undefined;
-  return Boolean(multiline) || multiline > 0 ? {
-    'aria-multiline': true
-  } : undefined;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.scss.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.scss.js ***!
-  \***************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "TextField": "Polaris-TextField",
-  "multiline": "Polaris-TextField--multiline",
-  "Input": "Polaris-TextField__Input",
-  "hasValue": "Polaris-TextField--hasValue",
-  "focus": "Polaris-TextField--focus",
-  "Backdrop": "Polaris-TextField__Backdrop",
-  "error": "Polaris-TextField--error",
-  "readOnly": "Polaris-TextField--readOnly",
-  "disabled": "Polaris-TextField--disabled",
-  "Prefix": "Polaris-TextField__Prefix",
-  "Input-hasClearButton": "Polaris-TextField__Input--hasClearButton",
-  "Input-suffixed": "Polaris-TextField__Input--suffixed",
-  "Input-alignRight": "Polaris-TextField__Input--alignRight",
-  "Input-alignLeft": "Polaris-TextField__Input--alignLeft",
-  "Input-alignCenter": "Polaris-TextField__Input--alignCenter",
-  "Suffix": "Polaris-TextField__Suffix",
-  "CharacterCount": "Polaris-TextField__CharacterCount",
-  "AlignFieldBottom": "Polaris-TextField__AlignFieldBottom",
-  "ClearButton": "Polaris-TextField__ClearButton",
-  "ClearButton-hidden": "Polaris-TextField__ClearButton--hidden",
-  "Spinner": "Polaris-TextField__Spinner",
-  "SpinnerIcon": "Polaris-TextField__SpinnerIcon",
-  "Resizer": "Polaris-TextField__Resizer",
-  "DummyInput": "Polaris-TextField__DummyInput",
-  "Segment": "Polaris-TextField__Segment",
-  "monospaced": "Polaris-TextField--monospaced"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextField/components/Resizer/Resizer.js":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextField/components/Resizer/Resizer.js ***!
-  \***************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Resizer": () => (/* binding */ Resizer)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../EventListener/EventListener.js */ "./node_modules/@shopify/polaris/dist/esm/components/EventListener/EventListener.js");
-/* harmony import */ var _TextField_scss_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../TextField.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.scss.js");
-
-
-
-
-function Resizer({
-  contents,
-  currentHeight: currentHeightProp = null,
-  minimumLines,
-  onHeightChange
-}) {
-  const contentNode = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const minimumLinesNode = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const animationFrame = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  const currentHeight = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(currentHeightProp);
-
-  if (currentHeightProp !== currentHeight.current) {
-    currentHeight.current = currentHeightProp;
-  }
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    return () => {
-      if (animationFrame.current) {
-        cancelAnimationFrame(animationFrame.current);
-      }
-    };
-  }, []);
-  const minimumLinesMarkup = minimumLines ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    ref: minimumLinesNode,
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].DummyInput,
-    dangerouslySetInnerHTML: {
-      __html: getContentsForMinimumLines(minimumLines)
-    }
-  }) : null;
-  const handleHeightCheck = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    if (animationFrame.current) {
-      cancelAnimationFrame(animationFrame.current);
-    }
-
-    animationFrame.current = requestAnimationFrame(() => {
-      if (!contentNode.current || !minimumLinesNode.current) {
-        return;
-      }
-
-      const newHeight = Math.max(contentNode.current.offsetHeight, minimumLinesNode.current.offsetHeight);
-
-      if (newHeight !== currentHeight.current) {
-        onHeightChange(newHeight);
-      }
-    });
-  }, [onHeightChange]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect)(() => {
-    handleHeightCheck();
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    "aria-hidden": true,
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].Resizer
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_EventListener_EventListener_js__WEBPACK_IMPORTED_MODULE_2__.EventListener, {
-    event: "resize",
-    handler: handleHeightCheck
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    ref: contentNode,
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_1__["default"].DummyInput,
-    dangerouslySetInnerHTML: {
-      __html: getFinalContents(contents)
-    }
-  }), minimumLinesMarkup);
-}
-const ENTITIES_TO_REPLACE = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '\n': '<br>',
-  '\r': ''
-};
-const REPLACE_REGEX = new RegExp(`[${Object.keys(ENTITIES_TO_REPLACE).join()}]`, 'g');
-
-function replaceEntity(entity) {
-  return ENTITIES_TO_REPLACE[entity];
-}
-
-function getContentsForMinimumLines(minimumLines) {
-  let content = '';
-
-  for (let line = 0; line < minimumLines; line++) {
-    content += '<br>';
-  }
-
-  return content;
-}
-
-function getFinalContents(contents) {
-  return contents ? `${contents.replace(REPLACE_REGEX, replaceEntity)}<br>` : '<br>';
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextField/components/Spinner/Spinner.js":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextField/components/Spinner/Spinner.js ***!
-  \***************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Spinner": () => (/* binding */ Spinner)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/CaretUpMinor.svg.mjs");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/CaretDownMinor.svg.mjs");
-/* harmony import */ var _Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Icon/Icon.js */ "./node_modules/@shopify/polaris/dist/esm/components/Icon/Icon.js");
-/* harmony import */ var _TextField_scss_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../TextField.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.scss.js");
-
-
-
-
-
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-  source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S
-});
-
-var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Icon_Icon_js__WEBPACK_IMPORTED_MODULE_1__.Icon, {
-  source: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_3__.S
-});
-
-function Spinner({
-  onChange,
-  onClick,
-  onMouseDown,
-  onMouseUp
-}) {
-  function handleStep(step) {
-    return () => onChange(step);
-  }
-
-  function handleMouseDown(onChange) {
-    return event => {
-      if (event.button !== 0) return;
-      onMouseDown(onChange);
-    };
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Spinner,
-    onClick: onClick,
-    "aria-hidden": true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    role: "button",
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Segment,
-    tabIndex: -1,
-    onClick: handleStep(1),
-    onMouseDown: handleMouseDown(handleStep(1)),
-    onMouseUp: onMouseUp
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].SpinnerIcon
-  }, _ref)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    role: "button",
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Segment,
-    tabIndex: -1,
-    onClick: handleStep(-1),
-    onMouseDown: handleMouseDown(handleStep(-1)),
-    onMouseUp: onMouseUp
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: _TextField_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].SpinnerIcon
-  }, _ref2)));
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.js ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TextStyle": () => (/* binding */ TextStyle)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _TextStyle_scss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TextStyle.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.scss.js");
-
-
-
-
-var VariationValue;
-
-(function (VariationValue) {
-  VariationValue["Positive"] = "positive";
-  VariationValue["Negative"] = "negative";
-  VariationValue["Strong"] = "strong";
-  VariationValue["Subdued"] = "subdued";
-  VariationValue["Code"] = "code";
-})(VariationValue || (VariationValue = {}));
-
-function TextStyle({
-  variation,
-  children
-}) {
-  const className = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.classNames)(variation && _TextStyle_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"][(0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_1__.variationName)('variation', variation)], variation === VariationValue.Code && _TextStyle_scss_js__WEBPACK_IMPORTED_MODULE_2__["default"].code);
-  const Element = variationElement(variation);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Element, {
-    className: className
-  }, children);
-}
-
-function variationElement(variation) {
-  return variation === VariationValue.Code ? 'code' : 'span';
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.scss.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/TextStyle/TextStyle.scss.js ***!
-  \***************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "variationPositive": "Polaris-TextStyle--variationPositive",
-  "variationNegative": "Polaris-TextStyle--variationNegative",
-  "variationCode": "Polaris-TextStyle--variationCode",
-  "variationStrong": "Polaris-TextStyle--variationStrong",
-  "variationSubdued": "Polaris-TextStyle--variationSubdued"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
 /***/ "./node_modules/@shopify/polaris/dist/esm/components/ThemeProvider/ThemeProvider.js":
 /*!******************************************************************************************!*\
   !*** ./node_modules/@shopify/polaris/dist/esm/components/ThemeProvider/ThemeProvider.js ***!
@@ -9301,318 +4044,6 @@ function getColorScheme(colorScheme, parentColorScheme) {
   } else {
     return colorScheme;
   }
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Tooltip/Tooltip.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Tooltip/Tooltip.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Tooltip": () => (/* binding */ Tooltip)
-/* harmony export */ });
-/* harmony import */ var _types_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../types.js */ "./node_modules/@shopify/polaris/dist/esm/types.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/unique-id/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/unique-id/hooks.js");
-/* harmony import */ var _utilities_focus_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/focus.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js");
-/* harmony import */ var _Portal_Portal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Portal/Portal.js */ "./node_modules/@shopify/polaris/dist/esm/components/Portal/Portal.js");
-/* harmony import */ var _utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utilities/use-toggle.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/use-toggle.js");
-/* harmony import */ var _components_TooltipOverlay_TooltipOverlay_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/TooltipOverlay/TooltipOverlay.js */ "./node_modules/@shopify/polaris/dist/esm/components/Tooltip/components/TooltipOverlay/TooltipOverlay.js");
-
-
-
-
-
-
-
-
-function Tooltip({
-  children,
-  content,
-  dismissOnMouseOut,
-  active: originalActive,
-  preferredPosition = 'below',
-  activatorWrapper = 'span',
-  accessibilityLabel
-}) {
-  const WrapperComponent = activatorWrapper;
-  const {
-    value: active,
-    setTrue: handleFocus,
-    setFalse: handleBlur
-  } = (0,_utilities_use_toggle_js__WEBPACK_IMPORTED_MODULE_1__.useToggle)(Boolean(originalActive));
-  const [activatorNode, setActivatorNode] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  const id = (0,_utilities_unique_id_hooks_js__WEBPACK_IMPORTED_MODULE_2__.useUniqueId)('TooltipContent');
-  const activatorContainer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const mouseEntered = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const firstFocusable = activatorContainer.current ? (0,_utilities_focus_js__WEBPACK_IMPORTED_MODULE_3__.findFirstFocusableNode)(activatorContainer.current) : null;
-    const accessibilityNode = firstFocusable || activatorContainer.current;
-    if (!accessibilityNode) return;
-    accessibilityNode.tabIndex = 0;
-    accessibilityNode.setAttribute('aria-describedby', id);
-    accessibilityNode.setAttribute('data-polaris-tooltip-activator', 'true');
-  }, [id, children]);
-  const handleKeyUp = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(event => {
-    if (event.keyCode !== _types_js__WEBPACK_IMPORTED_MODULE_4__.Key.Escape) return;
-    handleBlur();
-  }, [handleBlur]);
-  const portal = activatorNode ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Portal_Portal_js__WEBPACK_IMPORTED_MODULE_5__.Portal, {
-    idPrefix: "tooltip"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_TooltipOverlay_TooltipOverlay_js__WEBPACK_IMPORTED_MODULE_6__.TooltipOverlay, {
-    id: id,
-    preferredPosition: preferredPosition,
-    activator: activatorNode,
-    active: active,
-    accessibilityLabel: accessibilityLabel,
-    onClose: noop,
-    preventInteraction: dismissOnMouseOut
-  }, content)) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(WrapperComponent, {
-    onFocus: handleFocus,
-    onBlur: handleBlur,
-    onMouseLeave: handleMouseLeave,
-    onMouseOver: handleMouseEnterFix,
-    onClick: stopPropagation,
-    ref: setActivator,
-    onKeyUp: handleKeyUp
-  }, children, portal);
-
-  function setActivator(node) {
-    const activatorContainerRef = activatorContainer;
-
-    if (node == null) {
-      activatorContainerRef.current = null;
-      setActivatorNode(null);
-      return;
-    }
-
-    node.firstElementChild instanceof HTMLElement && setActivatorNode(node.firstElementChild);
-    activatorContainerRef.current = node;
-  }
-
-  function handleMouseEnter() {
-    mouseEntered.current = true;
-    handleFocus();
-  }
-
-  function handleMouseLeave() {
-    mouseEntered.current = false;
-    handleBlur();
-  } // https://github.com/facebook/react/issues/10109
-  // Mouseenter event not triggered when cursor moves from disabled button
-
-
-  function handleMouseEnterFix() {
-    !mouseEntered.current && handleMouseEnter();
-  }
-}
-
-function noop() {}
-
-function stopPropagation(event) {
-  event.stopPropagation();
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Tooltip/components/TooltipOverlay/TooltipOverlay.js":
-/*!***************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Tooltip/components/TooltipOverlay/TooltipOverlay.js ***!
-  \***************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TooltipOverlay": () => (/* binding */ TooltipOverlay)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../utilities/i18n/hooks.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/i18n/hooks.js");
-/* harmony import */ var _shared_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../shared.js */ "./node_modules/@shopify/polaris/dist/esm/components/shared.js");
-/* harmony import */ var _utilities_css_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../utilities/css.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/css.js");
-/* harmony import */ var _PositionedOverlay_PositionedOverlay_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../PositionedOverlay/PositionedOverlay.js */ "./node_modules/@shopify/polaris/dist/esm/components/PositionedOverlay/PositionedOverlay.js");
-/* harmony import */ var _TooltipOverlay_scss_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TooltipOverlay.scss.js */ "./node_modules/@shopify/polaris/dist/esm/components/Tooltip/components/TooltipOverlay/TooltipOverlay.scss.js");
-
-
-
-
-
-
-
-function TooltipOverlay({
-  active,
-  activator,
-  preferredPosition = 'below',
-  preventInteraction,
-  id,
-  children,
-  accessibilityLabel
-}) {
-  const i18n = (0,_utilities_i18n_hooks_js__WEBPACK_IMPORTED_MODULE_1__.useI18n)();
-  const markup = active ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_PositionedOverlay_PositionedOverlay_js__WEBPACK_IMPORTED_MODULE_2__.PositionedOverlay, {
-    active: active,
-    activator: activator,
-    preferredPosition: preferredPosition,
-    preventInteraction: preventInteraction,
-    render: renderTooltip
-  }) : null;
-  return markup;
-
-  function renderTooltip(overlayDetails) {
-    const {
-      measuring,
-      desiredHeight,
-      positioning
-    } = overlayDetails;
-    const containerClassName = (0,_utilities_css_js__WEBPACK_IMPORTED_MODULE_3__.classNames)(_TooltipOverlay_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].TooltipOverlay, measuring && _TooltipOverlay_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].measuring, positioning === 'above' && _TooltipOverlay_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].positionedAbove);
-    const contentStyles = measuring ? undefined : {
-      minHeight: desiredHeight
-    };
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", Object.assign({
-      className: containerClassName
-    }, _shared_js__WEBPACK_IMPORTED_MODULE_5__.layer.props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      id: id,
-      role: "tooltip",
-      className: _TooltipOverlay_scss_js__WEBPACK_IMPORTED_MODULE_4__["default"].Content,
-      style: contentStyles,
-      "aria-label": accessibilityLabel ? i18n.translate('Polaris.TooltipOverlay.accessibilityLabel', {
-        label: accessibilityLabel
-      }) : undefined
-    }, children));
-  }
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/Tooltip/components/TooltipOverlay/TooltipOverlay.scss.js":
-/*!********************************************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/Tooltip/components/TooltipOverlay/TooltipOverlay.scss.js ***!
-  \********************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var styles = {
-  "TooltipOverlay": "Polaris-Tooltip-TooltipOverlay",
-  "measuring": "Polaris-Tooltip-TooltipOverlay--measuring",
-  "positionedAbove": "Polaris-Tooltip-TooltipOverlay--positionedAbove",
-  "Content": "Polaris-Tooltip-TooltipOverlay__Content"
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styles);
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledButton/UnstyledButton.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/components/UnstyledButton/UnstyledButton.js ***!
-  \********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UnstyledButton": () => (/* binding */ UnstyledButton)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../_virtual/_rollupPluginBabelHelpers.js */ "./node_modules/@shopify/polaris/dist/esm/_virtual/_rollupPluginBabelHelpers.js");
-/* harmony import */ var _utilities_focus_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/focus.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js");
-/* harmony import */ var _UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../UnstyledLink/UnstyledLink.js */ "./node_modules/@shopify/polaris/dist/esm/components/UnstyledLink/UnstyledLink.js");
-
-
-
-
-
-function UnstyledButton(_ref) {
-  let {
-    id,
-    children,
-    className,
-    url,
-    external,
-    download,
-    submit,
-    disabled,
-    loading,
-    pressed,
-    accessibilityLabel,
-    role,
-    ariaControls,
-    ariaExpanded,
-    ariaDescribedBy,
-    onClick,
-    onFocus,
-    onBlur,
-    onKeyDown,
-    onKeyPress,
-    onKeyUp,
-    onMouseEnter,
-    onTouchStart
-  } = _ref,
-      rest = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectWithoutProperties)(_ref, ["id", "children", "className", "url", "external", "download", "submit", "disabled", "loading", "pressed", "accessibilityLabel", "role", "ariaControls", "ariaExpanded", "ariaDescribedBy", "onClick", "onFocus", "onBlur", "onKeyDown", "onKeyPress", "onKeyUp", "onMouseEnter", "onTouchStart"]);
-
-  let buttonMarkup;
-  const commonProps = {
-    id,
-    className,
-    'aria-label': accessibilityLabel
-  };
-
-  const interactiveProps = (0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectSpread2)((0,_virtual_rollupPluginBabelHelpers_js__WEBPACK_IMPORTED_MODULE_1__.objectSpread2)({}, commonProps), {}, {
-    role,
-    onClick,
-    onFocus,
-    onBlur,
-    onMouseUp: _utilities_focus_js__WEBPACK_IMPORTED_MODULE_2__.handleMouseUpByBlurring,
-    onMouseEnter,
-    onTouchStart
-  });
-
-  if (url) {
-    buttonMarkup = disabled ?
-    /*#__PURE__*/
-    // Render an `<a>` so toggling disabled/enabled state changes only the
-    // `href` attribute instead of replacing the whole element.
-    react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", commonProps, children) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_UnstyledLink_UnstyledLink_js__WEBPACK_IMPORTED_MODULE_3__.UnstyledLink, Object.assign({}, interactiveProps, {
-      url: url,
-      external: external,
-      download: download
-    }, rest), children);
-  } else {
-    buttonMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", Object.assign({}, interactiveProps, {
-      type: submit ? 'submit' : 'button',
-      disabled: disabled,
-      "aria-busy": loading ? true : undefined,
-      "aria-controls": ariaControls,
-      "aria-expanded": ariaExpanded,
-      "aria-describedby": ariaDescribedBy,
-      "aria-pressed": pressed,
-      onKeyDown: onKeyDown,
-      onKeyUp: onKeyUp,
-      onKeyPress: onKeyPress
-    }, rest), children);
-  }
-
-  return buttonMarkup;
 }
 
 
@@ -9913,27 +4344,6 @@ let Key;
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/banner-context.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/banner-context.js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BannerContext": () => (/* binding */ BannerContext)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-const BannerContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(false);
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/@shopify/polaris/dist/esm/utilities/breakpoints.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/@shopify/polaris/dist/esm/utilities/breakpoints.js ***!
@@ -9968,87 +4378,6 @@ function navigationBarCollapsed() {
 }
 function stackedContent() {
   return typeof window === 'undefined' ? noWindowMatches : window.matchMedia(`(max-width: ${Breakpoints.stackedContent})`);
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/components.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/components.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ConditionalRender": () => (/* binding */ ConditionalRender),
-/* harmony export */   "ConditionalWrapper": () => (/* binding */ ConditionalWrapper),
-/* harmony export */   "elementChildren": () => (/* binding */ elementChildren),
-/* harmony export */   "isElementOfType": () => (/* binding */ isElementOfType),
-/* harmony export */   "wrapWithComponent": () => (/* binding */ wrapWithComponent)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-// `Component`. If `props` is passed, those will be added as props on the
-// wrapped component. If `element` is null, the component is not wrapped.
-
-function wrapWithComponent(element, Component, props) {
-  if (element == null) {
-    return null;
-  }
-
-  return isElementOfType(element, Component) ? element : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Component, props, element);
-} // In development, we compare based on the name of the function because
-// React Hot Loader proxies React components in order to make updates. In
-// production we can simply compare the components for equality.
-
-const isComponent =  true ? hotReloadComponentCheck : 0; // Checks whether `element` is a React element of type `Component` (or one of
-// the passed components, if `Component` is an array of React components).
-
-function isElementOfType(element, Component) {
-  var _element$props;
-
-  if (element == null || ! /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(element) || typeof element.type === 'string') {
-    return false;
-  }
-
-  const {
-    type: defaultType
-  } = element; // Type override allows components to bypass default wrapping behavior. Ex: Stack, ResourceList...
-  // See https://github.com/Shopify/app-extension-libs/issues/996#issuecomment-710437088
-
-  const overrideType = (_element$props = element.props) == null ? void 0 : _element$props.__type__;
-  const type = overrideType || defaultType;
-  const Components = Array.isArray(Component) ? Component : [Component];
-  return Components.some(AComponent => typeof type !== 'string' && isComponent(AComponent, type));
-} // Returns all children that are valid elements as an array. Can optionally be
-// filtered by passing `predicate`.
-
-function elementChildren(children, predicate = () => true) {
-  return react__WEBPACK_IMPORTED_MODULE_0__.Children.toArray(children).filter(child => /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(child) && predicate(child));
-}
-function ConditionalWrapper({
-  condition,
-  wrapper,
-  children
-}) {
-  return condition ? wrapper(children) : children;
-}
-function ConditionalRender({
-  condition,
-  children
-}) {
-  return condition ? children : null;
-}
-
-function hotReloadComponentCheck(AComponent, AnotherComponent) {
-  const componentName = AComponent.name;
-  const anotherComponentName = AnotherComponent.displayName;
-  return AComponent === AnotherComponent || Boolean(componentName) && componentName === anotherComponentName;
 }
 
 
@@ -10146,131 +4475,6 @@ const FocusManagerContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.c
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/focus.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/focus.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "findFirstFocusableNode": () => (/* binding */ findFirstFocusableNode),
-/* harmony export */   "findFirstFocusableNodeIncludingDisabled": () => (/* binding */ findFirstFocusableNodeIncludingDisabled),
-/* harmony export */   "findFirstKeyboardFocusableNode": () => (/* binding */ findFirstKeyboardFocusableNode),
-/* harmony export */   "findLastKeyboardFocusableNode": () => (/* binding */ findLastKeyboardFocusableNode),
-/* harmony export */   "focusFirstFocusableNode": () => (/* binding */ focusFirstFocusableNode),
-/* harmony export */   "focusFirstKeyboardFocusableNode": () => (/* binding */ focusFirstKeyboardFocusableNode),
-/* harmony export */   "focusLastKeyboardFocusableNode": () => (/* binding */ focusLastKeyboardFocusableNode),
-/* harmony export */   "focusNextFocusableNode": () => (/* binding */ focusNextFocusableNode),
-/* harmony export */   "handleMouseUpByBlurring": () => (/* binding */ handleMouseUpByBlurring),
-/* harmony export */   "nextFocusableNode": () => (/* binding */ nextFocusableNode)
-/* harmony export */ });
-/* harmony import */ var _is_element_in_viewport_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./is-element-in-viewport.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/is-element-in-viewport.js");
-
-
-const FOCUSABLE_SELECTOR = 'a,frame,iframe,input:not([type=hidden]):not(:disabled),select:not(:disabled),textarea:not(:disabled),button:not(:disabled),*[tabindex]';
-const KEYBOARD_FOCUSABLE_SELECTORS = 'a,frame,iframe,input:not([type=hidden]):not(:disabled),select:not(:disabled),textarea:not(:disabled),button:not(:disabled),*[tabindex]:not([tabindex="-1"])';
-const handleMouseUpByBlurring = ({
-  currentTarget
-}) => currentTarget.blur();
-function nextFocusableNode(node, filter) {
-  const allFocusableElements = [...document.querySelectorAll(FOCUSABLE_SELECTOR)];
-  const sliceLocation = allFocusableElements.indexOf(node) + 1;
-  const focusableElementsAfterNode = allFocusableElements.slice(sliceLocation);
-
-  for (const focusableElement of focusableElementsAfterNode) {
-    if ((0,_is_element_in_viewport_js__WEBPACK_IMPORTED_MODULE_0__.isElementInViewport)(focusableElement) && (!filter || filter && filter(focusableElement))) {
-      return focusableElement;
-    }
-  }
-
-  return null;
-}
-function findFirstFocusableNode(element, onlyDescendants = true) {
-  if (!onlyDescendants && matches(element, FOCUSABLE_SELECTOR)) {
-    return element;
-  }
-
-  return element.querySelector(FOCUSABLE_SELECTOR);
-} // Popover needs to be able to find its activator even if it is disabled, which FOCUSABLE_SELECTOR doesn't support.
-
-function findFirstFocusableNodeIncludingDisabled(element) {
-  const focusableSelector = `a,button,frame,iframe,input:not([type=hidden]),select,textarea,*[tabindex]`;
-
-  if (matches(element, focusableSelector)) {
-    return element;
-  }
-
-  return element.querySelector(focusableSelector);
-}
-function focusFirstFocusableNode(element, onlyDescendants = true) {
-  var _findFirstFocusableNo;
-
-  (_findFirstFocusableNo = findFirstFocusableNode(element, onlyDescendants)) == null ? void 0 : _findFirstFocusableNo.focus();
-}
-function focusNextFocusableNode(node, filter) {
-  const nextFocusable = nextFocusableNode(node, filter);
-
-  if (nextFocusable && nextFocusable instanceof HTMLElement) {
-    nextFocusable.focus();
-    return true;
-  }
-
-  return false;
-}
-function findFirstKeyboardFocusableNode(element, onlyDescendants = true) {
-  if (!onlyDescendants && matches(element, KEYBOARD_FOCUSABLE_SELECTORS)) {
-    return element;
-  }
-
-  return element.querySelector(KEYBOARD_FOCUSABLE_SELECTORS);
-}
-function focusFirstKeyboardFocusableNode(element, onlyDescendants = true) {
-  const firstFocusable = findFirstKeyboardFocusableNode(element, onlyDescendants);
-
-  if (firstFocusable) {
-    firstFocusable.focus();
-    return true;
-  }
-
-  return false;
-}
-function findLastKeyboardFocusableNode(element, onlyDescendants = true) {
-  if (!onlyDescendants && matches(element, KEYBOARD_FOCUSABLE_SELECTORS)) {
-    return element;
-  }
-
-  const allFocusable = element.querySelectorAll(KEYBOARD_FOCUSABLE_SELECTORS);
-  return allFocusable[allFocusable.length - 1];
-}
-function focusLastKeyboardFocusableNode(element, onlyDescendants = true) {
-  const lastFocusable = findLastKeyboardFocusableNode(element, onlyDescendants);
-
-  if (lastFocusable) {
-    lastFocusable.focus();
-    return true;
-  }
-
-  return false;
-}
-
-function matches(node, selector) {
-  if (node.matches) {
-    return node.matches(selector);
-  }
-
-  const matches = (node.ownerDocument || document).querySelectorAll(selector);
-  let i = matches.length;
-
-  while (--i >= 0 && matches.item(i) !== node) return i > -1;
-}
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/@shopify/polaris/dist/esm/utilities/geometry.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@shopify/polaris/dist/esm/utilities/geometry.js ***!
@@ -10327,6 +4531,30 @@ function getRectForNode(node) {
     width: rect.width,
     height: rect.height
   });
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/get-width.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/get-width.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getWidth": () => (/* binding */ getWidth)
+/* harmony export */ });
+/* harmony import */ var _pluck_deep_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pluck-deep.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/pluck-deep.js");
+
+
+function getWidth(value = {}, defaultWidth = 0, key = 'width') {
+  const width = typeof value === 'number' ? value : (0,_pluck_deep_js__WEBPACK_IMPORTED_MODULE_0__.pluckDeep)(value, key);
+  return width ? `${width}px` : `${defaultWidth}px`;
 }
 
 
@@ -10496,61 +4724,20 @@ function useI18n() {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/is-element-in-viewport.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/is-element-in-viewport.js ***!
-  \************************************************************************************/
+/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/is-object.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/is-object.js ***!
+  \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isElementInViewport": () => (/* binding */ isElementInViewport)
+/* harmony export */   "isObject": () => (/* binding */ isObject)
 /* harmony export */ });
-function isElementInViewport(element) {
-  const {
-    top,
-    left,
-    bottom,
-    right
-  } = element.getBoundingClientRect();
-  return top >= 0 && right <= window.innerWidth && bottom <= window.innerHeight && left >= 0;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/is-input-focused.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/is-input-focused.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isInputFocused": () => (/* binding */ isInputFocused)
-/* harmony export */ });
-var EditableTarget;
-
-(function (EditableTarget) {
-  EditableTarget["Input"] = "INPUT";
-  EditableTarget["Textarea"] = "TEXTAREA";
-  EditableTarget["Select"] = "SELECT";
-  EditableTarget["ContentEditable"] = "contenteditable";
-})(EditableTarget || (EditableTarget = {}));
-
-function isInputFocused() {
-  if (document == null || document.activeElement == null) {
-    return false;
-  }
-
-  const {
-    tagName
-  } = document.activeElement;
-  return tagName === EditableTarget.Input || tagName === EditableTarget.Textarea || tagName === EditableTarget.Select || document.activeElement.hasAttribute(EditableTarget.ContentEditable);
+function isObject(value) {
+  const type = typeof value;
+  return value != null && (type === 'object' || type === 'function');
 }
 
 
@@ -10708,6 +4895,49 @@ function isMergeableValue(value) {
 
 /***/ }),
 
+/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/pluck-deep.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/pluck-deep.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "pluckDeep": () => (/* binding */ pluckDeep)
+/* harmony export */ });
+/* harmony import */ var _is_object_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./is-object.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/is-object.js");
+
+
+function pluckDeep(obj, key) {
+  if (!obj) {
+    return null;
+  }
+
+  const keys = Object.keys(obj);
+
+  for (const currKey of keys) {
+    if (currKey === key) {
+      return obj[key];
+    }
+
+    if ((0,_is_object_js__WEBPACK_IMPORTED_MODULE_0__.isObject)(obj[currKey])) {
+      const plucked = pluckDeep(obj[currKey], key);
+
+      if (plucked) {
+        return plucked;
+      }
+    }
+  }
+
+  return null;
+}
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@shopify/polaris/dist/esm/utilities/portals/context.js":
 /*!*****************************************************************************!*\
   !*** ./node_modules/@shopify/polaris/dist/esm/utilities/portals/context.js ***!
@@ -10723,37 +4953,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const PortalsManagerContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(undefined);
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/portals/hooks.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/portals/hooks.js ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "usePortalsManager": () => (/* binding */ usePortalsManager)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _context_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./context.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/portals/context.js");
-
-
-
-function usePortalsManager() {
-  const portalsManager = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context_js__WEBPACK_IMPORTED_MODULE_1__.PortalsManagerContext);
-
-  if (!portalsManager) {
-    throw new Error('No portals manager was provided. Your application must be wrapped in an <AppProvider> component. See https://polaris.shopify.com/components/structure/app-provider for implementation instructions.');
-  }
-
-  return portalsManager;
-}
 
 
 
@@ -11154,6 +5353,39 @@ const ThemeContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createCo
 
 /***/ }),
 
+/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/theme/hooks.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/theme/hooks.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useTheme": () => (/* binding */ useTheme)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _context_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./context.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/theme/context.js");
+/* harmony import */ var _errors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../errors.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/errors.js");
+
+
+
+
+function useTheme() {
+  const theme = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_context_js__WEBPACK_IMPORTED_MODULE_1__.ThemeContext);
+
+  if (!theme) {
+    throw new _errors_js__WEBPACK_IMPORTED_MODULE_2__.MissingAppProviderError('No Theme was provided.');
+  }
+
+  return theme;
+}
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@shopify/polaris/dist/esm/utilities/theme/tokens.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@shopify/polaris/dist/esm/utilities/theme/tokens.js ***!
@@ -11421,71 +5653,6 @@ function globalIdGeneratorFactory(prefix = '') {
   let index = 1;
   return () => `Polaris${prefix}${index++}`;
 }
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/use-is-after-initial-mount.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/use-is-after-initial-mount.js ***!
-  \****************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useIsAfterInitialMount": () => (/* binding */ useIsAfterInitialMount)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-/**
- * useIsAfterInitialMount will trigger a re-render to provide
- * you with an updated value. Using this you enhance server-side
- * code that can only run on the client.
- * @returns MutableRefObject<T> - Returns a ref object with the
- * results from invoking initial value
- * @example
- * function ComponentExample({children}) {
- *  const isMounted = useIsAfterInitialMount();
- *  const content = isMounted ? children : null;
- *
- *  return <>{content}</>;
- * }
- */
-
-function useIsAfterInitialMount() {
-  const [isAfterInitialMount, setIsAfterInitialMount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    setIsAfterInitialMount(true);
-  }, []);
-  return isAfterInitialMount;
-}
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/dist/esm/utilities/use-isomorphic-layout-effect.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/esm/utilities/use-isomorphic-layout-effect.js ***!
-  \******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useIsomorphicLayoutEffect": () => (/* binding */ useIsomorphicLayoutEffect)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _target_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./target.js */ "./node_modules/@shopify/polaris/dist/esm/utilities/target.js");
-
-
-
-const useIsomorphicLayoutEffect = _target_js__WEBPACK_IMPORTED_MODULE_1__.isServer ? react__WEBPACK_IMPORTED_MODULE_0__.useEffect : react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect;
 
 
 
@@ -13640,7 +7807,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  */
 
 
-__webpack_require__(/*! ./index.js */ "./resources/js/index.js");
+__webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
 
 /***/ }),
 
@@ -13688,249 +7855,60 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/App.js":
-/*!****************************************!*\
-  !*** ./resources/js/components/App.js ***!
-  \****************************************/
+/***/ "./resources/js/components/Example.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/Example.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "App": () => (/* binding */ App)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/Page/Page.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/Layout/Layout.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/SettingToggle/SettingToggle.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/Card/Card.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/FormLayout/FormLayout.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/TextField/TextField.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/ChoiceList/ChoiceList.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/Button/Button.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/FooterHelp/FooterHelp.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/Link/Link.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/AccountConnection/AccountConnection.js");
+/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/AppProvider/AppProvider.js");
+/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/Navigation/Navigation.js");
+/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/HomeMajor.svg.mjs");
+/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/OrdersMajor.svg.mjs");
+/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/ProductsMajor.svg.mjs");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @shopify/polaris-icons */ "./node_modules/@shopify/polaris-icons/dist/icons/ImportMinor.svg.mjs");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 
 
-function App() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-      _useState2 = _slicedToArray(_useState, 2),
-      first = _useState2[0],
-      setFirst = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-      _useState4 = _slicedToArray(_useState3, 2),
-      last = _useState4[0],
-      setLast = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-      _useState6 = _slicedToArray(_useState5, 2),
-      email = _useState6[0],
-      setEmail = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-      _useState8 = _slicedToArray(_useState7, 2),
-      checkboxes = _useState8[0],
-      setCheckboxes = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState10 = _slicedToArray(_useState9, 2),
-      connected = _useState10[0],
-      setConnected = _useState10[1];
-
-  var handleFirstChange = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (value) {
-    return setFirst(value);
-  }, []);
-  var handleLastChange = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (value) {
-    return setLast(value);
-  }, []);
-  var handleEmailChange = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (value) {
-    return setEmail(value);
-  }, []);
-  var handleCheckboxesChange = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (value) {
-    return setCheckboxes(value);
-  }, []);
-  var toggleConnection = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
-    setConnected(!connected);
-  }, [connected]);
-  var breadcrumbs = [{
-    content: "Sample apps"
-  }, {
-    content: "Create React App"
-  }];
-  var primaryAction = {
-    content: "New product"
-  };
-  var secondaryActions = [{
-    content: "Import",
-    icon: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_2__.S
-  }];
-  var choiceListItems = [{
-    label: "I accept the Terms of Service",
-    value: "false"
-  }, {
-    label: "I consent to receiving emails",
-    value: "false2"
-  }];
-  var accountSectionDescription = connected ? "Disconnect your account from your Shopify store." : "Connect your account to your Shopify store.";
-  var accountMarkup = connected ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(DisconnectAccount, {
-    onAction: toggleConnection
-  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ConnectAccount, {
-    onAction: toggleConnection
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_3__.Page, {
-    title: "Polaris",
-    breadcrumbs: breadcrumbs,
-    primaryAction: primaryAction,
-    secondaryActions: secondaryActions,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_4__.Layout, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_4__.Layout.AnnotatedSection, {
-        title: "Style",
-        description: "Customize the style of your checkout",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_5__.SettingToggle, {
-          action: {
-            content: "Customize Checkout"
-          },
-          children: "Upload your store\u2019s logo, change colors and fonts, and more."
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_4__.Layout.AnnotatedSection, {
-        title: "Account",
-        description: accountSectionDescription,
-        children: accountMarkup
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_4__.Layout.AnnotatedSection, {
-        title: "Form",
-        description: "A sample form using Polaris components.",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_6__.Card, {
-          sectioned: true,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_7__.FormLayout, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_7__.FormLayout.Group, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_8__.TextField, {
-                value: first,
-                label: "First name",
-                placeholder: "Tom",
-                onChange: handleFirstChange,
-                autoComplete: "given-name"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_8__.TextField, {
-                value: last,
-                label: "Last name",
-                placeholder: "Ford",
-                onChange: handleLastChange,
-                autoComplete: "family-name"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_8__.TextField, {
-              value: email,
-              label: "Email",
-              placeholder: "example@email.com",
-              onChange: handleEmailChange,
-              autoComplete: "email"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_9__.ChoiceList, {
-              allowMultiple: true,
-              choices: choiceListItems,
-              selected: checkboxes,
-              onChange: handleCheckboxesChange
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_10__.Button, {
-              primary: true,
-              children: "Submit"
-            })]
-          })
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_4__.Layout.Section, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_11__.FooterHelp, {
-          children: ["For more details on Polaris, visit our", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_12__.Link, {
-            url: "https://polaris.shopify.com",
-            children: "style guide"
-          }), "."]
-        })
-      })]
+function Example() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_3__.AppProvider, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_4__.Navigation, {
+      location: "/",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_4__.Navigation.Section, {
+        items: [{
+          url: "/path/to/place",
+          label: "Home",
+          icon: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_5__.S
+        }, {
+          url: "/path/to/place",
+          label: "Orders",
+          icon: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_6__.S,
+          badge: "15"
+        }, {
+          url: "/path/to/place",
+          label: "Products",
+          icon: _shopify_polaris_icons__WEBPACK_IMPORTED_MODULE_7__.S
+        }]
+      })
     })
   });
 }
 
-function ConnectAccount(_ref) {
-  var onAction = _ref.onAction;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_13__.AccountConnection, {
-    action: {
-      content: "Connect",
-      onAction: onAction
-    },
-    details: "No account connected",
-    termsOfService: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-      children: ["By clicking Connect, you are accepting Sample\u2019s", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_12__.Link, {
-        url: "https://polaris.shopify.com",
-        children: "Terms and Conditions"
-      }), ", including a commission rate of 15% on sales."]
-    })
-  });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Example);
+
+if (document.getElementById("root")) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Example, {}), document.getElementById("root"));
 }
-
-function DisconnectAccount(_ref2) {
-  var onAction = _ref2.onAction;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_13__.AccountConnection, {
-    connected: true,
-    action: {
-      content: "Disconnect",
-      onAction: onAction
-    },
-    accountName: "Tom Ford",
-    title: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_12__.Link, {
-      url: "http://google.com",
-      children: "Tom Ford"
-    }),
-    details: "Account id: d587647ae4"
-  });
-}
-
-/***/ }),
-
-/***/ "./resources/js/index.js":
-/*!*******************************!*\
-  !*** ./resources/js/index.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _shopify_polaris_dist_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @shopify/polaris/dist/styles.css */ "./node_modules/@shopify/polaris/dist/styles.css");
-/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/App */ "./resources/js/components/App.js");
-/* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shopify/polaris */ "./node_modules/@shopify/polaris/dist/esm/components/AppProvider/AppProvider.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _shopify_polaris_locales_en_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @shopify/polaris/locales/en.json */ "./node_modules/@shopify/polaris/locales/en.json");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-
-function WrappedApp() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_shopify_polaris__WEBPACK_IMPORTED_MODULE_5__.AppProvider, {
-    i18n: _shopify_polaris_locales_en_json__WEBPACK_IMPORTED_MODULE_6__,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_App__WEBPACK_IMPORTED_MODULE_1__.App, {})
-  });
-}
-
-react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(WrappedApp, {}), document.getElementById("root"));
 
 /***/ }),
 
@@ -18372,106 +12350,6 @@ react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime
 })));
 //# sourceMappingURL=bootstrap.js.map
 
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/@shopify/polaris/dist/styles.css":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/@shopify/polaris/dist/styles.css ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n:root{ --polaris-version-number:'6.6.0'; --polaris-animation-skeleton-shimmer:polaris-SkeletonShimmerAnimation; }\n\nhtml, body{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; font-weight:400; color:var(--p-text); }\n\n@media (min-width: 40em){ html, body{ font-size:1.4rem; } }\n\nhtml, body, button{ font-family:-apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; }\n\nhtml{ position:relative; font-size:62.5%; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; -webkit-text-size-adjust:100%; text-size-adjust:100%; text-rendering:optimizeLegibility; }\n\nbody{ min-height:100%; margin:0; padding:0; background-color:#f4f6f8; }\n\n@media print{ body{ background-color:transparent !important; } }\n\n*, *::before, *::after{ box-sizing:border-box; }\n\nh1, h2, h3, h4, h5, h6, p{ margin:0; font-size:1em; font-weight:400; }\n\nbutton::-moz-focus-inner, [type='button']::-moz-focus-inner, [type='reset']::-moz-focus-inner, [type='submit']::-moz-focus-inner{ border-style:none; }\n\n@keyframes polaris-SkeletonShimmerAnimation{ 0%{ opacity:0.45; }\n  100%{ opacity:0.9; } }\n\n\n.Polaris-Avatar{ position:relative; display:block; overflow:hidden; min-width:3.2rem; max-width:100%; background:var(--p-surface-neutral); color:var(--p-icon-subdued); border-radius:3rem; -webkit-user-select:none; user-select:none; }\n\n@media (forced-colors: active){ .Polaris-Avatar{ border:0.1rem solid transparent; } }\n\n.Polaris-Avatar::after{ content:''; display:block; padding-bottom:100%; }\n\n.Polaris-Avatar--hidden{ visibility:hidden; }\n\n.Polaris-Avatar--sizeSmall{ width:3.2rem; }\n\n.Polaris-Avatar--sizeMedium{ width:4rem; }\n\n.Polaris-Avatar--sizeLarge{ width:6rem; }\n\n.Polaris-Avatar--styleOne{ color:var(--p-decorative-one-text); background:var(--p-decorative-one-surface); }\n\n.Polaris-Avatar--styleTwo{ color:var(--p-decorative-two-text); background:var(--p-decorative-two-surface); }\n\n.Polaris-Avatar--styleThree{ color:var(--p-decorative-three-text); background:var(--p-decorative-three-surface); }\n\n.Polaris-Avatar--styleFour{ color:var(--p-decorative-four-text); background:var(--p-decorative-four-surface); }\n\n.Polaris-Avatar--styleFive{ color:var(--p-decorative-five-text); background:var(--p-decorative-five-surface); }\n\n.Polaris-Avatar--hasImage{ background:transparent; }\n\n.Polaris-Avatar__Image{ position:absolute; top:50%; left:50%; width:100%; height:100%; background-color:var(--p-background); border-radius:3rem; transform:translate(-50%, -50%); object-fit:cover; }\n\n.Polaris-Avatar__Initials{ position:absolute; top:0; right:0; display:flex; align-items:center; justify-content:center; width:100%; height:100%; }\n\n.Polaris-Avatar__Svg{ width:100%; height:100%; }\n\n\n.Polaris-Icon{ display:block; height:2rem; width:2rem; max-height:100%; max-width:100%; margin:auto; }\n\n.Polaris-Icon--applyColor{ color:var(--p-surface); }\n\n.Polaris-Icon--hasBackdrop{ position:relative; display:flex; align-items:center; margin:0.4rem; }\n\n.Polaris-Icon--hasBackdrop::before{ content:''; position:absolute; top:-0.4rem; bottom:-0.4rem; left:-0.4rem; right:-0.4rem; border-radius:50%; }\n\n.Polaris-Icon--colorBase svg{ fill:var(--p-icon); }\n\n.Polaris-Icon--colorBase::before{ background-color:var(--p-surface-neutral); }\n\n.Polaris-Icon--colorSubdued svg{ fill:var(--p-icon-subdued); }\n\n.Polaris-Icon--colorCritical svg{ fill:var(--p-icon-critical); }\n\n.Polaris-Icon--colorCritical::before{ background-color:var(--p-surface-critical); }\n\n.Polaris-Icon--colorInteractive svg{ fill:var(--p-interactive); }\n\n.Polaris-Icon--colorWarning svg{ fill:var(--p-icon-warning); }\n\n.Polaris-Icon--colorWarning::before{ background-color:var(--p-surface-warning); }\n\n.Polaris-Icon--colorHighlight svg{ fill:var(--p-icon-highlight); }\n\n.Polaris-Icon--colorHighlight::before{ background-color:var(--p-surface-highlight); }\n\n.Polaris-Icon--colorSuccess svg{ fill:var(--p-icon-success); }\n\n.Polaris-Icon--colorSuccess::before{ background-color:var(--p-surface-success); }\n\n.Polaris-Icon--colorPrimary svg{ fill:var(--p-action-primary); }\n\n.Polaris-Icon__Svg, .Polaris-Icon__Img{ position:relative; display:block; width:100%; max-width:100%; max-height:100%; }\n\n.Polaris-Icon__Placeholder{ padding-bottom:100%; background:currentColor; }\n\n\n.Polaris-VisuallyHidden{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n\n@keyframes Polaris-Spinner--loading{ to{ transform:rotate(360deg); } }\n\n.Polaris-Spinner svg{ animation:Polaris-Spinner--loading 500ms linear infinite; fill:var(--p-border-highlight); }\n\n.Polaris-Spinner--sizeSmall svg{ height:2rem; width:2rem; }\n\n.Polaris-Spinner--sizeLarge svg{ height:4.4rem; width:4.4rem; }\n\n\n.Polaris-Scrollable{ -webkit-overflow-scrolling:touch; position:relative; }\n\n.Polaris-Scrollable:focus{ outline:2px solid var(--p-focused); outline-offset:2px; }\n\n.Polaris-Scrollable--horizontal{ overflow-x:auto; }\n\n.Polaris-Scrollable--vertical{ overflow-y:auto; }\n\n.Polaris-Scrollable--verticalHasScrolling{ overflow-y:scroll; }\n\n.Polaris-Scrollable--hasTopShadow{ box-shadow:inset 0 2rem 2rem -2rem var(--p-hint-from-direct-light); }\n\n.Polaris-Scrollable--hasBottomShadow{ box-shadow:inset 0 -2rem 2rem -2rem var(--p-hint-from-direct-light); }\n\n.Polaris-Scrollable--hasTopShadow.Polaris-Scrollable--hasBottomShadow{ box-shadow:inset 0 2rem 2rem -2rem var(--p-hint-from-direct-light), inset 0 -2rem 2rem -2rem var(--p-hint-from-direct-light); }\n\n\n.Polaris-Popover{ max-width:calc(100vw - 3.2rem); margin:0.5rem 0.8rem 1.6rem; box-shadow:var(--p-popover-shadow); border-radius:var(--p-border-radius-wide); -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:left, top; }\n\n.Polaris-Popover__PopoverOverlay{ -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; opacity:0; transition:opacity 200ms cubic-bezier(0.36, 0, 1, 1); }\n\n.Polaris-Popover__PopoverOverlay--entering{ opacity:1; }\n\n.Polaris-Popover__PopoverOverlay--open{ opacity:1; }\n\n.Polaris-Popover__PopoverOverlay--exiting{ opacity:0; transition-timing-function:cubic-bezier(0, 0, 0.42, 1); }\n\n.Polaris-Popover--measuring:not(.Polaris-Popover__PopoverOverlay--exiting){ opacity:0; }\n\n.Polaris-Popover--fullWidth{ margin:0; margin-top:0.5rem; }\n\n.Polaris-Popover--fullWidth .Polaris-Popover__Content{ max-width:none; }\n\n.Polaris-Popover--positionedAbove{ margin:1.6rem 0.8rem 0.5rem; }\n\n.Polaris-Popover--positionedAbove.Polaris-Popover--fullWidth{ margin:0 0 0.5rem; }\n\n.Polaris-Popover__Wrapper{ position:relative; overflow:hidden; background-color:var(--p-surface); border-radius:var(--p-border-radius-wide); outline:1px solid transparent; }\n\n.Polaris-Popover__Content{ position:relative; display:flex; flex-direction:column; border-radius:var(--p-border-radius-base); max-width:40rem; max-height:29.5rem; }\n\n.Polaris-Popover__Content:focus{ outline:none; }\n\n.Polaris-Popover__Content--fullHeight{ max-height:none; }\n\n.Polaris-Popover__Content--fluidContent{ max-height:none; max-width:none; }\n\n.Polaris-Popover__Pane{ flex:1 1; max-width:100%; }\n\n.Polaris-Popover__Pane + .Polaris-Popover__Pane{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-Popover__Pane:focus{ outline:none; }\n\n.Polaris-Popover__Pane--fixed{ overflow:visible; flex:0 0 auto; }\n\n.Polaris-Popover__Section{ padding:1.6rem; }\n\n.Polaris-Popover__Section + .Polaris-Popover__Section{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-Popover__FocusTracker{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n@media print{ .Polaris-Popover__PopoverOverlay--hideOnPrint{ display:none !important; } }\n\n\n.Polaris-PositionedOverlay{ position:absolute; z-index:400; }\n\n.Polaris-PositionedOverlay--fixed{ position:fixed; }\n\n.Polaris-PositionedOverlay--calculating{ visibility:hidden; }\n\n.Polaris-PositionedOverlay--preventInteraction{ pointer-events:none; }\n\n\n.Polaris-Badge{ --p-component-badge-pip-color:var(--p-icon); display:inline-flex; align-items:center; padding:0.3rem 0.8rem; background-color:var(--p-surface-neutral); border:var(--p-override-zero); border-radius:2rem; font-size:1.3rem; line-height:1.6rem; color:var(--p-text); font-weight:var(--p-badge-font-weight); }\n\n@media print{ .Polaris-Badge{ border:solid 0.01rem var(--p-border); border-radius:2rem; } }\n\n.Polaris-Badge--sizeSmall{ font-size:1.2rem; line-height:1.8rem; }\n\n.Polaris-Badge--statusSuccess{ --p-component-badge-pip-color:var(--p-icon-success); background-color:var(--p-surface-success); color:var(--p-text); }\n\n.Polaris-Badge--statusInfo{ --p-component-badge-pip-color:var(--p-icon-highlight); background-color:var(--p-surface-highlight); color:var(--p-text); }\n\n.Polaris-Badge--statusAttention{ --p-component-badge-pip-color:color('yellow', 'dark'); background-color:#ffea8a; color:var(--p-text); }\n\n.Polaris-Badge--statusWarning{ --p-component-badge-pip-color:var(--p-icon-warning); background-color:var(--p-surface-warning); color:var(--p-text, #594430); }\n\n.Polaris-Badge--statusCritical{ --p-component-badge-pip-color:var(--p-icon-critical); background-color:var(--p-surface-critical); color:var(--p-text); }\n\n.Polaris-Badge--statusNew{ background-color:var(--p-surface-neutral); color:var(--p-text); font-weight:500; border:none; }\n\n.Polaris-Badge__Pip{ color:var(--p-component-badge-pip-color); height:1rem; width:1rem; margin:0 0.4rem 0 -0.3rem; border:0.2rem solid currentColor; border-radius:50%; flex-shrink:0; }\n\n.Polaris-Badge--progressIncomplete .Polaris-Badge__Pip{ background:transparent; }\n\n.Polaris-Badge--progressPartiallyComplete .Polaris-Badge__Pip{ background:linear-gradient(to top, currentColor, currentColor 50%, transparent 50%, transparent); }\n\n@media print{ .Polaris-Badge--progressPartiallyComplete .Polaris-Badge__Pip{ background:none; box-shadow:0 -103px 0 -100px currentColor inset; } }\n\n.Polaris-Badge--progressComplete .Polaris-Badge__Pip{ background:currentColor; }\n\n@media print{ .Polaris-Badge--progressComplete .Polaris-Badge__Pip{ background:none; box-shadow:0 0 0 100px currentColor inset; } }\n\n.Polaris-Badge--withinFilter{ border-radius:var(--p-border-radius-base); }\n\n\n.Polaris-TextStyle--variationPositive{ color:var(--p-text-success); }\n\n.Polaris-TextStyle--variationNegative{ color:var(--p-text-critical); }\n\n.Polaris-TextStyle--variationCode{ position:relative; padding:0 0.4rem; border-radius:3px; background-color:var(--p-surface-subdued); display:inline-block; font-size:1.15em; box-shadow:inset 0 0 0 1px var(--p-border-subdued); }\n\n.Polaris-TextStyle--variationCode::after{ content:''; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid transparent; pointer-events:none; }\n\n.Polaris-TextStyle--variationStrong{ font-weight:600; }\n\n.Polaris-TextStyle--variationSubdued{ color:var(--p-text-subdued); }\n\n@media print{ .Polaris-TextStyle--variationSubdued{ color:var(--p-text-subdued); } }\n\n\n.Polaris-ActionList{ list-style:none; margin:0; padding:0.8rem 0; }\n\n.Polaris-ActionList__Section--withoutTitle:not(:first-child){ border-top:0.1rem solid var(--p-divider); margin-top:0.8rem; padding-top:0.8rem; }\n\n.Polaris-ActionList__Actions{ list-style:none; margin:0; border-top:0.1rem solid var(--p-divider); padding:0 0.8rem; }\n\n.Polaris-ActionList__Title + .Polaris-ActionList__Actions{ padding-top:0.8rem; }\n\n.Polaris-ActionList > .Polaris-ActionList__Section--withoutTitle .Polaris-ActionList__Actions, .Polaris-ActionList__Section:first-child > .Polaris-ActionList__Section--withoutTitle .Polaris-ActionList__Actions{ border-top:none; }\n\n.Polaris-ActionList__Title{ font-size:1.3rem; font-weight:600; line-height:1.6rem; text-transform:uppercase; padding:1.2rem 1.6rem; }\n\n@media (min-width: 40em){ .Polaris-ActionList__Title{ font-size:1.2rem; } }\n\n.Polaris-ActionList__Item{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; color:inherit; text-decoration:none; position:relative; display:block; width:100%; min-height:4rem; text-align:left; cursor:pointer; padding:1rem 0.8rem; border-radius:var(--p-border-radius-base); border-top:1px solid transparent; }\n\n.Polaris-ActionList__Item:focus{ outline:none; }\n\n.Polaris-ActionList__Item:visited{ color:inherit; }\n\n.Polaris-ActionList__Item::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n@media (forced-colors: active){ .Polaris-ActionList__Item{ border:0.1rem solid transparent; } }\n\n.Polaris-ActionList__Item:hover{ background-color:var(--p-surface-hovered); text-decoration:none; outline:0.3rem solid transparent; }\n\n.Polaris-ActionList__Item.Polaris-ActionList--active{ background-color:var(--p-surface-selected); }\n\n.Polaris-ActionList__Item.Polaris-ActionList--active svg{ fill:var(--p-interactive); }\n\n.Polaris-ActionList__Item.Polaris-ActionList--active::before{ content:''; background-color:var(--p-interactive); position:absolute; top:0; left:-0.8rem; height:100%; display:block; width:0.3rem; border-top-right-radius:var(--p-border-radius-base); border-bottom-right-radius:var(--p-border-radius-base); }\n\n.Polaris-ActionList__Item:active{ background-color:var(--p-surface-pressed); }\n\n.Polaris-ActionList__Item:active svg{ fill:var(--p-interactive); }\n\n.Polaris-ActionList__Item:focus:not(:active){ outline:0.3rem solid transparent; }\n\n.Polaris-ActionList__Item:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-ActionList__Item.Polaris-ActionList--destructive{ color:var(--p-interactive-critical); }\n\n.Polaris-ActionList__Item.Polaris-ActionList--destructive svg{ fill:var(--p-icon-critical); }\n\n.Polaris-ActionList__Item.Polaris-ActionList--destructive:hover{ background-color:var(--p-surface-critical-subdued-hovered); }\n\n.Polaris-ActionList__Item.Polaris-ActionList--destructive:active, .Polaris-ActionList__Item.Polaris-ActionList--destructive.Polaris-ActionList--active{ background-color:var(--p-surface-critical-subdued-pressed); }\n\n.Polaris-ActionList__Item.Polaris-ActionList--disabled{ background-image:none; color:var(--p-text-disabled); }\n\n.Polaris-ActionList__Item.Polaris-ActionList--disabled .Polaris-ActionList__Prefix svg, .Polaris-ActionList__Item.Polaris-ActionList--disabled .Polaris-ActionList__Suffix svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-ActionList__Content{ display:flex; align-items:center; }\n\n.Polaris-ActionList__Prefix{ display:flex; flex:0 0 auto; justify-content:center; align-items:center; height:2rem; width:2rem; border-radius:3px; margin:-1rem 1.6rem -1rem 0; background-size:cover; background-position:center center; }\n\n.Polaris-ActionList__Prefix svg{ fill:var(--p-icon); }\n\n.Polaris-ActionList__Suffix{ margin-left:1.6rem; }\n\n.Polaris-ActionList__Suffix svg{ fill:var(--p-icon); }\n\n.Polaris-ActionList__ContentBlock, .Polaris-ActionList__ContentBlockInner{ display:block; }\n\n.Polaris-ActionList__Text{ min-width:0; max-width:100%; flex:1 1 auto; }\n\n\n.Polaris-Button{ position:relative; position:relative; display:inline-flex; align-items:center; justify-content:center; min-height:3.6rem; min-width:3.6rem; margin:0; padding:0.7rem 1.6rem; background:var(--p-surface); box-shadow:var(--p-button-drop-shadow); border-radius:var(--p-border-radius-base); color:var(--p-text); border:1px solid var(--p-border-neutral-subdued); border-top-color:var(--p-border-subdued); border-bottom-color:var(--p-border-shadow-subdued); line-height:1; text-align:center; cursor:pointer; -webkit-user-select:none; user-select:none; text-decoration:none; -webkit-tap-highlight-color:transparent; }\n\n.Polaris-Button svg{ fill:var(--p-icon); }\n\n.Polaris-Button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Button:hover{ background:var(--p-action-secondary-hovered); outline:0.1rem solid transparent; }\n\n.Polaris-Button:focus{ box-shadow:var(--p-button-drop-shadow); outline:0; }\n\n.Polaris-Button:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Button:active{ background:var(--p-action-secondary-pressed); box-shadow:var(--p-button-drop-shadow); }\n\n.Polaris-Button:active::after{ border:none; box-shadow:none; }\n\n.Polaris-Button.Polaris-Button--pressed{ background:var(--p-action-secondary-depressed); box-shadow:var(--p-button-pressed-inner-shadow); color:var(--p-text-on-primary); border-color:var(--p-border-depressed); }\n\n.Polaris-Button.Polaris-Button--pressed svg{ fill:currentColor; }\n\n@media (-ms-high-contrast: active){ .Polaris-Button{ border:1px solid windowText; } }\n\n.Polaris-Button.Polaris-Button--disabled{ transition:none; box-shadow:none; border-color:var(--p-border-disabled); background:var(--p-surface-disabled); color:var(--p-text-disabled); }\n\n.Polaris-Button.Polaris-Button--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-Button.Polaris-Button--connectedDisclosure{ z-index:10; border-top-right-radius:0; border-bottom-right-radius:0; }\n\n.Polaris-Button.Polaris-Button--connectedDisclosure::after{ border-top-right-radius:0; border-bottom-right-radius:0; }\n\n.Polaris-Button.Polaris-Button--connectedDisclosure:focus{ z-index:20; }\n\n.Polaris-Button__Content{ font-size:1.5rem; font-weight:var(--p-button-font-weight, 400); line-height:1.6rem; text-transform:initial; letter-spacing:initial; position:relative; display:flex; justify-content:center; align-items:center; min-width:1px; min-height:1px; }\n\n@media (min-width: 40em){ .Polaris-Button__Content{ font-size:1.4rem; } }\n\n.Polaris-Button:not(.Polaris-Button--plain) .Polaris-Button__Content{ width:100%; }\n\n.Polaris-Button--textAlignLeft{ justify-content:flex-start; text-align:left; }\n\n.Polaris-Button--textAlignLeft .Polaris-Button__Content{ justify-content:flex-start; }\n\n.Polaris-Button--textAlignCenter{ justify-content:center; text-align:center; }\n\n.Polaris-Button--textAlignRight{ justify-content:flex-end; text-align:right; }\n\n.Polaris-Button--textAlignRight .Polaris-Button__Content{ justify-content:flex-end; }\n\n.Polaris-Button__Icon{ margin-left:-0.4rem; }\n\n.Polaris-Button__Icon:last-child{ margin-right:-0.8rem; margin-left:0.4rem; }\n\n.Polaris-Button--fullWidth.Polaris-Button--textAlignLeft .Polaris-Button__Icon:last-child:not(:only-child){ margin-left:auto; }\n\n.Polaris-Button__Icon + *:not(.Polaris-Button__Icon){ margin-left:0.4rem; }\n\n.Polaris-Button--hidden{ visibility:hidden; }\n\n.Polaris-Button__Spinner{ position:absolute; top:50%; left:50%; margin-top:-1rem; margin-left:-1rem; }\n\n.Polaris-Button--primary{ --p-button-color:var(--p-action-primary); --p-button-text:var(--p-text-on-primary); --p-button-color-hover:var(--p-action-primary-hovered); --p-button-color-active:var(--p-action-primary-pressed); --p-button-color-depressed:var(--p-action-primary-depressed); position:relative; background:var(--p-button-color); border-width:0; border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); color:var(--p-button-text); }\n\n.Polaris-Button--primary::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Button--primary:hover{ background:var(--p-button-color-hover); border-color:transparent; color:var(--p-button-text); }\n\n.Polaris-Button--primary:focus{ border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--primary:active{ background:var(--p-button-color-active); border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--primary.Polaris-Button--pressed{ color:var(--p-button-text); background:var(--p-button-color-depressed); border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--primary.Polaris-Button--pressed:hover, .Polaris-Button--primary.Polaris-Button--pressed:focus{ background:var(--p-button-color-depressed); box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--primary svg{ fill:var(--p-icon-on-primary); }\n\n.Polaris-Button--primary.Polaris-Button--disabled{ background:var(--p-action-primary-disabled); color:var(--p-text-disabled); border-color:transparent; box-shadow:none; }\n\n.Polaris-Button--primary.Polaris-Button--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-Button--destructive{ --p-button-color:var(--p-action-critical); --p-button-text:var(--p-text-on-critical); --p-button-color-hover:var(--p-action-critical-hovered); --p-button-color-active:var(--p-action-critical-pressed); --p-button-color-depressed:var(--p-action-critical-depressed); position:relative; background:var(--p-button-color); border-width:0; border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); color:var(--p-button-text); }\n\n.Polaris-Button--destructive::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Button--destructive:hover{ background:var(--p-button-color-hover); border-color:transparent; color:var(--p-button-text); }\n\n.Polaris-Button--destructive:focus{ border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--destructive:active{ background:var(--p-button-color-active); border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--destructive.Polaris-Button--pressed{ color:var(--p-button-text); background:var(--p-button-color-depressed); border-color:transparent; box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--destructive.Polaris-Button--pressed:hover, .Polaris-Button--destructive.Polaris-Button--pressed:focus{ background:var(--p-button-color-depressed); box-shadow:var(--p-button-drop-shadow), var(--p-button-inner-shadow); }\n\n.Polaris-Button--destructive svg{ fill:var(--p-icon-on-critical); }\n\n.Polaris-Button--destructive.Polaris-Button--disabled{ background:var(--p-action-critical-disabled); color:var(--p-text-disabled); box-shadow:none; border-color:transparent; }\n\n.Polaris-Button--destructive.Polaris-Button--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-Button--outline{ background:transparent; border:0.1rem solid var(--p-border); box-shadow:none; color:var(--p-text); position:relative; }\n\n.Polaris-Button--outline::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Button--outline:hover{ border:0.1rem solid var(--p-border); box-shadow:none; background:var(--p-surface-hovered); }\n\n.Polaris-Button--outline:focus{ border:0.1rem solid var(--p-border); box-shadow:none; }\n\n.Polaris-Button--outline:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Button--outline:active{ border:0.1rem solid var(--p-border); box-shadow:none; background:var(--p-surface-pressed); }\n\n.Polaris-Button--outline:active::after{ box-shadow:none; }\n\n.Polaris-Button--outline.Polaris-Button--pressed{ background:var(--p-action-secondary-pressed); border:0.1rem solid var(--p-border); box-shadow:none; color:var(--p-button-text); }\n\n.Polaris-Button--outline.Polaris-Button--disabled{ border:0.1rem solid var(--p-border-disabled); box-shadow:none; background:transparent; color:var(--p-text-disabled); }\n\n.Polaris-Button--outline.Polaris-Button--destructive{ background:transparent; border:0.1rem solid var(--p-border-critical); box-shadow:none; color:var(--p-interactive-critical); }\n\n.Polaris-Button--outline.Polaris-Button--destructive svg{ fill:var(--p-icon-critical); }\n\n.Polaris-Button--outline.Polaris-Button--destructive:hover{ border:0.1rem solid var(--p-border-critical); background:var(--p-surface-critical-subdued); }\n\n.Polaris-Button--outline.Polaris-Button--destructive:focus{ border:0.1rem solid var(--p-border-critical); }\n\n.Polaris-Button--outline.Polaris-Button--destructive:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Button--outline.Polaris-Button--destructive:active{ border:0.1rem solid var(--p-border-critical); background:var(--p-surface-critical-subdued); }\n\n.Polaris-Button--outline.Polaris-Button--destructive.Polaris-Button--disabled{ border:0.1rem solid var(--p-border-critical-disabled); background:transparent; color:var(--p-interactive-critical-disabled); }\n\n.Polaris-Button--outline.Polaris-Button--destructive.Polaris-Button--pressed{ background:var(--p-surface-critical-subdued); box-shadow:0.1rem solid var(--p-border-critical); color:var(--p-interactive-critical); }\n\n.Polaris-Button--outline.Polaris-Button--disabled{ background:transparent; box-shadow:none; }\n\n.Polaris-Button--destructive.Polaris-Button--outline{ background:transparent; border:0.1rem solid var(--p-border); box-shadow:none; color:var(--p-text); position:relative; }\n\n.Polaris-Button--destructive.Polaris-Button--outline::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Button--destructive.Polaris-Button--outline:hover{ border:0.1rem solid var(--p-border); box-shadow:none; background:var(--p-surface-hovered); }\n\n.Polaris-Button--destructive.Polaris-Button--outline:focus{ border:0.1rem solid var(--p-border); box-shadow:none; }\n\n.Polaris-Button--destructive.Polaris-Button--outline:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Button--destructive.Polaris-Button--outline:active{ border:0.1rem solid var(--p-border); box-shadow:none; background:var(--p-surface-pressed); }\n\n.Polaris-Button--destructive.Polaris-Button--outline:active::after{ box-shadow:none; }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--pressed{ background:var(--p-action-secondary-pressed); border:0.1rem solid var(--p-border); box-shadow:none; color:var(--p-button-text); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--disabled{ border:0.1rem solid var(--p-border-disabled); box-shadow:none; background:transparent; color:var(--p-text-disabled); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive{ background:transparent; border:0.1rem solid var(--p-border-critical); box-shadow:none; color:var(--p-interactive-critical); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive svg{ fill:var(--p-icon-critical); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive:hover{ border:0.1rem solid var(--p-border-critical); background:var(--p-surface-critical-subdued); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive:focus{ border:0.1rem solid var(--p-border-critical); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive:active{ border:0.1rem solid var(--p-border-critical); background:var(--p-surface-critical-subdued); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive.Polaris-Button--disabled{ border:0.1rem solid var(--p-border-critical-disabled); background:transparent; color:var(--p-interactive-critical-disabled); }\n\n.Polaris-Button--destructive.Polaris-Button--outline.Polaris-Button--destructive.Polaris-Button--pressed{ background:var(--p-surface-critical-subdued); box-shadow:0.1rem solid var(--p-border-critical); color:var(--p-interactive-critical); }\n\n.Polaris-Button--disabled{ cursor:default; pointer-events:none; }\n\n@keyframes Polaris-Button--loading{ to{ transform:rotate(360deg); } }\n\n.Polaris-Button--loading{ position:relative; }\n\n.Polaris-Button--loading, .Polaris-Button--loading:hover, .Polaris-Button--loading.Polaris-Button--disabled{ color:transparent; }\n\n.Polaris-Button--loading.Polaris-Button--disabled svg{ fill:var(--p-icon-subdued); }\n\n.Polaris-Button--plain{ margin:-0.7rem -0.8rem; padding-left:0.8rem; padding-right:0.8rem; background:transparent; border:0; box-shadow:none; color:var(--p-interactive); }\n\n.Polaris-Button--plain svg{ fill:var(--p-interactive); }\n\n.Polaris-Button--plain > .Polaris-Button__Content{ font-weight:400; position:relative; }\n\n.Polaris-Button--plain > .Polaris-Button__Content::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Button--plain:hover, .Polaris-Button--plain:focus{ color:var(--p-interactive-hovered); background:transparent; box-shadow:none; }\n\n.Polaris-Button--plain:hover svg, .Polaris-Button--plain:focus svg{ fill:var(--p-interactive-hovered); }\n\n.Polaris-Button--plain:hover:not(.Polaris-Button--removeUnderline), .Polaris-Button--plain:focus:not(.Polaris-Button--removeUnderline){ text-decoration:underline; }\n\n.Polaris-Button--plain.Polaris-Button--pressed, .Polaris-Button--plain:active{ color:var(--p-interactive-pressed); background:transparent; box-shadow:none; }\n\n.Polaris-Button--plain.Polaris-Button--pressed svg, .Polaris-Button--plain:active svg{ fill:var(--p-interactive-pressed); }\n\n@media (-ms-high-contrast: active){ .Polaris-Button--plain.Polaris-Button--pressed, .Polaris-Button--plain:active{ outline:none; } }\n\n.Polaris-Button--plain:focus::after{ content:none; }\n\n@media (-ms-high-contrast: active){ .Polaris-Button--plain:focus{ outline:none; } }\n\n@media (-ms-high-contrast: active){ .Polaris-Button--plain:focus > .Polaris-Button__Content{ outline:2px dotted; } }\n\n.Polaris-Button--plain:focus:not(:active) > .Polaris-Button__Content::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Button--plain:active:not(.Polaris-Button--iconOnly) > .Polaris-Button__Content, .Polaris-Button--plain.Polaris-Button--pressed:not(.Polaris-Button--iconOnly) > .Polaris-Button__Content{ padding:2px 5px; margin:-2px -5px; background:var(--p-action-secondary-hovered); border-radius:3px; }\n\n.Polaris-Button--plain.Polaris-Button--fullWidth{ margin-left:0; margin-right:0; }\n\n.Polaris-Button--plain.Polaris-Button--disabled{ color:var(--p-text-disabled); background:none; }\n\n.Polaris-Button--plain.Polaris-Button--disabled.Polaris-Button--loading{ color:transparent; }\n\n.Polaris-Button--plain.Polaris-Button--destructive{ color:var(--p-interactive-critical); }\n\n.Polaris-Button--plain.Polaris-Button--destructive svg{ fill:var(--p-interactive-critical); }\n\n.Polaris-Button--plain.Polaris-Button--destructive:hover{ color:var(--p-interactive-critical-hovered); }\n\n.Polaris-Button--plain.Polaris-Button--destructive:active, .Polaris-Button--plain.Polaris-Button--destructive.Polaris-Button--pressed{ color:var(--p-interactive-critical-pressed); }\n\n.Polaris-Button--plain.Polaris-Button--destructive.Polaris-Button--disabled{ color:var(--p-interactive-critical-disabled); }\n\n.Polaris-Button--plain.Polaris-Button--sizeSlim{ margin-top:-0.3rem; margin-bottom:-0.3rem; }\n\n.Polaris-Button--plain.Polaris-Button--sizeLarge{ margin:-1.1rem -2rem; }\n\n.Polaris-Button--plain.Polaris-Button--iconOnly{ margin:-0.8rem; }\n\n.Polaris-Button--plain.Polaris-Button--iconOnly svg{ fill:var(--p-icon); }\n\n.Polaris-Button--plain.Polaris-Button--iconOnly:hover svg{ fill:var(--p-icon-hovered); }\n\n.Polaris-Button--plain.Polaris-Button--iconOnly:active svg, .Polaris-Button--plain.Polaris-Button--iconOnly.Polaris-Button--pressed svg{ fill:var(--p-icon-pressed); }\n\n.Polaris-Button--plain.Polaris-Button--iconOnly.Polaris-Button--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-Button--plain.Polaris-Button--destructive.Polaris-Button--iconOnly svg{ fill:var(--p-action-critical); }\n\n.Polaris-Button--plain.Polaris-Button--destructive.Polaris-Button--iconOnly:hover svg{ fill:var(--p-action-critical-hovered); }\n\n.Polaris-Button--plain.Polaris-Button--destructive.Polaris-Button--iconOnly:active svg, .Polaris-Button--plain.Polaris-Button--destructive.Polaris-Button--iconOnly.Polaris-Button--pressed svg{ fill:var(--p-action-critical-pressed); }\n\n.Polaris-Button--plain.Polaris-Button--destructive.Polaris-Button--iconOnly.Polaris-Button--disabled svg{ fill:var(--p-action-critical-disabled); }\n\n.Polaris-Button--plain .Polaris-Button__Icon{ margin-left:0; margin-right:0; }\n\n.Polaris-Button--fullWidth{ display:flex; width:100%; }\n\n.Polaris-Button--iconOnly{ padding-left:0.8rem; padding-right:0.8rem; }\n\n.Polaris-Button--iconOnly.Polaris-Button--sizeLarge{ padding-left:1.2rem; padding-right:1.2rem; }\n\n.Polaris-Button--iconOnly .Polaris-Button__Icon:first-child{ margin-left:0; }\n\n.Polaris-Button--iconOnly .Polaris-Button__Icon:last-child{ margin-right:-0.4rem; }\n\n.Polaris-Button--iconOnly .Polaris-Button__Icon:only-child{ margin-right:0; }\n\n.Polaris-Button--sizeSlim{ min-height:2.8rem; padding:0.3rem 1.2rem; }\n\n.Polaris-Button--sizeLarge{ min-height:4.4rem; min-width:4.4rem; padding:1.1rem 2.4rem; }\n\n.Polaris-Button--sizeLarge .Polaris-Button__Content{ font-size:1.7rem; font-weight:var(--p-button-font-weight, 400); line-height:2rem; text-transform:initial; letter-spacing:initial; }\n\n@media (min-width: 40em){ .Polaris-Button--sizeLarge .Polaris-Button__Content{ font-size:1.6rem; } }\n\n.Polaris-Button--monochrome.Polaris-Button--outline, .Polaris-Button--monochrome.Polaris-Button--plain{ color:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline svg, .Polaris-Button--monochrome.Polaris-Button--plain svg{ fill:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:hover, .Polaris-Button--monochrome.Polaris-Button--outline:focus, .Polaris-Button--monochrome.Polaris-Button--outline:active, .Polaris-Button--monochrome.Polaris-Button--plain:hover, .Polaris-Button--monochrome.Polaris-Button--plain:focus, .Polaris-Button--monochrome.Polaris-Button--plain:active{ color:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:hover svg, .Polaris-Button--monochrome.Polaris-Button--outline:focus svg, .Polaris-Button--monochrome.Polaris-Button--outline:active svg, .Polaris-Button--monochrome.Polaris-Button--plain:hover svg, .Polaris-Button--monochrome.Polaris-Button--plain:focus svg, .Polaris-Button--monochrome.Polaris-Button--plain:active svg{ fill:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--disabled, .Polaris-Button--monochrome.Polaris-Button--plain.Polaris-Button--disabled{ color:currentColor; opacity:0.4; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--disabled svg, .Polaris-Button--monochrome.Polaris-Button--plain.Polaris-Button--disabled svg{ fill:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--iconOnly svg, .Polaris-Button--monochrome.Polaris-Button--plain.Polaris-Button--iconOnly svg{ fill:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--iconOnly:focus svg, .Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--iconOnly:active svg, .Polaris-Button--monochrome.Polaris-Button--plain.Polaris-Button--iconOnly:focus svg, .Polaris-Button--monochrome.Polaris-Button--plain.Polaris-Button--iconOnly:active svg{ fill:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--iconOnly.Polaris-Button--disabled svg, .Polaris-Button--monochrome.Polaris-Button--plain.Polaris-Button--iconOnly.Polaris-Button--disabled svg{ fill:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--plain .Polaris-Button__Text:not(.Polaris-Button--removeUnderline){ text-decoration:underline; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline{ position:relative; border-color:currentColor; box-shadow:0 0 0 0.1rem currentColor; position:relative; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.3rem; right:-0.3rem; bottom:-0.3rem; left:-0.3rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.3rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Button--monochrome.Polaris-Button--outline::before{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; background-color:currentColor; opacity:0; z-index:0; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--pressed{ background:transparent; box-shadow:none; color:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline.Polaris-Button--pressed::before{ opacity:0.2; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:hover, .Polaris-Button--monochrome.Polaris-Button--outline:focus, .Polaris-Button--monochrome.Polaris-Button--outline:active{ background-color:transparent; border-color:currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:hover::before, .Polaris-Button--monochrome.Polaris-Button--outline:focus::before, .Polaris-Button--monochrome.Polaris-Button--outline:active::before{ opacity:0.07; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:focus{ box-shadow:0 0 0 1px currentColor; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:active::after{ box-shadow:none; }\n\n.Polaris-Button--monochrome.Polaris-Button--outline:hover::before, .Polaris-Button--monochrome.Polaris-Button--outline:active::before{ opacity:0.05; }\n\n.Polaris-Button__ConnectedDisclosureWrapper{ display:flex; }\n\n.Polaris-Button__ConnectedDisclosure{ z-index:10; margin-left:-0.1rem; border-top-left-radius:0; border-bottom-left-radius:0; height:100%; }\n\n.Polaris-Button__ConnectedDisclosure.Polaris-Button--outline:not(:focus){ border-left-color:rgba(99, 115, 129, 0); }\n\n.Polaris-Button__ConnectedDisclosure:focus, .Polaris-Button__ConnectedDisclosure:active{ z-index:20; }\n\n.Polaris-Button__ConnectedDisclosure.Polaris-Button--primary, .Polaris-Button__ConnectedDisclosure.Polaris-Button--destructive{ margin-left:0.1rem; }\n\n.Polaris-Button__ConnectedDisclosure.Polaris-Button--primary.Polaris-Button--outline, .Polaris-Button__ConnectedDisclosure.Polaris-Button--destructive.Polaris-Button--outline{ margin-left:0; border-left:0; }\n\n.Polaris-Button__ConnectedDisclosure::after{ border-top-left-radius:0; border-bottom-left-radius:0; }\n\n[data-buttongroup-segmented='true'] .Polaris-Button, [data-buttongroup-segmented='true'] .Polaris-Button::after{ border-radius:0; }\n\n[data-buttongroup-segmented='true'] > :first-child .Polaris-Button, [data-buttongroup-segmented='true'] > :first-child .Polaris-Button::after{ border-radius:0; border-top-left-radius:var(--p-border-radius-base, 3px); border-bottom-left-radius:var(--p-border-radius-base, 3px); }\n\n[data-buttongroup-segmented='true'] > :last-child .Polaris-Button, [data-buttongroup-segmented='true'] > :last-child .Polaris-Button::after{ border-radius:0; border-top-right-radius:var(--p-border-radius-base, 3px); border-bottom-right-radius:var(--p-border-radius-base, 3px); }\n\n[data-buttongroup-segmented='true'] > :last-child:first-child .Polaris-Button, [data-buttongroup-segmented='true'] > :last-child:first-child .Polaris-Button::after{ border-radius:var(--p-border-radius-base, 3px); }\n\n[data-buttongroup-connected-top='true'] > :first-child .Polaris-Button, [data-buttongroup-connected-top='true'] > :first-child .Polaris-Button::after{ border-top-left-radius:0; }\n\n[data-buttongroup-connected-top='true'] > :last-child .Polaris-Button, [data-buttongroup-connected-top='true'] > :last-child .Polaris-Button::after{ border-top-right-radius:0; }\n\n[data-buttongroup-full-width='true'] .Polaris-Button{ display:flex; width:100%; }\n\n\n.Polaris-ButtonGroup{ display:flex; flex-wrap:wrap; align-items:center; margin-top:-0.8rem; margin-left:-0.8rem; }\n\n.Polaris-ButtonGroup__Item{ margin-top:0.8rem; margin-left:0.8rem; }\n\n.Polaris-ButtonGroup__Item--plain:not(:first-child){ margin-left:1.6rem; }\n\n.Polaris-ButtonGroup__Item--plain:not(:last-child){ margin-right:0.8rem; }\n\n.Polaris-ButtonGroup--segmented{ display:flex; flex-wrap:nowrap; margin-top:0; margin-left:0; }\n\n.Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item{ position:relative; z-index:10; margin-top:0; margin-left:0; }\n\n.Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item:not(:first-child){ margin-left:-0.1rem; }\n\n.Polaris-ButtonGroup--segmented .Polaris-ButtonGroup__Item--focused{ z-index:20; }\n\n.Polaris-ButtonGroup--fullWidth .Polaris-ButtonGroup__Item{ flex:1 1 auto; }\n\n.Polaris-ButtonGroup--extraTight{ margin-top:-0.4rem; margin-left:-0.4rem; }\n\n.Polaris-ButtonGroup--extraTight .Polaris-ButtonGroup__Item{ margin-top:0.4rem; margin-left:0.4rem; }\n\n.Polaris-ButtonGroup--tight{ margin-top:-0.8rem; margin-left:-0.8rem; }\n\n.Polaris-ButtonGroup--tight .Polaris-ButtonGroup__Item{ margin-top:0.8rem; margin-left:0.8rem; }\n\n.Polaris-ButtonGroup--loose{ margin-top:-2rem; margin-left:-2rem; }\n\n.Polaris-ButtonGroup--loose .Polaris-ButtonGroup__Item{ margin-top:2rem; margin-left:2rem; }\n\n\n.Polaris-Stack{ margin-top:-1.6rem; margin-left:-1.6rem; display:flex; flex-wrap:wrap; align-items:stretch; }\n\n.Polaris-Stack > .Polaris-Stack__Item{ margin-top:1.6rem; margin-left:1.6rem; max-width:100%; }\n\n.Polaris-Stack--noWrap{ flex-wrap:nowrap; }\n\n.Polaris-Stack--spacingNone{ margin-top:0; margin-left:0; }\n\n.Polaris-Stack--spacingNone > .Polaris-Stack__Item{ margin-top:0; margin-left:0; max-width:100%; }\n\n.Polaris-Stack--spacingExtraTight{ margin-top:-0.4rem; margin-left:-0.4rem; }\n\n.Polaris-Stack--spacingExtraTight > .Polaris-Stack__Item{ margin-top:0.4rem; margin-left:0.4rem; max-width:100%; }\n\n.Polaris-Stack--spacingTight{ margin-top:-0.8rem; margin-left:-0.8rem; }\n\n.Polaris-Stack--spacingTight > .Polaris-Stack__Item{ margin-top:0.8rem; margin-left:0.8rem; max-width:100%; }\n\n.Polaris-Stack--spacingBaseTight{ margin-top:-1.2rem; margin-left:-1.2rem; }\n\n.Polaris-Stack--spacingBaseTight > .Polaris-Stack__Item{ margin-top:1.2rem; margin-left:1.2rem; max-width:100%; }\n\n.Polaris-Stack--spacingLoose{ margin-top:-2rem; margin-left:-2rem; }\n\n.Polaris-Stack--spacingLoose > .Polaris-Stack__Item{ margin-top:2rem; margin-left:2rem; max-width:100%; }\n\n.Polaris-Stack--spacingExtraLoose{ margin-top:-3.2rem; margin-left:-3.2rem; }\n\n.Polaris-Stack--spacingExtraLoose > .Polaris-Stack__Item{ margin-top:3.2rem; margin-left:3.2rem; max-width:100%; }\n\n.Polaris-Stack--distributionLeading{ justify-content:flex-start; }\n\n.Polaris-Stack--distributionTrailing{ justify-content:flex-end; }\n\n.Polaris-Stack--distributionCenter{ justify-content:center; }\n\n.Polaris-Stack--distributionEqualSpacing{ justify-content:space-between; }\n\n.Polaris-Stack--distributionFill > .Polaris-Stack__Item{ flex:1 1 auto; }\n\n.Polaris-Stack--distributionFillEvenly > .Polaris-Stack__Item{ flex:1 1 auto; }\n\n@supports ((min-width: -webkit-fit-content) or (min-width: -moz-fit-content) or (min-width: fit-content)){ .Polaris-Stack--distributionFillEvenly > .Polaris-Stack__Item{ flex:1 0; min-width:-webkit-fit-content; min-width:-moz-fit-content; min-width:fit-content; } }\n\n.Polaris-Stack--alignmentLeading{ align-items:flex-start; }\n\n.Polaris-Stack--alignmentTrailing{ align-items:flex-end; }\n\n.Polaris-Stack--alignmentCenter{ align-items:center; }\n\n.Polaris-Stack--alignmentFill{ align-items:stretch; }\n\n.Polaris-Stack--alignmentBaseline{ align-items:baseline; }\n\n.Polaris-Stack--vertical{ flex-direction:column; margin-left:0; }\n\n.Polaris-Stack--vertical > .Polaris-Stack__Item{ margin-left:0; }\n\n.Polaris-Stack__Item{ flex:0 0 auto; min-width:0; }\n\n.Polaris-Stack__Item--fill{ flex:1 1 auto; }\n\n\n.Polaris-Heading{ font-size:1.7rem; font-weight:600; line-height:2.4rem; margin:0; }\n\n@media (min-width: 40em){ .Polaris-Heading{ font-size:1.6rem; } }\n\n@media print{ .Polaris-Heading{ font-size:1.4rem; line-height:1.8rem; } }\n\n\n.Polaris-Card{ background-color:var(--p-surface); box-shadow:var(--p-card-shadow, 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15)); outline:0.1rem solid transparent; }\n\n.Polaris-Card + .Polaris-Card{ margin-top:1.6rem; }\n\n@media print{ .Polaris-Card + .Polaris-Card{ margin-top:-0.8rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Card{ border-radius:var(--p-border-radius-wide, 3px); } }\n\n@media (min-width: 30.625em){ .Polaris-Card{ border-radius:var(--p-border-radius-wide, 3px); } }\n\n@media print{ .Polaris-Card{ box-shadow:none; } }\n\n.Polaris-Card--subdued{ background-color:var(--p-surface-subdued); }\n\n@media print{ .Polaris-Card__Section--hideOnPrint, .Polaris-Card--hideOnPrint{ display:none !important; } }\n\n.Polaris-Card__Header{ padding:1.6rem 1.6rem 0; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Card__Header{ padding:2rem 2rem 0; } }\n\n@media (min-width: 30.625em){ .Polaris-Card__Header{ padding:2rem 2rem 0; } }\n\n@media print and (max-width: 48.0625em) and (min-width: 30.625em), print and (min-width: 45.625em){ [data-has-navigation] .Polaris-Card__Header{ padding:0.8rem 1.6rem 0; } }\n\n@media print and (min-width: 30.625em){ .Polaris-Card__Header{ padding:0.8rem 1.6rem 0; } }\n\n.Polaris-Card__Section{ padding:1.6rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Card__Section{ padding:2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-Card__Section{ padding:2rem; } }\n\n.Polaris-Card__Section + .Polaris-Card__Section{ border-top:0.1rem solid var(--p-divider); }\n\n@media print{ .Polaris-Card__Section + .Polaris-Card__Section{ border-top:0; } }\n\n@media print{ .Polaris-Card__Section{ padding-top:0.4rem; padding-bottom:0.4rem; } }\n\n.Polaris-Card__Section:first-child{ border-top-left-radius:var(--p-border-radius-wide, 3px); border-top-right-radius:var(--p-border-radius-wide, 3px); }\n\n.Polaris-Card__Section:last-child{ border-bottom-left-radius:var(--p-border-radius-wide, 3px); border-bottom-right-radius:var(--p-border-radius-wide, 3px); }\n\n.Polaris-Card__Section--fullWidth{ padding:1.6rem 0; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Card__Section--fullWidth{ padding:2rem 0; } }\n\n@media (min-width: 30.625em){ .Polaris-Card__Section--fullWidth{ padding:2rem 0; } }\n\n.Polaris-Card__Section--flush{ padding:0; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Card__Section--flush{ padding:0; } }\n\n@media (min-width: 30.625em){ .Polaris-Card__Section--flush{ padding:0; } }\n\n.Polaris-Card__Section--subdued{ background-color:var(--p-surface-subdued); }\n\n@media (-ms-high-contrast: active){ .Polaris-Card__Section--subdued{ background-color:transparent; } }\n\n.Polaris-Card__Header + .Polaris-Card__Section--subdued{ border-top:0.1rem solid var(--p-divider); margin-top:2rem; }\n\n.Polaris-Card__SectionHeader{ padding-bottom:0.8rem; }\n\n.Polaris-Card__Section--fullWidth .Polaris-Card__SectionHeader{ padding-left:1.6rem; padding-right:1.6rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Card__Section--fullWidth .Polaris-Card__SectionHeader{ padding-left:2rem; padding-right:2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-Card__Section--fullWidth .Polaris-Card__SectionHeader{ padding-left:2rem; padding-right:2rem; } }\n\n.Polaris-Card__Subsection + .Polaris-Card__Subsection{ margin-top:1.6rem; padding-top:1.6rem; border-top:0.1rem solid var(--p-divider); }\n\n@media print{ .Polaris-Card__Subsection + .Polaris-Card__Subsection{ border-top:0; } }\n\n@media print{ .Polaris-Card__Subsection{ padding-top:0.4rem; padding-bottom:0.4rem; } }\n\n.Polaris-Card__Footer{ display:flex; justify-content:flex-end; padding:0 1.6rem 1.6rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Card__Footer{ padding:0 2rem 2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-Card__Footer{ padding:0 2rem 2rem; } }\n\n.Polaris-Card__Footer.Polaris-Card__LeftJustified{ justify-content:flex-start; }\n\n.Polaris-Card__Section--subdued + .Polaris-Card__Footer{ border-top:0.1rem solid var(--p-divider); padding:2rem; }\n\n\n.Polaris-Subheading{ font-size:1.3rem; font-weight:600; line-height:1.6rem; text-transform:uppercase; margin:0; }\n\n@media (min-width: 40em){ .Polaris-Subheading{ font-size:1.2rem; } }\n\n@media print{ .Polaris-Subheading{ font-size:1.1rem; } }\n\n\n.Polaris-SettingAction{ display:flex; flex-wrap:wrap; align-items:center; margin-top:-1.6rem; margin-left:-1.6rem; }\n\n.Polaris-SettingAction__Setting, .Polaris-SettingAction__Action{ flex:0 0 auto; margin-top:1.6rem; margin-left:1.6rem; max-width:calc(100% - 1.6rem); min-width:0; }\n\n.Polaris-SettingAction__Setting{ flex:1 0 35rem; }\n\n\n.Polaris-AccountConnection__TermsOfService{ margin-top:2rem; }\n\n.Polaris-AccountConnection__Content > * + *{ margin-top:0.8rem; }\n\n\n.Polaris-ActionMenu-SecondaryAction a, .Polaris-ActionMenu-SecondaryAction button{ position:relative; background:transparent !important; box-shadow:none !important; border-radius:var(--p-border-radius-base) !important; padding-left:1.2rem; padding-right:1.2rem; }\n\n.Polaris-ActionMenu-SecondaryAction a::after, .Polaris-ActionMenu-SecondaryAction button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-ActionMenu-SecondaryAction a:hover, .Polaris-ActionMenu-SecondaryAction button:hover{ background:var(--p-background-hovered) !important; }\n\n.Polaris-ActionMenu-SecondaryAction a:active, .Polaris-ActionMenu-SecondaryAction button:active{ background:var(--p-background-pressed) !important; }\n\n@media (min-width: 48em){ .Polaris-ActionMenu-SecondaryAction a, .Polaris-ActionMenu-SecondaryAction button{ border:none !important; position:relative; }\n  .Polaris-ActionMenu-SecondaryAction a::after, .Polaris-ActionMenu-SecondaryAction button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); } }\n\n\n.Polaris-ActionMenu-MenuGroup__Details{ margin-top:-1.6rem; padding:1.6rem; }\n\n\n.Polaris-ActionMenu-Actions__ActionsLayout{ display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; flex:1 1 auto; }\n\n.Polaris-ActionMenu-Actions__ActionsLayout > *{ flex:0 0 auto; }\n\n\n.Polaris-ActionMenu-RollupActions__RollupActivator{ text-align:right; }\n\n.Polaris-ActionMenu-RollupActions__RollupActivator button[type='button']{ margin:0; border:1px solid var(--p-border-neutral-subdued); }\n\n.Polaris-ActionMenu-RollupActions__RollupActivator button[type='button']:hover, .Polaris-ActionMenu-RollupActions__RollupActivator button[type='button']:active, .Polaris-ActionMenu-RollupActions__RollupActivator button[type='button']:focus{ border:1px solid var(--p-border-neutral-subdued); }\n\n\n.Polaris-ActionMenu{ width:100%; display:flex; justify-content:flex-end; }\n\n@media print{ .Polaris-ActionMenu{ display:none !important; } }\n\n.Polaris-ActionMenu:not(.Polaris-ActionMenu--rollup){ margin-left:var(--p-override-zero, -1.2rem); }\n\n\n.Polaris-OptionList-Checkbox{ position:relative; width:100%; margin:var(--p-choice-margin); }\n\n.Polaris-OptionList-Checkbox.Polaris-OptionList-Checkbox--active .Polaris-OptionList-Checkbox__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-OptionList-Checkbox__Input{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-OptionList-Checkbox__Input.Polaris-OptionList-Checkbox--keyFocused + .Polaris-OptionList-Checkbox__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-OptionList-Checkbox__Input:active:not(:disabled) + .Polaris-OptionList-Checkbox__Backdrop, .Polaris-OptionList-Checkbox__Input:checked + .Polaris-OptionList-Checkbox__Backdrop, .Polaris-OptionList-Checkbox__Input.Polaris-OptionList-Checkbox__Input--indeterminate + .Polaris-OptionList-Checkbox__Backdrop{ border-color:var(--p-interactive); }\n\n.Polaris-OptionList-Checkbox__Input:active:not(:disabled) + .Polaris-OptionList-Checkbox__Backdrop::before, .Polaris-OptionList-Checkbox__Input:checked + .Polaris-OptionList-Checkbox__Backdrop::before, .Polaris-OptionList-Checkbox__Input.Polaris-OptionList-Checkbox__Input--indeterminate + .Polaris-OptionList-Checkbox__Backdrop::before{ opacity:1; transform:scale(1); }\n\n@media (-ms-high-contrast: active){ .Polaris-OptionList-Checkbox__Input:active:not(:disabled) + .Polaris-OptionList-Checkbox__Backdrop::before, .Polaris-OptionList-Checkbox__Input:checked + .Polaris-OptionList-Checkbox__Backdrop::before, .Polaris-OptionList-Checkbox__Input.Polaris-OptionList-Checkbox__Input--indeterminate + .Polaris-OptionList-Checkbox__Backdrop::before{ border:2px solid windowText; } }\n\n.Polaris-OptionList-Checkbox__Input:active:not(:disabled) ~ .Polaris-OptionList-Checkbox__Icon, .Polaris-OptionList-Checkbox__Input:checked ~ .Polaris-OptionList-Checkbox__Icon, .Polaris-OptionList-Checkbox__Input.Polaris-OptionList-Checkbox__Input--indeterminate ~ .Polaris-OptionList-Checkbox__Icon{ transform:translate(-50%, -50%) scale(1); opacity:1; transition:opacity var(--p-duration-1-5-0) var(--p-ease), transform var(--p-duration-1-5-0) var(--p-ease); }\n\n.Polaris-OptionList-Checkbox__Input:disabled + .Polaris-OptionList-Checkbox__Backdrop{ border-color:var(--p-border-disabled); }\n\n.Polaris-OptionList-Checkbox__Input:disabled + .Polaris-OptionList-Checkbox__Backdrop::before{ background-color:var(--p-action-secondary-disabled); }\n\n.Polaris-OptionList-Checkbox__Input:disabled + .Polaris-OptionList-Checkbox__Backdrop:hover{ cursor:default; }\n\n.Polaris-OptionList-Checkbox__Input:disabled:checked + .Polaris-OptionList-Checkbox__Backdrop, .Polaris-OptionList-Checkbox__Input:disabled:checked + .Polaris-OptionList-Checkbox__Backdrop::before{ background:var(--p-border-disabled); }\n\n.Polaris-OptionList-Checkbox__Backdrop{ position:relative; border:var(--p-control-border-width) solid var(--p-border); background-color:var(--p-surface); border-radius:var(--p-border-radius-base); position:relative; display:block; width:100%; height:100%; position:relative; }\n\n.Polaris-OptionList-Checkbox__Backdrop::before{ content:''; position:absolute; top:calc(-1*var(--p-control-border-width)); right:calc(-1*var(--p-control-border-width)); bottom:calc(-1*var(--p-control-border-width)); left:calc(-1*var(--p-control-border-width)); border-radius:var(--p-border-radius-base); background-color:var(--p-interactive); opacity:0; transform:scale(0.25); transition:opacity var(--p-duration-1-0-0) var(--p-ease), transform var(--p-duration-1-0-0) var(--p-ease); }\n\n.Polaris-OptionList-Checkbox__Backdrop.Polaris-OptionList-Checkbox--hover, .Polaris-OptionList-Checkbox__Backdrop:hover{ cursor:pointer; border-color:var(--p-border-hovered); }\n\n.Polaris-OptionList-Checkbox__Backdrop::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:calc(-1*(var(--p-control-border-width) + 0.1rem)); right:calc(-1*(var(--p-control-border-width) + 0.1rem)); bottom:calc(-1*(var(--p-control-border-width) + 0.1rem)); left:calc(-1*(var(--p-control-border-width) + 0.1rem)); display:block; pointer-events:none; box-shadow:0 0 0 calc(-1*(var(--p-control-border-width) + 0.1rem)) var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-OptionList-Checkbox__Icon{ position:absolute; top:50%; left:50%; transform-origin:50% 50%; pointer-events:none; transform:translate(-50%, -50%) scale(0.25); opacity:0; transition:opacity var(--p-duration-1-0-0) var(--p-ease), transform var(--p-duration-1-0-0) var(--p-ease); }\n\n.Polaris-OptionList-Checkbox__Icon svg{ fill:var(--p-icon-on-interactive); }\n\n@media (-ms-high-contrast: active){ .Polaris-OptionList-Checkbox__Icon{ fill:windowText; } }\n\n\n.Polaris-OptionList-Option{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; color:inherit; text-decoration:none; width:100%; min-height:3.6rem; text-align:left; border-radius:var(--p-border-radius-base); margin-top:0.4rem; }\n\n.Polaris-OptionList-Option:focus{ outline:none; }\n\n.Polaris-OptionList-Option:visited{ color:inherit; }\n\n.Polaris-OptionList-Option__SingleSelectOption{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; text-align:left; position:relative; }\n\n.Polaris-OptionList-Option__SingleSelectOption:focus{ outline:none; }\n\n.Polaris-OptionList-Option__SingleSelectOption::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-OptionList-Option__SingleSelectOption.Polaris-OptionList-Option--focused:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-OptionList-Option__SingleSelectOption.Polaris-OptionList-Option--active{ background:var(--p-surface-selected); }\n\n.Polaris-OptionList-Option__SingleSelectOption.Polaris-OptionList-Option--active::before, .Polaris-OptionList-Option__SingleSelectOption.Polaris-OptionList-Option--select::before{ content:''; background-color:var(--p-interactive); position:absolute; top:0; left:-0.8rem; height:100%; display:block; width:0.3rem; border-top-right-radius:var(--p-border-radius-base); border-bottom-right-radius:var(--p-border-radius-base); }\n\n.Polaris-OptionList-Option__SingleSelectOption:not(.Polaris-OptionList-Option--disabled){ color:inherit; }\n\n.Polaris-OptionList-Option__SingleSelectOption .Polaris-OptionList-Option__Media{ padding:0 0.8rem 0 0; }\n\n.Polaris-OptionList-Option__Label, .Polaris-OptionList-Option__SingleSelectOption{ display:flex; align-items:flex-start; width:100%; cursor:pointer; border-radius:var(--p-border-radius-base); padding:0.8rem; }\n\n.Polaris-OptionList-Option__Label:hover:not(.Polaris-OptionList-Option--disabled), .Polaris-OptionList-Option__SingleSelectOption:hover:not(.Polaris-OptionList-Option--disabled){ background:var(--p-surface-hovered); outline:0.1rem solid transparent; }\n\n.Polaris-OptionList-Option__Label.Polaris-OptionList-Option--select, .Polaris-OptionList-Option__Label.Polaris-OptionList-Option--select:hover:not(.Polaris-OptionList-Option--disabled), .Polaris-OptionList-Option__Label:active:not(.Polaris-OptionList-Option--disabled), .Polaris-OptionList-Option__SingleSelectOption.Polaris-OptionList-Option--select, .Polaris-OptionList-Option__SingleSelectOption.Polaris-OptionList-Option--select:hover:not(.Polaris-OptionList-Option--disabled), .Polaris-OptionList-Option__SingleSelectOption:active:not(.Polaris-OptionList-Option--disabled){ background:var(--p-surface-selected); outline:0.1rem solid transparent; }\n\n.Polaris-OptionList-Option__Label.Polaris-OptionList-Option--disabled, .Polaris-OptionList-Option__SingleSelectOption.Polaris-OptionList-Option--disabled{ background:var(--p-surface-disabled); cursor:default; color:var(--p-text-disabled); }\n\n.Polaris-OptionList-Option__Checkbox{ box-sizing:border-box; display:flex; flex-shrink:0; width:var(--p-choice-size); height:var(--p-choice-size); margin-right:0.8rem; margin-left:calc(-1*var(--p-choice-margin)); }\n\n.Polaris-OptionList-Option--disabled .Polaris-OptionList-Option__Media svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-OptionList-Option__Media{ padding:0 0.8rem; }\n\n.Polaris-OptionList-Option__Media svg{ fill:var(--p-icon); }\n\n\n.Polaris-OptionList{ margin:0; padding:0; list-style:none; padding:0.8rem; }\n\n.Polaris-OptionList__Options{ margin:0; padding:0; list-style:none; }\n\n.Polaris-OptionList__Title{ font-size:1.3rem; font-weight:600; line-height:1.6rem; text-transform:uppercase; padding:0.8rem; color:var(--p-text-subdued); }\n\n@media (min-width: 40em){ .Polaris-OptionList__Title{ font-size:1.2rem; } }\n\n\n.Polaris-Autocomplete-ComboBox__EmptyState{ padding:0.8rem 1.6rem; }\n\n\n.Polaris-Label{ -webkit-tap-highlight-color:transparent; }\n\n.Polaris-Label--hidden{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-Label__Text{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; display:block; flex:1 1 auto; color:currentColor; -webkit-tap-highlight-color:transparent; }\n\n@media (min-width: 40em){ .Polaris-Label__Text{ font-size:1.4rem; } }\n\n.Polaris-Label__RequiredIndicator::after{ content:'*'; color:var(--p-text-critical); margin-left:0.4rem; }\n\n\n.Polaris-InlineError{ display:flex; color:var(--p-text-critical); fill:var(--p-icon-critical); }\n\n.Polaris-InlineError__Icon{ fill:currentColor; margin-left:-0.2rem; margin-right:0.6rem; }\n\n\n.Polaris-Labelled--hidden > .Polaris-Labelled__LabelWrapper{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-Labelled__LabelWrapper{ word-wrap:break-word; word-break:break-word; overflow-wrap:break-word; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; margin-bottom:0.4rem; }\n\n.Polaris-Labelled__HelpText{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; color:var(--p-text-subdued); word-wrap:break-word; word-break:break-word; overflow-wrap:break-word; margin-top:0.4rem; }\n\n@media (min-width: 40em){ .Polaris-Labelled__HelpText{ font-size:1.4rem; } }\n\n.Polaris-Labelled__Error{ word-wrap:break-word; word-break:break-word; overflow-wrap:break-word; margin-top:0.4rem; }\n\n.Polaris-Labelled__Action{ flex:0 0 auto; }\n\n\n.Polaris-Connected{ position:relative; display:flex; }\n\n.Polaris-Connected__Item{ position:relative; z-index:10; flex:0 0 auto; }\n\n.Polaris-Connected__Item:not(:first-child){ margin-left:0.4rem; }\n\n.Polaris-Connected__Item--primary{ z-index:20; flex:1 1 auto; }\n\n.Polaris-Connected__Item--focused{ z-index:30; }\n\n\n.Polaris-TextField{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; position:relative; display:flex; align-items:center; color:var(--p-text); cursor:text; }\n\n@media (min-width: 40em){ .Polaris-TextField{ font-size:1.4rem; } }\n\n.Polaris-TextField svg{ fill:var(--p-icon); }\n\n.Polaris-TextField--multiline{ padding:0; flex-wrap:wrap; }\n\n.Polaris-TextField--multiline > .Polaris-TextField__Input{ overflow:auto; padding-left:1.2rem; padding-right:1.2rem; resize:none; }\n\n.Polaris-TextField--hasValue{ color:var(--p-text); }\n\n.Polaris-TextField--focus > .Polaris-TextField__Input, .Polaris-TextField__Input:focus{ outline:none; }\n\n.Polaris-TextField--focus > .Polaris-TextField__Input ~ .Polaris-TextField__Backdrop::after, .Polaris-TextField__Input:focus ~ .Polaris-TextField__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-TextField--error .Polaris-TextField__Input::-webkit-input-placeholder{ color:#9c9798; }\n\n.Polaris-TextField--error .Polaris-TextField__Input::placeholder{ color:#9c9798; }\n\n.Polaris-TextField--error > .Polaris-TextField__Input ~ .Polaris-TextField__Backdrop{ background-color:var(--p-surface-critical-subdued); border-color:var(--p-border-critical); }\n\n.Polaris-TextField--error > .Polaris-TextField__Input ~ .Polaris-TextField__Backdrop::after{ border-color:var(--p-focused); }\n\n.Polaris-TextField--readOnly > .Polaris-TextField__Backdrop{ background-color:var(--p-action-secondary-disabled); }\n\n.Polaris-TextField--disabled{ color:var(--p-text-disabled); cursor:initial; }\n\n.Polaris-TextField--disabled > .Polaris-TextField__Backdrop{ background-color:var(--p-surface-disabled); border-top-color:var(--p-border-disabled); }\n\n.Polaris-TextField--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-TextField__Input{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; position:relative; z-index:20; display:block; flex:1 1; width:100%; min-width:0; min-height:3.6rem; margin:0; padding:0.5rem 1.2rem; background:none; border:0.1rem solid transparent; font-family:inherit; font-size:inherit; font-weight:inherit; -webkit-appearance:none; appearance:none; caret-color:var(--p-text); color:var(--p-text); }\n\n@media (min-width: 40em){ .Polaris-TextField__Input{ font-size:1.4rem; } }\n\n.Polaris-TextField__Prefix + .Polaris-TextField__Input{ padding-left:0; }\n\n.Polaris-TextField__Input:disabled{ background:none; color:currentColor; opacity:1; -webkit-text-fill-color:currentColor; }\n\n.Polaris-TextField__Input:invalid{ box-shadow:none; }\n\n.Polaris-TextField__Input::-webkit-input-placeholder{ color:var(--p-text-subdued); }\n\n.Polaris-TextField__Input::placeholder{ color:var(--p-text-subdued); }\n\n.Polaris-TextField__Input[type='number']{ -webkit-appearance:textfield; appearance:textfield; }\n\n.Polaris-TextField__Input[type='number']::-webkit-outer-spin-button, .Polaris-TextField__Input[type='number']::-webkit-inner-spin-button{ -webkit-appearance:none; appearance:none; margin:0; }\n\n.Polaris-TextField__Input:-webkit-autofill{ border-radius:var(--p-border-radius-base); }\n\n.Polaris-TextField__Input--hasClearButton[type='search']::-webkit-search-cancel-button{ -webkit-appearance:none; appearance:none; }\n\n.Polaris-TextField__Input--suffixed{ padding-right:0; }\n\n.Polaris-TextField__Input--alignRight{ text-align:right; }\n\n.Polaris-TextField__Input--alignLeft{ text-align:left; }\n\n.Polaris-TextField__Input--alignCenter{ text-align:center; }\n\n.Polaris-TextField__Backdrop{ position:relative; position:absolute; z-index:10; top:0; right:0; bottom:0; left:0; background-color:var(--p-surface); border:1px solid var(--p-border-subdued); border-top-color:var(--p-border-shadow); border-radius:var(--p-border-radius-base); pointer-events:none; }\n\n.Polaris-TextField__Backdrop::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-TextField__Prefix, .Polaris-TextField__Suffix{ position:relative; z-index:20; flex:0 0 auto; color:var(--p-text-subdued); -webkit-user-select:none; user-select:none; pointer-events:none; }\n\n.Polaris-TextField__Prefix{ margin-left:1.2rem; margin-right:0.8rem; }\n\n.Polaris-TextField__Suffix{ margin-left:0.25em; margin-right:1.2rem; }\n\n.Polaris-TextField__CharacterCount{ color:var(--p-text-subdued); z-index:20; margin:0 1.2rem 0 0.25em; pointer-events:none; text-align:right; }\n\n.Polaris-TextField__AlignFieldBottom{ align-self:flex-end; width:100%; padding-bottom:0.8rem; }\n\n.Polaris-TextField__ClearButton{ position:relative; -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; z-index:20; margin:0 1.2rem 0 0.25em; }\n\n.Polaris-TextField__ClearButton::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-TextField__ClearButton:focus{ outline:none; }\n\n.Polaris-TextField__ClearButton:focus:enabled::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-TextField__ClearButton:disabled{ cursor:default; }\n\n.Polaris-TextField__ClearButton.Polaris-TextField__ClearButton--hidden{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-TextField__Spinner{ --p-text-field-spinner-offset-large:calc(var(--p-text-field-spinner-offset) + 0.1rem); z-index:20; margin:var(--p-text-field-spinner-offset-large); color:var(--p-icon); display:flex; align-self:stretch; flex-direction:column; width:2.2rem; cursor:pointer; }\n\n.Polaris-TextField__SpinnerIcon{ height:1.2rem; width:1.2rem; }\n\n.Polaris-TextField__Resizer{ position:absolute; bottom:0; left:0; right:0; height:0; visibility:hidden; overflow:hidden; }\n\n.Polaris-TextField__DummyInput{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; padding:0.5rem 1.2rem; word-wrap:break-word; word-break:break-word; overflow-wrap:break-word; white-space:pre-wrap; }\n\n@media (min-width: 40em){ .Polaris-TextField__DummyInput{ font-size:1.4rem; } }\n\n.Polaris-TextField__Segment{ --p-text-field-spinner-border-radius:calc(var(--p-border-radius-base) - var(--p-text-field-spinner-offset)); background:var(--p-surface-neutral); border-radius:var(--p-text-field-spinner-border-radius); display:flex; flex:1 1; justify-content:center; align-items:center; -webkit-appearance:none; appearance:none; border:none; }\n\n.Polaris-TextField__Segment:focus{ outline:none; }\n\n.Polaris-TextField__Segment:active{ background:var(--p-surface-neutral-pressed); }\n\n.Polaris-TextField__Segment:first-child{ border-top-right-radius:var(--p-text-field-spinner-border-radius); margin-bottom:var(--p-text-field-spinner-offset); }\n\n.Polaris-TextField__Segment:last-child{ border-bottom-right-radius:var(--p-text-field-spinner-border-radius); }\n\n.Polaris-TextField__Segment:not(:first-child){ margin-top:0; }\n\n.Polaris-TextField--monospaced{ font-family:ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo, monospace; }\n\n\n.Polaris-Autocomplete__Loading{ display:flex; justify-content:center; align-items:center; width:100%; padding:0.8rem 1.6rem; }\n\n\n[data-lock-scrolling]{ overflow-y:scroll; margin:0; }\n\n[data-lock-scrolling] [data-lock-scrolling-wrapper]{ overflow:hidden; height:100%; }\n\n\n.Polaris-Backdrop{ position:fixed; z-index:518; top:0; right:0; bottom:0; left:0; display:block; background-color:var(--p-backdrop, rgba(33, 43, 54, 0.4)); animation:Polaris-Backdrop__fade--in 200ms 1 forwards; opacity:1; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; }\n\n.Polaris-Backdrop--transparent{ background-color:transparent; }\n\n.Polaris-Backdrop--belowNavigation{ z-index:515; }\n\n@keyframes Polaris-Backdrop__fade--in{ 0%{ opacity:0; }\n  100%{ opacity:1; } }\n\n\n.Polaris-Banner{ --p-rgb-text:33, 43, 54; position:relative; display:flex; }\n\n.Polaris-Banner.Polaris-Banner--statusCritical .Polaris-Banner__PrimaryAction .Polaris-Banner__Button{ border-color:var(--p-border-critical-subdued); background:var(--p-surface-critical-subdued); }\n\n.Polaris-Banner.Polaris-Banner--statusCritical .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:hover{ border-color:var(--p-border-critical-subdued); background:var(--p-surface-critical-subdued-hovered); }\n\n.Polaris-Banner.Polaris-Banner--statusCritical .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:active{ border-color:var(--p-border-critical-subdued); background:var(--p-surface-critical-subdued-pressed); }\n\n.Polaris-Banner.Polaris-Banner--statusCritical .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:focus:not(:active){ border-color:var(--p-border-critical-subdued); background:var(--p-surface-critical-subdued); }\n\n.Polaris-Banner.Polaris-Banner--statusWarning .Polaris-Banner__PrimaryAction .Polaris-Banner__Button{ border-color:var(--p-border-warning-subdued); background:var(--p-surface-warning-subdued); }\n\n.Polaris-Banner.Polaris-Banner--statusWarning .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:hover{ border-color:var(--p-border-warning-subdued); background:var(--p-surface-warning-subdued-hovered); }\n\n.Polaris-Banner.Polaris-Banner--statusWarning .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:active{ border-color:var(--p-border-warning-subdued); background:var(--p-surface-warning-subdued-pressed); }\n\n.Polaris-Banner.Polaris-Banner--statusWarning .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:focus:not(:active){ border-color:var(--p-border-warning-subdued); background:var(--p-surface-warning-subdued); }\n\n.Polaris-Banner.Polaris-Banner--statusInfo .Polaris-Banner__PrimaryAction .Polaris-Banner__Button{ border-color:var(--p-border-highlight-subdued); background:var(--p-surface-highlight-subdued); }\n\n.Polaris-Banner.Polaris-Banner--statusInfo .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:hover{ border-color:var(--p-border-highlight-subdued); background:var(--p-surface-highlight-subdued-hovered); }\n\n.Polaris-Banner.Polaris-Banner--statusInfo .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:active{ border-color:var(--p-border-highlight-subdued); background:var(--p-surface-highlight-subdued-pressed); }\n\n.Polaris-Banner.Polaris-Banner--statusInfo .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:focus:not(:active){ border-color:var(--p-border-highlight-subdued); background:var(--p-surface-highlight-subdued); }\n\n.Polaris-Banner.Polaris-Banner--statusSuccess .Polaris-Banner__PrimaryAction .Polaris-Banner__Button{ border-color:var(--p-border-success-subdued); background:var(--p-surface-success-subdued); }\n\n.Polaris-Banner.Polaris-Banner--statusSuccess .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:hover{ border-color:var(--p-border-success-subdued); background:var(--p-surface-success-subdued-hovered); }\n\n.Polaris-Banner.Polaris-Banner--statusSuccess .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:active{ border-color:var(--p-border-success-subdued); background:var(--p-surface-success-subdued-pressed); }\n\n.Polaris-Banner.Polaris-Banner--statusSuccess .Polaris-Banner__PrimaryAction .Polaris-Banner__Button:focus:not(:active){ border-color:var(--p-border-success-subdued); background:var(--p-surface-success-subdued); }\n\n.Polaris-Banner__ContentWrapper{ flex:1 1 auto; }\n\n.Polaris-Banner--withinContentContainer{ padding:1.6rem 1.6rem 1.4rem; --p-banner-background:var(--p-background); --p-banner-border:var(--p-banner-border-default); transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1); transition-delay:100ms; box-shadow:var(--p-banner-border); position:relative; border-radius:var(--p-border-radius-base); background-color:var(--p-banner-background); outline:0.1rem solid transparent; }\n\n.Polaris-Banner--withinContentContainer .Polaris-Banner__ContentWrapper{ margin-top:-0.2rem; }\n\n.Polaris-Banner--withinContentContainer .Polaris-Banner__Dismiss{ top:1.6rem; right:1.2rem; position:absolute; }\n\n.Polaris-Banner--withinContentContainer .Polaris-Banner__Ribbon{ padding-right:1.6rem; }\n\n.Polaris-Banner--withinContentContainer::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Banner--withinContentContainer:focus{ outline:none; }\n\n.Polaris-Banner--withinContentContainer.Polaris-Banner--keyFocused{ box-shadow:var(--p-banner-border); }\n\n.Polaris-Banner--withinContentContainer.Polaris-Banner--keyFocused::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Banner--withinContentContainer.Polaris-Banner--statusSuccess{ --p-banner-background:var(--p-surface-success-subdued); --p-banner-border:var(--p-banner-border-success); }\n\n.Polaris-Banner--withinContentContainer.Polaris-Banner--statusInfo{ --p-banner-background:var(--p-surface-highlight-subdued); --p-banner-border:var(--p-banner-border-highlight); }\n\n.Polaris-Banner--withinContentContainer.Polaris-Banner--statusWarning{ --p-banner-background:var(--p-surface-warning-subdued); --p-banner-border:var(--p-banner-border-warning); }\n\n.Polaris-Banner--withinContentContainer.Polaris-Banner--statusCritical{ --p-banner-background:var(--p-surface-critical-subdued); --p-banner-border:var(--p-banner-border-critical); }\n\n.Polaris-Banner--withinContentContainer + .Polaris-Banner{ margin-top:0.8rem; }\n\n.Polaris-Banner--withinContentContainer .Polaris-Banner__Actions{ padding:1.2rem 0 0.4rem 0; }\n\n.Polaris-Banner--withinPage{ border-radius:0 0 3px 3px; padding:2rem 2rem 1.8rem; --p-banner-background:var(--p-background); --p-banner-border:var(--p-banner-border-default); transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1); transition-delay:100ms; box-shadow:var(--p-banner-border); position:relative; border-radius:var(--p-border-radius-wide); background-color:var(--p-banner-background); outline:0.1rem solid transparent; }\n\n.Polaris-Banner--withinPage .Polaris-Banner__ContentWrapper{ margin-top:-0.2rem; }\n\n.Polaris-Banner--withinPage::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-wide) + 0.1rem); }\n\n.Polaris-Banner--withinPage:focus{ outline:none; }\n\n.Polaris-Banner--withinPage.Polaris-Banner--keyFocused{ box-shadow:var(--p-banner-border); }\n\n.Polaris-Banner--withinPage.Polaris-Banner--keyFocused::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Banner--withinPage.Polaris-Banner--statusSuccess{ --p-banner-background:var(--p-surface-success-subdued); --p-banner-border:var(--p-banner-border-success); }\n\n.Polaris-Banner--withinPage.Polaris-Banner--statusInfo{ --p-banner-background:var(--p-surface-highlight-subdued); --p-banner-border:var(--p-banner-border-highlight); }\n\n.Polaris-Banner--withinPage.Polaris-Banner--statusWarning{ --p-banner-background:var(--p-surface-warning-subdued); --p-banner-border:var(--p-banner-border-warning); }\n\n.Polaris-Banner--withinPage.Polaris-Banner--statusCritical{ --p-banner-background:var(--p-surface-critical-subdued); --p-banner-border:var(--p-banner-border-critical); }\n\n.Polaris-Banner--withinPage + .Polaris-Banner{ margin-top:2rem; }\n\n.Polaris-Banner--withinPage .Polaris-Banner__Ribbon{ padding-right:1.6rem; }\n\n.Polaris-Banner--withinPage .Polaris-Banner__Actions{ padding-top:1.6rem; }\n\n.Polaris-Banner--withinPage .Polaris-Banner__Dismiss{ right:1.6rem; top:2rem; position:absolute; }\n\n.Polaris-Banner--hasDismiss{ padding-right:calc(3.2rem + var(--p-icon-size)); }\n\n.Polaris-Banner__Heading{ padding-top:var(--p-override-none, 0.2rem); word-break:break-word; }\n\n.Polaris-Banner__Content{ word-wrap:break-word; word-break:break-word; overflow-wrap:break-word; padding:0.2rem 0; }\n\n.Polaris-Banner__Ribbon{ flex:0 0 3.2rem; }\n\n.Polaris-Banner__PrimaryAction{ margin-right:0.6rem; }\n\n.Polaris-Banner__SecondaryAction{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; color:inherit; text-decoration:none; display:inline-block; text-align:left; margin:-0.8rem -0.6rem; padding:0.8rem 1.2rem; color:var(--p-text); padding-left:0.6rem; }\n\n.Polaris-Banner__SecondaryAction:focus{ outline:none; }\n\n.Polaris-Banner__SecondaryAction:visited{ color:inherit; }\n\n.Polaris-Banner__SecondaryAction:hover > .Polaris-Banner__Text{ box-shadow:0 -2px 0 0 rgba(var(--p-rgb-text), 0.75) inset; }\n\n.Polaris-Banner__SecondaryAction:active > .Polaris-Banner__Text{ box-shadow:0 -2px 0 0 rgba(var(--p-rgb-text), 0) inset; }\n\n.Polaris-Banner__SecondaryAction:focus > .Polaris-Banner__Text{ padding:2px 5px; margin:-2px -5px; background:var(--p-action-secondary-hovered); border-radius:3px; box-shadow:none; }\n\n@media (-ms-high-contrast: active){ .Polaris-Banner__SecondaryAction:focus > .Polaris-Banner__Text{ outline:2px dotted; } }\n\n.Polaris-Banner__Text{ box-shadow:0 -2px 0 0 rgba(var(--p-rgb-text), 0.25) inset; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:box-shadow; transition:box-shadow 200ms cubic-bezier(0.64, 0, 0.35, 1); }\n\n.Polaris-Banner__Button{ position:relative; position:relative; display:inline-flex; align-items:center; justify-content:center; min-height:3.6rem; min-width:3.6rem; margin:0; padding:0.7rem 1.6rem; background:var(--p-surface); box-shadow:var(--p-button-drop-shadow); border-radius:var(--p-border-radius-base); color:var(--p-text); border:1px solid var(--p-border-neutral-subdued); border-top-color:var(--p-border-subdued); border-bottom-color:var(--p-border-shadow-subdued); line-height:1; text-align:center; cursor:pointer; -webkit-user-select:none; user-select:none; text-decoration:none; -webkit-tap-highlight-color:transparent; font-size:1.5rem; font-weight:var(--p-button-font-weight, 400); line-height:1.6rem; text-transform:initial; letter-spacing:initial; position:relative; color:var(--p-text); }\n\n.Polaris-Banner__Button svg{ fill:var(--p-icon); }\n\n.Polaris-Banner__Button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Banner__Button:hover{ background:var(--p-action-secondary-hovered); outline:0.1rem solid transparent; }\n\n.Polaris-Banner__Button:focus{ box-shadow:var(--p-button-drop-shadow); outline:0; }\n\n.Polaris-Banner__Button:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Banner__Button:active{ background:var(--p-action-secondary-pressed); box-shadow:var(--p-button-drop-shadow); }\n\n.Polaris-Banner__Button:active::after{ border:none; box-shadow:none; }\n\n.Polaris-Banner__Button.Polaris-Banner--pressed{ background:var(--p-action-secondary-depressed); box-shadow:var(--p-button-pressed-inner-shadow); color:var(--p-text-on-primary); border-color:var(--p-border-depressed); }\n\n.Polaris-Banner__Button.Polaris-Banner--pressed svg{ fill:currentColor; }\n\n@media (-ms-high-contrast: active){ .Polaris-Banner__Button{ border:1px solid windowText; } }\n\n@media (min-width: 40em){ .Polaris-Banner__Button{ font-size:1.4rem; } }\n\n.Polaris-Banner__Button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.3rem; right:-0.3rem; bottom:-0.3rem; left:-0.3rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.3rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Banner__Button:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n\n.Polaris-Breadcrumbs__Breadcrumb{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; color:var(--p-text-subdued); -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; position:relative; display:flex; align-items:center; min-height:3.6rem; color:var(--p-text-subdued); text-decoration:none; margin:0; padding:0.2rem; border-radius:var(--p-border-radius-base); border:1px solid var(--p-border-neutral-subdued); position:relative; }\n\n@media (min-width: 40em){ .Polaris-Breadcrumbs__Breadcrumb{ font-size:1.4rem; } }\n\n.Polaris-Breadcrumbs__Breadcrumb:focus{ outline:none; }\n\n.Polaris-Breadcrumbs__Breadcrumb::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Breadcrumbs__Breadcrumb:hover{ background-color:var(--p-surface-hovered); }\n\n.Polaris-Breadcrumbs__Breadcrumb:active{ background-color:var(--p-surface-pressed); }\n\n.Polaris-Breadcrumbs__Breadcrumb:active .Polaris-Breadcrumbs__ContentWrapper{ background:var(--p-override-transparent); }\n\n.Polaris-Breadcrumbs__Breadcrumb:hover, .Polaris-Breadcrumbs__Breadcrumb:active{ color:var(--p-text); text-decoration:none; }\n\n.Polaris-Breadcrumbs__Breadcrumb:hover .Polaris-Breadcrumbs__Icon svg, .Polaris-Breadcrumbs__Breadcrumb:active .Polaris-Breadcrumbs__Icon svg{ fill:var(--p-icon-pressed); }\n\n.Polaris-Breadcrumbs__Breadcrumb:focus{ outline:none; }\n\n.Polaris-Breadcrumbs__Breadcrumb:focus .Polaris-Breadcrumbs__ContentWrapper{ background:var(--p-override-transparent); }\n\n.Polaris-Breadcrumbs__Breadcrumb:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Breadcrumbs__ContentWrapper{ position:relative; display:flex; align-items:center; justify-content:center; padding:0; margin-left:0; background:transparent; height:2.8rem; width:2.8rem; border-radius:var(--p-border-radius-wide); -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:background; transition:background 200ms cubic-bezier(0.64, 0, 0.35, 1); }\n\n.Polaris-Breadcrumbs__Content{ overflow:hidden; white-space:nowrap; text-overflow:ellipsis; position:relative; }\n\n.Polaris-Breadcrumbs__Icon{ width:2rem; height:2rem; margin:-1rem 0 -1rem -0.8rem; margin:0; }\n\n.Polaris-Breadcrumbs__Icon svg{ fill:var(--p-icon); }\n\n\n.Polaris-Choice{ display:inline-flex; justify-content:flex-start; padding:0.4rem 0; cursor:pointer; }\n\n.Polaris-Choice--labelHidden{ padding:0; }\n\n.Polaris-Choice--labelHidden > .Polaris-Choice__Label{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-Choice--labelHidden .Polaris-Choice__Control{ margin-top:0; margin-right:0; }\n\n.Polaris-Choice--disabled{ cursor:default; }\n\n.Polaris-Choice--disabled > .Polaris-Choice__Label{ color:var(--p-text-disabled); }\n\n.Polaris-Choice--disabled > .Polaris-Choice__Label:hover{ cursor:default; }\n\n@media (-ms-high-contrast: active){ .Polaris-Choice--disabled > .Polaris-Choice__Label{ color:grayText; } }\n\n.Polaris-Choice__Control{ display:flex; flex:0 0 auto; align-items:stretch; width:var(--p-choice-size, 1.6rem); height:var(--p-choice-size, 1.6rem); margin-top:var(--p-override-none, 0.2rem); margin-right:0.8rem; }\n\n.Polaris-Choice__Control > *{ width:100%; }\n\n.Polaris-Choice__Label{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; -webkit-tap-highlight-color:transparent; }\n\n@media (min-width: 40em){ .Polaris-Choice__Label{ font-size:1.4rem; } }\n\n.Polaris-Choice__Label:hover{ cursor:pointer; }\n\n.Polaris-Choice__Descriptions{ padding-left:calc(0.8rem + var(--p-choice-size, 1.6rem)); }\n\n.Polaris-Choice__HelpText{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; color:var(--p-text-subdued); margin-bottom:0.4rem; }\n\n@media (min-width: 40em){ .Polaris-Choice__HelpText{ font-size:1.4rem; } }\n\n\n.Polaris-Checkbox{ position:relative; margin:var(--p-choice-margin, 0); }\n\n.Polaris-Checkbox__Input{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-Checkbox__Input.Polaris-Checkbox--keyFocused + .Polaris-Checkbox__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Checkbox__Input:active:not(:disabled) + .Polaris-Checkbox__Backdrop, .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop, .Polaris-Checkbox__Input.Polaris-Checkbox__Input--indeterminate + .Polaris-Checkbox__Backdrop{ border-color:var(--p-interactive); }\n\n.Polaris-Checkbox__Input:active:not(:disabled) + .Polaris-Checkbox__Backdrop::before, .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop::before, .Polaris-Checkbox__Input.Polaris-Checkbox__Input--indeterminate + .Polaris-Checkbox__Backdrop::before{ opacity:1; transform:scale(1); }\n\n@media (-ms-high-contrast: active){ .Polaris-Checkbox__Input:active:not(:disabled) + .Polaris-Checkbox__Backdrop::before, .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop::before, .Polaris-Checkbox__Input.Polaris-Checkbox__Input--indeterminate + .Polaris-Checkbox__Backdrop::before{ border:2px solid windowText; } }\n\n.Polaris-Checkbox__Input:active:not(:disabled) ~ .Polaris-Checkbox__Icon, .Polaris-Checkbox__Input:checked ~ .Polaris-Checkbox__Icon, .Polaris-Checkbox__Input.Polaris-Checkbox__Input--indeterminate ~ .Polaris-Checkbox__Icon{ transition:opacity var(--p-duration-1-5-0) var(--p-ease), transform var(--p-duration-1-5-0) var(--p-ease); transform:translate(-50%, -50%) scale(1); opacity:1; }\n\n.Polaris-Checkbox__Input:disabled + .Polaris-Checkbox__Backdrop{ border-color:var(--p-border-disabled); }\n\n.Polaris-Checkbox__Input:disabled + .Polaris-Checkbox__Backdrop::before{ background-color:var(--p-action-secondary-disabled); }\n\n.Polaris-Checkbox__Input:disabled + .Polaris-Checkbox__Backdrop:hover{ cursor:default; }\n\n.Polaris-Checkbox__Input:disabled:checked + .Polaris-Checkbox__Backdrop{ background:var(--p-border-disabled); }\n\n.Polaris-Checkbox__Input:disabled:checked + .Polaris-Checkbox__Backdrop::before{ background:var(--p-border-disabled); }\n\n.Polaris-Checkbox__Backdrop{ position:relative; border:var(--p-control-border-width) solid var(--p-border); background-color:var(--p-surface); border-radius:var(--p-border-radius-base); position:relative; display:block; width:100%; height:100%; position:relative; }\n\n.Polaris-Checkbox__Backdrop::before{ content:''; position:absolute; top:calc(-1*var(--p-control-border-width)); right:calc(-1*var(--p-control-border-width)); bottom:calc(-1*var(--p-control-border-width)); left:calc(-1*var(--p-control-border-width)); border-radius:var(--p-border-radius-base); background-color:var(--p-interactive); opacity:0; transform:scale(0.25); transition:opacity var(--p-duration-1-0-0) var(--p-ease), transform var(--p-duration-1-0-0) var(--p-ease); }\n\n.Polaris-Checkbox__Backdrop.Polaris-Checkbox--hover, .Polaris-Checkbox__Backdrop:hover{ cursor:pointer; border-color:var(--p-border-hovered); }\n\n.Polaris-Checkbox__Backdrop::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:calc(-1*(var(--p-control-border-width) + 0.1rem)); right:calc(-1*(var(--p-control-border-width) + 0.1rem)); bottom:calc(-1*(var(--p-control-border-width) + 0.1rem)); left:calc(-1*(var(--p-control-border-width) + 0.1rem)); display:block; pointer-events:none; box-shadow:0 0 0 calc(-1*(var(--p-control-border-width) + 0.1rem)) var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Checkbox__Icon{ position:absolute; top:50%; left:50%; transform-origin:50% 50%; pointer-events:none; transform:translate(-50%, -50%) scale(0.25); opacity:0; transition:opacity var(--p-duration-1-0-0) var(--p-ease), transform var(--p-duration-1-0-0) var(--p-ease); }\n\n.Polaris-Checkbox__Icon svg{ fill:var(--p-icon-on-interactive); }\n\n@media (-ms-high-contrast: active){ .Polaris-Checkbox__Icon{ fill:windowText; } }\n\n.Polaris-Checkbox--error .Polaris-Checkbox__Icon svg{ fill:var(--p-icon-on-critical); }\n\n.Polaris-Checkbox--error .Polaris-Checkbox__Backdrop{ border-color:var(--p-border-critical); background-color:var(--p-surface-critical); }\n\n.Polaris-Checkbox--error .Polaris-Checkbox__Backdrop.Polaris-Checkbox--hover, .Polaris-Checkbox--error .Polaris-Checkbox__Backdrop:hover{ border-color:var(--p-border-critical); }\n\n.Polaris-Checkbox--error .Polaris-Checkbox__Backdrop::before{ background-color:var(--p-border-critical); }\n\n.Polaris-Checkbox--error .Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop::before, .Polaris-Checkbox--error .Polaris-Checkbox__Input:active + .Polaris-Checkbox__Backdrop::before, .Polaris-Checkbox--error .Polaris-Checkbox__Input.Polaris-Checkbox__Input--indeterminate + .Polaris-Checkbox__Backdrop::before{ background-color:var(--p-border-critical); }\n\n\n.Polaris-CheckableButton{ font-size:1.5rem; font-weight:var(--p-button-font-weight, 400); line-height:1.6rem; text-transform:initial; letter-spacing:initial; display:flex; align-items:center; min-height:3.6rem; min-width:3.6rem; margin:0; padding:0.7rem 1.6rem; line-height:1; cursor:pointer; -webkit-user-select:none; user-select:none; text-decoration:none; text-align:left; border-radius:var(--p-border-radius-base, 3px); width:100%; background:var(--p-surface); box-shadow:var(--p-button-drop-shadow); border:1px solid var(--p-border-neutral-subdued); border-top-color:var(--p-border-subdued); border-bottom-color:var(--p-border-shadow-subdued); }\n\n@media (min-width: 40em){ .Polaris-CheckableButton{ font-size:1.4rem; } }\n\n.Polaris-CheckableButton svg{ fill:var(--p-icon-on-interactive); }\n\n[data-buttongroup-segmented='true'] .Polaris-CheckableButton{ border-top-right-radius:0; border-bottom-right-radius:0; }\n\n.Polaris-CheckableButton:hover{ background:var(--p-action-secondary-hovered); }\n\n.Polaris-CheckableButton:active{ background:var(--p-action-secondary-pressed); }\n\n.Polaris-CheckableButton.Polaris-CheckableButton__CheckableButton--measuring{ font-size:1.5rem; font-weight:700; }\n\n.Polaris-CheckableButton.Polaris-CheckableButton__CheckableButton--measuring::before{ content:''; display:inline-block; width:1.5rem; }\n\n@media (min-width: 28.625em){ .Polaris-CheckableButton{ flex:0 1 auto; } }\n\n.Polaris-CheckableButton:focus{ outline:none; }\n\n.Polaris-CheckableButton.Polaris-CheckableButton__CheckableButton--plain{ border-radius:3px; box-shadow:none; background:transparent; border:none; }\n\n.Polaris-CheckableButton.Polaris-CheckableButton__CheckableButton--plain:hover{ background:transparent; }\n\n.Polaris-CheckableButton.Polaris-CheckableButton__CheckableButton--selectMode{ color:var(--p-text-subdued); font-weight:500; }\n\n.Polaris-CheckableButton.Polaris-CheckableButton__CheckableButton--selected{ color:var(--p-text); }\n\n.Polaris-CheckableButton__Checkbox{ pointer-events:none; height:var(--p-choice-size); width:var(--p-choice-size); margin-left:calc(-0.9rem - var(--p-control-border-width)); }\n\n.Polaris-CheckableButton__Label{ flex:1 1; white-space:nowrap; overflow:hidden; max-width:100%; text-overflow:ellipsis; padding:0.1rem 0; margin-left:calc(2rem - var(--p-control-border-width)); }\n\n\n.Polaris-Indicator::before, .Polaris-Indicator::after{ content:''; position:absolute; background-color:var(--p-border-highlight, #47c1bf); right:-0.4rem; top:-0.4rem; width:1rem; height:1rem; border-radius:100%; border:0.5rem solid transparent; }\n\n.Polaris-Indicator--pulseIndicator::before{ z-index:1; animation:Polaris-Indicator--bounce 5s ease infinite; }\n\n.Polaris-Indicator--pulseIndicator::after{ right:-0.4rem; top:-0.4rem; animation:Polaris-Indicator--pulse 5s ease infinite; }\n\n@keyframes Polaris-Indicator--bounce{ from, 65%, 85%{ transform:scale(1); }\n  75%{ transform:scale(0.85); }\n  82.5%{ transform:scale(1.05); } }\n\n@keyframes Polaris-Indicator--pulse{ from, 75%{ transform:scale(0.85);\n    opacity:1; }\n  to{ transform:scale(2.5);\n    opacity:0; } }\n\n\n.Polaris-BulkActions__Group{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; width:100%; display:none; align-items:center; flex-wrap:wrap; opacity:0; }\n\n@media (min-width: 40em){ .Polaris-BulkActions__Group{ font-size:1.4rem; } }\n\n.Polaris-BulkActions__Group.Polaris-BulkActions__Group--measuring{ transition:none; display:flex; opacity:0; }\n\n.Polaris-BulkActions__Group--entering, .Polaris-BulkActions__Group--exiting{ opacity:0; display:flex; }\n\n.Polaris-BulkActions__Group--entered{ opacity:1; display:flex; }\n\n.Polaris-BulkActions__Group--exited{ opacity:0; display:none; }\n\n@media (min-width: 28.625em){ .Polaris-BulkActions__Group--smallScreen{ display:none; } }\n\n.Polaris-BulkActions__Group--largeScreen{ display:none; }\n\n@media (min-width: 28.625em){ .Polaris-BulkActions__Group--largeScreen{ display:flex; }\n  .Polaris-BulkActions__Group--largeScreen.Polaris-BulkActions__Group--exiting{ transition:none; }\n  .Polaris-BulkActions__Group--largeScreen.Polaris-BulkActions__Group--exited{ opacity:0; display:none; } }\n\n.Polaris-BulkActions__ButtonGroupWrapper{ width:100%; max-width:100%; }\n\n@media (max-width: 28.625em){ .Polaris-BulkActions__ButtonGroupWrapper > div > div:first-child{ flex:1 1 auto; } }\n\n@media (min-width: 28.625em){ .Polaris-BulkActions__ButtonGroupWrapper{ width:auto; justify-content:flex-start; margin-right:0.8rem; } }\n\n.Polaris-BulkActions__Group--measuring .Polaris-BulkActions__ButtonGroupWrapper{ position:absolute; width:auto; }\n\n.Polaris-BulkActions__BulkActionButton{ white-space:nowrap; }\n\n.Polaris-BulkActions__CheckableContainer{ flex:1 1; }\n\n.Polaris-BulkActions--disabled{ transition:none; box-shadow:none; border-color:var(--p-border-disabled); background:var(--p-surface-disabled); color:var(--p-text-disabled); cursor:default; pointer-events:none; }\n\n.Polaris-BulkActions--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-BulkActions__PaginatedSelectAll{ padding:0.4rem 0; }\n\n.Polaris-BulkActions__Slide{ -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:transform; transform:translateY(0); transition:transform cubic-bezier(0.64, 0, 0.35, 1) 200ms; }\n\n.Polaris-BulkActions__Slide--appear, .Polaris-BulkActions__Slide--enter, .Polaris-BulkActions__Slide--exit{ transform:translateX(-4rem); }\n\n.Polaris-BulkActions__Slide--appearing, .Polaris-BulkActions__Slide--entering{ transform:translateY(0); }\n\n\n.Polaris-TextContainer > *:not(:first-child){ margin-top:1.6rem; }\n\n.Polaris-TextContainer--spacingTight > *:not(:first-child){ margin-top:0.8rem; }\n\n.Polaris-TextContainer--spacingLoose > *:not(:first-child){ margin-top:2rem; }\n\n\n.Polaris-CalloutCard{ display:flex; align-items:center; }\n\n.Polaris-CalloutCard__Image{ display:none; flex:0 0 auto; width:10rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-CalloutCard__Image{ display:block; margin-left:2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-CalloutCard__Image{ display:block; margin-left:2rem; } }\n\n.Polaris-CalloutCard__DismissImage{ margin-right:2rem; }\n\n.Polaris-CalloutCard__Content{ flex:1 1 auto; }\n\n.Polaris-CalloutCard__Title{ margin-bottom:2rem; }\n\n.Polaris-CalloutCard__Buttons{ margin-top:2rem; }\n\n.Polaris-CalloutCard__Container{ position:relative; }\n\n.Polaris-CalloutCard__Dismiss{ right:1.6rem; top:1.6rem; position:absolute; }\n\n.Polaris-CalloutCard--hasDismiss{ padding-right:calc(3.2rem + var(--p-icon-size)); }\n\n\n.Polaris-Caption{ font-size:1.3rem; font-weight:400; line-height:2rem; margin:0; }\n\n@media (min-width: 40em){ .Polaris-Caption{ font-size:1.2rem; line-height:1.6rem; } }\n\n\n.Polaris-RadioButton{ position:relative; margin:var(--p-choice-margin, 0); }\n\n.Polaris-RadioButton__Input{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-RadioButton__Input.Polaris-RadioButton--keyFocused + .Polaris-RadioButton__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-RadioButton__Input.Polaris-RadioButton--keyFocused + .Polaris-RadioButton__Backdrop::after{ border-radius:50%; }\n\n.Polaris-RadioButton__Input:checked + .Polaris-RadioButton__Backdrop{ border-color:var(--p-interactive); }\n\n.Polaris-RadioButton__Input:checked + .Polaris-RadioButton__Backdrop::before{ transition:opacity var(--p-duration-1-5-0) var(--p-ease), transform var(--p-duration-1-5-0) var(--p-ease); opacity:1; transform:translate(-50%, -50%) scale(1); }\n\n.Polaris-RadioButton__Input:disabled + .Polaris-RadioButton__Backdrop{ border-color:var(--p-border-disabled); cursor:default; }\n\n.Polaris-RadioButton__Input:disabled + .Polaris-RadioButton__Backdrop::before{ background-color:var(--p-border-disabled); }\n\n.Polaris-RadioButton__Backdrop{ position:relative; top:0; left:0; display:block; width:100%; height:100%; border:var(--p-control-border-width) solid var(--p-border); border-radius:50%; background-color:var(--p-surface); transition:border-color var(--p-duration-1-0-0) var(--p-ease); position:relative; }\n\n.Polaris-RadioButton__Backdrop::before{ content:''; position:absolute; top:50%; left:50%; opacity:0; transform:translate(-50%, -50%) scale(0.1); transform-origin:50% 50%; height:var(--p-icon-size); width:var(--p-icon-size); background-color:var(--p-interactive); border-radius:50%; transition:opacity var(--p-duration-1-0-0) var(--p-ease), transform var(--p-duration-1-0-0) var(--p-ease); }\n\n@media (forced-colors: active){ .Polaris-RadioButton__Backdrop::before{ border:0.5rem solid transparent; } }\n\n.Polaris-RadioButton__Backdrop::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:calc(-1*(var(--p-control-border-width) + 0.1rem)); right:calc(-1*(var(--p-control-border-width) + 0.1rem)); bottom:calc(-1*(var(--p-control-border-width) + 0.1rem)); left:calc(-1*(var(--p-control-border-width) + 0.1rem)); display:block; pointer-events:none; box-shadow:0 0 0 calc(-1*(var(--p-control-border-width) + 0.1rem)) var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-RadioButton__Backdrop::after{ border-radius:50%; }\n\n.Polaris-RadioButton__Backdrop.Polaris-RadioButton--hover, .Polaris-RadioButton__Backdrop:hover{ cursor:pointer; border-color:var(--p-border-hovered); }\n\n\n.Polaris-ChoiceList{ margin:0; padding:0; border:none; }\n\n.Polaris-ChoiceList--titleHidden > .Polaris-ChoiceList__Title{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-ChoiceList__Choices{ margin:0; padding:0; list-style:none; }\n\n.Polaris-ChoiceList__ChoiceChildren{ margin-bottom:0.8rem; padding-left:calc(0.8rem + var(--p-choice-size, 1.6rem)); }\n\n.Polaris-ChoiceList__ChoiceError{ margin-top:0.4rem; margin-bottom:0.8rem; }\n\n.Polaris-ChoiceList__Title{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; display:block; margin:0 0 0.4rem; padding:0; }\n\n@media (min-width: 40em){ .Polaris-ChoiceList__Title{ font-size:1.4rem; } }\n\n\n.Polaris-Collapsible{ padding-top:0; padding-bottom:0; max-height:0; overflow:hidden; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:max-height; transition-property:max-height; transition-duration:100ms; transition-timing-function:cubic-bezier(0, 0, 0.42, 1); }\n\n.Polaris-Collapsible--isFullyClosed{ display:none; }\n\n@media print{ .Polaris-Collapsible--expandOnPrint{ max-height:none !important; overflow:visible; display:block; } }\n\n\n.Polaris-ColorPicker{ -webkit-user-select:none; user-select:none; display:flex; }\n\n.Polaris-ColorPicker__MainColor{ background:repeating-conic-gradient(var(--p-surface) 0% 25%, var(--p-surface-neutral-subdued) 0% 50%) 50% / 1.6rem 1.6rem; position:relative; overflow:hidden; height:16rem; width:16rem; border-radius:var(--p-border-radius-base); cursor:pointer; }\n\n.Polaris-ColorPicker--fullWidth .Polaris-ColorPicker__MainColor{ width:auto; flex-grow:1; }\n\n.Polaris-ColorPicker__MainColor .Polaris-ColorPicker__Dragger{ right:0.9rem; margin:0; }\n\n.Polaris-ColorPicker__MainColor .Polaris-ColorPicker__ColorLayer{ border-radius:var(--p-border-radius-base); }\n\n.Polaris-ColorPicker__MainColor::after, .Polaris-ColorPicker__MainColor::before{ content:''; position:absolute; z-index:20; top:0; left:0; display:block; height:100%; width:100%; pointer-events:none; border-radius:var(--p-border-radius-base, 3px); }\n\n.Polaris-ColorPicker__MainColor::before{ background:linear-gradient(to right, white, transparent); }\n\n.Polaris-ColorPicker__MainColor::after{ background-image:linear-gradient(to top, black, transparent); }\n\n.Polaris-ColorPicker__Dragger{ position:relative; z-index:30; bottom:0.9rem; transform:none; height:1.8rem; width:1.8rem; margin:0 auto; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:transform; background:transparent; border:var(--p-border-radius-base) solid var(--p-surface); border-radius:50%; pointer-events:none; }\n\n.Polaris-ColorPicker__HuePicker, .Polaris-ColorPicker__AlphaPicker{ position:relative; overflow:hidden; height:16rem; width:2.4rem; margin-left:0.8rem; border-width:var(--p-border-radius-base); border-radius:8rem; }\n\n.Polaris-ColorPicker__HuePicker{ background-image:linear-gradient(to bottom, red 1.8rem, yellow, lime, cyan, blue, magenta, red 14.2rem); }\n\n.Polaris-ColorPicker__AlphaPicker{ background:repeating-conic-gradient(var(--p-surface) 0% 25%, var(--p-surface-neutral-subdued) 0% 50%) 50% / 1.6rem 1.6rem; }\n\n.Polaris-ColorPicker__ColorLayer{ position:absolute; z-index:10; top:0; left:0; height:100%; width:100%; pointer-events:none; }\n\n.Polaris-ColorPicker__Slidable{ height:100%; width:100%; cursor:pointer; }\n\n\n.Polaris-DataTable{ position:relative; max-width:100vw; }\n\n.Polaris-DataTable--condensed .Polaris-DataTable__Navigation{ display:flex; align-items:center; justify-content:center; width:100%; padding:1.6rem 0.8rem; }\n\n@media (min-width: 48em){ .Polaris-DataTable--condensed .Polaris-DataTable__Navigation{ justify-content:flex-end; } }\n\n.Polaris-DataTable__Navigation{ display:none; }\n\n.Polaris-DataTable__Pip{ height:0.6rem; width:0.6rem; background:var(--p-text-subdued); border-radius:var(--p-border-radius-base); }\n\n.Polaris-DataTable__Pip:not(:last-of-type){ margin-right:0.4rem; }\n\n.Polaris-DataTable__Pip--visible{ background:var(--p-text); }\n\n.Polaris-DataTable__ScrollContainer{ overflow-x:auto; -webkit-overflow-scrolling:touch; }\n\n.Polaris-DataTable__Table{ width:100%; border-spacing:0; }\n\n@media (min-width: 48em){ .Polaris-DataTable--hoverable:hover .Polaris-DataTable__Cell{ background:var(--p-surface-hovered); } }\n\n.Polaris-DataTable__TableRow + .Polaris-DataTable__TableRow .Polaris-DataTable__Cell{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-DataTable__Cell{ padding:1.6rem; white-space:nowrap; text-align:left; transition:background-color 0.2s ease-in-out; }\n\n.Polaris-DataTable__Cell--firstColumn{ font-weight:400; color:var(--p-text); text-align:left; white-space:normal; }\n\n.Polaris-DataTable__Cell--numeric{ text-align:right; }\n\n.Polaris-DataTable__Cell--truncated{ white-space:nowrap; overflow-x:hidden; text-overflow:ellipsis; max-width:14.5rem; }\n\n.Polaris-DataTable__Cell--header{ font-weight:400; color:var(--p-text); border-bottom:0.1rem solid var(--p-border); border-top:0; }\n\n.Polaris-DataTable__Cell--sortable{ padding:0; }\n\n.Polaris-DataTable__Cell--verticalAlignTop{ vertical-align:top; }\n\n.Polaris-DataTable__Cell--verticalAlignBottom{ vertical-align:bottom; }\n\n.Polaris-DataTable__Cell--verticalAlignMiddle{ vertical-align:middle; }\n\n.Polaris-DataTable__Cell--verticalAlignBaseline{ vertical-align:baseline; }\n\n.Polaris-DataTable__Icon{ display:flex; align-self:flex-end; opacity:0; transition:opacity 200ms cubic-bezier(0.64, 0, 0.35, 1), fill 200ms cubic-bezier(0.64, 0, 0.35, 1); }\n\n.Polaris-DataTable__Heading{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; position:relative; position:relative; display:inline-flex; justify-content:flex-end; align-items:baseline; color:var(--p-text); transition:color 200ms cubic-bezier(0.64, 0, 0.35, 1); cursor:pointer; padding:0.8rem; margin:0.8rem; }\n\n.Polaris-DataTable__Heading:focus{ outline:none; }\n\n.Polaris-DataTable__Heading::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-DataTable__Heading svg{ fill:var(--p-icon); }\n\n.Polaris-DataTable__Heading:hover{ color:var(--p-interactive-hovered); }\n\n.Polaris-DataTable__Heading:hover svg{ fill:var(--p-interactive-hovered); }\n\n.Polaris-DataTable__Heading:hover .Polaris-DataTable__Icon{ opacity:1; }\n\n.Polaris-DataTable__Heading:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-DataTable__Heading--left{ justify-content:flex-start; flex-direction:row-reverse; }\n\n.Polaris-DataTable__Cell--sorted .Polaris-DataTable__Icon{ opacity:1; }\n\n.Polaris-DataTable__Cell--total{ font-weight:600; background:var(--p-surface-subdued); border-bottom:0.1rem solid var(--p-border-subdued); }\n\n.Polaris-DataTable--cellTotalFooter{ border-top:0.1rem solid var(--p-divider); border-bottom:none; border-bottom-left-radius:var(--p-border-radius-base); border-bottom-right-radius:var(--p-border-radius-base); }\n\n.Polaris-DataTable__Footer{ padding:1.6rem; background:var(--p-surface-subdued); color:var(--p-text-subdued); text-align:center; border-top:0.1rem solid var(--p-divider); border-bottom-left-radius:var(--p-border-radius-base); border-bottom-right-radius:var(--p-border-radius-base); }\n\n\n.Polaris-DatePicker{ position:relative; }\n\n.Polaris-DatePicker__MonthLayout{ display:flex; flex-wrap:wrap; margin-top:-1.6rem; margin-left:-1.6rem; }\n\n.Polaris-DatePicker__MonthContainer{ flex:1 1 23rem; margin-top:1.6rem; margin-left:1.6rem; max-width:calc(100% - 1.6rem); min-width:23rem; }\n\n.Polaris-DatePicker__Month{ width:100%; table-layout:fixed; border-collapse:collapse; border:none; border-spacing:0; }\n\n.Polaris-DatePicker__Month--current{ font-weight:700; }\n\n.Polaris-DatePicker__DayCell{ width:14.28571%; background:transparent; margin:0; padding:0; border-radius:var(--p-border-radius-base); }\n\n.Polaris-DatePicker__DayCell--inRange{ border-radius:0; }\n\n.Polaris-DatePicker__Day{ display:block; height:100%; width:100%; margin:0; padding:0.8rem; background:transparent; border:none; border-radius:var(--p-border-radius-base); outline:none; font-size:1.2rem; text-align:center; color:var(--p-text); cursor:pointer; position:relative; }\n\n.Polaris-DatePicker__Day:hover{ background:var(--p-interactive-hovered); color:var(--p-text-on-interactive); outline:0.1rem solid transparent; }\n\n.Polaris-DatePicker__Day::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-DatePicker__Day:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-DatePicker__Day--today{ font-weight:700; }\n\n.Polaris-DatePicker__Day--inRange{ background:var(--p-surface-selected); border-radius:0; }\n\n@media (-ms-high-contrast: active){ .Polaris-DatePicker__Day--inRange{ -ms-high-contrast-adjust:none; background-color:Highlight; color:HighlightText; }\n  .Polaris-DatePicker__Day--inRange:hover{ background-color:HighlightText; color:Highlight; outline:2px solid Highlight; } }\n\n.Polaris-DatePicker__Day--selected{ background:var(--p-interactive); color:var(--p-text-on-interactive); }\n\n@media (-ms-high-contrast: active){ .Polaris-DatePicker__Day--selected{ -ms-high-contrast-adjust:none; background-color:Highlight; color:HighlightText; }\n  .Polaris-DatePicker__Day--selected:hover{ background-color:HighlightText; color:Highlight; outline:2px solid Highlight; } }\n\n.Polaris-DatePicker__Day--disabled{ background-color:transparent; color:var(--p-text-disabled); }\n\n.Polaris-DatePicker__Day--disabled:hover{ background-color:transparent; color:var(--p-text-disabled); }\n\n@media (-ms-high-contrast){ .Polaris-DatePicker__Day--disabled{ -ms-high-contrast-adjust:none; color:grayText; }\n  .Polaris-DatePicker__Day--disabled:hover{ color:grayText; outline:none; } }\n\n.Polaris-DatePicker__Day--disabled:focus::after{ content:none; }\n\n.Polaris-DatePicker__EmptyDayCell{ width:14.28571%; margin:0; padding:0; }\n\n.Polaris-DatePicker__Weekday{ padding:0.8rem; background:transparent; font-size:1.2rem; font-weight:400; color:var(--p-text-subdued); text-align:center; }\n\n.Polaris-DatePicker__Weekday--current{ font-weight:700; color:var(--p-text); }\n\n.Polaris-DatePicker__Header{ position:absolute; top:1.6rem; display:flex; justify-content:space-between; width:100%; }\n\n.Polaris-DatePicker__Title{ flex:1 1 auto; margin-top:0.2rem; padding-bottom:0.4rem; text-align:center; }\n\n.Polaris-DatePicker__Day--firstInRange{ border-radius:var(--p-border-radius-base); }\n\n.Polaris-DatePicker__Day--firstInRange.Polaris-DatePicker__Day--hasRange, .Polaris-DatePicker__Day--firstInRange.Polaris-DatePicker__Day--hoverRight{ border-radius:3rem 0 0 3rem; }\n\n.Polaris-DatePicker__Day--firstInRange.Polaris-DatePicker__Day--hasRange::after, .Polaris-DatePicker__Day--firstInRange.Polaris-DatePicker__Day--hoverRight::after{ border-radius:3rem 0 0 3rem; }\n\n.Polaris-DatePicker__Day--lastInRange{ border-radius:0 3rem 3rem 0; }\n\n.Polaris-DatePicker__Day--lastInRange::after{ border-radius:0 3rem 3rem 0; }\n\n.Polaris-DatePicker__Week{ margin-bottom:0.2rem; }\n\n.Polaris-DatePicker__Week > .Polaris-DatePicker__Day--inRange:first-child:not(.Polaris-DatePicker__Day--firstInRange):not(.Polaris-DatePicker__Day--lastInRange){ border-radius:var(--p-border-radius-base) 0 0 var(--p-border-radius-base); }\n\n.Polaris-DatePicker__Week > .Polaris-DatePicker__Day--inRange:last-child:not(.Polaris-DatePicker__Day--firstInRange):not(.Polaris-DatePicker__Day--lastInRange){ border-radius:0 var(--p-border-radius-base) var(--p-border-radius-base) 0; }\n\n.Polaris-DatePicker__Day--inRange::after, .Polaris-DatePicker__Day--inRange:not(:hover) + .Polaris-DatePicker__Day::after{ border-radius:0 3rem 3rem 0; }\n\n\n.Polaris-DescriptionList{ margin:0; padding:0; word-break:break-word; }\n\n@media (max-width: 48.0625em) and (min-width: 36.875em), (min-width: 51.875em){ [data-has-navigation] .Polaris-DescriptionList{ display:flex; flex-wrap:wrap; align-items:flex-start; } }\n\n@media (min-width: 36.875em){ .Polaris-DescriptionList{ display:flex; flex-wrap:wrap; align-items:flex-start; } }\n\n.Polaris-DescriptionList__Term{ font-weight:600; padding:1.6rem 0 0.8rem; }\n\n.Polaris-DescriptionList--spacingTight .Polaris-DescriptionList__Term{ padding:0.8rem 0 0.4rem; }\n\n@media (max-width: 48.0625em) and (min-width: 36.875em), (min-width: 51.875em){ [data-has-navigation] .Polaris-DescriptionList__Term{ flex:0 1 25%; padding:1.6rem 1.6rem 1.6rem 0; }\n  .Polaris-DescriptionList--spacingTight [data-has-navigation] .Polaris-DescriptionList__Term{ padding:0.8rem 0.8rem 0.8rem 0; }\n  .Polaris-DescriptionList__Description + [data-has-navigation] .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{ border-top:0.1rem solid var(--p-divider); } }\n\n@media (min-width: 36.875em){ .Polaris-DescriptionList__Term{ flex:0 1 25%; padding:1.6rem 1.6rem 1.6rem 0; }\n  .Polaris-DescriptionList--spacingTight .Polaris-DescriptionList__Term{ padding:0.8rem 0.8rem 0.8rem 0; }\n  .Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{ border-top:0.1rem solid var(--p-divider); } }\n\n.Polaris-DescriptionList__Description{ margin-left:0; padding:0 0 1.6rem; }\n\n.Polaris-DescriptionList--spacingTight .Polaris-DescriptionList__Description{ padding:0 0 0.8rem; }\n\n.Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term{ border-top:0.1rem solid var(--p-divider); }\n\n@media (max-width: 48.0625em) and (min-width: 36.875em), (min-width: 51.875em){ [data-has-navigation] .Polaris-DescriptionList__Description{ flex:1 1 51%; padding:1.6rem 0; }\n  .Polaris-DescriptionList--spacingTight [data-has-navigation] .Polaris-DescriptionList__Description{ padding:0.8rem 0; }\n  [data-has-navigation] .Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{ border-top:0.1rem solid var(--p-divider); } }\n\n@media (min-width: 36.875em){ .Polaris-DescriptionList__Description{ flex:1 1 51%; padding:1.6rem 0; }\n  .Polaris-DescriptionList--spacingTight .Polaris-DescriptionList__Description{ padding:0.8rem 0; }\n  .Polaris-DescriptionList__Description + .Polaris-DescriptionList__Term + .Polaris-DescriptionList__Description{ border-top:0.1rem solid var(--p-divider); } }\n\n\n.Polaris-DisplayText{ margin:0; }\n\n.Polaris-DisplayText--sizeSmall{ font-size:1.6rem; font-weight:400; line-height:2.4rem; }\n\n@media (min-width: 40em){ .Polaris-DisplayText--sizeSmall{ font-size:2rem; line-height:2.8rem; } }\n\n.Polaris-DisplayText--sizeMedium{ font-size:2.1rem; font-weight:400; line-height:2.8rem; }\n\n@media (min-width: 40em){ .Polaris-DisplayText--sizeMedium{ font-size:2.6rem; line-height:3.2rem; } }\n\n.Polaris-DisplayText--sizeLarge{ font-size:2.4rem; font-weight:600; line-height:2.8rem; }\n\n@media (min-width: 40em){ .Polaris-DisplayText--sizeLarge{ font-size:2.8rem; line-height:3.2rem; } }\n\n.Polaris-DisplayText--sizeExtraLarge{ font-size:2.7rem; font-weight:600; line-height:3.6rem; }\n\n@media (min-width: 40em){ .Polaris-DisplayText--sizeExtraLarge{ font-size:4.2rem; line-height:4.4rem; } }\n\n\n.Polaris-DropZone-FileUpload{ padding:1.5rem; text-align:center; display:flex; align-items:center; justify-content:center; height:100%; }\n\n.Polaris-DropZone-FileUpload__FileUploadSmallView{ padding:1.25rem; }\n\n.Polaris-DropZone-FileUpload img{ vertical-align:bottom; }\n\n.Polaris-DropZone-FileUpload__Button{ position:relative; position:relative; display:inline-flex; align-items:center; justify-content:center; min-height:3.6rem; min-width:3.6rem; margin:0; padding:0.7rem 1.6rem; background:var(--p-surface); box-shadow:var(--p-button-drop-shadow); border-radius:var(--p-border-radius-base); color:var(--p-text); border:1px solid var(--p-border-neutral-subdued); border-top-color:var(--p-border-subdued); border-bottom-color:var(--p-border-shadow-subdued); line-height:1; text-align:center; cursor:pointer; -webkit-user-select:none; user-select:none; text-decoration:none; -webkit-tap-highlight-color:transparent; position:relative; }\n\n.Polaris-DropZone-FileUpload__Button svg{ fill:var(--p-icon); }\n\n.Polaris-DropZone-FileUpload__Button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-DropZone-FileUpload__Button:hover{ background:var(--p-action-secondary-hovered); outline:0.1rem solid transparent; }\n\n.Polaris-DropZone-FileUpload__Button:focus{ box-shadow:var(--p-button-drop-shadow); outline:0; }\n\n.Polaris-DropZone-FileUpload__Button:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-DropZone-FileUpload__Button:active{ background:var(--p-action-secondary-pressed); box-shadow:var(--p-button-drop-shadow); }\n\n.Polaris-DropZone-FileUpload__Button:active::after{ border:none; box-shadow:none; }\n\n.Polaris-DropZone-FileUpload__Button.Polaris-DropZone-FileUpload--pressed{ background:var(--p-action-secondary-depressed); box-shadow:var(--p-button-pressed-inner-shadow); color:var(--p-text-on-primary); border-color:var(--p-border-depressed); }\n\n.Polaris-DropZone-FileUpload__Button.Polaris-DropZone-FileUpload--pressed svg{ fill:currentColor; }\n\n@media (-ms-high-contrast: active){ .Polaris-DropZone-FileUpload__Button{ border:1px solid windowText; } }\n\n.Polaris-DropZone-FileUpload__Button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-DropZone-FileUpload__Button.Polaris-DropZone-FileUpload--disabled{ transition:none; box-shadow:none; border-color:var(--p-border-disabled); background:var(--p-surface-disabled); color:var(--p-text-disabled); cursor:not-allowed; box-shadow:none; }\n\n.Polaris-DropZone-FileUpload__Button.Polaris-DropZone-FileUpload--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-DropZone-FileUpload__Button.Polaris-DropZone-FileUpload--focused{ outline:0; box-shadow:none; }\n\n.Polaris-DropZone-FileUpload__Button.Polaris-DropZone-FileUpload--focused::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n@media (-ms-high-contrast: active){ .Polaris-DropZone-FileUpload__Button.Polaris-DropZone-FileUpload--focused{ outline:2px dotted; } }\n\n.Polaris-DropZone-FileUpload__Button .Polaris-DropZone-FileUpload--sizeSlim{ min-height:3rem; padding:0.4rem 1.2rem; }\n\n.Polaris-DropZone-FileUpload__ActionTitle{ color:var(--p-interactive); text-decoration:none; }\n\n.Polaris-DropZone-FileUpload__ActionTitle:not(.Polaris-DropZone-FileUpload__ActionTitle--disabled){ cursor:pointer; }\n\n.Polaris-DropZone-FileUpload__ActionTitle:not(.Polaris-DropZone-FileUpload__ActionTitle--disabled):hover, .Polaris-DropZone-FileUpload__ActionTitle:not(.Polaris-DropZone-FileUpload__ActionTitle--disabled):active{ color:var(--p-interactive-pressed); text-decoration:underline; }\n\n.Polaris-DropZone-FileUpload__ActionTitle--focused{ text-decoration:underline; }\n\n.Polaris-DropZone-FileUpload__ActionTitle--disabled{ color:var(--p-interactive-disabled); }\n\n\n.Polaris-DropZone{ position:relative; display:flex; justify-content:center; background-color:var(--p-surface); border-radius:var(--p-border-radius-base); }\n\n.Polaris-DropZone::after{ content:''; position:absolute; z-index:29; top:0; right:0; bottom:0; left:0; border:0.2rem dashed transparent; border-radius:var(--p-border-radius-base); pointer-events:none; }\n\n.Polaris-DropZone:not(.Polaris-DropZone--focused)::after{ top:0; left:0; right:0; bottom:0; opacity:1; transform:scale(1); border:0.2rem dashed transparent; }\n\n.Polaris-DropZone:hover{ outline:0.1rem solid transparent; }\n\n.Polaris-DropZone--hasOutline{ padding:0.2rem; }\n\n.Polaris-DropZone--hasOutline::after{ border-color:var(--p-border); }\n\n.Polaris-DropZone--hasOutline:not(.Polaris-DropZone--isDisabled):hover{ cursor:pointer; background-color:var(--p-surface-hovered); }\n\n.Polaris-DropZone--hasOutline:not(.Polaris-DropZone--focused)::after{ top:0; left:0; right:0; bottom:0; opacity:1; transform:scale(1); border:0.2rem dashed transparent; border-radius:calc(var(--p-border-radius-base) + 0.3rem); border-color:var(--p-border); }\n\n.Polaris-DropZone--isDragging:not(.Polaris-DropZone--isDisabled){ background-color:var(--p-surface-hovered); }\n\n.Polaris-DropZone--isDisabled{ cursor:not-allowed; }\n\n.Polaris-DropZone--isDisabled::after{ border-color:var(--p-border-disabled); }\n\n.Polaris-DropZone--sizeExtraLarge{ min-height:20.5rem; }\n\n.Polaris-DropZone--sizeLarge{ min-height:16rem; }\n\n.Polaris-DropZone--sizeMedium{ min-height:10rem; align-items:center; }\n\n.Polaris-DropZone--sizeSmall{ padding:0; align-items:center; min-height:5rem; }\n\n.Polaris-DropZone--measuring{ visibility:hidden; min-height:0; }\n\n.Polaris-DropZone__Container{ position:relative; flex:1 1; }\n\n.Polaris-DropZone__Container::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.3rem; right:-0.3rem; bottom:-0.3rem; left:-0.3rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.3rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-DropZone__Overlay{ border-radius:calc(var(--p-border-radius-base) + 0.3rem); position:absolute; z-index:30; top:0; right:0; bottom:0; left:0; display:flex; justify-content:center; align-items:center; padding:1.5rem; border:0.2rem dashed var(--p-interactive); text-align:center; color:var(--p-interactive); background-color:var(--p-surface-selected); pointer-events:none; }\n\n.Polaris-DropZone--hasError .Polaris-DropZone__Overlay{ border-color:var(--p-border-critical); color:var(--p-text-critical); background-color:var(--p-surface-critical-subdued); }\n\n.Polaris-DropZone--sizeSmall .Polaris-DropZone__Overlay{ padding:0; }\n\n.Polaris-DropZone--focused:not(.Polaris-DropZone--isDisabled) .Polaris-DropZone__Container::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n\n.Polaris-EmptyState{ display:flex; flex-direction:column; align-items:center; width:100%; margin:0 auto; padding:2rem 0; padding-top:2rem; padding-bottom:6rem; max-width:99.8rem; }\n\n.Polaris-EmptyState__Section{ display:flex; flex-direction:column-reverse; flex:1 1 auto; width:100%; align-items:center; justify-content:center; }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-EmptyState__Section{ left:2rem; } }\n\n@media (min-width: 46.5em){ .Polaris-EmptyState__Section{ left:2rem; } }\n\n.Polaris-EmptyState__Details{ display:flex; text-align:center; flex-direction:column; align-items:center; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-EmptyState__Details{ max-width:40rem; } }\n\n@media (min-width: 30.625em){ .Polaris-EmptyState__Details{ max-width:40rem; } }\n\n.Polaris-EmptyState__Image{ margin:0; width:initial; }\n\n.Polaris-EmptyState__ImageContainer, .Polaris-EmptyState__DetailsContainer{ flex:1 1 auto; padding:0; margin:0; }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-EmptyState__ImageContainer, [data-has-navigation] .Polaris-EmptyState__DetailsContainer{ flex-basis:50%; } }\n\n@media (min-width: 46.5em){ .Polaris-EmptyState__ImageContainer, .Polaris-EmptyState__DetailsContainer{ flex-basis:50%; } }\n\n@media (max-width: 30.625em), (min-width: 48.0625em) and (max-width: 47.125em){ [data-has-navigation] .Polaris-EmptyState__ImageContainer, [data-has-navigation] .Polaris-EmptyState__DetailsContainer{ overflow-x:hidden; } }\n\n@media (max-width: 30.625em){ .Polaris-EmptyState__ImageContainer, .Polaris-EmptyState__DetailsContainer{ overflow-x:hidden; } }\n\n.Polaris-EmptyState--withinContentContainer{ margin:0 auto; padding-top:2rem; padding-bottom:6rem; }\n\n.Polaris-EmptyState--withinContentContainer .Polaris-EmptyState__Section{ position:unset; flex-direction:column-reverse; align-items:center; justify-content:center; }\n\n.Polaris-EmptyState--withinContentContainer .Polaris-EmptyState__Details{ display:flex; text-align:center; flex-direction:column; align-items:center; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-EmptyState--withinContentContainer .Polaris-EmptyState__Details{ max-width:40rem; } }\n\n@media (min-width: 30.625em){ .Polaris-EmptyState--withinContentContainer .Polaris-EmptyState__Details{ max-width:40rem; } }\n\n.Polaris-EmptyState--withinContentContainer .Polaris-EmptyState__Image{ margin:0; width:initial; }\n\n.Polaris-EmptyState--withinContentContainer .Polaris-EmptyState__Content{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; padding-bottom:0.8rem; }\n\n@media (min-width: 40em){ .Polaris-EmptyState--withinContentContainer .Polaris-EmptyState__Content{ font-size:1.4rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-EmptyState--imageContained .Polaris-EmptyState__Image{ position:initial; width:100%; } }\n\n@media (min-width: 46.5em){ .Polaris-EmptyState--imageContained .Polaris-EmptyState__Image{ position:initial; width:100%; } }\n\n.Polaris-EmptyState--fullWidth .Polaris-EmptyState__Details{ max-width:100%; }\n\n.Polaris-EmptyState__Content{ font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; color:var(--p-text-subdued); padding-bottom:0.8rem; }\n\n@media (min-width: 40em){ .Polaris-EmptyState__Content{ font-size:1.4rem; } }\n\n.Polaris-EmptyState__Actions{ margin-top:1.6rem; }\n\n.Polaris-EmptyState__FooterContent{ color:var(--p-text-subdued); margin-top:1.6rem; }\n\n\n.Polaris-Truncate{ display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }\n\n\n.Polaris-ExceptionList{ margin:0; padding:0; list-style:none; }\n\n.Polaris-ExceptionList__Item{ position:relative; padding-left:2.4rem; color:var(--p-text-subdued); }\n\n.Polaris-ExceptionList__Item + .Polaris-ExceptionList__Item{ margin-top:0.4rem; }\n\n.Polaris-ExceptionList__Icon{ position:absolute; top:0; left:0; display:flex; align-items:center; justify-content:center; min-width:2rem; height:2rem; margin-right:0.4rem; }\n\n.Polaris-ExceptionList__Icon svg{ fill:var(--p-icon-subdued); }\n\n.Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Icon svg{ fill:var(--p-icon-warning); }\n\n.Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Icon svg{ fill:var(--p-icon-critical); }\n\n.Polaris-ExceptionList__Bullet{ width:0.6rem; height:0.6rem; border-radius:100%; background-color:var(--p-icon-subdued); }\n\n.Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Bullet{ background-color:var(--p-icon-warning); }\n\n.Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Bullet{ background-color:var(--p-icon-critical); }\n\n.Polaris-ExceptionList__Title + .Polaris-ExceptionList__Description::before{ content:'–'; margin:0 0.4rem; }\n\n.Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Title, .Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Title{ font-weight:500; }\n\n.Polaris-ExceptionList--statusWarning .Polaris-ExceptionList__Title{ color:var(--p-text-warning); }\n\n.Polaris-ExceptionList--statusCritical .Polaris-ExceptionList__Title{ color:var(--p-text-critical); }\n\n\n.Polaris-Tag{ display:inline-flex; max-width:100%; align-items:center; min-height:2.8rem; padding:0 0.8rem; background-color:var(--p-surface-neutral); border-radius:var(--p-border-radius-base); color:var(--p-text); outline:0.1rem solid transparent; }\n\n.Polaris-Tag.Polaris-Tag--disabled{ transition:none; background:var(--p-surface-neutral-disabled); color:var(--p-text-disabled); }\n\n.Polaris-Tag.Polaris-Tag--disabled svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-Tag.Polaris-Tag--removable{ padding-right:0; }\n\n.Polaris-Tag.Polaris-Tag--clickable{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; cursor:pointer; padding:0 0.8rem; background-color:var(--p-surface-neutral); position:relative; }\n\n.Polaris-Tag.Polaris-Tag--clickable:focus{ outline:none; }\n\n.Polaris-Tag.Polaris-Tag--clickable:hover{ background:var(--p-surface-neutral-hovered); }\n\n.Polaris-Tag.Polaris-Tag--clickable::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Tag.Polaris-Tag--clickable:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Tag.Polaris-Tag--clickable:active{ background:var(--p-surface-neutral-pressed); }\n\n.Polaris-Tag.Polaris-Tag--clickable:disabled{ background:var(--p-surface-neutral-disabled); cursor:default; pointer-events:none; }\n\n.Polaris-Tag__TagText{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:middle; }\n\n.Polaris-Tag__Button{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; display:block; height:2.8rem; width:2.8rem; margin-left:0.4rem; border-radius:0 3px 3px 0; position:relative; }\n\n.Polaris-Tag__Button svg{ fill:var(--p-icon); }\n\n.Polaris-Tag__Button:focus{ outline:none; }\n\n.Polaris-Tag__Button:hover{ background:var(--p-surface-neutral-hovered); outline:0.1rem solid transparent; }\n\n.Polaris-Tag__Button:focus{ background-color:transparent; }\n\n.Polaris-Tag__Button::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Tag__Button:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Tag__Button:active{ background:var(--p-surface-neutral-pressed); }\n\n.Polaris-Tag__Button:disabled{ cursor:default; pointer-events:none; }\n\n.Polaris-Tag__Button:disabled svg{ fill:var(--p-icon-disabled); }\n\n\n.Polaris-Sheet{ position:fixed; bottom:0; width:100%; height:100%; background-color:var(--p-surface); box-shadow:var(--p-modal-shadow); }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-Sheet{ border-left:0.1rem solid var(--p-border-subdued); } }\n\n@media (min-width: 48.0625em){ .Polaris-Sheet{ right:0; width:38rem; } }\n\n.Polaris-Sheet:focus{ outline:0; }\n\n.Polaris-Sheet__Container{ position:fixed; z-index:519; top:0; right:0; bottom:0; left:0; }\n\n@media (min-width: 48.0625em){ .Polaris-Sheet__Container{ left:auto; width:38rem; } }\n\n.Polaris-Sheet__Bottom{ -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:transform; transition:transform 300ms cubic-bezier(0.64, 0, 0.35, 1); transform-origin:bottom; }\n\n.Polaris-Sheet--enterBottom{ transform:translateY(100%); }\n\n.Polaris-Sheet--enterBottomActive{ transform:translateY(0%); }\n\n.Polaris-Sheet--exitBottom{ transform:translateY(0%); }\n\n.Polaris-Sheet--exitBottomActive{ transform:translateY(100%); }\n\n.Polaris-Sheet__Right{ -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:transform; transition:transform 300ms cubic-bezier(0.64, 0, 0.35, 1); transform-origin:right; }\n\n.Polaris-Sheet--enterRight{ transform:translateX(100%); }\n\n.Polaris-Sheet--enterRightActive{ transform:translateX(0%); }\n\n.Polaris-Sheet--exitRight{ transform:translateX(0%); }\n\n.Polaris-Sheet--exitRightActive{ transform:translateX(100%); }\n\n\n.Polaris-Filters-ConnectedFilterControl__Item{ position:relative; z-index:10; }\n\n.Polaris-Filters-ConnectedFilterControl__Item--focused{ z-index:20; }\n\n.Polaris-Filters-ConnectedFilterControl__ProxyButtonContainer{ position:absolute; top:-100rem; left:-100rem; display:flex; width:100%; height:0; visibility:hidden; overflow:hidden; }\n\n.Polaris-Filters-ConnectedFilterControl__ProxyButtonContainer > *{ flex-shrink:0; }\n\n.Polaris-Filters-ConnectedFilterControl{ display:flex; flex-grow:1; }\n\n.Polaris-Filters-ConnectedFilterControl .Polaris-Filters-ConnectedFilterControl__CenterContainer{ flex:1 1 auto; min-width:10rem; }\n\n.Polaris-Filters-ConnectedFilterControl.Polaris-Filters-ConnectedFilterControl--right .Polaris-Filters-ConnectedFilterControl__CenterContainer *{ border-top-right-radius:var(--p-border-radius-base); border-bottom-right-radius:var(--p-border-radius-base); }\n\n.Polaris-Filters-ConnectedFilterControl__CenterContainer + .Polaris-Filters-ConnectedFilterControl__RightContainer, .Polaris-Filters-ConnectedFilterControl__CenterContainer + .Polaris-Filters-ConnectedFilterControl__MoreFiltersButtonContainer{ margin-left:0.8rem; }\n\n.Polaris-Filters-ConnectedFilterControl__RightContainer{ display:flex; }\n\n.Polaris-Filters-ConnectedFilterControl__RightContainer .Polaris-Filters-ConnectedFilterControl__Item > div > button{ margin-right:var(--p-button-group-item-spacing); border-radius:0; }\n\n.Polaris-Filters-ConnectedFilterControl__RightContainer .Polaris-Filters-ConnectedFilterControl__Item{ flex-shrink:0; }\n\n.Polaris-Filters-ConnectedFilterControl__RightContainer .Polaris-Filters-ConnectedFilterControl__Item:first-of-type > div > button{ border-top-left-radius:var(--p-border-radius-base); border-bottom-left-radius:var(--p-border-radius-base); }\n\n.Polaris-Filters-ConnectedFilterControl__RightContainer.Polaris-Filters-ConnectedFilterControl--queryFieldHidden .Polaris-Filters-ConnectedFilterControl__Item:first-of-type > div > button{ border-top-left-radius:var(--p-border-radius-base); border-bottom-left-radius:var(--p-border-radius-base); }\n\n.Polaris-Filters-ConnectedFilterControl__RightContainerWithoutMoreFilters .Polaris-Filters-ConnectedFilterControl__Item:last-child > div > button{ border-top-right-radius:var(--p-border-radius-base); border-bottom-right-radius:var(--p-border-radius-base); }\n\n.Polaris-Filters-ConnectedFilterControl__MoreFiltersButtonContainer > div{ margin-left:var(--p-override-none); }\n\n.Polaris-Filters-ConnectedFilterControl__MoreFiltersButtonContainer .Polaris-Filters-ConnectedFilterControl__Item > div > button{ white-space:nowrap; border-top-left-radius:0; border-bottom-left-radius:0; }\n\n.Polaris-Filters-ConnectedFilterControl__MoreFiltersButtonContainer.Polaris-Filters-ConnectedFilterControl--onlyButtonVisible .Polaris-Filters-ConnectedFilterControl__Item > div > button{ border-radius:var(--p-border-radius-base); }\n\n.Polaris-Filters-ConnectedFilterControl__Wrapper{ display:flex; }\n\n.Polaris-Filters-ConnectedFilterControl__AuxiliaryContainer{ flex-grow:0; }\n\n\n.Polaris-Filters{ position:relative; }\n\n.Polaris-Filters__FiltersContainer{ position:relative; height:100%; width:100%; display:flex; flex-direction:column; }\n\n.Polaris-Filters__FiltersContainerHeader{ top:0; width:100%; padding:1.6rem 2rem; border-bottom:0.1rem solid var(--p-divider); height:5.6rem; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; }\n\n.Polaris-Filters__FiltersDesktopContainerContent{ width:100%; height:calc(100% - 12.6rem); padding:0.8rem; }\n\n.Polaris-Filters__FiltersMobileContainerContent{ width:100%; height:calc(100% - 5.6rem); padding:0.8rem; }\n\n.Polaris-Filters__FiltersContainerFooter{ position:absolute; bottom:0; width:100%; padding:1.4rem 2rem; border-top:0.1rem solid var(--p-divider); height:7rem; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; }\n\n.Polaris-Filters__FiltersMobileContainerFooter{ width:100%; padding:1.4rem 1.6rem; height:7rem; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; }\n\n.Polaris-Filters__EmptyFooterState{ border-top:0.1rem solid var(--p-divider); padding-top:1.4rem; width:100%; display:flex; justify-content:center; }\n\n.Polaris-Filters__FilterTriggerContainer{ position:relative; }\n\n.Polaris-Filters__FilterTrigger{ width:100%; margin:0; padding:1.4rem 2rem; color:var(--p-text); border-radius:var(--p-border-radius-base); background:none; border:none; outline:none; position:relative; }\n\n.Polaris-Filters__FilterTrigger::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Filters__FilterTrigger:focus{ box-shadow:none; }\n\n.Polaris-Filters__FilterTrigger:hover{ cursor:pointer; background-color:var(--p-surface-hovered); outline:0.1rem solid transparent; }\n\n.Polaris-Filters__FilterTrigger:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Filters__FilterTriggerTitle{ font-size:1.5rem; font-weight:600; }\n\n.Polaris-Filters__AppliedFilterBadgeContainer{ padding-top:0.4rem; display:flex; }\n\n.Polaris-Filters--open .Polaris-Filters__AppliedFilterBadgeContainer{ display:none; }\n\n.Polaris-Filters__FilterTriggerLabelContainer{ display:flex; align-items:center; justify-content:space-between; }\n\n.Polaris-Filters--open::before, .Polaris-Filters--open::after{ content:''; position:relative; left:1.6rem; width:calc(100% - 3.2rem); height:0.1rem; background-color:var(--p-surface-subdued); display:block; }\n\n.Polaris-Filters--open::before{ top:0; }\n\n.Polaris-Filters--open::after{ bottom:0; }\n\n.Polaris-Filters--open.Polaris-Filters--first::after{ content:''; bottom:0; position:relative; left:1.6rem; width:calc(100% - 3.2rem); height:0.1rem; background-color:var(--p-surface-subdued); display:block; }\n\n.Polaris-Filters--open.Polaris-Filters--first::before{ display:none; }\n\n.Polaris-Filters--open ~ .Polaris-Filters--open::before{ display:none; }\n\n.Polaris-Filters--open.Polaris-Filters--last::before{ content:''; top:0; position:relative; left:1.6rem; width:calc(100% - 3.2rem); height:0.1rem; background-color:var(--p-surface-subdued); display:block; }\n\n.Polaris-Filters--open.Polaris-Filters--last::after{ display:none; }\n\n.Polaris-Filters--open + .Polaris-Filters--last::before{ display:none; }\n\n.Polaris-Filters__FilterNodeContainer{ padding:0.8rem 2rem 2rem 2rem; }\n\n.Polaris-Filters__SearchIcon{ fill:currentColor; }\n\n.Polaris-Filters__Backdrop{ position:fixed; z-index:518; top:0; right:0; bottom:0; left:0; display:block; opacity:0; }\n\n.Polaris-Filters__HelpText{ margin-top:10px; }\n\n.Polaris-Filters__TagsContainer{ display:flex; padding-top:0.8rem; flex-wrap:wrap; }\n\n.Polaris-Filters__TagsContainer > *{ margin-right:0.8rem; margin-bottom:0.8rem; }\n\n\n.Polaris-FooterHelp{ display:flex; justify-content:center; margin:2rem 0; width:100%; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-FooterHelp{ margin:2rem; width:auto; } }\n\n@media (min-width: 30.625em){ .Polaris-FooterHelp{ margin:2rem; width:auto; } }\n\n.Polaris-FooterHelp__Content{ display:inline-flex; align-items:center; padding:2rem 2rem 2rem 1.6rem; border-top:var(--p-override-none, 0.1rem solid var(--p-border-subdued)); border-bottom:var(--p-override-none, 0.1rem solid var(--p-border-subdued)); width:100%; justify-content:center; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-FooterHelp__Content{ width:auto; border:var(--p-override-none, 0.1rem solid var(--p-border-subdued)); border-radius:var(--p-override-none, 999px); } }\n\n@media (min-width: 30.625em){ .Polaris-FooterHelp__Content{ width:auto; border:var(--p-override-none, 0.1rem solid var(--p-border-subdued)); border-radius:var(--p-override-none, 999px); } }\n\n.Polaris-FooterHelp__Icon{ margin-right:0.8rem; }\n\n.Polaris-FooterHelp__Text{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; }\n\n@media (min-width: 40em){ .Polaris-FooterHelp__Text{ font-size:1.4rem; } }\n\n\n.Polaris-FormLayout{ margin-top:-1.6rem; margin-left:-2rem; }\n\n.Polaris-FormLayout__Title{ margin-bottom:-0.8rem; padding:1.6rem 2rem 0; }\n\n.Polaris-FormLayout__Items{ display:flex; flex-wrap:wrap; }\n\n.Polaris-FormLayout__HelpText{ color:var(--p-text-subdued); padding:0.8rem 2rem 0; }\n\n.Polaris-FormLayout__Item{ flex:1 1 22rem; margin-top:1.6rem; margin-left:2rem; max-width:calc(100% - 2rem); }\n\n.Polaris-FormLayout--grouped .Polaris-FormLayout__Item{ min-width:22rem; }\n\n.Polaris-FormLayout--condensed .Polaris-FormLayout__Item{ flex-basis:11rem; min-width:11rem; }\n\n\n.Polaris-Frame-Toast{ font-size:1.6rem; font-weight:400; line-height:2.4rem; display:inline-flex; max-width:50rem; padding:0.8rem 1.6rem; border-radius:var(--p-border-radius-wide); background:var(--p-surface); box-shadow:var(--p-override-none); color:var(--p-text); margin-bottom:2rem; }\n\n@media (min-width: 40em){ .Polaris-Frame-Toast{ font-size:2rem; line-height:2.8rem; } }\n\n@media (min-width: 40em){ .Polaris-Frame-Toast{ padding:1.6rem; } }\n\n@media (forced-colors: active){ .Polaris-Frame-Toast{ border:0.2rem solid transparent; } }\n\n.Polaris-Frame-Toast__Action{ margin-left:3.2rem; margin-right:1.6rem; }\n\n.Polaris-Frame-Toast--error{ background:var(--p-action-critical); color:var(--p-text-on-critical); }\n\n.Polaris-Frame-Toast--error .Polaris-Frame-Toast__CloseButton{ fill:var(--p-icon-on-critical); }\n\n.Polaris-Frame-Toast__CloseButton{ display:flex; align-self:center; flex-direction:column; justify-content:flex-start; margin-right:-1.6rem; padding:0 1.6rem; border:none; -webkit-appearance:none; appearance:none; background:transparent; color:currentColor; cursor:pointer; }\n\n.Polaris-Frame-Toast__CloseButton svg{ fill:currentColor; }\n\n@media (min-width: 40em){ .Polaris-Frame-Toast__CloseButton{ align-self:flex-start; margin:-0.8rem -1.6rem -0.8rem 0; padding:1.2rem 1.6rem 0.8rem; } }\n\n.Polaris-Frame-Toast__CloseButton:focus{ outline:none; }\n\n\n:root{ --toast-translate-y-out:15rem; --toast-translate-y-in:0; }\n\n.Polaris-Frame-ToastManager{ position:fixed; z-index:520; right:0; left:0; text-align:center; bottom:var(--global-ribbon-height); display:flex; flex-direction:column; align-items:center; }\n\n.Polaris-Frame-ToastManager__ToastWrapper{ position:absolute; display:inline-flex; opacity:0; transition:transform 400ms ease, opacity 400ms ease; transform:translateY(var(--toast-translate-y-out)); }\n\n.Polaris-Frame-ToastManager__ToastWrapper--enter, .Polaris-Frame-ToastManager__ToastWrapper--exit{ transform:translateY(var(--toast-translate-y-out)); opacity:0; }\n\n.Polaris-Frame-ToastManager--toastWrapperEnterDone{ transform:translateY(var(--toast-translate-y-in)); opacity:1; }\n\n\n.Polaris-Frame-Loading{ overflow:hidden; height:0.3rem; background-color:var(--p-surface); opacity:1; }\n\n.Polaris-Frame-Loading__Level{ width:100%; height:100%; transform-origin:0; background-color:var(--p-icon-success); transition:transform 500ms linear; }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-Frame-Loading__Level{ background-color:highlight; } }\n\n\n.Polaris-Modal-Dialog__Container{ position:fixed; z-index:519; top:0; right:0; bottom:0; left:0; display:flex; flex-direction:column; justify-content:flex-end; }\n\n@media (min-width: 48.0625em){ .Polaris-Modal-Dialog__Container{ justify-content:center; } }\n\n.Polaris-Modal-Dialog:focus{ outline:0; }\n\n.Polaris-Modal-Dialog__Modal{ position:fixed; right:0; bottom:0; left:0; display:flex; flex-direction:column; width:100%; max-height:calc(100vh - 60px); background:var(--p-surface); box-shadow:var(--p-modal-shadow); }\n\n@media (forced-colors: active){ .Polaris-Modal-Dialog__Modal{ border:0.1rem solid transparent; } }\n\n@media (max-width: 48.0525em){ .Polaris-Modal-Dialog__Modal{ bottom:0; max-height:100%; } }\n\n@media (min-width: 48.0625em){ .Polaris-Modal-Dialog__Modal{ position:relative; max-width:62rem; margin:0 auto; border-radius:var(--p-border-radius-wide); } }\n\n@media (min-width: 48.0625em) and (min-height: 660px){ .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--limitHeight{ max-height:600px; } }\n\n@media (min-width: 48.0625em){ .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--sizeSmall{ max-width:calc(100% - 6.4rem); } }\n\n@media (min-width: 27.75em){ .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--sizeSmall{ max-width:38rem; } }\n\n@media (min-width: 48.0625em){ .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--sizeLarge{ max-width:calc(100% - 6.4rem); } }\n\n@media (min-width: 65.25em){ .Polaris-Modal-Dialog__Modal.Polaris-Modal-Dialog--sizeLarge{ max-width:98rem; } }\n\n.Polaris-Modal-Dialog--animateFadeUp{ -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:transform, opacity; opacity:1; transform:translateY(0); transition:transform cubic-bezier(0.64, 0, 0.35, 1) 200ms, opacity cubic-bezier(0.64, 0, 0.35, 1) 200ms; }\n\n.Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--entering, .Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--exiting, .Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--exited{ opacity:0; transform:translateY(20rem); }\n\n.Polaris-Modal-Dialog--animateFadeUp.Polaris-Modal-Dialog--entered{ opacity:1; transform:translateY(0); }\n\n\n.Polaris-Modal-Footer{ display:flex; align-self:flex-end; align-items:center; width:100%; min-height:6.4rem; padding:1.6rem; border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-Modal-Footer__FooterContent{ width:100%; }\n\n\n.Polaris-Modal-CloseButton{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; position:relative; margin-left:2rem; margin-right:-0.8rem; padding:0.8rem; border-radius:6px; }\n\n.Polaris-Modal-CloseButton:focus{ outline:none; }\n\n.Polaris-Modal-CloseButton::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Modal-CloseButton:hover{ background:var(--p-surface-hovered); }\n\n.Polaris-Modal-CloseButton:hover svg{ fill:var(--p-icon-hovered); }\n\n.Polaris-Modal-CloseButton:focus{ background:var(--p-override-transparent); }\n\n.Polaris-Modal-CloseButton:active{ background:var(--p-surface-pressed); }\n\n.Polaris-Modal-CloseButton:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n\n.Polaris-Modal-Header{ display:flex; align-items:flex-start; flex-shrink:0; padding:1.6rem 2rem; border-bottom:0.1rem solid var(--p-divider); }\n\n.Polaris-Modal-Header--titleHidden{ position:absolute; right:0.8rem; z-index:1; }\n\n.Polaris-Modal-Header--titleHidden .Polaris-Modal-Header__Title{ display:none; }\n\n.Polaris-Modal-Header__Title{ word-wrap:break-word; word-break:break-word; overflow-wrap:break-word; flex:1 1; margin-top:0.4rem; }\n\n\n.Polaris-Modal-Section{ flex:0 0 auto; padding:2rem; }\n\n.Polaris-Modal-Section:not(:last-of-type){ border-bottom:0.1rem solid var(--p-divider); }\n\n.Polaris-Modal-Section.Polaris-Modal-Section--subdued{ background:var(--p-surface-subdued); }\n\n.Polaris-Modal-Section.Polaris-Modal-Section--flush{ padding:0; }\n\n\n.Polaris-Modal__BodyWrapper{ display:flex; flex-grow:1; overflow-x:hidden; -webkit-overflow-scrolling:touch; }\n\n.Polaris-Modal__Body{ width:100%; }\n\n.Polaris-Modal__IFrame{ display:block; width:62rem; max-width:100vw; border:none; }\n\n@media (min-width: 48.0625em){ .Polaris-Modal__IFrame{ max-width:62rem; } }\n\n.Polaris-Modal__Spinner{ margin:1.6rem; text-align:center; }\n\n\n.Polaris-Frame-ContextualSaveBar{ display:flex; height:5.6rem; background:var(--p-surface); box-shadow:0 2px 4px rgba(0, 0, 0, 0.1); }\n\n.Polaris-Frame-ContextualSaveBar .Polaris-Frame-ContextualSaveBar__LogoContainer{ border-right:none; }\n\n.Polaris-Frame-ContextualSaveBar .Polaris-Frame-ContextualSaveBar__ContextControl{ opacity:0.3; pointer-events:none; }\n\n.Polaris-Frame-ContextualSaveBar .Polaris-Frame-ContextualSaveBar__Message{ color:var(--p-text); }\n\n@media (forced-colors: active){ .Polaris-Frame-ContextualSaveBar{ border:0.1rem solid transparent; } }\n\n.Polaris-Frame-ContextualSaveBar__LogoContainer{ display:none; }\n\n@media (min-width: 48.0625em){ .Polaris-Frame-ContextualSaveBar__LogoContainer{ display:flex; flex:0 0 24rem; align-items:center; height:100%; padding:0 1.6rem; background-color:transparent; } }\n\n.Polaris-Frame-ContextualSaveBar__Contents{ display:flex; flex:1 1 auto; align-items:center; justify-content:space-between; min-width:1px; max-width:99.8rem; height:100%; margin:0 auto; padding:0 1.6rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Frame-ContextualSaveBar__Contents{ padding:0 2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-Frame-ContextualSaveBar__Contents{ padding:0 2rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-Frame-ContextualSaveBar__Contents{ padding:0 3.2rem; } }\n\n@media (min-width: 46.5em){ .Polaris-Frame-ContextualSaveBar__Contents{ padding:0 3.2rem; } }\n\n.Polaris-Frame-ContextualSaveBar--fullWidth{ max-width:none; padding:0 1.6rem; }\n\n.Polaris-Frame-ContextualSaveBar__Message{ overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:1.7rem; font-weight:600; line-height:2.4rem; color:var(--p-text-subdued); }\n\n@media (min-width: 40em){ .Polaris-Frame-ContextualSaveBar__Message{ font-size:1.6rem; } }\n\n.Polaris-Frame-ContextualSaveBar__ActionContainer{ flex-shrink:0; }\n\n.Polaris-Frame-ContextualSaveBar__Action{ margin-left:0.8rem; }\n\n.Polaris-Frame-ContextualSaveBar__ContextControl{ display:none; }\n\n@media (min-width: 48.0625em){ .Polaris-Frame-ContextualSaveBar__ContextControl{ display:block; width:24rem; } }\n\n\n.Polaris-Frame-CSSAnimation--startFade{ opacity:0; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; transition:opacity 300ms cubic-bezier(0, 0, 0.42, 1); pointer-events:none; }\n\n.Polaris-Frame-CSSAnimation--endFade{ opacity:1; pointer-events:auto; }\n\n\n.Polaris-Frame{ width:100%; min-height:100vh; display:flex; background-color:var(--p-background); }\n\n@media print{ .Polaris-Frame{ background-color:transparent; } }\n\n@media (min-width: 48.0625em){ .Polaris-Frame{ width:calc(100% - var(--p-frame-offset)); margin-left:var(--p-frame-offset); } }\n\n.Polaris-Frame__Navigation{ position:fixed; z-index:516; top:0; left:0; display:none; flex:0 0 auto; align-items:stretch; height:100%; outline:none; transform:translateX(0%); }\n\n@media print{ .Polaris-Frame__Navigation{ display:none !important; } }\n\n@media (min-width: 48.0625em){ .Polaris-Frame__Navigation{ z-index:1; left:var(--p-frame-offset); display:flex; }\n  .Polaris-Frame--hasTopBar .Polaris-Frame__Navigation{ top:5.6rem; height:calc(100% - 5.6rem); } }\n\n.Polaris-Frame__Navigation:focus{ outline:none; }\n\n.Polaris-Frame__Navigation--enter, .Polaris-Frame__Navigation--enterActive, .Polaris-Frame__Navigation--exit, .Polaris-Frame__Navigation--exitActive{ display:flex; }\n\n.Polaris-Frame__Navigation--enter{ transform:translateX(-100%); }\n\n.Polaris-Frame__Navigation--enterActive{ transform:translateX(0%); transition:transform 300ms cubic-bezier(0, 0, 0.42, 1); }\n\n.Polaris-Frame__Navigation--exit{ transform:translateX(0%); }\n\n.Polaris-Frame__Navigation--exitActive{ transform:translateX(-100%); transition:transform 300ms cubic-bezier(0, 0, 0.42, 1); }\n\n.Polaris-Frame__NavigationDismiss{ position:relative; position:absolute; top:0; left:100%; width:3.2rem; height:3.2rem; margin:1.6rem; padding:0; border:none; border-radius:50%; background:none; opacity:0; pointer-events:none; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; cursor:pointer; transition:opacity 100ms cubic-bezier(0.64, 0, 0.35, 1); }\n\n@media print{ .Polaris-Frame__NavigationDismiss{ display:none !important; } }\n\n.Polaris-Frame__NavigationDismiss svg{ fill:var(--p-surface); }\n\n.Polaris-Frame__NavigationDismiss::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Frame__Navigation--visible .Polaris-Frame__NavigationDismiss{ pointer-events:all; opacity:1; }\n\n.Polaris-Frame__NavigationDismiss:focus{ position:absolute; border-radius:3px; background-color:var(--p-override-transparent, rgba(255, 255, 255, 0.16)); outline:none; }\n\n.Polaris-Frame__NavigationDismiss:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n@media (min-width: 48.0625em){ .Polaris-Frame__NavigationDismiss{ display:none; } }\n\n.Polaris-Frame__NavigationDismiss:hover{ background-color:var(--p-overlay); }\n\n.Polaris-Frame__NavigationDismiss:active{ background-color:var(--p-overlay); }\n\n.Polaris-Frame__TopBar{ position:fixed; z-index:512; top:0; left:0; width:100%; height:5.6rem; }\n\n@media print{ .Polaris-Frame__TopBar{ display:none !important; } }\n\n@media (min-width: 48.0625em){ .Polaris-Frame__TopBar{ left:var(--p-frame-offset); width:calc(100% - var(--p-frame-offset)); } }\n\n.Polaris-Frame__ContextualSaveBar{ position:fixed; z-index:513; top:0; left:0; width:100%; }\n\n@media (min-width: 48.0625em){ .Polaris-Frame__ContextualSaveBar{ left:var(--p-frame-offset); width:calc(100% - var(--p-frame-offset)); } }\n\n.Polaris-Frame__Main{ flex:1 1; display:flex; align-items:stretch; min-width:0; max-width:100%; padding-right:0px; padding-right:calc(constant(safe-area-inset-right)); padding-right:calc(env(safe-area-inset-right)); padding-left:0px; padding-left:calc(constant(safe-area-inset-left)); padding-left:calc(env(safe-area-inset-left)); padding-bottom:0px; padding-bottom:calc(constant(safe-area-inset-bottom)); padding-bottom:calc(env(safe-area-inset-bottom)); }\n\n@media (min-width: 48.0625em){ .Polaris-Frame--hasNav .Polaris-Frame__Main{ padding-left:24rem; padding-left:24rem; padding-left:calc(24rem + constant(safe-area-inset-left)); padding-left:calc(24rem + env(safe-area-inset-left)); } }\n\n@media print and (min-width: 48.0625em){ .Polaris-Frame--hasNav .Polaris-Frame__Main{ padding-left:0; } }\n\n.Polaris-Frame--hasTopBar .Polaris-Frame__Main{ padding-top:5.6rem; }\n\n@media print{ .Polaris-Frame--hasTopBar .Polaris-Frame__Main{ padding-top:0; } }\n\n.Polaris-Frame__Content{ position:relative; padding-bottom:var(--global-ribbon-height, 0); flex:1 1; min-width:0; max-width:100%; }\n\n.Polaris-Frame__GlobalRibbonContainer{ position:fixed; z-index:510; bottom:0; width:100%; }\n\n@media (min-width: 48.0625em){ .Polaris-Frame__GlobalRibbonContainer{ left:var(--p-frame-offset); }\n  .Polaris-Frame--hasNav .Polaris-Frame__GlobalRibbonContainer{ left:calc(24rem + var(--p-frame-offset)); left:calc(24rem + var(--p-frame-offset)); left:calc(24rem + var(--p-frame-offset) + constant(safe-area-inset-left)); left:calc(24rem + var(--p-frame-offset) + env(safe-area-inset-left)); width:calc(100% - 24rem - var(--p-frame-offset)); } }\n\n.Polaris-Frame__LoadingBar{ position:fixed; z-index:514; top:0; right:0; left:0; }\n\n@media print{ .Polaris-Frame__LoadingBar{ display:none !important; } }\n\n@media (min-width: 48.0625em){ .Polaris-Frame--hasNav .Polaris-Frame__LoadingBar{ left:var(--p-frame-offset); }\n  .Polaris-Frame--hasTopBar .Polaris-Frame__LoadingBar{ top:var(--p-override-zero, 5.6rem); z-index:var(--p-override-loading-z-index, 511); } }\n\n.Polaris-Frame__Skip{ position:fixed; z-index:517; top:1rem; left:calc(0.8rem + var(--p-frame-offset)); opacity:0; pointer-events:none; }\n\n.Polaris-Frame__Skip.Polaris-Frame--focused{ pointer-events:all; opacity:1; }\n\n.Polaris-Frame__Skip.Polaris-Frame--focused > a::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Frame__Skip > a{ position:relative; position:relative; display:inline-flex; align-items:center; justify-content:center; min-height:3.6rem; min-width:3.6rem; margin:0; padding:0.7rem 1.6rem; background:var(--p-surface); box-shadow:var(--p-button-drop-shadow); border-radius:var(--p-border-radius-base); color:var(--p-text); border:1px solid var(--p-border-neutral-subdued); border-top-color:var(--p-border-subdued); border-bottom-color:var(--p-border-shadow-subdued); line-height:1; text-align:center; cursor:pointer; -webkit-user-select:none; user-select:none; text-decoration:none; -webkit-tap-highlight-color:transparent; font-size:1.5rem; font-weight:var(--p-button-font-weight, 400); line-height:1.6rem; text-transform:initial; letter-spacing:initial; position:relative; color:var(--p-text); }\n\n.Polaris-Frame__Skip > a svg{ fill:var(--p-icon); }\n\n.Polaris-Frame__Skip > a::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Frame__Skip > a:hover{ background:var(--p-action-secondary-hovered); outline:0.1rem solid transparent; }\n\n.Polaris-Frame__Skip > a:focus{ box-shadow:var(--p-button-drop-shadow); outline:0; }\n\n.Polaris-Frame__Skip > a:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Frame__Skip > a:active{ background:var(--p-action-secondary-pressed); box-shadow:var(--p-button-drop-shadow); }\n\n.Polaris-Frame__Skip > a:active::after{ border:none; box-shadow:none; }\n\n.Polaris-Frame__Skip > a.Polaris-Frame--pressed{ background:var(--p-action-secondary-depressed); box-shadow:var(--p-button-pressed-inner-shadow); color:var(--p-text-on-primary); border-color:var(--p-border-depressed); }\n\n.Polaris-Frame__Skip > a.Polaris-Frame--pressed svg{ fill:currentColor; }\n\n@media (-ms-high-contrast: active){ .Polaris-Frame__Skip > a{ border:1px solid windowText; } }\n\n@media (min-width: 40em){ .Polaris-Frame__Skip > a{ font-size:1.4rem; } }\n\n.Polaris-Frame__Skip > a::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Frame__Skip > a:focus{ border-color:none; box-shadow:none; }\n\n\n.Polaris-IndexTable{ position:relative; overflow:hidden; }\n\n.Polaris-IndexTable__LoadingContainer--enter{ opacity:0; transform:translateY(-100%); }\n\n.Polaris-IndexTable--loadingContainerEnterActive{ opacity:1; transition:opacity 100ms ease-out, transform 100ms ease-out; transform:translateY(0); }\n\n.Polaris-IndexTable__LoadingContainer--exit{ opacity:1; transform:translateY(0); }\n\n.Polaris-IndexTable--loadingContainerExitActive{ opacity:0; transform:translateY(-100%); transition:opacity 100ms ease-in, transform 100ms ease-in; }\n\n.Polaris-IndexTable__LoadingPanel{ position:absolute; z-index:37; top:0; left:0; display:flex; width:100%; justify-content:center; align-items:center; background:var(--p-surface); padding:0.8rem 1.6rem; box-shadow:0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }\n\n.Polaris-IndexTable__LoadingPanel .Polaris-IndexTable__LoadingPanelRow{ display:flex; flex-wrap:nowrap; width:100%; background:var(--p-surface-highlight-subdued); padding:0.8rem; padding-bottom:0.4rem; border-radius:var(--p-border-radius-base, 3px); }\n\n.Polaris-IndexTable__LoadingPanelText{ margin-left:1.2rem; color:var(--p-text); }\n\n.Polaris-IndexTable__Table{ width:100%; min-width:100%; border-collapse:collapse; }\n\n.Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableCell--first, .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell, .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableHeading--first, .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableHeading--second{ visibility:visible; background-color:var(--p-surface); }\n\n.Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableCell--first, .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableHeading--first{ box-shadow:0.1rem -0.1rem 0 0 var(--p-divider); }\n\n@media (min-width: 28.625em){ .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableCell--first, .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableHeading--first{ box-shadow:0 -0.1rem 0 0 var(--p-divider); } }\n\n@media (min-width: 28.625em){ .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell, .Polaris-IndexTable__Table--scrolling .Polaris-IndexTable__TableHeading--second{ box-shadow:0.1rem -0.1rem 0 0 var(--p-divider); } }\n\n.Polaris-IndexTable__TableRow{ background-color:var(--p-surface); cursor:pointer; }\n\n.Polaris-IndexTable__TableRow.Polaris-IndexTable--statusSuccess, .Polaris-IndexTable__TableRow.Polaris-IndexTable--statusSuccess .Polaris-IndexTable__TableCell--first, .Polaris-IndexTable__TableRow.Polaris-IndexTable--statusSuccess .Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell{ background-color:var(--p-surface-primary-selected); }\n\n.Polaris-IndexTable__TableRow.Polaris-IndexTable--statusSubdued, .Polaris-IndexTable__TableRow.Polaris-IndexTable--statusSubdued .Polaris-IndexTable__TableCell--first, .Polaris-IndexTable__TableRow.Polaris-IndexTable--statusSubdued .Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell{ background-color:var(--p-surface-subdued); }\n\n.Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--hovered, .Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--hovered .Polaris-IndexTable__TableCell--first, .Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--hovered .Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell{ background-color:var(--p-surface-selected-hovered); }\n\n.Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--selected, .Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--selected .Polaris-IndexTable__TableHeading--first, .Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--selected .Polaris-IndexTable__TableHeading--second, .Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--selected .Polaris-IndexTable__TableCell--first, .Polaris-IndexTable__TableRow.Polaris-IndexTable__TableRow--selected .Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell{ background-color:var(--p-surface-selected); }\n\n.Polaris-IndexTable__TableRow--subdued{ color:var(--p-text-subdued); }\n\n.Polaris-IndexTable__TableHeading{ padding:1.6rem; text-align:left; font-weight:500; white-space:nowrap; border:0; }\n\n.Polaris-IndexTable__TableHeading--first{ position:-webkit-sticky; position:sticky; left:0; padding-left:1.4rem; padding-right:1.8rem; }\n\n.Polaris-IndexTable__ColumnHeaderCheckboxWrapper{ display:flex; }\n\n.Polaris-IndexTable__StickyColumnHeaderCheckbox{ margin-left:-0.2rem; padding-right:0.2rem; }\n\n.Polaris-IndexTable__TableHeading--second{ padding-left:0; }\n\n@media (min-width: 28.625em){ .Polaris-IndexTable__TableHeading--second{ position:-webkit-sticky; position:sticky; } }\n\n.Polaris-IndexTable__TableHeading--last{ position:-webkit-sticky; position:sticky; right:0; }\n\n.Polaris-IndexTable__TableCell{ z-index:1; text-align:left; padding:0.8rem 1.6rem; white-space:nowrap; box-shadow:0 -0.1rem 0 0 var(--p-divider); }\n\n.Polaris-IndexTable__TableCell--flush{ padding:0; }\n\n.Polaris-IndexTable__TableCell--first{ position:-webkit-sticky; position:sticky; left:0; z-index:30; padding:0; }\n\n.Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell{ left:var(--p-checkbox-offset); padding-left:0; }\n\n@media (min-width: 28.625em){ .Polaris-IndexTable__TableCell--first + .Polaris-IndexTable__TableCell{ position:-webkit-sticky; position:sticky; z-index:30; padding:0; } }\n\n.Polaris-IndexTable__StickyTable{ position:relative; top:0; left:0; right:0; visibility:hidden; z-index:37; }\n\n.Polaris-IndexTable__StickyTableHeader{ position:absolute; display:flex; width:100%; }\n\n.Polaris-IndexTable__StickyTableHeader:not(.Polaris-IndexTable__StickyTableHeader--isSticky){ top:-100rem; left:-100rem; }\n\n.Polaris-IndexTable__StickyTableColumnHeader{ flex:0 0 auto; }\n\n.Polaris-IndexTable__StickyTableColumnHeader--isScrolling{ box-shadow:1px 1px 0 0 var(--p-divider), 1px 0 1px 1px rgba(63, 63, 68, 0.05), 1px 0 3px 0 rgba(63, 63, 68, 0.15); }\n\n.Polaris-IndexTable__StickyTableHeadings{ overflow:hidden; flex:1 1 auto; display:flex; }\n\n.Polaris-IndexTable__StickyTableHeading--second{ padding-left:0; }\n\n@media (min-width: 28.625em){ .Polaris-IndexTable__StickyTableHeading--second{ display:none; } }\n\n.Polaris-IndexTable--stickyTableHeadingSecondScrolling{ padding:0 0.06rem 0 1.6rem; display:none; }\n\n@media (min-width: 28.625em){ .Polaris-IndexTable--stickyTableHeadingSecondScrolling{ display:block; } }\n\n.Polaris-IndexTable__StickyTableHeader--isSticky{ visibility:visible; background-color:var(--p-surface); box-shadow:0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }\n\n.Polaris-IndexTable:hover .Polaris-IndexTable__ScrollLeft{ display:block; }\n\n.Polaris-IndexTable:hover .Polaris-IndexTable__ScrollRight{ display:block; }\n\n.Polaris-IndexTable .Polaris-IndexTable__ScrollRight--onboarding{ display:block; }\n\n.Polaris-IndexTable__BulkActionsWrapper{ visibility:visible; position:relative; z-index:36; top:0; left:0; right:0; padding:0.8rem; background:var(--p-surface); }\n\n.Polaris-IndexTable__ScrollBarContainer{ position:-webkit-sticky; position:sticky; z-index:35; bottom:0; padding:0.2rem; border-top:0.1rem solid var(--p-divider); background-color:var(--p-surface); border-bottom-right-radius:var(--p-border-radius-base, 3px); border-bottom-left-radius:var(--p-border-radius-base, 3px); }\n\n.Polaris-IndexTable--scrollBarContainerCondensed{ visibility:hidden; pointer-events:none; }\n\n.Polaris-IndexTable__ScrollBar{ overflow-x:scroll; width:100%; margin:0; padding:0; }\n\n.Polaris-IndexTable__ScrollBar::-webkit-scrollbar-track{ border-radius:0.4rem; background-color:transparent; }\n\n.Polaris-IndexTable__ScrollBar::-webkit-scrollbar{ -webkit-appearance:none; appearance:none; height:0.8rem; width:0.8rem; background-color:transparent; }\n\n.Polaris-IndexTable__ScrollBar::-webkit-scrollbar-thumb{ border-radius:0.4rem; background-color:var(--p-border-neutral-subdued); -webkit-transition:background-color 100ms ease-out; transition:background-color 100ms ease-out; }\n\n.Polaris-IndexTable__ScrollBar:hover::-webkit-scrollbar-thumb{ background-color:var(--p-border-depressed); }\n\n.Polaris-IndexTable--disableTextSelection{ -webkit-user-select:none; user-select:none; }\n\n.Polaris-IndexTable--selectMode{ transform:translateY(-5.2rem); margin-bottom:-5.2rem; }\n\n.Polaris-IndexTable__EmptySearchResultWrapper{ padding:1.6rem; }\n\n.Polaris-IndexTable--condensedRow{ width:calc(100% + 3.4rem); transform:translateX(-3.4rem); transition:transform cubic-bezier(0.64, 0, 0.35, 1) 200ms; display:flex; border-top:0.1rem solid var(--p-divider); }\n\n[data-selectmode='true'] .Polaris-IndexTable--condensedRow{ transform:none; }\n\n.Polaris-IndexTable__CondensedList{ list-style-type:none; margin:0; padding:0; overflow:hidden; }\n\n.Polaris-IndexTable__HeaderWrapper{ position:relative; display:flex; align-items:flex-start; width:100%; min-height:5.6rem; padding:1rem 1.6rem; background-color:var(--p-surface); box-shadow:0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }\n\n.Polaris-IndexTable__StickyTable--condensed{ visibility:visible; }\n\n.Polaris-IndexTable__StickyTableHeader--condensed{ padding:1.6rem 1.6rem 0.8rem; }\n\n.Polaris-IndexTable__ScrollBarContent{ height:1px; width:var(--p-scroll-bar-content-width); }\n\n\n.Polaris-IndexTable-Checkbox__TableCellContentContainer{ display:flex; align-items:center; }\n\n.Polaris-IndexTable-Checkbox__Wrapper{ display:flex; justify-content:center; align-items:center; }\n\n.Polaris-IndexTable-Checkbox--expanded{ width:3.2rem; height:3.2rem; padding-left:1.6rem; }\n\n.Polaris-IndexTable-Checkbox--condensed{ min-width:5rem; min-height:4.4rem; margin-right:-1.6rem; }\n\n\n.Polaris-IndexTable-ScrollContainer{ overflow-x:auto; overscroll-behavior-x:contain; -ms-overflow-style:none; scrollbar-width:none; }\n\n.Polaris-IndexTable-ScrollContainer::-webkit-scrollbar{ display:none; }\n\n\n.Polaris-KeyboardKey{ display:inline-block; height:2.4rem; margin:0 0.2rem 2px; padding:0 0.4rem; background-color:var(--p-surface); box-shadow:0 0 0 1px var(--p-border-subdued), 0 2px 0 0 var(--p-surface), 0 2px 0 1px var(--p-border-subdued); border-radius:var(--p-border-radius-base); font-family:-apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; font-size:1.2rem; font-weight:500; line-height:2.4rem; color:var(--p-text-subdued); text-align:center; min-width:2.4rem; -webkit-user-select:none; user-select:none; }\n\n\n.Polaris-Layout{ display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; margin-top:-1.6rem; margin-left:-2rem; }\n\n@media print{ body .Polaris-Layout{ font-size:1.1rem; line-height:1.6rem; }\n  .Polaris-Layout a, .Polaris-Layout button{ color:var(--p-text, #212b36); } }\n\n.Polaris-Layout__Section{ flex:2 2 48rem; min-width:51%; }\n\n@media print{ .Polaris-Layout__Section{ flex:2 2 36rem; } }\n\n.Polaris-Layout__Section--secondary{ flex:1 1 24rem; min-width:0; }\n\n.Polaris-Layout__Section--fullWidth{ flex:1 1 100%; }\n\n.Polaris-Layout__Section--oneHalf{ flex:1 1 45rem; min-width:0; }\n\n.Polaris-Layout__Section--oneThird{ flex:1 1 24rem; min-width:0; }\n\n.Polaris-Layout__AnnotatedSection{ min-width:0; flex:1 1 100%; }\n\n.Polaris-Layout__Section, .Polaris-Layout__AnnotatedSection{ max-width:calc(100% - 2rem); margin-top:1.6rem; margin-left:2rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Layout__Section + .Polaris-Layout__AnnotatedSection, [data-has-navigation] .Polaris-Layout__AnnotatedSection + .Polaris-Layout__AnnotatedSection{ padding-top:1.6rem; border-top:0.1rem solid var(--p-divider); } }\n\n@media (min-width: 30.625em){ .Polaris-Layout__Section + .Polaris-Layout__AnnotatedSection, .Polaris-Layout__AnnotatedSection + .Polaris-Layout__AnnotatedSection{ padding-top:1.6rem; border-top:0.1rem solid var(--p-divider); } }\n\n.Polaris-Layout__AnnotationWrapper{ display:flex; flex-wrap:wrap; margin-top:-1.6rem; margin-left:-2rem; }\n\n.Polaris-Layout__AnnotationContent{ flex:2 2 48rem; }\n\n.Polaris-Layout__Annotation{ flex:1 1 24rem; padding:1.6rem 2rem 0; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Layout__Annotation{ padding:1.6rem 0 0; } }\n\n@media (min-width: 30.625em){ .Polaris-Layout__Annotation{ padding:1.6rem 0 0; } }\n\n@media (max-width: 48.0625em) and (min-width: 50em), (min-width: 65em){ [data-has-navigation] .Polaris-Layout__Annotation{ padding:2rem 2rem 2rem 0; } }\n\n@media (min-width: 50em){ .Polaris-Layout__Annotation{ padding:2rem 2rem 2rem 0; } }\n\n.Polaris-Layout__Annotation, .Polaris-Layout__AnnotationContent{ min-width:0; max-width:calc(100% - 2rem); margin-top:1.6rem; margin-left:2rem; }\n\n.Polaris-Layout__AnnotationDescription{ color:var(--p-text-subdued); }\n\n\n.Polaris-Link{ -webkit-appearance:none; appearance:none; display:inline; text-align:inherit; padding:0; background:none; border:0; font-size:inherit; color:var(--p-interactive); text-decoration:underline; cursor:pointer; }\n\n.Polaris-Link:hover{ color:var(--p-interactive-hovered); text-decoration:none; }\n\n.Polaris-Link:focus{ outline:var(--p-override-none); }\n\n.Polaris-Link:focus:not(:active){ outline:var(--p-focused) auto 1px; }\n\n.Polaris-Link:active{ position:relative; color:var(--p-interactive-pressed); }\n\n.Polaris-Link:active::before{ content:''; position:absolute; z-index:-1; top:-0.2rem; right:-0.5rem; bottom:-0.2rem; left:-0.5rem; display:block; border-radius:3px; }\n\n@media print{ .Polaris-Link{ -webkit-text-decoration-color:var(--p-border-neutral-subdued); text-decoration-color:var(--p-border-neutral-subdued); } }\n\n.Polaris-Link__IconLockup{ display:inline; white-space:nowrap; }\n\n.Polaris-Link__IconLockup svg{ fill:currentColor; }\n\n.Polaris-Link__IconLockup::before{ content:'\\2060'; }\n\n.Polaris-Link__IconLayout{ display:inline-flex; }\n\n.Polaris-Link__IconLayout::before{ content:'\\2060'; }\n\n.Polaris-Link--monochrome{ color:inherit; }\n\n.Polaris-Link--monochrome:hover, .Polaris-Link--monochrome:focus, .Polaris-Link--monochrome:active{ color:inherit; }\n\n.Polaris-Link--removeUnderline{ text-decoration:none; }\n\n\n.Polaris-List{ padding-left:2rem; margin-top:0; margin-bottom:0; list-style:disc outside none; }\n\n.Polaris-List + .Polaris-List{ margin-top:1.6rem; }\n\n.Polaris-List--typeNumber{ padding-left:3.2rem; list-style:decimal outside none; }\n\n.Polaris-List__Item{ margin-bottom:0.8rem; }\n\n.Polaris-List__Item:last-child{ margin-bottom:0; }\n\n.Polaris-List__Item .Polaris-List:first-child{ margin-top:0.8rem; }\n\n\n.Polaris-MediaCard{ height:100%; width:100%; display:flex; flex-flow:row wrap; }\n\n.Polaris-MediaCard.Polaris-MediaCard--portrait{ flex-flow:column nowrap; }\n\n@media (max-width: 50.25em){ .Polaris-MediaCard{ flex-flow:column nowrap; } }\n\n.Polaris-MediaCard__MediaContainer{ overflow:hidden; border-top-left-radius:var(--p-border-radius-wide); border-top-right-radius:var(--p-border-radius-wide); }\n\n.Polaris-MediaCard__MediaContainer:not(.Polaris-MediaCard--portrait){ flex-basis:40%; }\n\n.Polaris-MediaCard__MediaContainer:not(.Polaris-MediaCard--portrait).Polaris-MediaCard--sizeSmall{ flex-basis:33%; }\n\n@media (min-width: 50.25em){ .Polaris-MediaCard__MediaContainer:not(.Polaris-MediaCard--portrait){ border-top-right-radius:0; border-top-left-radius:var(--p-border-radius-wide); border-bottom-left-radius:var(--p-border-radius-wide); } }\n\n.Polaris-MediaCard__InfoContainer{ position:relative; }\n\n.Polaris-MediaCard__InfoContainer:not(.Polaris-MediaCard--portrait){ flex-basis:60%; }\n\n.Polaris-MediaCard__InfoContainer:not(.Polaris-MediaCard--portrait).Polaris-MediaCard--sizeSmall{ flex-basis:67%; }\n\n.Polaris-MediaCard__Popover{ position:absolute; z-index:400; top:1.6rem; right:1.6rem; }\n\n.Polaris-MediaCard__Heading{ margin-right:3.2rem; }\n\n.Polaris-MediaCard__PrimaryAction{ margin-right:0.8rem; }\n\n.Polaris-MediaCard__SecondaryAction{ margin-left:-spacing(tight); }\n\n.Polaris-MediaCard__ActionContainer{ padding-top:0.8rem; }\n\n.Polaris-MediaCard__ActionContainer.Polaris-MediaCard--portrait{ padding-top:3.2rem; }\n\n@media (max-width: 50.25em){ .Polaris-MediaCard__ActionContainer{ padding-top:3.2rem; } }\n\n\n@keyframes Polaris-Navigation__fade--in{ 0%{ opacity:0; }\n  100%{ opacity:1; } }\n\n.Polaris-Navigation{ display:flex; flex-direction:column; align-items:stretch; width:calc(100vw - 6.4rem); min-width:24rem; max-width:36rem; height:100%; min-height:100%; background-color:var(--p-background); -webkit-overflow-scrolling:touch; border-right:0.1rem solid var(--p-divider); padding-bottom:0px; padding-bottom:calc(constant(safe-area-inset-bottom)); padding-bottom:calc(env(safe-area-inset-bottom)); }\n\n.Polaris-Navigation:focus{ outline:none; }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation{ max-width:24rem; max-width:24rem; max-width:calc(24rem + constant(safe-area-inset-left)); max-width:calc(24rem + env(safe-area-inset-left)); } }\n\n.Polaris-Navigation__UserMenu{ flex:0 0 auto; }\n\n.Polaris-Navigation__ContextControl{ min-height:5.6rem; }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__ContextControl{ display:none; } }\n\n.Polaris-Navigation__PrimaryNavigation{ display:flex; overflow:auto; flex:1 1 auto; flex-direction:column; align-items:stretch; max-width:100%; }\n\n.Polaris-Navigation__PrimaryNavigation:focus{ outline:none; }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__PrimaryNavigation{ padding-top:1.2rem; } }\n\n.Polaris-Navigation__LogoContainer{ display:none; }\n\n@media (max-width: 48.0625em){ .Polaris-Navigation__LogoContainer{ display:flex; flex:0 0 5.6rem; align-items:center; height:5.6rem; padding:0 0.8rem 0 1.6rem; flex-basis:5.6rem; flex-basis:calc(5.6rem + constant(safe-area-inset-left)); flex-basis:calc(5.6rem + env(safe-area-inset-left)); padding-left:1.6rem; padding-left:calc(1.6rem + constant(safe-area-inset-left)); padding-left:calc(1.6rem + env(safe-area-inset-left)); } }\n\n.Polaris-Navigation__Logo, .Polaris-Navigation__LogoLink{ display:block; }\n\n.Polaris-Navigation__Item{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; font-size:1.6rem; font-weight:600; line-height:3.6rem; display:flex; flex-grow:1; align-items:flex-start; max-width:100%; padding:0 0.8rem; margin:0 0.8rem; border-radius:var(--p-border-radius-base); color:var(--p-text); text-decoration:none; text-align:left; padding-left:1.2rem; padding-right:0.4rem; position:relative; position:relative; }\n\n.Polaris-Navigation__Item:focus{ outline:none; }\n\n.Polaris-Navigation__Item:hover{ background:var(--p-background-hovered); color:var(--p-text); text-decoration:none; }\n\n.Polaris-Navigation__Item::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Navigation__Item.Polaris-Navigation--keyFocused{ background:var(--p-background-hovered); color:var(--p-text); text-decoration:none; }\n\n.Polaris-Navigation__Item.Polaris-Navigation--keyFocused::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Navigation__Item:active, .Polaris-Navigation__Item:active:hover{ color:var(--p-text); background-color:var(--p-background-pressed); }\n\n.Polaris-Navigation__Item:active::after, .Polaris-Navigation__Item:active:hover::after{ content:none; }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__Item{ font-size:1.6rem; font-weight:600; line-height:3.2rem; } }\n\n.Polaris-Navigation__Item::-moz-focus-inner{ border:0; }\n\n.Polaris-Navigation__Item--selected{ font-weight:600; color:var(--p-text-primary); background-color:var(--p-background-selected); outline:0.1rem solid transparent; position:relative; }\n\n.Polaris-Navigation__Item--selected::before{ content:''; position:absolute; top:0; bottom:0; left:-0.8rem; height:100%; width:0.3rem; background-color:var(--p-action-primary); border-top-right-radius:var(--p-border-radius-base); border-bottom-right-radius:var(--p-border-radius-base); }\n\n.Polaris-Navigation__Item--selected::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Navigation__Item--selected:hover, .Polaris-Navigation__Item--selected.Polaris-Navigation--keyFocused{ background-color:var(--p-background-hovered); color:var(--p-text-primary-hovered); }\n\n.Polaris-Navigation__Item--selected .Polaris-Navigation--keyFocused::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Navigation__Item--selected:active, .Polaris-Navigation__Item--selected:active:hover{ color:var(--p-text-primary); background-color:var(--p-background-pressed); }\n\n.Polaris-Navigation__Item--selected:active::after, .Polaris-Navigation__Item--selected:active:hover::after{ content:none; }\n\n.Polaris-Navigation__Item--disabled{ color:var(--p-text-disabled); pointer-events:none; opacity:0.6; }\n\n.Polaris-Navigation__Item--disabled .Polaris-Navigation__Icon{ opacity:0.6; }\n\n.Polaris-Navigation__Badge{ margin-left:0.8rem; display:inline-flex; margin-top:0.8rem; }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__Badge{ margin-top:0.4rem; } }\n\n.Polaris-Navigation__Icon{ flex-shrink:0; align-self:flex-start; width:2rem; height:2rem; margin-top:1rem; margin-right:1.6rem; margin-bottom:1rem; }\n\n.Polaris-Navigation__Icon svg{ fill:var(--p-icon); color:transparent; }\n\n.Polaris-Navigation__Icon img{ filter:brightness(0) saturate(100%) invert(36%) sepia(13%) saturate(137%) hue-rotate(169deg) brightness(95%) contrast(87%); }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__Icon{ margin-top:0.6rem; margin-right:1.6rem; margin-bottom:0.6rem; } }\n\n.Polaris-Navigation__Item:hover .Polaris-Navigation__Icon svg, .Polaris-Navigation__Item.Polaris-Navigation--keyFocused .Polaris-Navigation__Icon svg{ fill:var(--p-icon); color:transparent; }\n\n.Polaris-Navigation__Item:hover .Polaris-Navigation__Icon img, .Polaris-Navigation__Item.Polaris-Navigation--keyFocused .Polaris-Navigation__Icon img{ filter:brightness(0) saturate(100%) invert(36%) sepia(13%) saturate(137%) hue-rotate(169deg) brightness(95%) contrast(87%); }\n\n.Polaris-Navigation__Item--selected .Polaris-Navigation__Icon svg, .Polaris-Navigation__Item--selected:hover .Polaris-Navigation__Icon svg, .Polaris-Navigation--subNavigationActive .Polaris-Navigation__Icon svg, .Polaris-Navigation--subNavigationActive:hover .Polaris-Navigation__Icon svg, .Polaris-Navigation__Item--selected.Polaris-Navigation--keyFocused .Polaris-Navigation__Icon svg{ fill:var(--p-action-primary); color:transparent; }\n\n.Polaris-Navigation__Item--selected .Polaris-Navigation__Icon img, .Polaris-Navigation__Item--selected:hover .Polaris-Navigation__Icon img, .Polaris-Navigation--subNavigationActive .Polaris-Navigation__Icon img, .Polaris-Navigation--subNavigationActive:hover .Polaris-Navigation__Icon img, .Polaris-Navigation__Item--selected.Polaris-Navigation--keyFocused .Polaris-Navigation__Icon img{ filter:brightness(0) saturate(100%) invert(20%) sepia(59%) saturate(5557%) hue-rotate(162deg) brightness(95%) contrast(101%); }\n\n.Polaris-Navigation__Icon svg{ display:block; }\n\n.Polaris-Navigation__ListItem{ position:relative; display:flex; flex-wrap:wrap; }\n\n.Polaris-Navigation__RollupSection .Polaris-Navigation__ListItem, .Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__ListItem{ opacity:1; }\n\n.Polaris-Navigation__ListItem:nth-child(1){ animation-delay:0ms; }\n\n.Polaris-Navigation__ListItem:nth-child(2){ animation-delay:50ms; }\n\n.Polaris-Navigation__ListItem:nth-child(3){ animation-delay:100ms; }\n\n.Polaris-Navigation__ListItem:nth-child(4){ animation-delay:150ms; }\n\n.Polaris-Navigation__ListItem:nth-child(5){ animation-delay:200ms; }\n\n.Polaris-Navigation__ListItem:nth-child(6){ animation-delay:250ms; }\n\n.Polaris-Navigation__ListItem:nth-child(7){ animation-delay:300ms; }\n\n.Polaris-Navigation__ListItem:nth-child(8){ animation-delay:350ms; }\n\n.Polaris-Navigation__ListItem:nth-child(9){ animation-delay:400ms; }\n\n.Polaris-Navigation__ListItem:nth-child(10){ animation-delay:450ms; }\n\n.Polaris-Navigation__ListItem:nth-child(11){ animation-delay:500ms; }\n\n.Polaris-Navigation__ListItem:nth-child(12){ animation-delay:550ms; }\n\n.Polaris-Navigation__ListItem:not(:first-child) .Polaris-Navigation__Item{ border-top:1px solid var(--p-background); }\n\n.Polaris-Navigation__ListItem--hasAction .Polaris-Navigation__Item{ max-width:calc(100% - 5.6rem); }\n\n.Polaris-Navigation__ItemWrapper{ display:flex; flex-wrap:nowrap; width:100%; }\n\n.Polaris-Navigation__Text{ flex:1 1 auto; margin-top:1rem; margin-bottom:1rem; line-height:2rem; font-size:1.4rem; }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__Text{ margin-top:0.6rem; margin-bottom:0.6rem; } }\n\n@media (max-width: 48.0625em){ .Polaris-Navigation__Text{ font-size:1.5rem; line-height:1.9rem; } }\n\n.Polaris-Navigation__SecondaryAction{ display:flex; align-items:center; height:4rem; margin-right:0.4rem; padding:0.4rem 1.6rem; border-radius:var(--p-border-radius-base); position:relative; }\n\n.Polaris-Navigation__SecondaryAction svg{ fill:var(--p-icon); }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__SecondaryAction{ height:3.2rem; } }\n\n.Polaris-Navigation__SecondaryAction:hover, .Polaris-Navigation__SecondaryAction:focus, .Polaris-Navigation__SecondaryAction:active{ background:var(--p-background-hovered); }\n\n.Polaris-Navigation__SecondaryAction:hover svg, .Polaris-Navigation__SecondaryAction:focus svg, .Polaris-Navigation__SecondaryAction:active svg{ fill:var(--p-icon-hovered); color:var(--p-override-transparent); }\n\n.Polaris-Navigation__SecondaryAction:hover img, .Polaris-Navigation__SecondaryAction:focus img, .Polaris-Navigation__SecondaryAction:active img{ filter:brightness(0) saturate(100%) invert(20%) sepia(59%) saturate(5557%) hue-rotate(162deg) brightness(95%) contrast(101%); }\n\n@media (-ms-high-contrast: active){ .Polaris-Navigation__SecondaryAction:hover svg, .Polaris-Navigation__SecondaryAction:focus svg, .Polaris-Navigation__SecondaryAction:active svg{ fill:white; }\n  .Polaris-Navigation__SecondaryAction:hover img, .Polaris-Navigation__SecondaryAction:focus img, .Polaris-Navigation__SecondaryAction:active img{ filter:brightness(0) saturate(100%) invert(100%); } }\n\n.Polaris-Navigation__SecondaryAction::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Navigation__SecondaryAction:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Navigation__SecondaryAction:active{ background:var(--p-background-pressed); }\n\n.Polaris-Navigation__SecondaryAction:active::after{ content:none; }\n\n.Polaris-Navigation__SecondaryAction:active svg{ fill:var(--p-icon-pressed); }\n\n.Polaris-Navigation__SecondaryAction:focus, .Polaris-Navigation__SecondaryAction:active{ outline:none; }\n\n.Polaris-Navigation__SecondaryNavigation{ flex-basis:100%; margin-left:0; overflow-x:visible; }\n\n.Polaris-Navigation__SecondaryNavigation.Polaris-Navigation--isExpanded{ margin-bottom:0.8rem; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__List{ margin:0; padding:0; list-style:none; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item{ font-size:1.5rem; font-weight:500; line-height:4rem; color:var(--p-text-subdued); padding-left:4.8rem; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item:hover{ color:var(--p-text-subdued); }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item.Polaris-Navigation--keyFocused{ color:var(--p-text); }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item.Polaris-Navigation--keyFocused::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item:active::after, .Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item:active:hover::after{ content:none; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item:active{ color:var(--p-text-primary); }\n\n@media (min-width: 48.0625em){ .Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item{ font-size:1.4rem; line-height:2.8rem; } }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Text{ margin-top:0.6rem; margin-bottom:0.6rem; line-height:2rem; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item--selected{ color:var(--p-text-primary); position:relative; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item--selected::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item--selected:hover{ color:var(--p-text-primary-hovered); }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item--selected.Polaris-Navigation--keyFocused{ color:var(--p-text-primary); }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item--selected:active{ color:var(--p-text-primary); }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item--selected:active::after{ content:none; }\n\n.Polaris-Navigation__SecondaryNavigation .Polaris-Navigation__Item--disabled{ font-weight:500; color:var(--p-text-disabled); }\n\n.Polaris-Navigation__SecondaryNavigation--noIcon{ margin-left:1.6rem; }\n\n.Polaris-Navigation__Section{ margin:0; padding:0; list-style:none; flex:0 0 auto; padding:1.6rem 0; padding-top:0; padding-left:0px; padding-left:calc(constant(safe-area-inset-left)); padding-left:calc(env(safe-area-inset-left)); }\n\n.Polaris-Navigation__Section + .Polaris-Navigation__Section{ padding-top:0.4rem; padding-bottom:1.6rem; }\n\n.Polaris-Navigation__Section--fill{ flex:1 0 auto; }\n\n.Polaris-Navigation__Section--withSeparator{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-Navigation__SectionHeading{ font-size:1.3rem; font-weight:600; line-height:1.6rem; text-transform:uppercase; display:flex; align-items:center; padding-left:1.6rem; }\n\n@media (min-width: 40em){ .Polaris-Navigation__SectionHeading{ font-size:1.2rem; } }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Text{ font-size:1.3rem; color:var(--p-text-subdued); }\n\n@media (min-width: 40em){ .Polaris-Navigation__SectionHeading .Polaris-Navigation__Text{ font-size:1.2rem; } }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; display:flex; align-items:center; margin-right:0.4rem; padding:0.4rem 1.6rem; border-radius:var(--p-border-radius-base); position:relative; }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus{ outline:none; }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action svg{ fill:var(--p-icon); }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:hover, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus{ background:var(--p-background-hovered); }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:hover svg, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus svg{ fill:var(--p-icon-hovered); color:var(--p-override-transparent); }\n\n@media (-ms-high-contrast: active){ .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:hover svg, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus svg{ fill:white; }\n  .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:hover img, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus img{ filter:brightness(0) saturate(100%) invert(100%); } }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:hover img{ filter:brightness(0) saturate(100%) invert(20%) sepia(59%) saturate(5557%) hue-rotate(162deg) brightness(95%) contrast(101%); }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus:hover svg{ fill:var(--p-icon-hovered); }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:active, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:active:hover{ background:var(--p-background-pressed); }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:active svg, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:active:hover svg{ fill:var(--p-icon-pressed); }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:active::after, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:active:hover::after{ content:none; }\n\n.Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:focus, .Polaris-Navigation__SectionHeading .Polaris-Navigation__Action:active{ outline:none; }\n\n.Polaris-Navigation__RollupToggle{ font-weight:400; color:var(--p-text); color:var(--p-text-subdued); }\n\n.Polaris-Navigation__RollupToggle:hover{ color:var(--p-text-primary); }\n\n.Polaris-Navigation__RollupToggle:hover svg{ fill:var(--p-action-primary); }\n\n.Polaris-Navigation__RollupToggle:hover img{ filter:brightness(0) saturate(100%) invert(20%) sepia(59%) saturate(5557%) hue-rotate(162deg) brightness(95%) contrast(101%); }\n\n.Polaris-Navigation__RollupToggle:focus{ outline:none; }\n\n.Polaris-Navigation__RollupToggle:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Navigation__List{ margin:0; padding:0; list-style:none; }\n\n.Polaris-Navigation__Indicator{ position:relative; display:inline-block; height:1rem; width:1rem; }\n\n.Polaris-Navigation__SecondaryNavigation--noIcon .Polaris-Navigation__Item{ padding-left:1.2rem; }\n\n\n.Polaris-Tooltip-TooltipOverlay{ margin:0.4rem 1.6rem 1.6rem; opacity:1; box-shadow:var(--p-popover-shadow); border-radius:var(--p-border-radius-base); pointer-events:none; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity, left, top; transition:opacity 200ms cubic-bezier(0.36, 0, 1, 1) 100ms; }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-Tooltip-TooltipOverlay{ border:0.2rem solid windowText; } }\n\n.Polaris-Tooltip-TooltipOverlay--measuring{ opacity:0; }\n\n.Polaris-Tooltip-TooltipOverlay--positionedAbove{ margin:1.6rem 1.6rem 0.4rem; }\n\n.Polaris-Tooltip-TooltipOverlay__Content{ position:relative; border-radius:3px; background-color:var(--p-surface); color:var(--p-text); max-width:20rem; padding:0.4rem 0.8rem; word-break:break-word; }\n\n[data-polaris-tooltip-activator]{ outline:0; position:relative; }\n\n[data-polaris-tooltip-activator]::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n[data-polaris-tooltip-activator]:focus-visible::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n[data-polaris-tooltip-activator][data-focus-visible-added]::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n\n.Polaris-Header-Title{ word-wrap:break-word; word-break:break-word; overflow-wrap:break-word; font-weight:600; font-size:2.4rem; line-height:2.8rem; }\n\n@media (min-width: 40em){ .Polaris-Header-Title{ font-size:2rem; } }\n\n.Polaris-Header-Title__SubTitle{ margin-top:0.8rem; color:var(--p-text-subdued); }\n\n.Polaris-Header-Title--hasThumbnail{ display:grid; grid-gap:1.6rem; grid-template-columns:auto 1fr; }\n\n.Polaris-Header-Title--hasThumbnail .Polaris-Header-Title__TitleAndSubtitleWrapper{ display:flex; flex-direction:column; justify-content:center; }\n\n.Polaris-Header-Title__TitleWithMetadataWrapper{ display:flex; flex-wrap:wrap; align-items:center; }\n\n.Polaris-Header-Title__TitleWithMetadataWrapper .Polaris-Header-Title{ display:inline; margin-right:0.8rem; }\n\n.Polaris-Header-Title__TitleWithMetadataWrapper .Polaris-Header-Title > *{ display:inline; }\n\n.Polaris-Header-Title__TitleWithMetadataWrapper .Polaris-Header-Title__TitleMetadata{ margin-top:0; vertical-align:bottom; }\n\n\n.Polaris-Page-Header{ padding:1.6rem 1.6rem 0; position:relative; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Page-Header{ padding-left:0; padding-right:0; } }\n\n@media (min-width: 30.625em){ .Polaris-Page-Header{ padding-left:0; padding-right:0; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-Page-Header{ padding-top:1.6rem; } }\n\n@media (min-width: 46.5em){ .Polaris-Page-Header{ padding-top:1.6rem; } }\n\n.Polaris-Page-Header--titleHidden{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n.Polaris-Page-Header__TitleWrapper{ grid-area:title; margin-top:0.4rem; align-self:center; flex:1 1 auto; }\n\n@media (min-width: 29.25em){ .Polaris-Page-Header__TitleWrapper{ margin-top:0; } }\n\n.Polaris-Page-Header__Navigation{ display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem; }\n\n.Polaris-Page-Header--hasActionMenu.Polaris-Page-Header--mobileView .Polaris-Page-Header__Navigation{ padding-right:4rem; }\n\n@media print{ .Polaris-Page-Header__Navigation{ display:none !important; } }\n\n.Polaris-Page-Header__BreadcrumbWrapper{ flex:0 0 auto; grid-area:breadcrumbs; max-width:100%; margin-right:1.6rem; }\n\n@media print{ .Polaris-Page-Header__BreadcrumbWrapper{ display:none !important; } }\n\n.Polaris-Page-Header__PaginationWrapper{ flex:0 0 auto; display:flex; justify-content:flex-end; margin-left:0.4rem; line-height:1; }\n\n.Polaris-Page-Header__PaginationWrapper button{ border:1px solid var(--p-border-neutral-subdued) !important; box-shadow:none !important; }\n\n.Polaris-Page-Header__PaginationWrapper button:hover, .Polaris-Page-Header__PaginationWrapper button:active, .Polaris-Page-Header__PaginationWrapper button:focus{ border:1px solid var(--p-border-neutral-subdued) !important; }\n\n@media print{ .Polaris-Page-Header__PaginationWrapper{ display:none !important; } }\n\n.Polaris-Page-Header__AdditionalNavigationWrapper{ display:flex; flex:1 0 auto; justify-content:flex-end; }\n\n@media print{ .Polaris-Page-Header__AdditionalNavigationWrapper{ display:none !important; } }\n\n.Polaris-Page-Header:not(.Polaris-Page-Header--mobileView) .Polaris-Page-Header__MainContent{ display:flex; align-items:center; }\n\n.Polaris-Page-Header__TitleActionMenuWrapper{ flex:1 1 auto; }\n\n.Polaris-Page-Header:not(.Polaris-Page-Header--mobileView) .Polaris-Page-Header__TitleActionMenuWrapper{ padding-right:2rem; }\n\n.Polaris-Page-Header--hasActionMenu.Polaris-Page-Header--mobileView:not(.Polaris-Page-Header--hasNavigation) .Polaris-Page-Header__TitleActionMenuWrapper{ padding-right:4rem; }\n\n.Polaris-Page-Header__PrimaryActionWrapper{ flex:0 0 auto; margin-top:0; margin-left:0.4rem; }\n\n@media (min-width: 48em){ .Polaris-Page-Header__PrimaryActionWrapper{ margin-left:1.6rem; } }\n\n@media print{ .Polaris-Page-Header__PrimaryActionWrapper{ display:none !important; } }\n\n.Polaris-Page-Header__ActionMenuWrapper{ margin-top:0; }\n\n.Polaris-Page-Header--mobileView .Polaris-Page-Header__ActionMenuWrapper{ position:absolute; top:2.9rem; right:2rem; margin-top:0; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Page-Header--mobileView .Polaris-Page-Header__ActionMenuWrapper{ right:-0.8rem; } }\n\n@media (min-width: 30.625em){ .Polaris-Page-Header--mobileView .Polaris-Page-Header__ActionMenuWrapper{ right:-0.8rem; } }\n\n.Polaris-Page-Header--mobileView.Polaris-Page-Header--hasNavigation .Polaris-Page-Header__ActionMenuWrapper{ top:1.8rem; }\n\n@media print{ .Polaris-Page-Header__ActionMenuWrapper{ display:none !important; } }\n\n.Polaris-Page-Header__Row{ display:flex; justify-content:space-between; }\n\n.Polaris-Page-Header__Row + .Polaris-Page-Header__Row{ margin-top:0.4rem; }\n\n.Polaris-Page-Header--mobileView .Polaris-Page-Header__Row + .Polaris-Page-Header__Row{ margin-top:0.8rem; }\n\n.Polaris-Page-Header__Row + .Polaris-Page-Header__Row .Polaris-Page-Header__RightAlign{ margin-left:0; }\n\n.Polaris-Page-Header__LeftAlign{ display:flex; align-content:flex-start; align-items:center; }\n\n.Polaris-Page-Header__RightAlign{ grid-area:actions; display:flex; align-content:flex-end; flex:1 1 auto; align-items:flex-start; justify-content:flex-end; margin-left:1.6rem; white-space:nowrap; }\n\n@media (max-width: 29.25em){ .Polaris-Page-Header--noBreadcrumbs .Polaris-Page-Header__RightAlign{ margin-left:0; } }\n\n@media (min-width: 29.25em){ .Polaris-Page-Header__AdditionalMetaData{ margin-left:5.2rem; } }\n\n.Polaris-Page-Header--noBreadcrumbs .Polaris-Page-Header__AdditionalMetaData{ margin-left:0; }\n\n@media print{ .Polaris-Page-Header__AdditionalMetaData{ margin-left:0 !important; } }\n\n.Polaris-Page-Header__Actions{ width:100%; display:flex; align-items:center; justify-content:flex-end; text-align:right; }\n\n@media (max-width: 67.5em){ .Polaris-Page-Header--longTitle .Polaris-Page-Header__AdditionalMetaData{ margin-left:0; }\n  .Polaris-Page-Header--longTitle .Polaris-Page-Header__Row{ display:grid; gap:0.8rem 1.6rem; grid-template-columns:auto 1fr; grid-template-areas:'breadcrumbs actions' 'title title'; }\n  .Polaris-Page-Header--longTitle .Polaris-Page-Header__Row + .Polaris-Page-Header__Row{ gap:0; } }\n\n@media (max-width: 53.75em){ .Polaris-Page-Header--mediumTitle:not(.Polaris-Page-Header--noBreadcrumbs) .Polaris-Page-Header__AdditionalMetaData{ margin-left:0; }\n  .Polaris-Page-Header--mediumTitle:not(.Polaris-Page-Header--noBreadcrumbs) .Polaris-Page-Header__Row{ display:grid; gap:0.8rem 1.6rem; grid-template-columns:auto 1fr; grid-template-areas:'breadcrumbs actions' 'title title'; }\n  .Polaris-Page-Header--mediumTitle:not(.Polaris-Page-Header--noBreadcrumbs) .Polaris-Page-Header__Row + .Polaris-Page-Header__Row{ gap:0; } }\n\n.Polaris-Page-Header--mediumTitle.Polaris-Page-Header--noBreadcrumbs .Polaris-Page-Header__TitleWrapper{ margin-top:0; }\n\n.Polaris-Page-Header--mediumTitle.Polaris-Page-Header--noBreadcrumbs .Polaris-Page-Header__RightAlign{ margin-bottom:0.4rem; }\n\n.Polaris-Page-Header--mediumTitle.Polaris-Page-Header--noBreadcrumbs .Polaris-Page-Header__Row{ flex-wrap:wrap-reverse; }\n\n@media (min-width: 48.0625em){ .Polaris-Page-Header--mediumTitle.Polaris-Page-Header--noBreadcrumbs .Polaris-Page-Header__Row{ flex-wrap:nowrap; } }\n\n.Polaris-Page-Header--isSingleRow .Polaris-Page-Header__Row{ gap:0; }\n\n\nhtml, body{ min-height:100%; height:100%; }\n\n.Polaris-Page{ margin:0 auto; padding:0; max-width:99.8rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-Page{ padding:0 2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-Page{ padding:0 2rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-Page{ padding:0 3.2rem; } }\n\n@media (min-width: 46.5em){ .Polaris-Page{ padding:0 3.2rem; } }\n\n.Polaris-Page::after{ content:''; display:table; }\n\n.Polaris-Page--fullWidth{ max-width:none; }\n\n.Polaris-Page--narrowWidth{ max-width:66.2rem; }\n\n.Polaris-Page__Content{ margin:1.6rem 0; }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-Page__Content{ margin-top:1.6rem; } }\n\n@media (min-width: 46.5em){ .Polaris-Page__Content{ margin-top:1.6rem; } }\n\n.Polaris-Page--divider{ border-top:0.1rem solid var(--p-border-subdued); padding-top:1.6rem; }\n\n\n.Polaris-PageActions{ margin:0 auto; padding:2rem; border-top:0.1rem solid var(--p-divider); }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-PageActions{ padding:2rem 0; } }\n\n@media (min-width: 30.625em){ .Polaris-PageActions{ padding:2rem 0; } }\n\n\n@keyframes Polaris-ProgressBar--fillup{ 0%{ width:0; } }\n\n.Polaris-ProgressBar{ overflow:hidden; width:100%; background-color:var(--p-progressbar-background); border-radius:var(--p-border-radius-base); }\n\n@media (forced-colors: active){ .Polaris-ProgressBar{ border:0.1rem solid transparent; } }\n\n.Polaris-ProgressBar--sizeSmall{ height:0.8rem; }\n\n.Polaris-ProgressBar--sizeMedium{ height:1.6rem; }\n\n.Polaris-ProgressBar--sizeLarge{ height:3.2rem; }\n\n.Polaris-ProgressBar--colorHighlight{ --p-progressbar-background:var(--p-surface-neutral); --p-progressbar-indicator:var(--p-border-highlight); }\n\n.Polaris-ProgressBar--colorPrimary{ --p-progressbar-background:var(--p-surface-neutral); --p-progressbar-indicator:var(--p-action-primary); }\n\n.Polaris-ProgressBar--colorSuccess{ --p-progressbar-background:var(--p-surface-neutral); --p-progressbar-indicator:var(--p-border-success); }\n\n.Polaris-ProgressBar__Indicator{ height:inherit; width:0; background-color:var(--p-progressbar-indicator); }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-ProgressBar__Indicator{ border:1.6rem solid highlight; } }\n\n.Polaris-ProgressBar__Animated{ -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:width; animation:Polaris-ProgressBar--fillup 500ms cubic-bezier(0.64, 0, 0.35, 1); transition:width 500ms cubic-bezier(0.64, 0, 0.35, 1); }\n\n.Polaris-ProgressBar__Progress, .Polaris-ProgressBar__Label{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n\n\n.Polaris-RangeSlider-DualThumb__Wrapper{ position:relative; width:100%; display:flex; align-items:center; }\n\n.Polaris-RangeSlider-DualThumb__TrackWrapper{ position:relative; display:flex; align-items:center; width:100%; min-height:2.8rem; cursor:pointer; }\n\n.Polaris-RangeSlider-DualThumb__TrackWrapper.Polaris-RangeSlider-DualThumb--disabled{ opacity:0.8; cursor:not-allowed; }\n\n.Polaris-RangeSlider-DualThumb__Track{ position:absolute; z-index:1; width:100%; height:0.4rem; border-radius:var(--p-range-slider-thumb-size-base); --unselected-range:var(--p-override-transparent); --selected-range:var(--p-interactive); --gradient-colors:var(--unselected-range) 0%,\n    var(--unselected-range) var(--Polaris-RangeSlider-progress-lower),\n    var(--selected-range) var(--Polaris-RangeSlider-progress-lower),\n    var(--selected-range) var(--Polaris-RangeSlider-progress-upper),\n    var(--unselected-range) var(--Polaris-RangeSlider-progress-upper),\n    var(--unselected-range) 100%; background-image:linear-gradient(to right, var(--gradient-colors)); }\n\n.Polaris-RangeSlider-DualThumb--error .Polaris-RangeSlider-DualThumb__Track{ --selected-range:var(--p-action-critical); --gradient-colors:var(--unselected-range) 0%,\n      var(--unselected-range) var(--Polaris-RangeSlider-progress-lower),\n      var(--selected-range) var(--Polaris-RangeSlider-progress-lower),\n      var(--selected-range) var(--Polaris-RangeSlider-progress-upper),\n      var(--unselected-range) var(--Polaris-RangeSlider-progress-upper),\n      var(--unselected-range) 100%; background-image:linear-gradient(to right, var(--gradient-colors)); }\n\n.Polaris-RangeSlider-DualThumb--disabled .Polaris-RangeSlider-DualThumb__Track{ background:var(--p-border-disabled) none; }\n\n.Polaris-RangeSlider-DualThumb--trackDashed{ content:''; position:absolute; height:0.4rem; width:100%; background-image:linear-gradient(to right, var(--p-border), var(--p-border) 50%, transparent 50%, transparent 100%); background-size:0.4rem 0.4rem; border-radius:var(--p-border-radius-base); border-right:var(--p-border-radius-base) var(--p-border) solid; }\n\n.Polaris-RangeSlider-DualThumb__Thumbs{ position:relative; position:absolute; z-index:10; padding:0; width:var(--p-range-slider-thumb-size-base); height:var(--p-range-slider-thumb-size-base); border-radius:50%; border:0.1rem solid var(--p-interactive); background:linear-gradient(var(--p-interactive), var(--p-interactive)); -webkit-tap-highlight-color:transparent; cursor:-webkit-grab; transition:transform var(--p-duration-1-5-0) var(--p-ease); }\n\n.Polaris-RangeSlider-DualThumb__Thumbs::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-wide) + 0.1rem); }\n\n.Polaris-RangeSlider-DualThumb__Thumbs.Polaris-RangeSlider-DualThumb--disabled{ cursor:not-allowed; border-color:var(--p-border-disabled); background:var(--p-border-disabled); }\n\n.Polaris-RangeSlider-DualThumb__Thumbs:active{ transform:scale(var(--p-range-slider-thumb-scale)); }\n\n.Polaris-RangeSlider-DualThumb__Thumbs:focus{ outline:0; }\n\n.Polaris-RangeSlider-DualThumb__Thumbs:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-RangeSlider-DualThumb--error .Polaris-RangeSlider-DualThumb__Thumbs{ border-color:var(--p-action-critical); background:linear-gradient(var(--p-action-critical), var(--p-action-critical)); }\n\n.Polaris-RangeSlider-DualThumb__Prefix{ flex:0 0 auto; margin-right:0.8rem; }\n\n.Polaris-RangeSlider-DualThumb__Suffix{ flex:0 0 auto; margin-left:0.8rem; }\n\n.Polaris-RangeSlider-DualThumb__Output{ position:absolute; z-index:20; bottom:var(--p-range-slider-thumb-size-active); opacity:0; visibility:hidden; pointer-events:none; transition-property:opacity, visibility, bottom; transition-duration:var(--p-duration-1-5-0); transition-timing-function:var(--p-ease); transform:translateX(calc(-50% + var(--p-range-slider-thumb-size-base)/2)); }\n\n.Polaris-RangeSlider-DualThumb__Thumbs:hover + .Polaris-RangeSlider-DualThumb__Output, .Polaris-RangeSlider-DualThumb__Thumbs:focus + .Polaris-RangeSlider-DualThumb__Output{ opacity:var(--p-override-zero); }\n\n.Polaris-RangeSlider-DualThumb__Thumbs:active + .Polaris-RangeSlider-DualThumb__Output{ opacity:1; visibility:visible; bottom:calc(var(--p-range-slider-thumb-size-active) + var(--p-range-slider-thumb-size-active) - var(--p-range-slider-thumb-size-base)); }\n\n.Polaris-RangeSlider-DualThumb__OutputBubble{ position:relative; display:flex; padding:0 0.8rem; min-width:3.2rem; height:3.2rem; background-color:var(--p-surface); box-shadow:var(--p-popover-shadow); border-radius:3px; transition-property:transform; transition-duration:var(--p-duration-1-5-0); transition-timing-function:var(--p-ease); }\n\n.Polaris-RangeSlider-DualThumb__Thumbs:hover + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble, .Polaris-RangeSlider-DualThumb__Thumbs:active + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble, .Polaris-RangeSlider-DualThumb__Thumbs:focus + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble{ transform:translateY(-1.6rem); }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-RangeSlider-DualThumb__Thumbs:hover + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble, [data-has-navigation] .Polaris-RangeSlider-DualThumb__Thumbs:active + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble, [data-has-navigation] .Polaris-RangeSlider-DualThumb__Thumbs:focus + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble{ transform:translateY(-0.8rem); } }\n\n@media (min-width: 46.5em){ .Polaris-RangeSlider-DualThumb__Thumbs:hover + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble, .Polaris-RangeSlider-DualThumb__Thumbs:active + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble, .Polaris-RangeSlider-DualThumb__Thumbs:focus + .Polaris-RangeSlider-DualThumb__Output .Polaris-RangeSlider-DualThumb__OutputBubble{ transform:translateY(-0.8rem); } }\n\n.Polaris-RangeSlider-DualThumb__OutputText{ font-size:1.3rem; font-weight:600; line-height:1.6rem; text-transform:uppercase; display:block; flex:1 1 auto; margin:auto; text-align:center; color:var(--p-text); }\n\n@media (min-width: 40em){ .Polaris-RangeSlider-DualThumb__OutputText{ font-size:1.2rem; } }\n\n\n.Polaris-RangeSlider-SingleThumb{ display:flex; align-items:center; }\n\n.Polaris-RangeSlider-SingleThumb.Polaris-RangeSlider-SingleThumb--disabled{ opacity:0.8; }\n\n.Polaris-RangeSlider-SingleThumb__InputWrapper{ position:relative; display:flex; align-items:center; flex:1 1 auto; height:var(--p-range-slider-thumb-size-base); }\n\n.Polaris-RangeSlider-SingleThumb__InputWrapper input{ padding:1.2rem 0; background-color:transparent; cursor:pointer; }\n\n.Polaris-RangeSlider-SingleThumb__InputWrapper::after{ content:''; position:absolute; height:0.4rem; width:100%; background-image:linear-gradient(to right, var(--p-border), var(--p-border) 50%, transparent 50%, transparent 100%); background-size:0.4rem 0.4rem; border-radius:var(--p-border-radius-base); border-right:var(--p-border-radius-base) var(--p-border) solid; }\n\n.Polaris-RangeSlider-SingleThumb--disabled input{ cursor:not-allowed; }\n\n.Polaris-RangeSlider-SingleThumb__Prefix{ flex:0 0 auto; margin-right:0.8rem; }\n\n.Polaris-RangeSlider-SingleThumb__Suffix{ flex:0 0 auto; margin-left:0.8rem; }\n\n.Polaris-RangeSlider-SingleThumb__Input{ --progress-lower:var(--p-interactive); --progress-upper:var(--p-override-transparent); --gradient-colors:var(--progress-lower, transparent) 0%,\n    var(--progress-lower, transparent) var(--Polaris-RangeSlider-progress, 0%),\n    var(--progress-upper, transparent) var(--Polaris-RangeSlider-progress, 100%),\n    var(--progress-upper, transparent) 100%; margin:0; padding:0; width:100%; background-color:transparent; -webkit-appearance:none; appearance:none; position:relative; z-index:10; flex:1 1 auto; }\n\n.Polaris-RangeSlider-SingleThumb__Input::-ms-tooltip{ display:none; }\n\n.Polaris-RangeSlider-SingleThumb__Input:focus{ outline:0; }\n\n.Polaris-RangeSlider-SingleThumb__Input::-moz-focus-outer{ border:0; }\n\n.Polaris-RangeSlider-SingleThumb__Input::-ms-track{ outline:0.1rem solid transparent; cursor:pointer; width:100%; height:0.4rem; background-image:linear-gradient(to right, var(--gradient-colors)); border:none; border-radius:0.4rem; }\n\n.Polaris-RangeSlider-SingleThumb__Input::-moz-range-track{ cursor:pointer; width:100%; height:0.4rem; background-image:linear-gradient(to right, var(--gradient-colors)); border:none; border-radius:0.4rem; }\n\n.Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-runnable-track{ cursor:pointer; width:100%; height:0.4rem; background-image:linear-gradient(to right, var(--gradient-colors)); border:none; border-radius:0.4rem; }\n\n.Polaris-RangeSlider-SingleThumb__Input::-ms-thumb{ cursor:-webkit-grab; width:var(--p-range-slider-thumb-size-base); height:var(--p-range-slider-thumb-size-base); border:1px solid transparent; border-radius:50%; background:linear-gradient(var(--p-interactive), var(--p-interactive)); box-shadow:0 0 0 0 var(--p-focused); appearance:none; -ms-transition:box-shadow 100ms var(--p-ease); transition:box-shadow 100ms var(--p-ease); -ms-transition-property:border-color, box-shadow, transform; transition-property:border-color, box-shadow, transform; transition-duration:200ms; transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); margin-top:calc(-1*(var(--p-range-slider-thumb-size-base) - 0.4rem)/2); }\n\n.Polaris-RangeSlider-SingleThumb__Input::-ms-thumb:hover{ background:linear-gradient(var(--p-interactive), var(--p-interactive)); }\n\n.Polaris-RangeSlider-SingleThumb__Input::-moz-range-thumb{ cursor:-webkit-grab; width:var(--p-range-slider-thumb-size-base); height:var(--p-range-slider-thumb-size-base); border:1px solid transparent; border-radius:50%; background:linear-gradient(var(--p-interactive), var(--p-interactive)); box-shadow:0 0 0 0 var(--p-focused); appearance:none; -moz-transition:box-shadow 100ms var(--p-ease); transition:box-shadow 100ms var(--p-ease); -moz-transition-property:border-color, box-shadow, transform; transition-property:border-color, box-shadow, transform; transition-duration:200ms; transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); margin-top:calc(-1*(var(--p-range-slider-thumb-size-base) - 0.4rem)/2); }\n\n.Polaris-RangeSlider-SingleThumb__Input::-moz-range-thumb:hover{ background:linear-gradient(var(--p-interactive), var(--p-interactive)); }\n\n.Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-thumb{ cursor:-webkit-grab; width:var(--p-range-slider-thumb-size-base); height:var(--p-range-slider-thumb-size-base); border:1px solid transparent; border-radius:50%; background:linear-gradient(var(--p-interactive), var(--p-interactive)); box-shadow:0 0 0 0 var(--p-focused); -webkit-appearance:none; appearance:none; -webkit-transition:box-shadow 100ms var(--p-ease); transition:box-shadow 100ms var(--p-ease); -webkit-transition-property:border-color, box-shadow, transform; transition-property:border-color, box-shadow, transform; transition-duration:200ms; transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); margin-top:calc(-1*(var(--p-range-slider-thumb-size-base) - 0.4rem)/2); }\n\n.Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-thumb:hover{ background:linear-gradient(var(--p-interactive), var(--p-interactive)); }\n\n.Polaris-RangeSlider-SingleThumb__Input::-ms-thumb{ margin-top:0; transform:translateY(var(--p-range-slider-thumb-size-base)/5) scale(0.4); }\n\n.Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-thumb{ margin-top:-var(--p-range-slider-thumb-size-base)-0.4rem/2; }\n\n.Polaris-RangeSlider-SingleThumb__Input:active::-ms-thumb{ transform:scale(var(--p-range-slider-thumb-scale)); }\n\n.Polaris-RangeSlider-SingleThumb__Input:active::-moz-range-thumb{ transform:scale(var(--p-range-slider-thumb-scale)); }\n\n.Polaris-RangeSlider-SingleThumb__Input:active::-webkit-slider-thumb{ transform:scale(var(--p-range-slider-thumb-scale)); }\n\n.Polaris-RangeSlider-SingleThumb__Input:focus{ outline:0.1rem solid transparent; }\n\n.Polaris-RangeSlider-SingleThumb__Input:focus::-ms-thumb{ border-color:var(--p-surface); box-shadow:0 0 0 0.2rem var(--p-focused); }\n\n.Polaris-RangeSlider-SingleThumb__Input:focus::-moz-range-thumb{ border-color:var(--p-surface); box-shadow:0 0 0 0.2rem var(--p-focused); }\n\n.Polaris-RangeSlider-SingleThumb__Input:focus::-webkit-slider-thumb{ border-color:var(--p-surface); box-shadow:0 0 0 0.2rem var(--p-focused); }\n\n.Polaris-RangeSlider-SingleThumb--error .Polaris-RangeSlider-SingleThumb__Input{ --progress-lower:var(--p-action-critical); }\n\n.Polaris-RangeSlider-SingleThumb--error .Polaris-RangeSlider-SingleThumb__Input::-ms-track{ outline:0.1rem solid transparent; background-color:var(--p-override-none); }\n\n.Polaris-RangeSlider-SingleThumb--error .Polaris-RangeSlider-SingleThumb__Input::-moz-range-track{ background-color:var(--p-override-none); }\n\n.Polaris-RangeSlider-SingleThumb--error .Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-runnable-track{ background-color:var(--p-override-none); }\n\n.Polaris-RangeSlider-SingleThumb--error .Polaris-RangeSlider-SingleThumb__Input::-ms-thumb{ border-color:var(--p-action-critical); background:var(--p-action-critical); }\n\n.Polaris-RangeSlider-SingleThumb--error .Polaris-RangeSlider-SingleThumb__Input::-moz-range-thumb{ border-color:var(--p-action-critical); background:var(--p-action-critical); }\n\n.Polaris-RangeSlider-SingleThumb--error .Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-thumb{ border-color:var(--p-action-critical); background:var(--p-action-critical); }\n\n.Polaris-RangeSlider-SingleThumb--disabled .Polaris-RangeSlider-SingleThumb__Input::-ms-track{ outline:0.1rem solid transparent; cursor:auto; background-image:none; background-color:var(--p-border-disabled); }\n\n.Polaris-RangeSlider-SingleThumb--disabled .Polaris-RangeSlider-SingleThumb__Input::-moz-range-track{ cursor:auto; background-image:none; background-color:var(--p-border-disabled); }\n\n.Polaris-RangeSlider-SingleThumb--disabled .Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-runnable-track{ cursor:auto; background-image:none; background-color:var(--p-border-disabled); }\n\n.Polaris-RangeSlider-SingleThumb--disabled .Polaris-RangeSlider-SingleThumb__Input::-ms-thumb{ cursor:not-allowed; border-color:var(--p-border-disabled); background:var(--p-border-disabled); }\n\n.Polaris-RangeSlider-SingleThumb--disabled .Polaris-RangeSlider-SingleThumb__Input::-moz-range-thumb{ cursor:not-allowed; border-color:var(--p-border-disabled); background:var(--p-border-disabled); }\n\n.Polaris-RangeSlider-SingleThumb--disabled .Polaris-RangeSlider-SingleThumb__Input::-webkit-slider-thumb{ cursor:not-allowed; border-color:var(--p-border-disabled); background:var(--p-border-disabled); }\n\n.Polaris-RangeSlider-SingleThumb__Output{ position:absolute; z-index:20; bottom:var(--p-range-slider-thumb-size-base); left:var(--Polaris-RangeSlider-progress); transform:translateX(calc(-50% + var(--Polaris-RangeSlider-output-factor)*var(--p-range-slider-thumb-size-base))); opacity:0; visibility:hidden; pointer-events:none; transition-property:opacity, visibility, bottom; transition-duration:200ms; transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); }\n\n.Polaris-RangeSlider-SingleThumb__Input:hover + .Polaris-RangeSlider-SingleThumb__Output, .Polaris-RangeSlider-SingleThumb__Input:focus + .Polaris-RangeSlider-SingleThumb__Output{ opacity:var(--p-override-zero); }\n\n.Polaris-RangeSlider-SingleThumb__Input:active + .Polaris-RangeSlider-SingleThumb__Output{ opacity:1; visibility:visible; bottom:calc(var(--p-range-slider-thumb-size-base) + var(--p-range-slider-thumb-size-active) - var(--p-range-slider-thumb-size-base)); }\n\n.Polaris-RangeSlider-SingleThumb__OutputBubble{ position:relative; display:flex; box-shadow:var(--p-popover-shadow); padding:0 0.8rem; min-width:3.2rem; height:3.2rem; background-color:var(--p-surface); border-radius:3px; transition-property:transform; transition-duration:200ms; transition-timing-function:cubic-bezier(0.64, 0, 0.35, 1); outline:0.1rem solid transparent; }\n\n.Polaris-RangeSlider-SingleThumb__Input:hover + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble, .Polaris-RangeSlider-SingleThumb__Input:active + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble, .Polaris-RangeSlider-SingleThumb__Input:focus + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble{ transform:translateY(-1.6rem); }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-RangeSlider-SingleThumb__Input:hover + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble, [data-has-navigation] .Polaris-RangeSlider-SingleThumb__Input:active + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble, [data-has-navigation] .Polaris-RangeSlider-SingleThumb__Input:focus + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble{ transform:translateY(-0.8rem); } }\n\n@media (min-width: 46.5em){ .Polaris-RangeSlider-SingleThumb__Input:hover + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble, .Polaris-RangeSlider-SingleThumb__Input:active + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble, .Polaris-RangeSlider-SingleThumb__Input:focus + .Polaris-RangeSlider-SingleThumb__Output .Polaris-RangeSlider-SingleThumb__OutputBubble{ transform:translateY(-0.8rem); } }\n\n.Polaris-RangeSlider-SingleThumb__OutputText{ font-size:1.3rem; font-weight:600; line-height:1.6rem; text-transform:uppercase; display:block; flex:1 1 auto; margin:auto; text-align:center; color:var(--p-text); }\n\n@media (min-width: 40em){ .Polaris-RangeSlider-SingleThumb__OutputText{ font-size:1.2rem; } }\n\n\n.Polaris-ResourceItem__CheckboxWrapper{ display:flex; }\n\n.Polaris-ResourceItem{ position:relative; outline:none; cursor:pointer; }\n\n.Polaris-ResourceItem:not(.Polaris-ResourceItem--persistActions) .Polaris-ResourceItem__Actions{ right:1.6rem; }\n\n.Polaris-ResourceItem:hover{ background-color:var(--p-surface-hovered); }\n\n.Polaris-ResourceItem:hover:not(.Polaris-ResourceItem--persistActions) .Polaris-ResourceItem__Actions{ clip:auto; overflow:visible; height:100%; }\n\n@media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){ [data-has-navigation] .Polaris-ResourceItem:hover:not(.Polaris-ResourceItem--persistActions) .Polaris-ResourceItem__Actions{ display:none; } }\n\n@media (max-width: 46.5em){ .Polaris-ResourceItem:hover:not(.Polaris-ResourceItem--persistActions) .Polaris-ResourceItem__Actions{ display:none; } }\n\n.Polaris-ResourceItem:active{ background-color:var(--p-surface-pressed); }\n\n.Polaris-ResourceItem__ItemWrapper{ overflow:hidden; max-width:100%; }\n\n.Polaris-ResourceItem--focusedInner, .Polaris-ResourceItem--focusedInner.Polaris-ResourceItem--focused, .Polaris-ResourceItem--focusedInner.Polaris-ResourceItem--focused.Polaris-ResourceItem--selected{ box-shadow:none; }\n\n.Polaris-ResourceItem__Link, .Polaris-ResourceItem__Button{ position:absolute; z-index:1; top:0; left:0; height:100%; width:100%; opacity:0; }\n\n.Polaris-ResourceItem__Button{ padding:0; border:none; }\n\n.Polaris-ResourceItem__Container{ position:relative; z-index:2; padding:1.2rem 1.6rem; min-height:4.4rem; display:flex; align-items:flex-start; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceItem__Container{ padding:1.2rem 2rem; } }\n\n.Polaris-ResourceItem--alignmentLeading{ align-items:flex-start; }\n\n.Polaris-ResourceItem--alignmentTrailing{ align-items:flex-end; }\n\n.Polaris-ResourceItem--alignmentCenter{ align-items:center; }\n\n.Polaris-ResourceItem--alignmentFill{ align-items:stretch; }\n\n.Polaris-ResourceItem--alignmentBaseline{ align-items:baseline; }\n\n.Polaris-ResourceItem__Owned{ display:flex; }\n\n.Polaris-ResourceItem__OwnedNoMedia{ padding-top:0.4rem; }\n\n.Polaris-ResourceItem__Handle{ width:4.8rem; min-height:4.4rem; justify-content:center; align-items:center; margin:-1.2rem 0.4rem -1.2rem -1.2rem; display:flex; }\n\n@media (max-width: 28.615em){ .Polaris-ResourceItem__Handle{ visibility:hidden; }\n  .Polaris-ResourceItem--selectMode .Polaris-ResourceItem__Handle{ visibility:visible; } }\n\n.Polaris-ResourceItem--selectable{ width:calc(100% + 4rem); transform:translateX(-4rem); transition:transform cubic-bezier(0.64, 0, 0.35, 1) 200ms; margin-right:-4rem; }\n\n.Polaris-ResourceItem--selectable.Polaris-ResourceItem--selectMode{ transform:translateX(0); }\n\n@media (min-width: 28.625em){ .Polaris-ResourceItem--selectable{ width:100%; transform:translateX(0); margin-right:0; } }\n\n.Polaris-ResourceItem__Media{ flex:0 0 auto; margin-right:2rem; color:inherit; text-decoration:none; }\n\n.Polaris-ResourceItem__Content{ min-width:0; max-width:100%; flex:1 1 auto; }\n\n.Polaris-ResourceItem__Actions{ position:absolute; top:0; display:flex; pointer-events:initial; height:100%; max-height:5.6rem; clip:rect(1px, 1px, 1px, 1px); overflow:hidden; height:1px; }\n\n.Polaris-ResourceItem--focused .Polaris-ResourceItem__Actions{ clip:auto; overflow:visible; height:100%; }\n\n@media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){ [data-has-navigation] .Polaris-ResourceItem__Actions{ display:none; } }\n\n@media (max-width: 46.5em){ .Polaris-ResourceItem__Actions{ display:none; } }\n\n.Polaris-ResourceItem--persistActions .Polaris-ResourceItem__Actions{ position:relative; display:flex; flex:0 0 auto; flex-basis:auto; align-items:center; margin-top:0; margin-left:1.6rem; pointer-events:initial; height:100%; }\n\n@media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){ [data-has-navigation] .Polaris-ResourceItem--persistActions .Polaris-ResourceItem__Actions{ display:none; } }\n\n@media (max-width: 46.5em){ .Polaris-ResourceItem--persistActions .Polaris-ResourceItem__Actions{ display:none; } }\n\n.Polaris-ResourceItem__Disclosure{ position:relative; top:-1.2rem; right:-1.6rem; display:none; width:4.8rem; min-height:4.4rem; pointer-events:initial; }\n\n.Polaris-ResourceItem--selectMode .Polaris-ResourceItem__Disclosure{ display:none; }\n\n@media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){ [data-has-navigation] .Polaris-ResourceItem__Disclosure{ display:flex; flex:0 0 4.8rem; justify-content:center; align-items:center; } }\n\n@media (max-width: 46.5em){ .Polaris-ResourceItem__Disclosure{ display:flex; flex:0 0 4.8rem; justify-content:center; align-items:center; } }\n\n.Polaris-ResourceItem--selected{ background-color:var(--p-surface-selected); }\n\n.Polaris-ResourceItem--selected:hover{ background-color:var(--p-surface-selected-hovered); }\n\n.Polaris-ResourceItem--selected:active{ background-color:var(--p-surface-selected-pressed); }\n\n.Polaris-ResourceItem__ListItem{ position:relative; position:relative; }\n\n.Polaris-ResourceItem__ListItem::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:0rem; right:0rem; bottom:0rem; left:0rem; display:block; pointer-events:none; box-shadow:0 0 0 0rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-ResourceItem__ListItem + .Polaris-ResourceItem__ListItem{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-ResourceItem__ListItem::after{ border-radius:0.2rem; }\n\n.Polaris-ResourceItem__ListItem:last-of-type{ border-bottom-left-radius:var(--p-border-radius-wide); border-bottom-right-radius:var(--p-border-radius-wide); }\n\n.Polaris-ResourceItem__ListItem:last-of-type .Polaris-ResourceItem__ItemWrapper{ border-bottom-left-radius:var(--p-border-radius-wide); border-bottom-right-radius:var(--p-border-radius-wide); }\n\n.Polaris-ResourceItem__ListItem:last-of-type.Polaris-ResourceItem--focused::after{ border-bottom-left-radius:var(--p-border-radius-wide); border-bottom-right-radius:var(--p-border-radius-wide); }\n\n.Polaris-ResourceItem__ListItem.Polaris-ResourceItem--focused{ z-index:1; }\n\n.Polaris-ResourceItem__ListItem.Polaris-ResourceItem--focused::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n* + ul > .Polaris-ResourceItem__ListItem:first-of-type.Polaris-ResourceItem--focused::after{ top:0.1rem; }\n\n\n.Polaris-Select{ position:relative; }\n\n.Polaris-Select select::-ms-expand{ display:none; }\n\n.Polaris-Select--disabled .Polaris-Select__Content{ color:var(--p-text-disabled); }\n\n.Polaris-Select--disabled .Polaris-Select__InlineLabel{ color:inherit; }\n\n.Polaris-Select--disabled .Polaris-Select__Icon svg{ fill:var(--p-icon-disabled); }\n\n.Polaris-Select--disabled .Polaris-Select__Backdrop{ border-color:var(--p-border-disabled); }\n\n.Polaris-Select--disabled .Polaris-Select__Backdrop::before{ background-color:var(--p-action-secondary-disabled); }\n\n.Polaris-Select--disabled .Polaris-Select__Backdrop:hover{ cursor:default; }\n\n.Polaris-Select--placeholder.Polaris-Select--error .Polaris-Select__Input{ color:#9c9798; }\n\n.Polaris-Select--placeholder.Polaris-Select--error .Polaris-Select__Input:-moz-focusring{ color:transparent; text-shadow:var(--p-override-none); }\n\n.Polaris-Select__Content{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; position:relative; z-index:20; display:flex; align-items:center; width:100%; min-height:3.6rem; padding:0.5rem 0.8rem 0.5rem 1.2rem; }\n\n@media (min-width: 40em){ .Polaris-Select__Content{ font-size:1.4rem; } }\n\n.Polaris-Select__InlineLabel{ color:var(--p-text-subdued); margin-right:0.4rem; white-space:nowrap; overflow:hidden; }\n\n.Polaris-Select__SelectedOption{ flex:1 1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }\n\n.Polaris-Select__Prefix{ padding-right:0.8rem; }\n\n.Polaris-Select__Icon svg{ fill:var(--p-icon); }\n\n.Polaris-Select__Input{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; position:absolute; text-rendering:auto; top:0; left:0; z-index:30; width:100%; height:100%; margin:0; opacity:0.001; -webkit-appearance:none; appearance:none; }\n\n@media (min-width: 40em){ .Polaris-Select__Input{ font-size:1.4rem; } }\n\n.Polaris-Select__Backdrop{ z-index:10; top:0; right:0; bottom:0; left:0; border:0.1rem solid var(--p-border-subdued); border-bottom-color:var(--p-border-shadow-subdued); border-radius:var(--p-border-radius-base); background-color:var(--p-surface); box-shadow:var(--p-button-drop-shadow); position:relative; position:absolute; }\n\n.Polaris-Select__Backdrop::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.2rem; right:-0.2rem; bottom:-0.2rem; left:-0.2rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.2rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Select--error .Polaris-Select__Backdrop{ border-color:var(--p-border-critical); background-color:var(--p-surface-critical-subdued); }\n\n.Polaris-Select--error .Polaris-Select__Backdrop.Polaris-Select--hover, .Polaris-Select--error .Polaris-Select__Backdrop:hover{ border-color:var(--p-border-critical); }\n\n.Polaris-Select--error .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n@media (-ms-high-contrast: active){ .Polaris-Select__Content{ color:windowText; -ms-high-contrast-adjust:none; }\n  .Polaris-Select__InlineLabel{ color:inherit; }\n  .Polaris-Select__InlineLabel::after{ content:':'; }\n  .Polaris-Select__SelectedOption{ color:inherit; }\n  .Polaris-Select__Icon svg{ fill:buttonText; }\n  .Polaris-Select__Backdrop::after{ display:none; }\n  .Polaris-Select__Input:focus ~ .Polaris-Select__Content{ color:highlightText; }\n  .Polaris-Select__Input:focus ~ .Polaris-Select__Backdrop{ background-color:highlight; }\n  .Polaris-Select--disabled .Polaris-Select__Content{ color:grayText; }\n  .Polaris-Select--disabled .Polaris-Select__Icon{ opacity:1; }\n  .Polaris-Select--disabled .Polaris-Select__Icon svg{ fill:grayText; } }\n\n\n.Polaris-ResourceList__FiltersWrapper{ padding:1.2rem 1.2rem 1.6rem; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__FiltersWrapper{ padding:1.6rem; } }\n\n.Polaris-ResourceList__FiltersWrapper + .Polaris-ResourceList{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-ResourceList__HeaderOuterWrapper{ position:relative; background-color:var(--p-surface); z-index:2; }\n\n.Polaris-ResourceList__HeaderOuterWrapper + .Polaris-ResourceList{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-ResourceList__HeaderWrapper--disabled{ pointer-events:none; }\n\n.Polaris-ResourceList__HeaderWrapper--overlay{ position:absolute; top:0; right:0; bottom:0; left:0; z-index:4; background-color:var(--p-overlay); }\n\n.Polaris-ResourceList__FiltersWrapper + .Polaris-ResourceList__HeaderOuterWrapper{ margin-top:-1.6rem; }\n\n.Polaris-ResourceList__HeaderWrapper{ position:relative; display:flex; align-items:flex-start; width:100%; min-height:5.6rem; padding:1rem 1.2rem; background-color:var(--p-surface); }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__HeaderWrapper{ flex-direction:row; padding:1rem 1.6rem; } }\n\n.Polaris-ResourceList__HeaderWrapper--isSticky{ box-shadow:0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15); }\n\n.Polaris-ResourceList__HeaderContentWrapper{ position:absolute; z-index:1; right:1.2rem; left:1.2rem; display:flex; min-height:3.6rem; opacity:1; transition:opacity cubic-bezier(0.64, 0, 0.35, 1) 200ms; }\n\n.Polaris-ResourceList__HeaderWrapper--inSelectMode .Polaris-ResourceList__HeaderContentWrapper{ opacity:0; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__HeaderContentWrapper{ right:1.6rem; left:1.6rem; align-self:flex-start; } }\n\n.Polaris-ResourceList__SortWrapper, .Polaris-ResourceList__AlternateToolWrapper{ position:relative; display:flex; flex:1 1; align-items:center; }\n\n.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__SortWrapper, .Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__AlternateToolWrapper{ padding-right:0.8rem; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__SortWrapper, .Polaris-ResourceList__AlternateToolWrapper{ position:relative; left:auto; flex:0 1 auto; margin-left:1.6rem; }\n  .Polaris-ResourceList__HeaderWrapper--hasAlternateTool.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__SortWrapper, .Polaris-ResourceList__HeaderWrapper--hasSort.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__SortWrapper, .Polaris-ResourceList__HeaderWrapper--hasAlternateTool.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__AlternateToolWrapper, .Polaris-ResourceList__HeaderWrapper--hasSort.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__AlternateToolWrapper{ padding-right:0; } }\n\n.Polaris-ResourceList__SortWrapper{ min-width:0; max-width:100%; }\n\n.Polaris-ResourceList__SortWrapper > *{ max-width:100%; }\n\n.Polaris-ResourceList__HeaderTitleWrapper{ white-space:nowrap; text-overflow:ellipsis; flex:1 1; padding-left:0.4rem; align-self:center; }\n\n.Polaris-ResourceList__HeaderWrapper--hasAlternateTool .Polaris-ResourceList__HeaderTitleWrapper, .Polaris-ResourceList__HeaderWrapper--hasSort .Polaris-ResourceList__HeaderTitleWrapper{ display:none; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__HeaderTitleWrapper, .Polaris-ResourceList__HeaderWrapper--hasAlternateTool.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__HeaderTitleWrapper, .Polaris-ResourceList__HeaderWrapper--hasSort.Polaris-ResourceList__HeaderWrapper--hasSelect .Polaris-ResourceList__HeaderTitleWrapper{ display:none; }\n  .Polaris-ResourceList__HeaderWrapper--hasAlternateTool .Polaris-ResourceList__HeaderTitleWrapper, .Polaris-ResourceList__HeaderWrapper--hasSort .Polaris-ResourceList__HeaderTitleWrapper{ display:block; } }\n\n.Polaris-ResourceList__BulkActionsWrapper{ position:relative; z-index:2; width:100%; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__BulkActionsWrapper{ flex:0 1 auto; align-self:flex-start; } }\n\n.Polaris-ResourceList__CheckableButtonWrapper{ display:none; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__CheckableButtonWrapper{ flex:1 1; display:block; } }\n\n.Polaris-ResourceList__SelectButtonWrapper{ position:relative; flex:none; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList__SelectButtonWrapper{ display:none; } }\n\n.Polaris-ResourceList__EmptySearchResultWrapper{ padding-top:3.2rem; padding-bottom:3.2rem; }\n\n@media (min-height: 37.5em){ .Polaris-ResourceList__EmptySearchResultWrapper{ padding-top:6.4rem; padding-bottom:6.4rem; } }\n\n.Polaris-ResourceList__ResourceListWrapper{ position:relative; }\n\n.Polaris-ResourceList{ position:relative; z-index:1; margin:0; padding:0; list-style:none; }\n\n.Polaris-ResourceList__ItemWrapper{ position:relative; z-index:1; overflow:hidden; max-width:100%; }\n\n.Polaris-ResourceList__ItemWrapper + .Polaris-ResourceList__ItemWrapper{ border-top:0.1rem solid var(--p-divider); }\n\n.Polaris-ResourceList__ItemWrapper--isLoading{ min-height:6.4rem; }\n\n.Polaris-ResourceList__SpinnerContainer{ position:absolute; top:0; right:0; bottom:0; left:0; z-index:4; display:flex; justify-content:center; }\n\n.Polaris-ResourceList__LoadingOverlay{ position:absolute; top:0; right:0; bottom:0; left:0; z-index:3; display:flex; justify-content:center; background-color:var(--p-overlay); }\n\n.Polaris-ResourceList__DisabledPointerEvents{ pointer-events:none; }\n\n.Polaris-ResourceList--disableTextSelection{ -webkit-user-select:none; user-select:none; }\n\n\n.Polaris-FilterControl-DateSelector__DateTextField{ margin-top:0.8rem; }\n\n.Polaris-FilterControl-DateSelector__DatePicker{ margin-top:1.6rem; }\n\n\n.Polaris-ResourceList-FilterControl__AppliedFilters{ list-style-type:none; padding:0; margin:0; display:flex; flex-wrap:nowrap; margin-top:-1.2rem; margin-left:-1.2rem; margin-right:-1.2rem; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; }\n\n.Polaris-ResourceList-FilterControl__AppliedFilters::after{ content:''; flex:0 0 1.2rem; }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList-FilterControl__AppliedFilters{ flex-wrap:wrap; margin-right:0; margin-left:-0.8rem; margin-top:-1.6rem; }\n  .Polaris-ResourceList-FilterControl__AppliedFilters::after{ content:none; flex:none; } }\n\n@media (max-width: 28.625em){ .Polaris-ResourceList-FilterControl__AppliedFilters{ padding-bottom:0.8rem; } }\n\n.Polaris-ResourceList-FilterControl__AppliedFilter{ flex:1 0 auto; margin-top:0.8rem; margin-left:1.2rem; max-width:calc(100% - 0.8rem); }\n\n@media (min-width: 28.625em){ .Polaris-ResourceList-FilterControl__AppliedFilter{ flex:0 1 auto; margin-left:0.8rem; } }\n\n\n.Polaris-SkeletonBodyText__SkeletonBodyTextContainer{ animation:var(--polaris-animation-skeleton-shimmer) 800ms linear infinite alternate; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; }\n\n.Polaris-SkeletonBodyText{ height:0.8rem; position:relative; }\n\n.Polaris-SkeletonBodyText::after{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; display:block; background-color:var(--p-surface-neutral); border-radius:3px; }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-SkeletonBodyText::after{ background-color:grayText; } }\n\n.Polaris-SkeletonBodyText:last-child:not(:first-child){ width:80%; }\n\n.Polaris-SkeletonBodyText + .Polaris-SkeletonBodyText{ margin-top:1.2rem; }\n\n\n.Polaris-SkeletonDisplayText__DisplayText{ max-width:12rem; animation:var(--polaris-animation-skeleton-shimmer) 800ms linear infinite alternate; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; position:relative; }\n\n.Polaris-SkeletonDisplayText__DisplayText::after{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; display:block; background-color:var(--p-surface-neutral); border-radius:3px; }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-SkeletonDisplayText__DisplayText::after{ background-color:grayText; } }\n\n.Polaris-SkeletonDisplayText--sizeSmall{ height:2.4rem; }\n\n@media (min-width: 40em){ .Polaris-SkeletonDisplayText--sizeSmall{ height:2.8rem; } }\n\n.Polaris-SkeletonDisplayText--sizeMedium{ height:2.8rem; }\n\n@media (min-width: 40em){ .Polaris-SkeletonDisplayText--sizeMedium{ height:3.2rem; } }\n\n.Polaris-SkeletonDisplayText--sizeLarge{ height:2.8rem; }\n\n@media (min-width: 40em){ .Polaris-SkeletonDisplayText--sizeLarge{ height:3.2rem; } }\n\n.Polaris-SkeletonDisplayText--sizeExtraLarge{ height:3.6rem; }\n\n@media (min-width: 40em){ .Polaris-SkeletonDisplayText--sizeExtraLarge{ height:4.4rem; } }\n\n\n.Polaris-SkeletonPage__Page{ margin:0 auto; padding:0; max-width:99.8rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-SkeletonPage__Page{ padding:0 2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-SkeletonPage__Page{ padding:0 2rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-SkeletonPage__Page{ padding:0 3.2rem; } }\n\n@media (min-width: 46.5em){ .Polaris-SkeletonPage__Page{ padding:0 3.2rem; } }\n\n.Polaris-SkeletonPage--fullWidth{ max-width:none; }\n\n.Polaris-SkeletonPage--narrowWidth{ max-width:66.2rem; }\n\n.Polaris-SkeletonPage__Content{ margin:1.6rem 0; }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-SkeletonPage__Content{ margin-top:1.6rem; } }\n\n@media (min-width: 46.5em){ .Polaris-SkeletonPage__Content{ margin-top:1.6rem; } }\n\n.Polaris-SkeletonPage__Header{ padding:1.6rem 1.6rem 0; padding-bottom:0.8rem; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-SkeletonPage__Header{ padding-left:0; padding-right:0; } }\n\n@media (min-width: 30.625em){ .Polaris-SkeletonPage__Header{ padding-left:0; padding-right:0; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-SkeletonPage__Header{ padding-top:1.6rem; } }\n\n@media (min-width: 46.5em){ .Polaris-SkeletonPage__Header{ padding-top:1.6rem; } }\n\n.Polaris-SkeletonPage__BreadcrumbAction{ padding-top:1.6rem; padding-bottom:1.6rem; margin-top:-0.4rem; margin-bottom:-0.4rem; }\n\n.Polaris-SkeletonPage__TitleAndPrimaryAction{ display:flex; }\n\n@media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){ [data-has-navigation] .Polaris-SkeletonPage__TitleAndPrimaryAction{ display:block; } }\n\n@media (max-width: 46.5em){ .Polaris-SkeletonPage__TitleAndPrimaryAction{ display:block; } }\n\n.Polaris-SkeletonPage__TitleWrapper{ flex:1 1; }\n\n.Polaris-SkeletonPage__Title{ font-weight:600; font-size:2.4rem; line-height:2.8rem; }\n\n@media (min-width: 40em){ .Polaris-SkeletonPage__Title{ font-size:2rem; } }\n\n.Polaris-SkeletonPage__SkeletonTitle{ animation:var(--polaris-animation-skeleton-shimmer) 800ms linear infinite alternate; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; position:relative; max-width:12rem; height:2.8rem; }\n\n.Polaris-SkeletonPage__SkeletonTitle::after{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; display:block; background-color:var(--p-surface-neutral); border-radius:3px; }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-SkeletonPage__SkeletonTitle::after{ background-color:grayText; } }\n\n.Polaris-SkeletonPage__PrimaryAction{ align-self:stretch; }\n\n.Polaris-SkeletonPage__PrimaryAction > *{ height:3.6rem; min-width:10rem; }\n\n@media (max-width: 48.0625em), (min-width: 48.0625em) and (max-width: 65em){ [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{ margin-top:1.6rem; margin-bottom:-0.8rem; } }\n\n@media (max-width: 50em){ .Polaris-SkeletonPage__PrimaryAction{ margin-top:1.6rem; margin-bottom:-0.8rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{ margin-top:0.8rem; margin-bottom:-0.8rem; } }\n\n@media (min-width: 30.625em){ .Polaris-SkeletonPage__PrimaryAction{ margin-top:0.8rem; margin-bottom:-0.8rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{ margin-top:0; } }\n\n@media (min-width: 46.5em){ .Polaris-SkeletonPage__PrimaryAction{ margin-top:0; } }\n\n@media (max-width: 48.0625em) and (min-width: 50em), (min-width: 65em){ [data-has-navigation] .Polaris-SkeletonPage__PrimaryAction{ margin-top:0; } }\n\n@media (min-width: 50em){ .Polaris-SkeletonPage__PrimaryAction{ margin-top:0; } }\n\n.Polaris-SkeletonPage__Actions{ margin-top:0.8rem; display:flex; flex-direction:row-reverse; justify-content:flex-end; align-items:center; }\n\n.Polaris-SkeletonPage__Action{ display:flex; flex-direction:column; justify-content:center; min-height:2.8rem; padding-right:2.4rem; margin-top:-0.4rem; margin-bottom:-0.4rem; padding-top:1.6rem; }\n\n.Polaris-SkeletonPage__Action:first-child{ padding-right:0; }\n\n@media (max-width: 45em), (min-width: 48.0625em) and (max-width: 61.5em){ [data-has-navigation] .Polaris-SkeletonPage__Action:not(:last-child){ display:none; } }\n\n@media (max-width: 46.5em){ .Polaris-SkeletonPage__Action:not(:last-child){ display:none; } }\n\n\n.Polaris-SkeletonThumbnail{ animation:var(--polaris-animation-skeleton-shimmer) 800ms linear infinite alternate; -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:opacity; position:relative; }\n\n.Polaris-SkeletonThumbnail::after{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; display:block; background-color:var(--p-surface-neutral); border-radius:3px; }\n\n@media screen and (-ms-high-contrast: active){ .Polaris-SkeletonThumbnail::after{ background-color:grayText; } }\n\n.Polaris-SkeletonThumbnail--sizeSmall{ height:4rem; width:4rem; }\n\n.Polaris-SkeletonThumbnail--sizeMedium{ height:6rem; width:6rem; }\n\n.Polaris-SkeletonThumbnail--sizeLarge{ height:8rem; width:8rem; }\n\n\n.Polaris-Tabs{ display:flex; flex-wrap:wrap; margin:0; padding:0; list-style:none; }\n\n.Polaris-Tabs__Wrapper{ border-bottom:0.1rem solid var(--p-divider); padding:0 0.8rem; }\n\n.Polaris-Tabs--fitted{ flex-wrap:nowrap; }\n\n.Polaris-Tabs--fitted .Polaris-Tabs__TabContainer{ flex:1 1 100%; }\n\n.Polaris-Tabs--fitted .Polaris-Tabs__Title{ width:100%; padding:0.8rem 1.6rem; }\n\n.Polaris-Tabs--fillSpace .Polaris-Tabs__TabContainer{ flex:1 1 auto; }\n\n.Polaris-Tabs__TabContainer{ display:flex; margin:0; padding:0; }\n\n.Polaris-Tabs__Tab{ color:inherit; text-decoration:none; -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; color:var(--p-text-subdued); color:var(--p-text); position:relative; justify-content:center; width:100%; min-width:100%; margin-top:1px; margin-bottom:-1px; padding:0.8rem 0.4rem; outline:none; text-align:center; white-space:nowrap; text-decoration:none; cursor:pointer; }\n\n.Polaris-Tabs__Tab:visited{ color:inherit; }\n\n.Polaris-Tabs__Tab:focus{ outline:none; }\n\n@media (min-width: 40em){ .Polaris-Tabs__Tab{ font-size:1.4rem; } }\n\n.Polaris-Tabs__Tab:hover{ text-decoration:none; }\n\n.Polaris-Tabs__Tab:hover .Polaris-Tabs__Title{ font-weight:400; color:var(--p-text); background-color:transparent; }\n\n.Polaris-Tabs__Tab:hover .Polaris-Tabs__Title::before{ background-color:var(--p-border-hovered); }\n\n.Polaris-Tabs__Tab:active .Polaris-Tabs__Title{ background-color:transparent; }\n\n.Polaris-Tabs__Tab:active .Polaris-Tabs__Title::before{ background:var(--p-surface-primary-selected-pressed); }\n\n.Polaris-Tabs__Tab:focus .Polaris-Tabs__Title{ font-weight:400; color:var(--p-text); }\n\n.Polaris-Tabs__Tab:focus:not(:active) .Polaris-Tabs__Title::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Tabs__Tab--selected{ font-weight:400; color:var(--p-text); }\n\n.Polaris-Tabs__Tab--selected:focus .Polaris-Tabs__Title{ outline:0.3rem solid transparent; }\n\n.Polaris-Tabs__Tab--selected:focus .Polaris-Tabs__Title::before{ background:var(--p-action-primary); }\n\n.Polaris-Tabs__Tab--selected .Polaris-Tabs__Title{ outline:0.3rem solid transparent; color:var(--p-text); }\n\n.Polaris-Tabs__Tab--selected .Polaris-Tabs__Title::before{ background:var(--p-action-primary); }\n\n.Polaris-Tabs__Title{ position:relative; border-radius:var(--p-border-radius-base); display:block; padding:0.8rem 1.6rem; min-width:5rem; color:var(--p-text-subdued); }\n\n.Polaris-Tabs__Title::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Tabs__Title::before{ content:''; position:absolute; bottom:-0.8rem; left:0; right:0; height:0.3rem; border-top-left-radius:var(--p-border-radius-base); border-top-right-radius:var(--p-border-radius-base); }\n\n.Polaris-Tabs--titleWithIcon{ display:flex; }\n\n.Polaris-Tabs__Panel{ display:block; }\n\n.Polaris-Tabs__Panel:focus{ outline:none; }\n\n.Polaris-Tabs__Panel--hidden{ display:none; }\n\n.Polaris-Tabs__List{ list-style:none; margin:0; padding:0.8rem; }\n\n.Polaris-Tabs__Item{ color:inherit; text-decoration:none; -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; position:relative; display:block; width:100%; min-height:1.6rem; padding:0.8rem 1.6rem; text-align:left; cursor:pointer; border-radius:var(--p-border-radius-base); }\n\n.Polaris-Tabs__Item:visited{ color:inherit; }\n\n.Polaris-Tabs__Item:focus{ outline:none; }\n\n.Polaris-Tabs__Item::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Tabs__Item::-moz-focus-inner{ border:none; }\n\n.Polaris-Tabs__Item:hover{ background-color:var(--p-surface-hovered); }\n\n.Polaris-Tabs__Item:active{ background-color:var(--p-surface-primary-selected-pressed); }\n\n.Polaris-Tabs__Item:focus:not(:active)::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Tabs__DisclosureTab{ display:none; }\n\n.Polaris-Tabs__DisclosureTab--visible{ display:flex; }\n\n.Polaris-Tabs__DisclosureActivator{ position:relative; height:100%; background-color:transparent; cursor:pointer; border:none; outline:none; margin:1px 1px -1px 0; }\n\n.Polaris-Tabs__DisclosureActivator::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-Tabs__DisclosureActivator:hover svg, .Polaris-Tabs__DisclosureActivator:focus svg{ fill:var(--p-icon); }\n\n.Polaris-Tabs__DisclosureActivator:focus .Polaris-Tabs__Title::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-Tabs__DisclosureActivator:hover .Polaris-Tabs__Title::before{ background-color:var(--p-border-hovered); }\n\n.Polaris-Tabs__TabMeasurer{ display:flex; visibility:hidden; height:0; }\n\n\n.Polaris-Thumbnail{ position:relative; display:block; overflow:hidden; background:var(--p-surface); min-width:4rem; max-width:100%; border-radius:var(--p-border-radius-base); border:0.1rem solid var(--p-divider); }\n\n.Polaris-Thumbnail::after{ content:''; display:block; padding-bottom:100%; }\n\n.Polaris-Thumbnail--sizeSmall{ width:4rem; }\n\n.Polaris-Thumbnail--sizeMedium{ width:6rem; }\n\n.Polaris-Thumbnail--sizeLarge{ width:8rem; }\n\n.Polaris-Thumbnail > *{ position:absolute; top:0; right:0; bottom:0; left:0; margin:auto; max-width:100%; max-height:100%; color:var(--p-icon-subdued, #637381); }\n\n.Polaris-Thumbnail > * svg{ fill:currentColor; }\n\n\n.Polaris-TopBar-SearchDismissOverlay{ position:fixed; top:0; left:0; right:0; z-index:515; height:100%; }\n\n.Polaris-TopBar-SearchDismissOverlay--visible{ background-color:transparent; animation:none; }\n\n@keyframes Polaris-TopBar-SearchDismissOverlay__fade--in{ 0%{ opacity:0; }\n  100%{ opacity:1; } }\n\n\n.Polaris-TopBar-Search{ position:fixed; visibility:hidden; z-index:516; pointer-events:none; top:5.6rem; left:0; right:0; box-shadow:var(--p-modal-shadow); overflow:hidden; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-TopBar-Search{ position:absolute; top:100%; max-width:58rem; margin:0.4rem 2rem 0; border-radius:var(--p-border-radius-wide); } }\n\n@media (min-width: 30.625em){ .Polaris-TopBar-Search{ position:absolute; top:100%; max-width:58rem; margin:0.4rem 2rem 0; border-radius:var(--p-border-radius-wide); } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-TopBar-Search{ margin:0.4rem 3.2rem 0; } }\n\n@media (min-width: 46.5em){ .Polaris-TopBar-Search{ margin:0.4rem 3.2rem 0; } }\n\n.Polaris-TopBar-Search__SearchContent{ background-color:var(--p-surface); }\n\n.Polaris-TopBar-Search--visible{ visibility:initial; pointer-events:all; }\n\n.Polaris-TopBar-Search__Results{ position:relative; display:flex; flex-direction:column; max-height:calc(100vh - 5.6rem); margin:0; }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-TopBar-Search__Results{ max-height:60vh; } }\n\n@media (min-width: 30.625em){ .Polaris-TopBar-Search__Results{ max-height:60vh; } }\n\n\n.Polaris-TopBar-SearchField{ z-index:519; position:relative; display:flex; flex:1 1 auto; align-items:center; border:1px solid transparent; width:100%; max-width:58rem; }\n\n.Polaris-TopBar-SearchField--focused .Polaris-TopBar-SearchField__Input, .Polaris-TopBar-SearchField__Input:focus{ border:none; color:var(--p-text); }\n\n.Polaris-TopBar-SearchField--focused .Polaris-TopBar-SearchField__Input::-webkit-input-placeholder, .Polaris-TopBar-SearchField__Input:focus::-webkit-input-placeholder{ color:var(--p-text-subdued); }\n\n.Polaris-TopBar-SearchField--focused .Polaris-TopBar-SearchField__Input::placeholder, .Polaris-TopBar-SearchField__Input:focus::placeholder{ color:var(--p-text-subdued); }\n\n.Polaris-TopBar-SearchField__Input:focus ~ .Polaris-TopBar-SearchField__Backdrop{ background-color:var(--p-surface-search-field); }\n\n.Polaris-TopBar-SearchField__Input:focus ~ .Polaris-TopBar-SearchField__Backdrop::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-TopBar-SearchField__Input:focus ~ .Polaris-TopBar-SearchField__BackdropShowFocusBorder{ border:1px solid var(--top-bar-border); }\n\n.Polaris-TopBar-SearchField__Input:focus ~ .Polaris-TopBar-SearchField__Icon svg{ fill:var(--p-icon); }\n\n.Polaris-TopBar-SearchField--focused .Polaris-TopBar-SearchField__Backdrop{ background-color:var(--p-surface-search-field); }\n\n.Polaris-TopBar-SearchField--focused .Polaris-TopBar-SearchField__BackdropShowFocusBorder{ border:1px solid var(--top-bar-border); }\n\n.Polaris-TopBar-SearchField--focused .Polaris-TopBar-SearchField__Icon svg{ fill:var(--p-icon); }\n\n.Polaris-TopBar-SearchField__Input{ font-size:1.6rem; font-weight:400; line-height:2.4rem; border:none; text-transform:initial; letter-spacing:initial; z-index:2; height:3.6rem; width:100%; padding:0 0 0 3.6rem; border:none; background-color:transparent; outline:none; color:var(--p-text); -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:fill, color; transition:fill 200ms cubic-bezier(0.64, 0, 0.35, 1), color 200ms cubic-bezier(0.64, 0, 0.35, 1); -webkit-appearance:textfield; appearance:textfield; }\n\n@media (min-width: 40em){ .Polaris-TopBar-SearchField__Input{ font-size:1.4rem; } }\n\n.Polaris-TopBar-SearchField__Input::-webkit-input-placeholder{ color:var(--p-text); -webkit-transition:167ms color cubic-bezier(0.64, 0, 0.35, 1) 33ms; transition:167ms color cubic-bezier(0.64, 0, 0.35, 1) 33ms; }\n\n.Polaris-TopBar-SearchField__Input::placeholder{ color:var(--p-text); transition:167ms color cubic-bezier(0.64, 0, 0.35, 1) 33ms; }\n\n.Polaris-TopBar-SearchField__Input::-webkit-search-decoration, .Polaris-TopBar-SearchField__Input::-webkit-search-cancel-button{ -webkit-appearance:none; appearance:none; }\n\n.Polaris-TopBar-SearchField__Icon{ position:absolute; z-index:3; top:50%; left:0.8rem; display:flex; height:2rem; pointer-events:none; transform:translateY(-50%); }\n\n.Polaris-TopBar-SearchField__Icon svg{ fill:var(--p-icon); }\n\n.Polaris-TopBar-SearchField__Icon svg{ transition:167ms fill cubic-bezier(0.64, 0, 0.35, 1) 33ms; }\n\n.Polaris-TopBar-SearchField__Clear{ position:relative; position:relative; z-index:3; border:none; -webkit-appearance:none; appearance:none; background:transparent; padding:0.8rem; }\n\n.Polaris-TopBar-SearchField__Clear svg{ fill:var(--p-icon); }\n\n.Polaris-TopBar-SearchField__Clear::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-wide) + 0.1rem); }\n\n.Polaris-TopBar-SearchField__Clear:focus, .Polaris-TopBar-SearchField__Clear:hover{ outline:none; }\n\n.Polaris-TopBar-SearchField__Clear:focus svg, .Polaris-TopBar-SearchField__Clear:hover svg{ fill:var(--p-icon-hovered); }\n\n.Polaris-TopBar-SearchField__Clear:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-TopBar-SearchField__Clear:active svg{ fill:var(--p-icon-pressed); }\n\n.Polaris-TopBar-SearchField__Clear:active::after{ border:none; }\n\n.Polaris-TopBar-SearchField__Backdrop{ position:relative; position:absolute; z-index:1; top:0; right:0; bottom:0; left:0; background-color:var(--p-surface-search-field, var(--top-bar-background-lighter)); -webkit-backface-visibility:hidden; backface-visibility:hidden; will-change:background-color; transition:background-color 200ms cubic-bezier(0.64, 0, 0.35, 1); border-radius:var(--p-border-radius-base, 3px); animation:Polaris-TopBar-SearchField--toLightBackground 0.01ms; }\n\n.Polaris-TopBar-SearchField__Backdrop::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n@keyframes Polaris-TopBar-SearchField--toLightBackground{ to{ background-color:var(--p-surface-neutral, var(--top-bar-background-lighter)); } }\n\n\n.Polaris-MessageIndicator__MessageIndicatorWrapper{ position:relative; }\n\n.Polaris-MessageIndicator{ position:absolute; z-index:1; top:-0.3rem; right:-0.3rem; width:1.2rem; height:1.2rem; border-radius:100%; background-color:var(--p-icon-highlight, #47c1bf); border:solid 0.2rem var(--p-background, var(--top-bar-background)); }\n\n\n.Polaris-Menu-Message__Section{ max-width:32.5rem; margin-top:0.8rem; padding-top:0.8rem; border-top:0.1rem solid var(--p-divider); }\n\n\n.Polaris-TopBar-Menu__ActivatorWrapper{ height:5.6rem; display:flex; align-items:center; }\n\n.Polaris-TopBar-Menu__Activator{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; position:relative; color:var(--p-text, var(--top-bar-color)); position:relative; display:flex; justify-content:center; align-items:center; min-width:3.6rem; padding:0.6rem 0.8rem; border:0; cursor:pointer; transition:background-color 0.1s; margin-right:0.8rem; border-radius:3px; }\n\n.Polaris-TopBar-Menu__Activator:focus{ outline:none; }\n\n.Polaris-TopBar-Menu__Activator::after{ content:var(--p-non-null-content, none); position:absolute; z-index:1; top:-0.1rem; right:-0.1rem; bottom:-0.1rem; left:-0.1rem; display:block; pointer-events:none; box-shadow:0 0 0 -0.1rem var(--p-focused); transition:box-shadow 100ms var(--p-ease); border-radius:calc(var(--p-border-radius-base) + 0.1rem); }\n\n.Polaris-TopBar-Menu__Activator:focus{ background-color:var(--top-bar-background-lighter, var(--p-override-transparent)); outline:none; }\n\n.Polaris-TopBar-Menu__Activator:focus::after{ box-shadow:0 0 0 0.2rem var(--p-focused); outline:0.1rem solid transparent; }\n\n.Polaris-TopBar-Menu__Activator:hover{ background-color:var(--top-bar-background-lighter, var(--p-surface-hovered)); }\n\n.Polaris-TopBar-Menu__Activator:active, .Polaris-TopBar-Menu__Activator[aria-expanded='true']{ background-color:var(--top-bar-background-darker, var(--p-surface-pressed)); outline:none; transition:none; }\n\n.Polaris-TopBar-Menu__Activator:active::after, .Polaris-TopBar-Menu__Activator[aria-expanded='true']::after{ border:none; }\n\n@media (max-width: 48.0525em){ .Polaris-TopBar-Menu__Activator{ margin:0; }\n  .Polaris-TopBar-Menu__Activator:focus, .Polaris-TopBar-Menu__Activator:hover, .Polaris-TopBar-Menu__Activator:active, .Polaris-TopBar-Menu__Activator[aria-expanded='true']{ background-color:transparent; opacity:0.85; } }\n\n.Polaris-TopBar-Menu__Section{ margin-top:0.8rem; padding-top:0.8rem; border-top:0.1rem solid var(--p-divider); }\n\n\n.Polaris-TopBar-UserMenu__Details{ max-width:16rem; margin-left:0.8rem; }\n\n@media (max-width: 48.0525em){ .Polaris-TopBar-UserMenu__Details{ display:none; } }\n\n.Polaris-TopBar-UserMenu__Name{ overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:1.5rem; font-weight:400; line-height:2rem; text-transform:initial; letter-spacing:initial; font-weight:500; line-height:1.6rem; color:var(--p-text, var(--top-bar-color)); text-align:left; }\n\n@media (min-width: 40em){ .Polaris-TopBar-UserMenu__Name{ font-size:1.4rem; } }\n\n.Polaris-TopBar-UserMenu__Detail{ font-size:1.3rem; font-weight:400; line-height:2rem; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; opacity:0.7; color:var(--p-text, var(--top-bar-color)); text-align:left; }\n\n@media (min-width: 40em){ .Polaris-TopBar-UserMenu__Detail{ font-size:1.2rem; line-height:1.6rem; } }\n\n.Polaris-TopBar-UserMenu__Name, .Polaris-TopBar-UserMenu__Detail{ transition:167ms color cubic-bezier(0.64, 0, 0.35, 1) 33ms; }\n\n\n.Polaris-TopBar{ position:relative; display:flex; height:5.6rem; box-shadow:var(--p-top-bar-shadow); background-color:var(--p-surface, var(--top-bar-background)); transition:200ms background-color ease-in-out; }\n\n.Polaris-TopBar::after{ content:''; position:absolute; bottom:0; width:100%; border-bottom:1px solid transparent; }\n\n.Polaris-TopBar__LogoDisplayControl{ display:none; }\n\n@media (min-width: 48.0625em){ .Polaris-TopBar__LogoDisplayControl{ display:flex; } }\n\n.Polaris-TopBar__LogoDisplayContainer{ display:flex; }\n\n.Polaris-TopBar__LogoContainer{ flex:0 0 24rem; align-items:center; height:100%; padding:0 0.8rem 0 1.6rem; flex-basis:24rem; flex-basis:calc(24rem + constant(safe-area-inset-left)); flex-basis:calc(24rem + env(safe-area-inset-left)); padding-left:1.6rem; padding-left:calc(1.6rem + constant(safe-area-inset-left)); padding-left:calc(1.6rem + env(safe-area-inset-left)); }\n\n.Polaris-TopBar__Logo, .Polaris-TopBar__LogoLink{ display:block; }\n\n.Polaris-TopBar__ContextControl{ display:none; }\n\n@media (min-width: 48.0625em){ .Polaris-TopBar__ContextControl{ width:24rem; display:block; } }\n\n@media (min-width: 87.5em){ .Polaris-TopBar__ContextControl{ width:24rem; } }\n\n.Polaris-TopBar__NavigationIcon{ -webkit-appearance:none; appearance:none; margin:0; padding:0; background:none; border:none; font-size:inherit; line-height:inherit; color:inherit; cursor:pointer; position:relative; align-self:center; margin-left:1rem; margin-right:0.8rem; padding:0.8rem; border-radius:3px; fill:var(--p-icon, var(--top-bar-color)); transition:167ms fill cubic-bezier(0.64, 0, 0.35, 1) 33ms; }\n\n.Polaris-TopBar__NavigationIcon:focus{ outline:none; }\n\n.Polaris-TopBar__NavigationIcon.Polaris-TopBar--focused{ background-color:var(--p-override-transparent); }\n\n.Polaris-TopBar__NavigationIcon.Polaris-TopBar--focused:active{ background-color:var(--p-surface-pressed); }\n\n.Polaris-TopBar__NavigationIcon:hover{ background-color:var(--p-surface-hovered); }\n\n.Polaris-TopBar__NavigationIcon::after{ content:''; position:absolute; top:-0.8rem; left:-0.8rem; width:calc(100% + 2rem); height:calc(100% + 2rem); }\n\n@media (min-width: 48.0625em){ .Polaris-TopBar__NavigationIcon{ display:none; } }\n\n.Polaris-TopBar__Contents{ z-index:10; display:flex; flex:1 1 auto; align-items:center; justify-content:flex-end; height:100%; }\n\n@media (min-width: 42.5em){ .Polaris-TopBar__Contents{ position:relative; } }\n\n.Polaris-TopBar__SearchField{ margin:0 auto; padding:0; max-width:99.8rem; position:relative; width:100%; margin:0; max-width:none; margin-left:calc((100% - 99.8rem)/2); }\n\n@media (max-width: 48.0625em) and (min-width: 30.625em), (min-width: 45.625em){ [data-has-navigation] .Polaris-TopBar__SearchField{ padding:0 2rem; } }\n\n@media (min-width: 30.625em){ .Polaris-TopBar__SearchField{ padding:0 2rem; } }\n\n@media (max-width: 48.0625em) and (min-width: 46.5em), (min-width: 61.5em){ [data-has-navigation] .Polaris-TopBar__SearchField{ padding:0 3.2rem; } }\n\n@media (min-width: 46.5em){ .Polaris-TopBar__SearchField{ padding:0 3.2rem; } }\n\n@media (max-width: 1238px){ .Polaris-TopBar__SearchField{ margin-left:0; margin-right:0.4rem; } }\n\n.Polaris-TopBar__SecondaryMenu svg{ fill:var(--p-icon, var(--top-bar-color)); color:transparent; }\n\n\n.Polaris-VideoThumbnail__Thumbnail{ position:relative; padding-bottom:56.25%; background-size:cover; background-position:center center; background-repeat:no-repeat; width:100%; height:100%; }\n\n.Polaris-VideoThumbnail__Thumbnail.Polaris-VideoThumbnail__WithPlayer{ position:absolute; z-index:1; top:0; left:0; width:100%; height:100%; padding-bottom:auto; }\n\n.Polaris-VideoThumbnail__PlayButton{ position:absolute; top:0; left:0; width:100%; height:100%; padding:0; border:none; background:transparent; opacity:0.8; transition:opacity 0.2s ease-in; cursor:pointer; }\n\n.Polaris-VideoThumbnail__PlayButton:hover, .Polaris-VideoThumbnail__PlayButton:focus{ opacity:1; }\n\n.Polaris-VideoThumbnail__PlayButton:focus{ outline:none; box-shadow:inset 0.2rem 0 0 var(--p-focused); background-image:linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }\n\n.Polaris-VideoThumbnail__PlayIcon{ position:absolute; top:50%; left:50%; width:6rem; height:6rem; margin-top:-3rem; margin-left:-3rem; }\n\n.Polaris-VideoThumbnail__Timestamp{ position:absolute; bottom:0; padding:0 0.4rem; margin-bottom:0.8rem; margin-left:0.8rem; border-radius:var(--p-border-radius-base); color:var(--p-text); background-color:var(--p-surface); opacity:0.8; text-align:center; }\n\n.Polaris-VideoThumbnail--withProgress{ margin-bottom:1.2rem; }\n\n.Polaris-VideoThumbnail__Progress{ position:absolute; bottom:0; width:100%; background-color:var(--p-surface); height:0.6rem; overflow:hidden; }\n\n.Polaris-VideoThumbnail__Indicator{ height:inherit; width:100%; transform-origin:left; transform:scaleX(0); background-color:var(--p-border-highlight); transition:transform 500ms cubic-bezier(0.64, 0, 0.35, 1); }\n\n.Polaris-VideoThumbnail__ProgressBar, .Polaris-VideoThumbnail__Label{ position:absolute !important; top:0; clip:rect(1px, 1px, 1px, 1px) !important; overflow:hidden !important; height:1px !important; width:1px !important; padding:0 !important; border:0 !important; }\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
-module.exports = function (cssWithMappingToString) {
-  var list = []; // return the list of modules as css string
-
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = cssWithMappingToString(item);
-
-      if (item[2]) {
-        return "@media ".concat(item[2], " {").concat(content, "}");
-      }
-
-      return content;
-    }).join("");
-  }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
-
-
-  list.i = function (modules, mediaQuery, dedupe) {
-    if (typeof modules === "string") {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, ""]];
-    }
-
-    var alreadyImportedModules = {};
-
-    if (dedupe) {
-      for (var i = 0; i < this.length; i++) {
-        // eslint-disable-next-line prefer-destructuring
-        var id = this[i][0];
-
-        if (id != null) {
-          alreadyImportedModules[id] = true;
-        }
-      }
-    }
-
-    for (var _i = 0; _i < modules.length; _i++) {
-      var item = [].concat(modules[_i]);
-
-      if (dedupe && alreadyImportedModules[item[0]]) {
-        // eslint-disable-next-line no-continue
-        continue;
-      }
-
-      if (mediaQuery) {
-        if (!item[2]) {
-          item[2] = mediaQuery;
-        } else {
-          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
-        }
-      }
-
-      list.push(item);
-    }
-  };
-
-  return list;
-};
 
 /***/ }),
 
@@ -81805,540 +75683,27 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris/dist/styles.css":
-/*!*******************************************************!*\
-  !*** ./node_modules/@shopify/polaris/dist/styles.css ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./node_modules/@shopify/polaris/dist/styles.css");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \****************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-
-var isOldIE = function isOldIE() {
-  var memo;
-  return function memorize() {
-    if (typeof memo === 'undefined') {
-      // Test for IE <= 9 as proposed by Browserhacks
-      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-      // Tests for existence of standard globals is to allow style-loader
-      // to operate correctly into non-standard environments
-      // @see https://github.com/webpack-contrib/style-loader/issues/177
-      memo = Boolean(window && document && document.all && !window.atob);
-    }
-
-    return memo;
-  };
-}();
-
-var getTarget = function getTarget() {
-  var memo = {};
-  return function memorize(target) {
-    if (typeof memo[target] === 'undefined') {
-      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
-
-      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-        try {
-          // This will throw an exception if access to iframe is blocked
-          // due to cross-origin restrictions
-          styleTarget = styleTarget.contentDocument.head;
-        } catch (e) {
-          // istanbul ignore next
-          styleTarget = null;
-        }
-      }
-
-      memo[target] = styleTarget;
-    }
-
-    return memo[target];
-  };
-}();
-
-var stylesInDom = [];
-
-function getIndexByIdentifier(identifier) {
-  var result = -1;
-
-  for (var i = 0; i < stylesInDom.length; i++) {
-    if (stylesInDom[i].identifier === identifier) {
-      result = i;
-      break;
-    }
-  }
-
-  return result;
-}
-
-function modulesToDom(list, options) {
-  var idCountMap = {};
-  var identifiers = [];
-
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = options.base ? item[0] + options.base : item[0];
-    var count = idCountMap[id] || 0;
-    var identifier = "".concat(id, " ").concat(count);
-    idCountMap[id] = count + 1;
-    var index = getIndexByIdentifier(identifier);
-    var obj = {
-      css: item[1],
-      media: item[2],
-      sourceMap: item[3]
-    };
-
-    if (index !== -1) {
-      stylesInDom[index].references++;
-      stylesInDom[index].updater(obj);
-    } else {
-      stylesInDom.push({
-        identifier: identifier,
-        updater: addStyle(obj, options),
-        references: 1
-      });
-    }
-
-    identifiers.push(identifier);
-  }
-
-  return identifiers;
-}
-
-function insertStyleElement(options) {
-  var style = document.createElement('style');
-  var attributes = options.attributes || {};
-
-  if (typeof attributes.nonce === 'undefined') {
-    var nonce =  true ? __webpack_require__.nc : 0;
-
-    if (nonce) {
-      attributes.nonce = nonce;
-    }
-  }
-
-  Object.keys(attributes).forEach(function (key) {
-    style.setAttribute(key, attributes[key]);
-  });
-
-  if (typeof options.insert === 'function') {
-    options.insert(style);
-  } else {
-    var target = getTarget(options.insert || 'head');
-
-    if (!target) {
-      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-    }
-
-    target.appendChild(style);
-  }
-
-  return style;
-}
-
-function removeStyleElement(style) {
-  // istanbul ignore if
-  if (style.parentNode === null) {
-    return false;
-  }
-
-  style.parentNode.removeChild(style);
-}
-/* istanbul ignore next  */
-
-
-var replaceText = function replaceText() {
-  var textStore = [];
-  return function replace(index, replacement) {
-    textStore[index] = replacement;
-    return textStore.filter(Boolean).join('\n');
-  };
-}();
-
-function applyToSingletonTag(style, index, remove, obj) {
-  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
-
-  /* istanbul ignore if  */
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = replaceText(index, css);
-  } else {
-    var cssNode = document.createTextNode(css);
-    var childNodes = style.childNodes;
-
-    if (childNodes[index]) {
-      style.removeChild(childNodes[index]);
-    }
-
-    if (childNodes.length) {
-      style.insertBefore(cssNode, childNodes[index]);
-    } else {
-      style.appendChild(cssNode);
-    }
-  }
-}
-
-function applyToTag(style, options, obj) {
-  var css = obj.css;
-  var media = obj.media;
-  var sourceMap = obj.sourceMap;
-
-  if (media) {
-    style.setAttribute('media', media);
-  } else {
-    style.removeAttribute('media');
-  }
-
-  if (sourceMap && typeof btoa !== 'undefined') {
-    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  } // For old IE
-
-  /* istanbul ignore if  */
-
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    while (style.firstChild) {
-      style.removeChild(style.firstChild);
-    }
-
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var singleton = null;
-var singletonCounter = 0;
-
-function addStyle(obj, options) {
-  var style;
-  var update;
-  var remove;
-
-  if (options.singleton) {
-    var styleIndex = singletonCounter++;
-    style = singleton || (singleton = insertStyleElement(options));
-    update = applyToSingletonTag.bind(null, style, styleIndex, false);
-    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-  } else {
-    style = insertStyleElement(options);
-    update = applyToTag.bind(null, style, options);
-
-    remove = function remove() {
-      removeStyleElement(style);
-    };
-  }
-
-  update(obj);
-  return function updateStyle(newObj) {
-    if (newObj) {
-      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
-        return;
-      }
-
-      update(obj = newObj);
-    } else {
-      remove();
-    }
-  };
-}
-
-module.exports = function (list, options) {
-  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-  // tags it will allow on a page
-
-  if (!options.singleton && typeof options.singleton !== 'boolean') {
-    options.singleton = isOldIE();
-  }
-
-  list = list || [];
-  var lastIdentifiers = modulesToDom(list, options);
-  return function update(newList) {
-    newList = newList || [];
-
-    if (Object.prototype.toString.call(newList) !== '[object Array]') {
-      return;
-    }
-
-    for (var i = 0; i < lastIdentifiers.length; i++) {
-      var identifier = lastIdentifiers[i];
-      var index = getIndexByIdentifier(identifier);
-      stylesInDom[index].references--;
-    }
-
-    var newLastIdentifiers = modulesToDom(newList, options);
-
-    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
-      var _identifier = lastIdentifiers[_i];
-
-      var _index = getIndexByIdentifier(_identifier);
-
-      if (stylesInDom[_index].references === 0) {
-        stylesInDom[_index].updater();
-
-        stylesInDom.splice(_index, 1);
-      }
-    }
-
-    lastIdentifiers = newLastIdentifiers;
-  };
-};
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/AlertMinor.svg.mjs":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/AlertMinor.svg.mjs ***!
-  \***************************************************************************/
+/***/ "./node_modules/@shopify/polaris-icons/dist/icons/HomeMajor.svg.mjs":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris-icons/dist/icons/HomeMajor.svg.mjs ***!
+  \**************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgAlertMinor)
+/* harmony export */   "S": () => (/* binding */ SvgHomeMajor)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 var _path;
 
-var SvgAlertMinor = function SvgAlertMinor(props) {
+var SvgHomeMajor = function SvgHomeMajor(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
     viewBox: "0 0 20 20"
   }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 9a1 1 0 0 0 2 0V7a1 1 0 1 0-2 0v2zm0 4a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/ArrowLeftMinor.svg.mjs":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/ArrowLeftMinor.svg.mjs ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgArrowLeftMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgArrowLeftMinor = function SvgArrowLeftMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "M17 9H5.414l3.293-3.293a.999.999 0 1 0-1.414-1.414l-5 5a.999.999 0 0 0 0 1.414l5 5a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L5.414 11H17a1 1 0 1 0 0-2z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/CaretDownMinor.svg.mjs":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/CaretDownMinor.svg.mjs ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgCaretDownMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgCaretDownMinor = function SvgCaretDownMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "m5 8 5 5 5-5H5z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/CaretUpMinor.svg.mjs":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/CaretUpMinor.svg.mjs ***!
-  \*****************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgCaretUpMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgCaretUpMinor = function SvgCaretUpMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "m15 12-5-5-5 5h10z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/ChevronLeftMinor.svg.mjs":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/ChevronLeftMinor.svg.mjs ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgChevronLeftMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgChevronLeftMinor = function SvgChevronLeftMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "M12 16a.997.997 0 0 1-.707-.293l-5-5a.999.999 0 0 1 0-1.414l5-5a.999.999 0 1 1 1.414 1.414L8.414 10l4.293 4.293A.999.999 0 0 1 12 16z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/ChevronRightMinor.svg.mjs":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/ChevronRightMinor.svg.mjs ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgChevronRightMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgChevronRightMinor = function SvgChevronRightMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "M8 16a.999.999 0 0 1-.707-1.707L11.586 10 7.293 5.707a.999.999 0 1 1 1.414-1.414l5 5a.999.999 0 0 1 0 1.414l-5 5A.997.997 0 0 1 8 16z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/CircleCancelMinor.svg.mjs":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/CircleCancelMinor.svg.mjs ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgCircleCancelMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgCircleCancelMinor = function SvgCircleCancelMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fillRule: "evenodd",
-    d: "M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM7.707 6.293a1 1 0 0 0-1.414 1.414L8.586 10l-2.293 2.293a1 1 0 1 0 1.414 1.414L10 11.414l2.293 2.293a1 1 0 1 0 1.414-1.414L11.414 10l2.293-2.293a1 1 0 0 0-1.414-1.414L10 8.586 7.707 6.293z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/ExternalSmallMinor.svg.mjs":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/ExternalSmallMinor.svg.mjs ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgExternalSmallMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgExternalSmallMinor = function SvgExternalSmallMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "M14 13v1a1 1 0 0 1-1 1H6c-.575 0-1-.484-1-1V7a1 1 0 0 1 1-1h1c1.037 0 1.04 1.5 0 1.5-.178.005-.353 0-.5 0v6h6V13c0-1 1.5-1 1.5 0zm-3.75-7.25A.75.75 0 0 1 11 5h4v4a.75.75 0 0 1-1.5 0V7.56l-3.22 3.22a.75.75 0 1 1-1.06-1.06l3.22-3.22H11a.75.75 0 0 1-.75-.75z"
+    d: "M18 7.261V17.5c0 .841-.672 1.5-1.5 1.5h-2c-.828 0-1.5-.659-1.5-1.5V13H7v4.477C7 18.318 6.328 19 5.5 19h-2c-.828 0-1.5-.682-1.5-1.523V7.261a1.5 1.5 0 0 1 .615-1.21l6.59-4.82a1.481 1.481 0 0 1 1.59 0l6.59 4.82A1.5 1.5 0 0 1 18 7.26z"
   })));
 };
 
@@ -82376,27 +75741,29 @@ var SvgHorizontalDotsMinor = function SvgHorizontalDotsMinor(props) {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/ImportMinor.svg.mjs":
+/***/ "./node_modules/@shopify/polaris-icons/dist/icons/OrdersMajor.svg.mjs":
 /*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/ImportMinor.svg.mjs ***!
+  !*** ./node_modules/@shopify/polaris-icons/dist/icons/OrdersMajor.svg.mjs ***!
   \****************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgImportMinor)
+/* harmony export */   "S": () => (/* binding */ SvgOrdersMajor)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
-var _path;
+var _path, _path2;
 
-var SvgImportMinor = function SvgImportMinor(props) {
+var SvgOrdersMajor = function SvgOrdersMajor(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
     viewBox: "0 0 20 20"
   }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "M13.707 10.707a.999.999 0 1 0-1.414-1.414L11 10.586V3a1 1 0 1 0-2 0v7.586L7.707 9.293a.999.999 0 1 0-1.414 1.414l3 3a.999.999 0 0 0 1.414 0l3-3zM3 16a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H3z"
+    d: "M11 1a1 1 0 1 0-2 0v7.586L7.707 7.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l3-3a1 1 0 0 0-1.414-1.414L11 8.586V1z"
+  })), _path2 || (_path2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M3 14V3h4V1H2.5A1.5 1.5 0 0 0 1 2.5v15A1.5 1.5 0 0 0 2.5 19h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 17.5 1H13v2h4v11h-3.5c-.775 0-1.388.662-1.926 1.244l-.11.12A1.994 1.994 0 0 1 10 16a1.994 1.994 0 0 1-1.463-.637l-.111-.12C7.888 14.664 7.275 14 6.5 14H3z"
   })));
 };
 
@@ -82405,115 +75772,27 @@ var SvgImportMinor = function SvgImportMinor(props) {
 
 /***/ }),
 
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/InfoMinor.svg.mjs":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/InfoMinor.svg.mjs ***!
-  \**************************************************************************/
+/***/ "./node_modules/@shopify/polaris-icons/dist/icons/ProductsMajor.svg.mjs":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@shopify/polaris-icons/dist/icons/ProductsMajor.svg.mjs ***!
+  \******************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgInfoMinor)
+/* harmony export */   "S": () => (/* binding */ SvgProductsMajor)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 var _path;
 
-var SvgInfoMinor = function SvgInfoMinor(props) {
+var SvgProductsMajor = function SvgProductsMajor(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
     viewBox: "0 0 20 20"
   }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    fillRule: "evenodd",
-    d: "M18 10a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-9 3a1 1 0 1 0 2 0v-2a1 1 0 1 0-2 0v2zm0-6a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/MinusMinor.svg.mjs":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/MinusMinor.svg.mjs ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgMinusMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgMinusMinor = function SvgMinusMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "M15 9H5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/SelectMinor.svg.mjs":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/SelectMinor.svg.mjs ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgSelectMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgSelectMinor = function SvgSelectMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "m10 16-4-4h8l-4 4zm0-12 4 4H6l4-4z"
-  })));
-};
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris-icons/dist/icons/TickSmallMinor.svg.mjs":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@shopify/polaris-icons/dist/icons/TickSmallMinor.svg.mjs ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": () => (/* binding */ SvgTickSmallMinor)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var _path;
-
-var SvgTickSmallMinor = function SvgTickSmallMinor(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
-    viewBox: "0 0 20 20"
-  }, props), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
-    d: "m8.315 13.859-3.182-3.417a.506.506 0 0 1 0-.684l.643-.683a.437.437 0 0 1 .642 0l2.22 2.393 4.942-5.327a.436.436 0 0 1 .643 0l.643.684a.504.504 0 0 1 0 .683l-5.91 6.35a.437.437 0 0 1-.642 0"
+    d: "M10.293 1.293A1 1 0 0 1 11 1h7a1 1 0 0 1 1 1v7a1 1 0 0 1-.293.707l-9 9a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414l9-9zM15.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
   })));
 };
 
@@ -82530,17 +75809,6 @@ var SvgTickSmallMinor = function SvgTickSmallMinor(props) {
 
 "use strict";
 module.exports = JSON.parse('{"surface":"#111213","onSurface":"#111213","interactive":"#2e72d2","secondary":"#111213","primary":"#008060","critical":"#d82c0d","warning":"#ffc453","highlight":"#5bcdda","success":"#008060","decorative":"#ffc96b"}');
-
-/***/ }),
-
-/***/ "./node_modules/@shopify/polaris/locales/en.json":
-/*!*******************************************************!*\
-  !*** ./node_modules/@shopify/polaris/locales/en.json ***!
-  \*******************************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"Polaris":{"Actions":{"moreActions":"More actions"},"Avatar":{"label":"Avatar","labelWithInitials":"Avatar with initials {initials}"},"Autocomplete":{"spinnerAccessibilityLabel":"Loading"},"Badge":{"PROGRESS_LABELS":{"incomplete":"Incomplete","partiallyComplete":"Partially complete","complete":"Complete"},"STATUS_LABELS":{"info":"Info","success":"Success","warning":"Warning","critical":"Critical","attention":"Attention","new":"New"},"progressAndStatus":"{statusLabel} {progressLabel}"},"Button":{"spinnerAccessibilityLabel":"Loading","connectedDisclosureAccessibilityLabel":"Related actions"},"Common":{"checkbox":"checkbox","undo":"Undo","cancel":"Cancel","newWindowAccessibilityHint":"(opens a new window)","clear":"Clear","close":"Close","submit":"Submit","more":"More"},"ContextualSaveBar":{"save":"Save","discard":"Discard"},"DataTable":{"sortAccessibilityLabel":"sort {direction} by","navAccessibilityLabel":"Scroll table {direction} one column","totalsRowHeading":"Totals","totalRowHeading":"Total"},"DatePicker":{"previousMonth":"Show previous month, {previousMonthName} {showPreviousYear}","nextMonth":"Show next month, {nextMonth} {nextYear}","today":"Today ","start":"Start of range","end":"End of range","months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"days":{"monday":"Monday","tuesday":"Tuesday","wednesday":"Wednesday","thursday":"Thursday","friday":"Friday","saturday":"Saturday","sunday":"Sunday"},"daysAbbreviated":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"}},"DiscardConfirmationModal":{"title":"Discard all unsaved changes","message":"If you discard changes, you’ll delete any edits you made since you last saved.","primaryAction":"Discard changes","secondaryAction":"Continue editing"},"DropZone":{"single":{"overlayTextFile":"Drop file to upload","overlayTextImage":"Drop image to upload","actionTitleFile":"Add file","actionTitleImage":"Add image","actionHintFile":"or drop file to upload","actionHintImage":"or drop image to upload","labelFile":"Upload file","labelImage":"Upload image"},"allowMultiple":{"overlayTextFile":"Drop files to upload","overlayTextImage":"Drop images to upload","actionTitleFile":"Add files","actionTitleImage":"Add images","actionHintFile":"or drop files to upload","actionHintImage":"or drop images to upload","labelFile":"Upload files","labelImage":"Upload images"},"errorOverlayTextFile":"File type is not valid","errorOverlayTextImage":"Image type is not valid"},"EmptySearchResult":{"altText":"Empty search results"},"Frame":{"skipToContent":"Skip to content","navigationLabel":"Navigation","Navigation":{"closeMobileNavigationLabel":"Close navigation"}},"ActionMenu":{"RollupActions":{"rollupButton":"Actions"}},"Filters":{"moreFilters":"More filters","moreFiltersWithCount":"More filters ({count})","filter":"Filter {resourceName}","noFiltersApplied":"No filters applied","cancel":"Cancel","done":"Done","clearAllFilters":"Clear all filters","clear":"Clear","clearLabel":"Clear {filterName}"},"IndexProvider":{"defaultItemSingular":"Item","defaultItemPlural":"Items","allItemsSelected":"All {itemsLength}+ {resourceNamePlural} are selected.","selected":"{selectedItemsCount} selected","a11yCheckboxDeselectAllSingle":"Deselect {resourceNameSingular}","a11yCheckboxSelectAllSingle":"Select {resourceNameSingular}","a11yCheckboxDeselectAllMultiple":"Deselect all {itemsLength} {resourceNamePlural}","a11yCheckboxSelectAllMultiple":"Select all {itemsLength} {resourceNamePlural}"},"IndexTable":{"emptySearchTitle":"No {resourceNamePlural} found","emptySearchDescription":"Try changing the filters or search term","onboardingBadgeText":"New","resourceLoadingAccessibilityLabel":"Loading {resourceNamePlural}…","selectAllLabel":"Select all {resourceNamePlural}","selected":"{selectedItemsCount} selected","undo":"Undo","selectAllItems":"Select all {itemsLength}+ {resourceNamePlural}","selectItem":"Select {resourceName}","selectButtonText":"Select"},"Loading":{"label":"Page loading bar"},"Modal":{"iFrameTitle":"body markup","modalWarning":"These required properties are missing from Modal: {missingProps}"},"Pagination":{"previous":"Previous","next":"Next","pagination":"Pagination"},"ProgressBar":{"negativeWarningMessage":"Values passed to the progress prop shouldn’t be negative. Resetting {progress} to 0.","exceedWarningMessage":"Values passed to the progress prop shouldn’t exceed 100. Setting {progress} to 100."},"ResourceList":{"sortingLabel":"Sort by","defaultItemSingular":"item","defaultItemPlural":"items","showing":"Showing {itemsCount} {resource}","showingTotalCount":"Showing {itemsCount} of {totalItemsCount} {resource}","loading":"Loading {resource}","selected":"{selectedItemsCount} selected","allItemsSelected":"All {itemsLength}+ {resourceNamePlural} in your store are selected.","allFilteredItemsSelected":"All {itemsLength}+ {resourceNamePlural} in this filter are selected.","selectAllItems":"Select all {itemsLength}+ {resourceNamePlural} in your store","selectAllFilteredItems":"Select all {itemsLength}+ {resourceNamePlural} in this filter","emptySearchResultTitle":"No {resourceNamePlural} found","emptySearchResultDescription":"Try changing the filters or search term","selectButtonText":"Select","a11yCheckboxDeselectAllSingle":"Deselect {resourceNameSingular}","a11yCheckboxSelectAllSingle":"Select {resourceNameSingular}","a11yCheckboxDeselectAllMultiple":"Deselect all {itemsLength} {resourceNamePlural}","a11yCheckboxSelectAllMultiple":"Select all {itemsLength} {resourceNamePlural}","ariaLiveSingular":"{itemsLength} item","ariaLivePlural":"{itemsLength} items","Item":{"actionsDropdownLabel":"Actions for {accessibilityLabel}","actionsDropdown":"Actions dropdown","viewItem":"View details for {itemName}"},"BulkActions":{"actionsActivatorLabel":"Actions","moreActionsActivatorLabel":"More actions","warningMessage":"To provide a better user experience. There should only be a maximum of {maxPromotedActions} promoted actions."},"FilterCreator":{"filterButtonLabel":"Filter","selectFilterKeyPlaceholder":"Select a filter…","addFilterButtonLabel":"Add filter","showAllWhere":"Show all {resourceNamePlural} where:"},"FilterControl":{"textFieldLabel":"Search {resourceNamePlural}"},"FilterValueSelector":{"selectFilterValuePlaceholder":"Select a filter…"},"DateSelector":{"dateFilterLabel":"Select a value","dateValueLabel":"Date","dateValueError":"Match YYYY-MM-DD format","dateValuePlaceholder":"YYYY-MM-DD","SelectOptions":{"PastWeek":"in the last week","PastMonth":"in the last month","PastQuarter":"in the last 3 months","PastYear":"in the last year","ComingWeek":"next week","ComingMonth":"next month","ComingQuarter":"in the next 3 months","ComingYear":"in the next year","OnOrBefore":"on or before","OnOrAfter":"on or after"},"FilterLabelForValue":{"past_week":"in the last week","past_month":"in the last month","past_quarter":"in the last 3 months","past_year":"in the last year","coming_week":"next week","coming_month":"next month","coming_quarter":"in the next 3 months","coming_year":"in the next year","on_or_before":"before {date}","on_or_after":"after {date}"}}},"SkeletonPage":{"loadingLabel":"Page loading"},"Tabs":{"toggleTabsLabel":"More tabs"},"Tag":{"ariaLabel":"Remove {children}"},"TextField":{"characterCount":"{count} characters","characterCountWithMaxLength":"{count} of {limit} characters used"},"TooltipOverlay":{"accessibilityLabel":"Tooltip: {label}"},"TopBar":{"toggleMenuLabel":"Toggle menu","SearchField":{"clearButtonLabel":"Clear","search":"Search"}},"MediaCard":{"popoverButton":"Actions"},"VideoThumbnail":{"playButtonA11yLabel":{"default":"Play video","defaultWithDuration":"Play video of length {duration}","duration":{"hours":{"other":{"only":"{hourCount} hours","andMinutes":"{hourCount} hours and {minuteCount} minutes","andMinute":"{hourCount} hours and {minuteCount} minute","minutesAndSeconds":"{hourCount} hours, {minuteCount} minutes, and {secondCount} seconds","minutesAndSecond":"{hourCount} hours, {minuteCount} minutes, and {secondCount} second","minuteAndSeconds":"{hourCount} hours, {minuteCount} minute, and {secondCount} seconds","minuteAndSecond":"{hourCount} hours, {minuteCount} minute, and {secondCount} second","andSeconds":"{hourCount} hours and {secondCount} seconds","andSecond":"{hourCount} hours and {secondCount} second"},"one":{"only":"{hourCount} hour","andMinutes":"{hourCount} hour and {minuteCount} minutes","andMinute":"{hourCount} hour and {minuteCount} minute","minutesAndSeconds":"{hourCount} hour, {minuteCount} minutes, and {secondCount} seconds","minutesAndSecond":"{hourCount} hour, {minuteCount} minutes, and {secondCount} second","minuteAndSeconds":"{hourCount} hour, {minuteCount} minute, and {secondCount} seconds","minuteAndSecond":"{hourCount} hour, {minuteCount} minute, and {secondCount} second","andSeconds":"{hourCount} hour and {secondCount} seconds","andSecond":"{hourCount} hour and {secondCount} second"}},"minutes":{"other":{"only":"{minuteCount} minutes","andSeconds":"{minuteCount} minutes and {secondCount} seconds","andSecond":"{minuteCount} minutes and {secondCount} second"},"one":{"only":"{minuteCount} minute","andSeconds":"{minuteCount} minute and {secondCount} seconds","andSecond":"{minuteCount} minute and {secondCount} second"}},"seconds":{"other":"{secondCount} seconds","one":"{secondCount} second"}}}}}}');
 
 /***/ }),
 

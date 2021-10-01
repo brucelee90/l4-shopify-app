@@ -329,8 +329,7 @@ return [
                 'address' => env('SHOPIFY_WEBHOOK_2_ADDRESS', 'https://some-app.com/webhook/purchase'),
             ]
             ...
-        */
-    ],
+        */],
 
     /*
     |--------------------------------------------------------------------------
@@ -349,8 +348,7 @@ return [
                 'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
             ],
             ...
-        */
-    ],
+        */],
 
     /*
     |--------------------------------------------------------------------------
@@ -369,8 +367,7 @@ return [
                 'job' => env('AFTER_AUTHENTICATE_JOB'), // example: \App\Jobs\AfterAuthorizeJob::class
                 'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false) // False = dispatch job for later, true = dispatch immediately
             ],
-        */
-    ],
+        */],
 
     /*
     |--------------------------------------------------------------------------

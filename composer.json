@@ -12,7 +12,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
-        "osiset/laravel-shopify": "^17.1"
+        "osiset/laravel-shopify": "v17.0.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

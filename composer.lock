@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "572970cddb5c37b4a4a2eff2b212f2e1",
+    "content-hash": "79fb1d7739c4500249425fd916eb72b7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2519,16 +2519,16 @@
         },
         {
             "name": "osiset/laravel-shopify",
-            "version": "v17.1.0",
+            "version": "v17.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/osiset/laravel-shopify.git",
-                "reference": "f819f4a521f93255d2986186e999f36f8d9f155a"
+                "reference": "06678dfd5dc75bd7db1dbeb667a2351632e1de92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/osiset/laravel-shopify/zipball/f819f4a521f93255d2986186e999f36f8d9f155a",
-                "reference": "f819f4a521f93255d2986186e999f36f8d9f155a",
+                "url": "https://api.github.com/repos/osiset/laravel-shopify/zipball/06678dfd5dc75bd7db1dbeb667a2351632e1de92",
+                "reference": "06678dfd5dc75bd7db1dbeb667a2351632e1de92",
                 "shasum": ""
             },
             "require": {
@@ -2541,7 +2541,6 @@
             },
             "require-dev": {
                 "ergebnis/composer-normalize": "^2.8",
-                "friendsofphp/php-cs-fixer": "^3.0",
                 "mockery/mockery": "^1.0",
                 "orchestra/database": "~3.8 || ~4.0 || ~5.0 || ~6.0",
                 "orchestra/testbench": "~3.8 || ~4.0 || ~5.0 || ~6.0",
@@ -2558,7 +2557,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Osiset\\ShopifyApp\\": "src/"
+                    "Osiset\\ShopifyApp\\": "src/ShopifyApp"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2602,7 +2601,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-07-15T13:20:06+00:00"
+            "time": "2021-06-25T18:17:13+00:00"
         },
         {
             "name": "phpoption/phpoption",
